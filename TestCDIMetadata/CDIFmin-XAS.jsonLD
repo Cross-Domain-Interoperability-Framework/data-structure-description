@@ -4,10 +4,7 @@
         {
             "schema": "http://schema.org/",
             "dcterms": "http://purl.org/dc/terms/",
-            "geosparql": "http://www.opengis.net/ont/geosparql#",
-            "spdx": "http://spdx.org/rdf/terms#",
             "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-            "time": "http://www.w3.org/2006/time#",
             "skos": "http://www.w3.org/2004/02/skos/core#",
             "xas": "http://cdi4exas.org/"
         }
@@ -20,20 +17,7 @@
                 "schema:Product"
             ],
             "schema:name": "X-ray absorption spectra for K edge, selenium in sodium selenate",
-            "schema:description": "comment from xdi file: room temperature; measured at beamline 13-BM-D.  need a better description of what's in this datasset-- maybe the DCAT metadata has what we need?",
-            "schema:identifier": "should have a DOI",
-            "schema:url":"https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
-            "schema:contributor": [
-                {
-                    "@type": "schema:Role",
-                    "schema:roleName": "Facility",
-                    "schema:contributor": {
-                        "@type": "schema:Organization",
-                        "@id": "#aps",
-                        "schema:name": "APS"
-                    }
-                }
-            ],
+            "schema:identifier": "https://doi.org/57.246356/bogus",
             "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
             "schema:distribution": [
                 {
@@ -42,11 +26,6 @@
                         "PhysicalDataSet"
                     ],
                     "schema:contentUrl": "https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
-                    "schema:description": "Distribution = PhysicalDataSet text file conformant with XDI specification",
-                    "schema:contentSize": "30 kb",
-                    "schema:encodingFormat": ["text/plain"],
-                    "dcterms:conformsTo": ["https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md"],
-                    "allowsDuplicates": false,
                     "isStructuredBy": {
                         "@type": "WideDataStructure",
                         "has_DataStructureComponent": [
@@ -79,25 +58,11 @@
                             }
                         ],
                         "allowsDuplicates": false,
-                        "arrayBase": 1,
-                        "commentPrefix": "#",
-                        "hasHeader": true,
-                        "headerRowCount": 27,
-                        "skipInitialSpace": true,
-                        "isDelimited": false,
-                        "isFixedWidth": true,
                         "cdifq:nColumns":3,
                         "cdifq:nRows":469 
                     }
                 }
             ],
-            "schema:measurementTechnique": {
-                "@type": "schema:DefinedTerm",
-                "schema:name": "X-Ray Absorption Spectroscopy",
-                "schema:termCode": "XAS",
-                "schema:identifier": "http://purl.org/pan-science/PaNET/PaNET01196",
-                "schema:inDefinedTermSet": "http://purl.org/pan-science/PaNET/PaNET.owl"
-            },
             "schema:keywords": [
                 {
                     "@type": "schema:DefinedTerm",
@@ -114,8 +79,9 @@
                 }
             ],
             "prov:wasGeneratedBy": {
+                "@id":"ex:provevent_246376", 
                 "@type": [
-                    "Event",
+                    "prov:Event",
                     "xas:Analysis_Event"
                 ],
                 "schema:identifier": "20241111_DSC_NU_OREX-803224-0_1",
@@ -163,8 +129,8 @@
                     },
                     {
                         "@id":"xas:Detector10cmN2",
-                        "@type": "schema:Thing",
-                        "schema:additionalType": "xas:Detector",
+                        "@type": ["schema:Thing","xas:Detector"],
+                        "schema:name":"10cm  N2 detector",
                         "schema:additionalProperty": [
                             {
                                 "@type": "schema:PropertyValue",
@@ -216,7 +182,6 @@
                         "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
                     ],
                     "schema:name": "Na2SeO4",
-                    "schema:description": "physical properties of sample: ph, eh, volume, porosity, density, concentration, resistivity, viscosity, crystal structure, opacity from xdi list...",
                     "schema:additionalProperty": [
                         {
                             "@type": "schema:PropertyValue",
@@ -245,69 +210,18 @@
                         "schema:PropertyValue"
                     ],
                     "schema:name": "energy",
-                    "schame:alternateName": "Monochromator energy",
-                    "schema:description": "The energy selected by the X-ray monochromator and delivered to the sample during an absorption scan.",
                     "schema:propertyID": {"@id": "xas:Monochromator_Energy"},
                     "schema:unitText": "eV",
-                    "identifier": "should be URI from nexusFormat organization",
-                    "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-                    "simpleUnitOfMeasure": "eV",
-                    "uses": "xas:Monochromator_Energy",
-                    "name": "energy",
-                    "displayLabel": "monochromator energy"
-                },
-                {
-                    "@id": "xas:incidentIntensityVariable",
-                    "@type": [
-                        "InstanceVariable",
-                        "schema:PropertyValue"
-                    ],
-                    "schema:name": "i0",
-                    "schema:alternateName": "Monitor intensity",
-                    "schema:description": "The measured X-ray intensity before it interacts with the sample. ",
-                    "schema:propertyID": {"@id": "xas:Incident_Intensity"},
-                    "schema:unitText": "counts",
-                    "schema:measurementTechnique":{"@id":"xas:Detector10cmN2"},
-                    "identifier": "should be URI from nexusFormat organization",
-                    "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-                    "uses": "xas:Incident_Intensity",
-                    "name": "i0",
-                    "displayLabel": "monitor intensity"
-                },
-                {
-                    "@id": "xas:transmittedIntensityVariable",
-                    "@type": [
-                        "InstanceVariable",
-                        "schema:PropertyValue"
-                    ],
-                    "schema:description": "missing, definition of what this variable is about (maybe even an iAdopt description",
-                    "schema:propertyID": {"@id": "xas:Transmitted_Intensity"},
-                    "schema:unitText": "counts",
-                    "schema:name": "itrans",
-                    "schema:alternateName": "transmission intensity",
-                    "schema:measurementTechnique":{"@id":"xas:Detector10cmN2"},
-                    "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-                    "identifier": "should be URI from nexusFormat organization",
-                    "uses": "xas:Transmitted_Intensity",
-                    "name": "itrans",
-                    "displayLabel": "transmission intensity"
+                    "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+                    "cdi:simpleUnitOfMeasure": "eV",
+                    "cdi:uses": "xas:Monochromator_Energy",
+                    "cdi:name": "energy"
                 }
             ],
             "schema:subjectOf": {
                 "@id": "xas:ja51-pz63",
                 "@type": "schema:Dataset",
-                "schema:dateModified": "2025-08-26",
-                "schema:creator": [
-                    {
-                        "@id": "https://ada.org/person/3479",
-                        "@type": "schema:Person",
-                        "schema:name": "Richard, Stephen M.",
-                        "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-                        "schema:email": "smrTucson@email.org"
-                    }
-                ],
                 "schema:about": {"@id": "xas:485749"},
-                "schema:description": "metadata about documentation for se_na2so4",
                 "dcterms:conformsTo": [
                     {"@id": "cdif:profile_basic_1.0"},
                     {"@id": "cdif:profile_xasCDIF"}
@@ -326,37 +240,6 @@
             "skos:inScheme": {"@id": "#xasDict"},
             "skos:prefLabel": "Monochromator Energy",
             "skos:definition": "photon energy selected by the X-ray monochromator and delivered to the sample during an absorption scan; the incident X-ray photon energy impinging on the sample at any given point in the scan. This is the independent variable in an XAS scan.(ChatGPT)"
-        },
-        {
-            "@id": "xas:Incident_Intensity",
-            "@type": "skos:Concept",
-            "skos:inScheme": {"@id": "#xasDict"},
-            "skos:prefLabel": "Incident X-Ray intensity",
-            "skos:definition": "The measured X-ray energy hitting the sample at each monochromator energy setting. Measured by an ionization chamber (gas-filled detector) or photodiode placed before the sample. (ChatGPT)"
-        },
-        {
-            "@id": "xas:Transmitted_Intensity",
-            "@type": "skos:Concept",
-            "skos:inScheme": {"@id": "#xasDict"},
-            "skos:prefLabel": "Transmitted X-Ray intensity",
-            "skos:altLabel": "itrans",
-            "skos:definition": "The measured X-ray energy transmitted through a sample (ChatGPT)"
-        },
-        {
-            "@id": "xas:Fluorescence_Absorption_Coefficient",
-            "@type": "skos:Concept",
-            "skos:inScheme": {"@id": "#xasDict"},
-            "skos:prefLabel": "Fluorescence Absorption Coefficient",
-            "skos:altLabel": "mufluor",
-            "skos:definition": "X-ray absorption coefficient μ(E) inferred from the intensity of emitted fluorescence photons; the fluorescence yield (probability of emission) is proportional to the absorbed fraction of the incident photons. Fluorescence is preferred for dilute samples (trace element studies, biological samples, catalysts, geological samples), because the emitted fluorescence is element-specific.(ChatGPT)."
-        },
-        {
-            "@id": "xas:Absorption_Coefficient",
-            "@type": "skos:Concept",
-            "skos:inScheme": {"@id": "#xasDict"},
-            "skos:prefLabel": "Absorption Coefficient",
-            "skos:altLabel": "mutrans",
-            "skos:definition": "X-ray absorption coefficient μ(E) calculated as the natural log the ratio of incident vs. tranmitted x-ray intensity, divided by the thickness of the sample.(ChatGPT)."
         }
     ]
 }

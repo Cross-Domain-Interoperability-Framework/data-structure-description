@@ -62,54 +62,48 @@
                 {
                     "@type": [
                         "schema:DataDownload",
-                        "PhysicalDataSet"
+                        "cdi:TabularTextDataset"
                     ],
                     "schema:contentUrl": "https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
                     "schema:description": "Distribution = PhysicalDataSet text file conformant with XDI specification",
                     "schema:contentSize": "30 kb",
                     "schema:encodingFormat": ["text/plain"],
                     "dcterms:conformsTo": ["https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md"],
+                    "cdi:allowsDuplicates": false,
+                    "cdi:has_TextMapping": [
+                        {
+                            "@type": "cdi:TextMapping",
+                            "cdi:formats": {"@id": "xas:monochromatorEnergyVariable"},
+                            "cdi:label": "energy",
+                            "cdi:hasRole": "Dimension",
+                            "cdi:index": 1,
+                            "cdi:length": 12
+                        },
+                        {
+                            "@type": "cdi:TextMapping",
+                            "cdi:formats": {"@id": "xas:incidentIntensityVariable"},
+                            "cdi:label": "i0",
+                            "cdi:hasRole": "Measure",
+                            "index": 3,
+                            "length": 13
+                        },
+                        {
+                            "@type": "cdi:TextMapping",
+                            "cdi:formats": {"@id": "xas:transmittedIntensityVariable"},
+                            "cdi:label": "it",
+                            "cdi:hasRole": "Measure",
+                            "cdi:index": 2,
+                            "cdi:length": 12
+                        }
+                    ],
                     "allowsDuplicates": false,
-                    "isStructuredBy": {
-                        "@type": "WideDataStructure",
-                        "has_DataStructureComponent": [
-                            {
-                                "@type": "IdentifierComponent",
-                                "isDefinedBy_InstanceVariable": {"@id": "xas:monochromatorEnergy"},
-                                "has": {
-                                    "@type": "ValueMapping",
-                                    "hasIndex": 1,
-                                    "length": 12
-                                }
-                            },
-                            {
-                                "@type": "MeasureComponent",
-                                "isDefinedBy_InstanceVariable": {"@id": "xas:incidentIntensity"},
-                                "has": {
-                                    "@type": "ValueMapping",
-                                    "hasIndex": 3,
-                                    "length": 13
-                                }
-                            },
-                            {
-                                "@type": "MeasureComponent",
-                                "isDefinedBy_InstanceVariable": {"@id": "xas:transmittedIntensity"},
-                                "has": {
-                                    "@type": "ValueMapping",
-                                    "hasIndex": 2,
-                                    "length": 12
-                                }
-                            }
-                        ],
-                        "allowsDuplicates": false,
-                        "arrayBase": 1,
-                        "commentPrefix": "#",
-                        "hasHeader": true,
-                        "headerRowCount": 27,
-                        "skipInitialSpace": true,
-                        "isDelimited": false,
-                        "isFixedWidth": true
-                    }
+                    "arrayBase": 1,
+                    "commentPrefix": "#",
+                    "hasHeader": true,
+                    "headerRowCount": 27,
+                    "skipInitialSpace": true,
+                    "isDelimited": false,
+                    "isFixedWidth": true
                 }
             ],
             "schema:measurementTechnique": [
@@ -271,7 +265,7 @@
                 "schema:additionalProperty": [
                     {
                         "@type": "schema:PropertyValue",
-                        "schema:propertyID":  "xas:pressure",
+                        "schema:propertyID": "xas:pressure",
                         "schema:description": "extrinsic properties of measurement environment--temperature, pressure, e-field, mag-field.  have to check magnetic_moment, electrochemical_potential",
                         "schema:value": 3567,
                         "schema:unitText": "KPa"
@@ -323,7 +317,7 @@
                         },
                         {
                             "@type": "schema:PropertyValue",
-                            "schema:propertyID":  "xas:xray_source",
+                            "schema:propertyID": "xas:xray_source",
                             "schema:value": "APS bending magnet"
                         }
                     ]
@@ -338,12 +332,12 @@
                         "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
                     ],
                     "schema:name": "Na2SeO4",
-                    "schema:identifier":"igsn:10.6620/357lkj",
+                    "schema:identifier": "igsn:10.6620/357lkj",
                     "schema:description": "physical properties of sample: ph, eh, volume, porosity, density, concentration, resistivity, viscosity, crystal structure, opacity from xdi list...",
                     "schema:additionalProperty": [
                         {
                             "@type": "schema:PropertyValue",
-                            "schema:propertyID":"xas:porosity",
+                            "schema:propertyID": "xas:porosity",
                             "schema:value": 27,
                             "schema:unitText": "percent"
                         },
@@ -361,7 +355,7 @@
                             "@type": "schema:PropertyValue",
                             "schema:propertyID": "nxs:Field/NXsample/mass",
                             "schema:value": "10",
-                          "schema:unitText":"mg" 
+                            "schema:unitText": "mg"
                         },
                         {
                             "@type": "schema:PropertyValue",
@@ -388,7 +382,7 @@
             },
             "schema:variableMeasured": [
                 {
-                    "@id": "xas:monochromatorEnergy",
+                    "@id": "xas:monochromatorEnergyVariable",
                     "@type": [
                         "InstanceVariable",
                         "schema:PropertyValue"
