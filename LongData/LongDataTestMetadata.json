@@ -1,0 +1,185 @@
+{
+    "@context": {
+        "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "schema": "https://schema.org/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "spdx": "http://spdx.org/rdf/terms#",
+        "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "time": "http://www.w3.org/2006/time#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xas": "http://www.cdi4exas.org/",
+        "ex": "https://example.org/"
+    },
+    "@id": "ex:nwis.001",
+    "@type": [
+        "schema:Dataset",
+        "cdi:LongDataset"
+    ],
+    "schema:name": "test with long format, simple water quality data",
+    "schema:contentUrl": "",
+    "schema:description": "",
+    "schema:identifier": "https://doi.org/10.xxxxx/nwis_q347qh5",
+    "cdi:isStructuredBy": {
+        "@id": "ex:testLongStructure_4808",
+        "@type": "cdi:LongDataStructure",
+        "cdi:has_DataStructureComponent": [
+            {
+                "@id": "ex:identifier_component_e54763",
+                "@type": "cdi:IdentifierComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultIdentifier_variable"}
+            },
+            {
+                "@id": "ex:characteristicnamecomponent_57",
+                "@type": "cdi:VariableDescriptorComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_Characteristic_Variable"},
+                "cdi:refersTo": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:resultmeasurecomponent_4376",
+                "@type": "cdi:VariableValueComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultMeasure_variable"}
+            }
+        ],
+        "allowsDuplicates": false
+    },
+    "schema:variableMeasured": [
+        {
+            "@id": "ex:ResultIdentifier_Variable",
+            "@type": [
+                "cdi:InstancrVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultIdentifier",
+            "schame:alternateName": ["Result Identifier"],
+            "schema:propertyID": "",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "uses": "",
+            "name": "ResultIdentifier",
+            "displayLabel": "Result identifier"
+        },
+        {
+            "@id": "ex:ResultMeasure_Variable",
+            "@type": [
+                "cdi:ReferenceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultMeasureValue",
+            "schema:alternateName": "ResultMeasureValue",
+            "schema:propertyID": "",
+            "schema:minValue": 0.01,
+            "schema:maxValue": 14.07,
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "uses": "",
+            "name": "ResultMeasureValue",
+            "displayLabel": "Result measure value"
+        },
+        {
+            "@id": "ex:_Characteristic_Variable",
+            "@type": [
+                "cdi:DescriptorVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:propertyID": "",
+            "schema:name": "CharacteristicName",
+            "schema:alternateName": "Characteristic Name",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "uses": "",
+            "identifier": "",
+            "name": "CharacteristicName",
+            "displayLabel": "Characteristic name",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:DescriptorValueDomain",
+                "@id": "ex:characteristicsSubstantiveDomain_547jh",
+                "cdi:takeValuesFrom": {
+                    "@type": "cdi:enumerationDomain",
+                    "@id": "ex:characteristicDomain_346",
+                    "description": "cdi model range is cdi:Concept; cdi:InstanceVariable is transitive subclass of cdi:Concept; have to assume that cdi:name on instance variable is the string value that appears in the DescriptorVariable field",
+                    "cdi:isDefinedBy": [
+                        {"@id": "ex:Nitrogen_Variable"},
+                        {"@id": "ex:Nitrate_Variable"},
+                        {"@id": "ex:OrothoPhosphate_Variable"}
+                    ]
+                }
+            }
+        },
+        {
+            "@id": "ex:Nitrogen_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrogen",
+            "schema:alternateName": "Nitrogen concentration",
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrogen",
+            "cdi:displayLabel": "Nitrogen concentration"
+        },
+        {
+            "@id": "ex:Nitrate_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate",
+            "cdi:displayLabel": "Nitrate concentration"
+        },
+        {
+            "@id": "ex:OrothoPhosphate_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Orthophosphate"
+        }
+    ],
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload",
+                "cdi:TabularTextDataset"
+            ],
+            "schema:contentUrl": "https://github.com/CDIF/integrationPublic/TestCDIMetadata/LongDataTest.json",
+            "schema:description": "testing serialization for simple long data with three columns. Water Quality data extracted from USGSN NSWIS",
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:algorithm": "spdx:checksumAlgorithm_md5",
+                "spdx:checksumValue": "0BA77A348"
+            },
+            "schema:contentSize": "0.1 Mb",
+            "schema:encodingFormat": ["text/csv"],
+            "dcterms:conformsTo": [],
+            "cdi:has_LocatorMapping": [
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultIdentifier_Variable"},
+                    "cdi:locator": "ResultIdentifier",
+                    "cdi:index": 0
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Characteristic_Variable"},
+                    "cdi:locator": "CharacteristicName",
+                    "cdi:index": 1
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultMeasure_Variable"},
+                    "cdi:locator": "ResultMeasureValue",
+                    "cdi:index": 2
+                }
+            ],
+            "cdi:allowsDuplicates": false,
+            "cdi:arrayBase": 0,
+            "cdi:commentPrefix": "#",
+            "cdi:delimiter": "|",
+            "cdi:hasHeader": true,
+            "headerRowCount": 1,
+            "skipInitialSpace": true,
+            "isDelimited": true,
+            "isFixedWidth": false
+        }
+    ]
+}

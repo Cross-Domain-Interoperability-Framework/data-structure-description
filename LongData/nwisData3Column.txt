@@ -1,0 +1,8 @@
+ResultIdentifier | CharacteristicName | ResultMeasureValue
+ NWIS-96934881     | Nitrogen           | 14.07               
+ NWIS-96936145     | Nitrate            | 2.53                
+ NWIS-96936147     | Orthophosphate     | 0.031               
+ NWIS-96936148     | Orthophosphate     | 0.01                
+ NWIS-96936610     | Nitrate            | 11.2                
+ NWIS-97019203     | Nitrogen           | 14.07               
+ NWIS-47324265     | Nitrate            | 6.54    
