@@ -1,4 +1,6 @@
-Ref Flavio's diagram https://drive.google.com/drive/folders/1qd-yPJ9XIupPj4AO5ge2W9b-kLLo_Ydc
+Ref Flavio's diagram https://drive.google.com/file/d/1-ZyZ08-kiLWHoLjpbiRcpPMi8DFWmEVA
+
+/view?usp=drive_link
 
 
 DataStore
@@ -11,6 +13,8 @@ Dataset:
 
 PhysicalDatasetStructure:
 	-specification-- we've been using dcterms:conformsTo to indicate specifications used by the distribution (physicalDataset) implementation.
+	
+
 	
 DataStructureComponent--
 	? I'm not clear on the use cases for 'semantic' property.  I guess specialization is used to refine roles in more detail that 'Measure' or 'Dimension'.  Is there a SpecializationRole vocabulary somewhere? Looks like it generalizes GeoRole (geographic location?) and TimeRole (temporalExtent, publication, creation, validDate...?)
