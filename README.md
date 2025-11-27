@@ -1,5 +1,5 @@
-# CDIF Data integration profile 
-Public documents for development of CDIF data integration profile.
+# CDIF Data Structure Description 
+Properties for documentation of the internal structure of data sets, including variables, but excluding enumerated value domains.
 
 **ExampleData** folder contains various data files for testing CDI-DDI JSON-LD documentation using CDIF integration profile. 
 
