@@ -83,7 +83,25 @@ CharacteristicName is a Descriptor Variable (cdi:DescriptorVariable), and Result
 Descriptor Variables take their values from a Descriptor Value Domain (cdi:DescriptorValueDomain) that specifies a set of codes (strings) that identify logical Instance Variables in the presentation. The code in the Descriptor Component indicates which Instance Variable the value provided in the corresponding Reference Variable should be associated with. Thus, in the example above, when the CharacteristicName column has a value of ‘Nitrogen’, we know that the value in the ResultMeasureValue column is a measurement of Nitrogen concentration, associated with the 'Nitrogen' InstanceVariable.
 
 ### Serialization of Long Data Structure
-Here is a 
+In the schema.org implementation for CDIF (see [example](https://github.com/Cross-Domain-Interoperability-Framework/data-structure-description/blob/main/LongData/LongDataTestMetadata.json)), all variables are defined in the schema:variableMeasured section. DescriptorVariables have an associated cdi:enumerationDomain that provides the mapping from the DescriptorVariable (CharacteristicName) values to the associated InstanceVariable. The InstanceVariable cdi:name must match the string that appears in the DescriptorVariable (CharacteristicName) value.
 
+The cdi:LongDataStructure defines three components-- an IdentifierComponent, the VariableDescriptorComponent, and VariableValueComponent, that are linked (cdi:isDefinedBy) the appropriate variable defined in schema:variableMeasured element. The array in schema:variableMeasured thus plays the role of cdi:LogicalRecord. 
+
+The physical dataset structure description is in the schema:distribution object, typed as both "schema:DataDownload" and "cdi:TabularTextDataset". because from the physical structure point of view, the data are just a three column tabular text dataset. There is one header row with the column names. The cdi:LocatorMapping associates column name (cdi:locator) and column number (cdi:index) with the appropriate variable.
+
+A machine agent using this metadata to parse a data file would first look at the cdi:LocatorMapping to determine which column is the descriptor and which is contains the result values. The access the descriptor variable definition to get the mapping from descriptor string values to instance variable. Given this information, the table could be read processing each row as appropriate for the InstanceVariable result value it contains.
 
 ## Attribute components
+Next, consider adding a unit of measure for each result value. The updated table looks like this:
+
+| ResultIdentifier | CharacteristicName | ResultMeasureValue | MeasureUnitCode }
+|-----------------|-----------------|----------|
+| NWIS-96934881   | Nitrogen         | 14.07     | mg/l |
+| NWIS-96936145   | Nitrate          | 2.53      | mg/l as N |
+| NWIS-96936147   | Orthophosphate   | 0.031     | mg/l as PO4 |
+| NWIS-96936148   | Orthophosphate   | 0.01      | mg/l as P 
+| NWIS-96936610   | Nitrate          | 11.2      | mg/l as NO3 |
+| NWIS-97019203   | Nitrogen         | 14.07     | mg/l |
+| NWIS-47324265   | Nitrate          | 6.54      | mg/l as N |
+
+The MeasureUnitCode is an attribute of the ResultMeasureVallue (we'll ignore for now the question of whether the 'as ...' should be part of the characteristicName...). So we need to add a new InstanceVariable for MeasureUnitCode, 
