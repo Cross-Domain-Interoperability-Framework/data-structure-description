@@ -39,6 +39,12 @@
                 "@id": "ex:resultmeasurecomponent_4376",
                 "@type": "cdi:VariableValueComponent",
                 "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultMeasure_variable"}
+            },
+            {
+                "@id": "ex:unitOfMeasurecomponent_45u7j",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:UnitOfMeasure_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasurecomponent_4376"}
             }
         ],
         "allowsDuplicates": false
@@ -133,6 +139,27 @@
             ],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Orthophosphate"
+        },
+        {
+            "@id": "ex:UnitOfMeasure_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "MeasureUnitCode",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:unitOfMeasureDomain_3558u3",
+                "description": "Domain should be a skos:ConceptScheme; here assume the URI identify skos concepts, but add #notation because the values in the data are the 'codes' (skos:notation) in the vocabulary.  It might make sense to use schema.org defined term set?",
+                "cdi:isDefinedBy": [
+                    {"@id": "ex:https://vocab.org/uom/mgl#notation"},
+                    {"@id": "ex:https://vocab.org/uom/mglasN#notation"},
+                    {"@id": "ex:https://vocab.org/uom/mglasPO4#notation"},
+                    {"@id": "ex:https://vocab.org/uom/mglasP#notation"},
+                    {"@id": "ex:https://vocab.org/uom/mglasNO3#notation"}
+                ]
+            }
         }
     ],
     "schema:distribution": [
@@ -169,6 +196,12 @@
                     "cdi:formats": {"@id": "ex:ResultMeasure_Variable"},
                     "cdi:locator": "ResultMeasureValue",
                     "cdi:index": 2
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:UnitOfMeasure_Variable"},
+                    "cdi:locator": "MeasureUnitCode",
+                    "cdi:index": 3
                 }
             ],
             "cdi:allowsDuplicates": false,
