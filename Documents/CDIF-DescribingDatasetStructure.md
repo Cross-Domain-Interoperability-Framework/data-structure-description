@@ -63,14 +63,14 @@ In hierarchical data structures like JSON, YAML, or XML, the value of a variable
 In a long data structure, the variable quantified by a Measure Component in a data set is specified by the value of another variable. Typically, long data are serialized in delimited tabular text formats, but the interpretation of the columns is different from wide data structure. The structure is described in terms of logical variables that are bound to the observation instance, and presentation variables that are bound to the columns in the data.  Here is an example using some water quality data:
 
 | ResultIdentifier | CharacteristicName | ResultMeasureValue |
-|------------------|--------------------|---------------------|
-| NWIS-96934881     | Nitrogen           | 14.07               |
-| NWIS-96936145     | Nitrate            | 2.53                |
-| NWIS-96936147     | Orthophosphate     | 0.031               |
-| NWIS-96936148     | Orthophosphate     | 0.01                |
-| NWIS-96936610     | Nitrate            | 11.2                |
-| NWIS-97019203     | Nitrogen           | 14.07               |
-| NWIS-47324265     | Nitrate            | 6.54                |
+|------------------|--------------------|--------------------|
+| NWIS-96934881     | Nitrogen           | 14.07             |
+| NWIS-96936145     | Nitrate            | 2.53              |
+| NWIS-96936147     | Orthophosphate     | 0.031             |
+| NWIS-96936148     | Orthophosphate     | 0.01              |
+| NWIS-96936610     | Nitrate            | 11.2              |
+| NWIS-97019203     | Nitrogen           | 14.07             |
+| NWIS-47324265     | Nitrate            | 6.54              |
 
 The ResultIdentifier column identifies each observation result; the CharacteristicName identifies the chemical constituent that awas measured, and the ResultMeasureValue is the observation result (we'll assume for the time being the units of measure are constant mg/l and defined elsewhere). 
 
@@ -104,4 +104,9 @@ Next, consider adding a unit of measure for each result value. The updated table
 | NWIS-97019203   | Nitrogen         | 14.07     | mg/l |
 | NWIS-47324265   | Nitrate          | 6.54      | mg/l as N |
 
-The MeasureUnitCode is an attribute of the ResultMeasureVallue (we'll ignore for now the question of whether the 'as ...' should be part of the characteristicName...). So we need to add a new InstanceVariable for MeasureUnitCode, 
+The MeasureUnitCode is an attribute of the ResultMeasureVallue (we'll ignore for now the question of whether the 'as ...' should be part of the characteristicName...). So we need to 
+1. add a new InstanceVariable for MeasureUnitCode in the schema:variableMeasuredSection
+1. add a cdi:AttributeComponent in the cdi:isStructuredBy section
+1. add a cdi:has_LocatorMapping indicating the column name and index for the measurement units property.
+
+
