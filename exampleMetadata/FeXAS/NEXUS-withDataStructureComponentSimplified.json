@@ -1,0 +1,286 @@
+{
+    "@id": "xas:fe_c3d.001",
+    "@type": [
+        "schema:Dataset",
+        "schema:Product",
+        "cdi:Dataset"
+    ],
+    "schema:name": "X-ray fluorescence spectra for K edge, Iron c3d",
+    "schema:contentUrl": "https://millenia.cars.aps.anl.gov/nxxas/MultiSpectrumFiles/FeXAS.nxs",
+    "schema:description": "HDF5 file declared to conform with NEXUS NXxas application definition; the described data is one NEXUS entry in this file, which contains 26 total spectra, each as separate NEXUS entry",
+    "schema:identifier": "https://doi.org/10.xxxxx/fe_c3d001",
+    "cdi:isStructuredBy": {
+        "@id": "ex:testComplexStructure_346",
+        "@type": "cdi:DimensionalDataStructure",
+        "cdi:has_DataStructureComponent": [
+            {
+                "@type": "DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "xas:Monochromator_Energy_Variable"}
+            },
+            {
+                "@type": "MeasureComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "xas:Incident_Intensity_Variable"}
+            },
+            {
+                "@type": "MeasureComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "xas:Fluorescence_Intensity_Variable"}
+            },
+            {
+                "@type": "MeasureComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "xas:Fluorescence_Absorption_Coefficient_Variable"}
+            },
+            {
+                "@type": "cdi:WideDataStructure",
+                "@id": "xas:nxXasRawData",
+                "cdifq:nRows": 443,
+                "cdifq:nColumns": 9,
+                "schema:name": "data",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "xas:Raw_Data_Variable"},
+                "schema:description": "this is the raw data in an array, represented here as a 35 column table with 443 rows",
+                "cdi:has_DataStructureComponent": [
+                    {
+                        "@type": "cdi:IdentifierComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:Monochromator_Energy_Variable",
+                        "cdi:has_ValueMappingPosition": 0,
+                        "cdi:name": "energy"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:tscaler_Variable",
+                        "cdi:has_ValueMappingPosition": 1,
+                        "cdi:name": "tscaler"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:Incident_Intensity_Variable",
+                        "cdi:has_ValueMappingPosition": 2,
+                        "cdi:name": "i0"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:i1_Variable",
+                        "cdi:has_ValueMappingPosition": 3,
+                        "cdi:name": "i1"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:i2_Variable",
+                        "cdi:has_ValueMappingPosition": 4,
+                        "cdi:name": "i2"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:sum_outputcounts_Variable",
+                        "cdi:has_ValueMappingPosition": 5,
+                        "cdi:name": "sum_outputcounts"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:sum_fe_ka_Variable",
+                        "cdi:has_ValueMappingPosition": 6,
+                        "cdi:name": "sum_fe_ka"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:outputcounts_mcal_Variable",
+                        "cdi:has_ValueMappingPosition": 7,
+                        "cdi:name": "outputcounts_mca1"
+                    },
+                    {
+                        "@type": "cdi:MeasureComponent",
+                        "cdi:isDefinedBy_RepresentedVariable": "xas:outputcounts_mca2_Variable",
+                        "cdi:has_ValueMappingPosition": 8,
+                        "cdi:name": "outputcounts_mca2"
+                    }
+                ]
+            }
+        ],
+        "allowsDuplicates": false
+    },
+    "schema:variableMeasured": [
+        {
+            "@id": "xas:Monochromator_Energy_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "energy",
+            "schame:alternateName": [
+                "Monochromator energy",
+                "mono energy"
+            ],
+            "schema:propertyID": "xas:Monochromator_Energy",
+            "schema:unitText": "eV",
+            "schema:minValue": 7052,
+            "schema:maxValue": 7380.83,
+            "identifier": "should be URI from nexusFormat organization",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "simpleUnitOfMeasure": "eV",
+            "uses": "xas:Monochromator_Energy",
+            "name": "energy",
+            "displayLabel": "monochromator energy"
+        },
+        {
+            "@id": "xas:Incident_Intensity_Variable",
+            "@type": [
+                "InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "i0",
+            "schema:alternateName": "Monitor intensity",
+            "schema:propertyID": "xas:Incident_Intensity",
+            "schema:unitText": "counts",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#positiveInteger",
+            "uses": "xas:Incident_Intensity",
+            "name": "i0",
+            "displayLabel": "monitor intensity"
+        },
+        {
+            "@id": "xas:Fluorescence_Intensity_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:propertyID": "xas:Fluorescence_Intensity",
+            "schema:unitText": "counts",
+            "schema:name": "ifluor",
+            "schema:alternateName": "fluorescence intensity",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "uses": "xas:Fluorescence_Intensity",
+            "identifier": "should be URI from nexusFormat organization",
+            "name": "ifluor",
+            "displayLabel": "fluorescence intensity"
+        },
+        {
+            "@id": "xas:Raw_Data_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "data",
+            "schema:alternateName": "raw data array",
+            "name": "data",
+            "displayLabel": "raw data array"
+        },
+        {
+            "@id": "xas:tscaler_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "tscaler"
+        },
+        {
+            "@id": "xas:i1_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "i1"
+        },
+        {
+            "@id": "xas:i2_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "i2"
+        },
+        {
+            "@id": "xas:sum_outputcounts_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#positiveinteger",
+            "cdi:name": "sum_outputcounts"
+        },
+        {
+            "@id": "xas:sum_fe_ka_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "sum_fe_ka"
+        },
+        {
+            "@id": "xas:outputcounts_mca1_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#positiveinteger",
+            "cdi:name": "outputcounts_mca1"
+        },
+        {
+            "@id": "xas:outputcounts_mca2_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#positiveinteger",
+            "cdi:name": "outputcounts_mca2"
+        }
+    ],
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload",
+                "cdi:StructuredDataset"
+            ],
+            "schema:contentUrl": "https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
+            "schema:description": "Distribution = PhysicalDataSet text file conformant with XDI specification",
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:algorithm": "spdx:checksumAlgorithm_md5",
+                "spdx:checksumValue": "0BA77A348"
+            },
+            "schema:contentSize": "2.6 Mb",
+            "schema:encodingFormat": ["application/x-hdf5"],
+            "dcterms:conformsTo": [
+                "nexus v2024.02",
+                "NXxas"
+            ],
+            "cdi:allowsDuplicates": false,
+            "cdi:has_LocatorMapping": [
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "xas:Monochromator_Energy_Variable"},
+                    "cdi:locator": "Fe_c3d.001/instrument/monochromator/energy",
+                    "cdifq:length": 443
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "xas:Incident_Intensity_Variable"},
+                    "cdi:locator": "Fe_c3d.001/instrument/i0/data"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "xas:Fluorescence_Intensity_Variable"},
+                    "cdi:locator": "Fe_c3d.001/instrument/ifluor/data"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "xas:Raw_Data_Variable"},
+                    "cdi:locator": "Fe_c3d.001/scan/data",
+                    "cdifq:shape": [
+                        443,
+                        9
+                    ]
+                }
+            ],
+            "allowsDuplicates": false,
+            "arrayBase": 0,
+            "commentPrefix": "#",
+            "hasHeader": true,
+            "headerRowCount": 27,
+            "skipInitialSpace": true,
+            "isDelimited": false,
+            "isFixedWidth": true
+        }
+    ]
+}

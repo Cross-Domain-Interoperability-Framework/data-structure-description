@@ -1,0 +1,703 @@
+{
+    "@context": {
+        "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "schema": "https://schema.org/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "spdx": "http://spdx.org/rdf/terms#",
+        "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "time": "http://www.w3.org/2006/time#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xas": "http://www.cdi4exas.org/",
+        "ex": "https://example.org/"
+    },
+    "@id": "ex:nwis.001",
+    "@type": [
+        "schema:Dataset",
+        "cdi:LongDataset"
+    ],
+    "schema:name": "NWIS water quality data for Pima County, Arizona",
+    "schema:description": " Water Quality data extracted from USGSN NSWIS. results use cdi descriptor, value pattern. Also have context information for station and activity, as well as method metadata for each result. ",
+    "schema:identifier": "https://doi.org/10.xxxxx/nwis_098bo",
+    "cdi:isStructuredBy": {
+        "@id": "ex:testLongStructure_w35u4",
+        "@type": "cdi:LongDataStructure",
+        "cdi:has_DataStructureComponent": [
+            {
+                "@id": "ex:identifier_component_e54763",
+                "@type": "cdi:IdentifierComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultIdentifier_variable"}
+            },
+            {
+                "@id": "ex:characteristic_component_57",
+                "@type": "cdi:VariableDescriptorComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_Characteristic_Variable"},
+                "cdi:refersTo": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:characteristicuri_component_352y5",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_CharacteristicURI_Variable"},
+                "cdi:qualifies": {"@id": "ex:characteristiccomponent_57"}
+            },
+            {
+                "@id": "ex:resultmeasure_component_4376",
+                "@type": "cdi:VariableValueComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultMeasure_variable"}
+            },
+            {
+                "@id": "ex:unitofmeasure_component_45u7j",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:UOM_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:activityidentifier_component_45h4h",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityIdentifier_variable"}
+            },
+            {
+                "@id": "ex:activitydatetime_component_97568j",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityDateTime_variable"}
+            },
+            {
+                "@id": "ex:projectname_component_45u7j",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ProjectName_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifiercomponent_45h4h"}
+            },
+            {
+                "@id": "ex:activityconductingorg_component_3273f",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityConductingOrganizationText_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifiercomponent_45h4h"}
+            },
+            {
+                "@id": "ex:monitoringlocationidentifier_component_06786k",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:MonitoringLocationIdentifier_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifiercomponent_45h4h"}
+            },
+            {
+                "@id": "ex:latitude_component_354uj4",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Latitude_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifiercomponent_06786k"}
+            },
+            {
+                "@id": "ex:longitude_component_4u6ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Longitude_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifiercomponent_06786k"}
+            },
+            {
+                "@id": "ex:samplecollectionmethod_component_r67o6lk",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:SampleCollectionMethod_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifiercomponent_45h4h"}
+            },
+            {
+                "@id": "ex:resultsamplefraction_component_654uj",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultSampleFractionText_Variable"}
+            },
+            {
+                "@id": "ex:resultvaluetype_component_465kjk",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultValueTypeName_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:resultcomment_component_765ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultCommentText_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:depthmeasure_component_4u6ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:DepthMeasure_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifiercomponent_06786k"}
+            },
+            {
+                "@id": "ex:resultanalyticalmethod_component_44uu",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultAnalyticalMethod_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasurecomponent_4376"}
+            },
+            {
+                "@id": "ex:methodname_component_5ek7u",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:MethodName_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultanalyticalmethod_44uu"}
+            },
+            {
+                "@id": "ex:lastupdated_component_4u6tt",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:LastUpdated_Variable"},
+                "cdi:qualifies": {"@id": "ex:identifier_component_e54763"}
+            }
+        ],
+        "allowsDuplicates": false
+    },
+    "schema:variableMeasured": [
+        {
+            "@id": "ex:ResultIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultIdentifier",
+            "schame:alternateName": ["Result Identifier"],
+            "schema:propertyID": "",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "uses": "",
+            "name": "ResultIdentifier",
+            "displayLabel": "Result identifier"
+        },
+        {
+            "@id": "ex:ResultMeasure_Variable",
+            "@type": [
+                "cdi:ReferenceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultMeasureValue",
+            "schema:alternateName": "ResultMeasureValue",
+            "schema:propertyID": "",
+            "schema:minValue": 0.01,
+            "schema:maxValue": 14.07,
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "uses": "",
+            "name": "ResultMeasureValue",
+            "displayLabel": "Result measure value"
+        },
+        {
+            "@id": "ex:UOM_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "UOM"
+        },
+        {
+            "@id": "ex:_Characteristic_Variable",
+            "@type": [
+                "cdi:DescriptorVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:propertyID": "",
+            "schema:name": "Characteristic",
+            "schema:alternateName": "Characteristic Name",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "uses": "",
+            "identifier": "",
+            "name": "Characteristic",
+            "displayLabel": "Characteristic name",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:DescriptorValueDomain",
+                "@id": "ex:characteristicsSubstantiveDomain_547jh",
+                "cdi:takeValuesFrom": {
+                    "@type": "cdi:enumerationDomain",
+                    "@id": "ex:characteristicDomain_346",
+                    "description": "cdi model range is cdi:Concept; cdi:InstanceVariable is transitive subclass of cdi:Concept; have to assume that cdi:name on instance variable is the string value that appears in the DescriptorVariable field",
+                    "cdi:isDefinedBy": [
+                        {"@id": "ex:nitrogen_variable"},
+                        {"@id": "ex:nitrate_variable"},
+                        {"@id": "ex:orthophosphateasp_variable"},
+                        {"@id": "ex:ammoniaandammoniumasn_variable"},
+                        {"@id": "ex:ammoniaandammoniumasnh4_variable"},
+                        {"@id": "ex:ammonia-nitrogen_variable"},
+                        {"@id": "ex:kjeldahlnitrogen_variable"},
+                        {"@id": "ex:nitratenitrite_variable"},
+                        {"@id": "ex:nitratenitriteasn_variable"},
+                        {"@id": "ex:nitrateasn_variable"},
+                        {"@id": "ex:nitrateasno3_variable"},
+                        {"@id": "ex:nitriteasn_variable"},
+                        {"@id": "ex:nitriteasno2_variable"},
+                        {"@id": "ex:nitrogenmixedforms_variable"},
+                        {"@id": "ex:organicnitrogen_variable"},
+                        {"@id": "ex:orthophosphateaspo4_variable"},
+                        {"@id": "ex:phosphorus_variable"},
+                        {"@id": "ex:phosphorusasp_variable"}
+                    ]
+                }
+            }
+        },
+        {
+            "@id": "ex:ActivityIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ActivityIdentifier"
+        },
+        {
+            "@id": "ex:ActivityDateTime_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ActivityDateTime"
+        },
+        {
+            "@id": "ex:ProjectName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ProjectName"
+        },
+        {
+            "@id": "ex:ActivityConductingOrganization_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ActivityConductingOrganizationText"
+        },
+        {
+            "@id": "ex:MonitoringLocationIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "MonitoringLocationIdentifier"
+        },
+        {
+            "@id": "ex:Latitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Latitude"
+        },
+        {
+            "@id": "ex:Longitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Longitude"
+        },
+        {
+            "@id": "ex:SampleCollectionMethod_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "SampleCollectionMethod"
+        },
+        {
+            "@id": "ex:CharacteristicURI_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "CharacteristicURI"
+        },
+        {
+            "@id": "ex:ResultSampleFraction_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ResultSampleFractionText"
+        },
+        {
+            "@id": "ex:ResultValueTypeName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ResultValueTypeName"
+        },
+        {
+            "@id": "ex:ResultComment_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ResultCommentText"
+        },
+        {
+            "@id": "ex:DepthMeasure_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "DepthMeasure"
+        },
+        {
+            "@id": "ex:ResultAnalyticalMethod_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "ResultAnalyticalMethod"
+        },
+        {
+            "@id": "ex:MethodName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "MethodName"
+        },
+        {
+            "@id": "ex:LastUpdated_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "LastUpdated"
+        },
+        {
+            "@id": "ex:nitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrogen",
+            "schema:alternateName": "Nitrogen concentration",
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrogen",
+            "cdi:displayLabel": "Nitrogen concentration"
+        },
+        {
+            "@id": "ex:nitrate_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate",
+            "cdi:displayLabel": "Nitrate concentration"
+        },
+        {
+            "@id": "ex:orthophosphateasp_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Orthophosphate as P"
+        },
+        {
+            "@id": "ex:ammoniaandammoniumasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium as N",
+            "cdi:displayLabel": "Ammonia and ammonium as nitrogen (N)"
+        },
+        {
+            "@id": "ex:ammoniaandammoniumasnh4_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium NH4",
+            "cdi:displayLabel": "Ammonia and ammonium as NH4"
+        },
+        {
+            "@id": "ex:ammonia-nitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia-nitrogen",
+            "cdi:displayLabel": "Ammonia-nitrogen"
+        },
+        {
+            "@id": "ex:kjeldahlnitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Kjeldahl nitrogen",
+            "cdi:displayLabel": "Kjeldahl nitrogen"
+        },
+        {
+            "@id": "ex:nitratenitrite_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate + Nitrite",
+            "cdi:displayLabel": "Nitrate + Nitrite"
+        },
+        {
+            "@id": "ex:nitratenitriteasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate + Nitrite as N",
+            "cdi:displayLabel": "Nitrate + Nitrite as nitrogen (N)"
+        },
+        {
+            "@id": "ex:nitrateasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate as N",
+            "cdi:displayLabel": "Nitrate as nitrogen (N)"
+        },
+        {
+            "@id": "ex:nitrateasno3_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate asNO3",
+            "cdi:displayLabel": "Nitrate as NO3"
+        },
+        {
+            "@id": "ex:nitriteasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrite as N",
+            "cdi:displayLabel": "Nitrite as N"
+        },
+        {
+            "@id": "ex:nitriteasno2_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrite asNO2",
+            "cdi:displayLabel": "Nitrite as NO2"
+        },
+        {
+            "@id": "ex:nitrogenmixedforms_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrogen, mixed forms",
+            "cdi:displayLabel": "Nitrogen, mixed forms"
+        },
+        {
+            "@id": "ex:organicnitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Organic Nitrogen",
+            "cdi:displayLabel": "Organic Nitrogen"
+        },
+        {
+            "@id": "ex:orthophosphateaspo4_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Orthophosphate asPO4",
+            "cdi:displayLabel": "Orthophosphate as PO4"
+        },
+        {
+            "@id": "ex:phosphorus_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Phosphorus",
+            "cdi:displayLabel": "Phosphorus"
+        },
+        {
+            "@id": "ex:phosphorusasp_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Phosphorus as P",
+            "cdi:displayLabel": "Phosphorus as P"
+        }
+    ],
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload",
+                "cdi:TabularTextDataset"
+            ],
+            "schema:contentUrl": "https://github.com/CDIF/integrationPublic/TestCDIMetadata/NWISWaterQualityData.csv",
+            "schema:description": "testing serialization for long data with 19 columns.",
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:algorithm": "spdx:checksumAlgorithm_md5",
+                "spdx:checksumValue": "0BFA43A348"
+            },
+            "schema:contentSize": "0.154 Mb",
+            "schema:encodingFormat": ["text/csv"],
+            "dcterms:conformsTo": [],
+            "cdi:has_LocatorMapping": [
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultIdentifier_Variable"},
+                    "cdi:locator": "ResultIdentifier",
+                    "cdi:index": 0
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultMeasure_Variable"},
+                    "cdi:locator": "ResultMeasureValue",
+                    "cdi:index": 1
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:UOM_Variable"},
+                    "cdi:locator": "UOM",
+                    "cdi:index": 2
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Characteristic_Variable"},
+                    "cdi:locator": "Characteristic",
+                    "cdi:index": 3
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_CharacteristicURI_Variable"},
+                    "cdi:locator": "CharacteristicURI",
+                    "cdi:index": 4
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityIdentifier_Variable"},
+                    "cdi:locator": "ActivityIdentifier",
+                    "cdi:index": 5
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityDateTime_Variable"},
+                    "cdi:locator": "ActivityDateTime",
+                    "cdi:index": 6
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ProjectName_Variable"},
+                    "cdi:locator": "ProjectName",
+                    "cdi:index": 7
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityConductingOrganization_Variable"},
+                    "cdi:locator": "ActivityConductingOrganizationText",
+                    "cdi:index": 8
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_MonitoringLocationIdentifier_Variable"},
+                    "cdi:locator": "MonitoringLocationIdentifier",
+                    "cdi:index": 9
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Latitude_Variable"},
+                    "cdi:locator": "Latitude",
+                    "cdi:index": 10
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Longitude_Variable"},
+                    "cdi:locator": "Longitude",
+                    "cdi:index": 11
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_SampleCollectionMethod_Variable"},
+                    "cdi:locator": "SampleCollectionMethod",
+                    "cdi:index": 12
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultSampleFraction_Variable"},
+                    "cdi:locator": "ResultSampleFractionText",
+                    "cdi:index": 13
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultValueTypeName_Variable"},
+                    "cdi:locator": "ResultValueTypeName",
+                    "cdi:index": 14
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultComment_Variable"},
+                    "cdi:locator": "ResultCommentText",
+                    "cdi:index": 15
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_DepthMeasure_Variable"},
+                    "cdi:locator": "DepthMeasure",
+                    "cdi:index": 16
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultAnalyticalMethod_Variable"},
+                    "cdi:locator": "ResultAnalyticalMethod",
+                    "cdi:index": 17
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_MethodName_Variable"},
+                    "cdi:locator": "MethodName",
+                    "cdi:index": 18
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_LastUpdated_Variable"},
+                    "cdi:locator": "LastUpdated",
+                    "cdi:index": 19
+                }
+            ],
+            "cdi:allowsDuplicates": false,
+            "cdi:arrayBase": 0,
+            "cdi:commentPrefix": "#",
+            "cdi:delimiter": ",",
+            "cdi:hasHeader": true,
+            "headerRowCount": 1,
+            "skipInitialSpace": true,
+            "isDelimited": true,
+            "isFixedWidth": false
+        }
+    ]
+}
