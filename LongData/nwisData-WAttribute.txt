@@ -1,9 +1,8 @@
-| ResultIdentifier | CharacteristicName | ResultMeasureValue | MeasureUnitCode }
-|-----------------|-----------------|----------|
-| NWIS-96934881   | Nitrogen         | 14.07     | mg/l |
-| NWIS-96936145   | Nitrate          | 2.53      | mg/l as N |
-| NWIS-96936147   | Orthophosphate   | 0.031     | mg/l as PO4 |
-| NWIS-96936148   | Orthophosphate   | 0.01      | mg/l as P 
-| NWIS-96936610   | Nitrate          | 11.2      | mg/l as NO3 |
-| NWIS-97019203   | Nitrogen         | 14.07     | mg/l |
-| NWIS-47324265   | Nitrate          | 6.54      | mg/l as N |
+ResultIdentifier | CharacteristicName | ResultMeasureValue | MeasureUnitCode 
+ NWIS-96934881   | Nitrogen         | 14.07     | mg/l 
+ NWIS-96936145   | Nitrate          | 2.53      | mg/l as N 
+ NWIS-96936147   | Orthophosphate   | 0.031     | mg/l as PO4 
+ NWIS-96936148   | Orthophosphate   | 0.01      | mg/l as P 
+ NWIS-96936610   | Nitrate          | 11.2      | mg/l as NO3 
+ NWIS-97019203   | Nitrogen         | 14.07     | mg/l 
+ NWIS-47324265   | Nitrate          | 6.54      | mg/l as N 
