@@ -1,0 +1,937 @@
+{
+    "@context": {
+        "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "schema": "http://schema.org/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "spdx": "http://spdx.org/rdf/terms#",
+        "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "time": "http://www.w3.org/2006/time#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xas": "http://www.cdi4exas.org/",
+        "ex": "https://example.org/"
+    },
+    "@id": "ex:nwis.001",
+    "@type": [
+        "schema:Dataset",
+        "cdi:LongDataset"
+    ],
+    "schema:name": "NWIS water quality data for Pima County, Arizona",
+    "schema:description": "Water Quality data extracted from USGS/EPA water quality data portal. Results use cdi descriptor, value pattern; the Characteristic column specifies the analyte reported, with the result in the ResultMeasure. Also have context information for station and activity, as well as method metadata for each result. These are treated as cdi Dimension components, with various Attribute components. The dimensions are Activity (specified by ActivityIdentifier), ActivityDateTime, monitoring location (sampled feature), specified by MonitoringLocationIdentifier;  analyzed sample fraction (total or dissolved) specified by ResultSampleFractionText; Analytical method, specified by ResultAnalyticalMethod. Note that ResultAnalyticalMethod is also considered an attribute of ResultMeasure, and Monitoring location is also considered an attribute of the Activity.",
+    "schema:identifier": "https://doi.org/10.xxxxx/nwis_098bo",
+    "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
+    "cdi:isStructuredBy": {
+        "@id": "ex:testLongStructure_w35u4",
+        "@type": "cdi:LongDataStructure",
+        "cdi:has_DataStructureComponent": [
+            {
+                "@id": "ex:identifier_component_e54763",
+                "@type": "cdi:IdentifierComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultIdentifier_variable"}
+            },
+            {
+                "@id": "ex:characteristic_component_57",
+                "@type": "cdi:VariableDescriptorComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_Characteristic_Variable"},
+                "cdi:refersTo": {"@id": "ex:resultmeasure_component_4376"}
+            },
+            {
+                "@id": "ex:characteristicuri_component_352y5",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_CharacteristicURI_Variable"},
+                "cdi:qualifies": {"@id": "ex:characteristic_component_57"}
+            },
+            {
+                "@id": "ex:resultmeasure_component_4376",
+                "@type": "cdi:VariableValueComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultMeasure_variable"}
+            },
+            {
+                "@id": "ex:unitofmeasure_component_45u7j",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:UOM_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasure_component_4376"}
+            },
+            {
+                "@id": "ex:activityidentifier_component_45h4h",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityIdentifier_variable"}
+            },
+            {
+                "@id": "ex:activitydatetime_component_97568j",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityDateTime_variable"}
+            },
+            {
+                "@id": "ex:projectname_component_45u7j",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ProjectName_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifier_component_45h4h"}
+            },
+            {
+                "@id": "ex:activityconductingorg_component_3273f",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ActivityConductingOrganizationText_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifier_component_45h4h"}
+            },
+            {
+                "@id": "ex:monitoringlocationidentifier_component_06786k",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:MonitoringLocationIdentifier_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifier_component_45h4h"}
+            },
+            {
+                "@id": "ex:monitoringlocationidentifier_component_436umj",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:MonitoringLocationIdentifier_Variable"}
+            },
+            {
+                "@id": "ex:latitude_component_354uj4",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Latitude_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifier_component_06786k"}
+            },
+            {
+                "@id": "ex:longitude_component_4u6ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Longitude_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifier_component_06786k"}
+            },
+            {
+                "@id": "ex:samplecollectionmethod_component_r67o6lk",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:SampleCollectionMethod_Variable"},
+                "cdi:qualifies": {"@id": "ex:activityidentifier_component_45h4h"}
+            },
+            {
+                "@id": "ex:resultsamplefraction_component_654uj",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultSampleFractionText_Variable"}
+            },
+            {
+                "@id": "ex:resultvaluetype_component_465kjk",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultValueTypeName_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasure_component_4376"}
+            },
+            {
+                "@id": "ex:resultcomment_component_765ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultCommentText_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasure_component_4376"}
+            },
+            {
+                "@id": "ex:depthmeasure_component_4u6ju",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:DepthMeasure_Variable"},
+                "cdi:qualifies": {"@id": "ex:monitoringlocationidentifier_component_06786k"}
+            },
+            {
+                "@id": "ex:resultanalyticalmethod_component_44uu",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultAnalyticalMethod_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultmeasure_component_4376"}
+            },
+            {
+                "@id": "ex:resultanalyticalmethod_component_354uj",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:ResultAnalyticalMethod_Variable"}
+            },
+            {
+                "@id": "ex:methodname_component_5ek7u",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:MethodName_Variable"},
+                "cdi:qualifies": {"@id": "ex:resultanalyticalmethod_component_44uu"}
+            },
+            {
+                "@id": "ex:lastupdated_component_4u6tt",
+                "@type": "cdi:AttributeComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:LastUpdated_Variable"},
+                "cdi:qualifies": {"@id": "ex:identifier_component_e54763"}
+            }
+        ],
+        "cdi:allowsDuplicates": false
+    },
+    "schema:variableMeasured": [
+        {
+            "@id": "ex:ResultIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultIdentifier",
+            "schame:alternateName": ["Result Identifier"],
+            "schema:description": "identifier for a single contstituent analysis result; unique in scope of NWIS",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:uses": "",
+            "cdi:name": "ResultIdentifier",
+            "cdi:displayLabel": "Result identifier"
+        },
+        {
+            "@id": "ex:ResultMeasure_Variable",
+            "@type": [
+                "cdi:ReferenceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultMeasureValue",
+            "schema:alternateName": "ResultMeasureValue",
+            "schema:description": "result value for individual analyte indicated by value in the CharacteristicName field",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:minValue": 0.01,
+            "schema:maxValue": 14.07,
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:uses": "",
+            "cdi:name": "ResultMeasureValue",
+            "cdi:displayLabel": "Result measure value"
+        },
+        {
+            "@id": "ex:UOM_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "UOM",
+            "schema:alternateName": "unit of measurement",
+            "schema:description": "string indicatign units of measure for the reported analysis result",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "UOM"
+        },
+        {
+            "@id": "ex:_Characteristic_Variable",
+            "@type": [
+                "cdi:DescriptorVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:description": "Name of the analyte for which the result is reported in the ResultMeasureValue field",
+            "schema:name": "Characteristic",
+            "schema:alternateName": "Characteristic Name",
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "Characteristic",
+            "cdi:displayLabel": "Characteristic name",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:DescriptorValueDomain",
+                "@id": "ex:characteristicsSubstantiveDomain_547jh",
+                "cdi:takeValuesFrom": {
+                    "@type": "cdi:enumerationDomain",
+                    "@id": "ex:characteristicDomain_346",
+                    "description": "cdi model range is cdi:Concept; cdi:InstanceVariable is transitive subclass of cdi:Concept; have to assume that cdi:name on instance variable is the string value that appears in the DescriptorVariable field",
+                    "cdi:isDefinedBy": [
+                        {"@id": "ex:nitrogen_variable"},
+                        {"@id": "ex:nitrate_variable"},
+                        {"@id": "ex:orthophosphateasp_variable"},
+                        {"@id": "ex:ammoniaandammoniumasn_variable"},
+                        {"@id": "ex:ammoniaandammoniumasnh4_variable"},
+                        {"@id": "ex:ammonia-nitrogen_variable"},
+                        {"@id": "ex:kjeldahlnitrogen_variable"},
+                        {"@id": "ex:nitratenitrite_variable"},
+                        {"@id": "ex:nitratenitriteasn_variable"},
+                        {"@id": "ex:nitrateasn_variable"},
+                        {"@id": "ex:nitrateasno3_variable"},
+                        {"@id": "ex:nitriteasn_variable"},
+                        {"@id": "ex:nitriteasno2_variable"},
+                        {"@id": "ex:nitrogenmixedforms_variable"},
+                        {"@id": "ex:organicnitrogen_variable"},
+                        {"@id": "ex:orthophosphateaspo4_variable"},
+                        {"@id": "ex:phosphorus_variable"},
+                        {"@id": "ex:phosphorusasp_variable"}
+                    ]
+                }
+            }
+        },
+        {
+            "@id": "ex:ActivityIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ActivityIdentifier",
+            "schema:alternateName": "activity identifier",
+            "schema:description": "String that identifies a sampling and analysis activity, unique in scope of NWIS",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ActivityIdentifier"
+        },
+        {
+            "@id": "ex:ActivityDateTime_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ActivityDateTime",
+            "schema:alternateName": "activity date time",
+            "schema:description": "Date and time that the analyzed sample was collected",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#dateTime",
+            "cdi:name": "ActivityDateTime"
+        },
+        {
+            "@id": "ex:ProjectName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ProjectName",
+            "schema:alternateName": "Project name",
+            "schema:description": "Name of the project that sponsored the sampling and analysis activity",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ProjectName"
+        },
+        {
+            "@id": "ex:ActivityConductingOrganization_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ActivityConductingOrganizationText",
+            "schema:alternateName": "Activity sponsor organization",
+            "schema:description": "Name of organization responsible for the sampling and analysis event",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ActivityConductingOrganizationText"
+        },
+        {
+            "@id": "ex:MonitoringLocationIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "MonitoringLocationIdentifier",
+            "schema:alternateName": "Sampling feature identifier",
+            "schema:description": "Identifier for the monitoring location, for groundwater this will be a well",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "MonitoringLocationIdentifier"
+        },
+        {
+            "@id": "ex:Latitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Latitude",
+            "schema:alternateName": "latitude",
+            "schema:description": "latitude of sampled feature (monitoring location) in decimal degrees, WGS84",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Latitude"
+        },
+        {
+            "@id": "ex:Longitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Longitude",
+            "schema:alternateName": "longitude",
+            "schema:description": "longitide of sampled feature (monitoring location) in decimal degrees east, WGS84",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Longitude"
+        },
+        {
+            "@id": "ex:SampleCollectionMethod_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "SampleCollectionMethod",
+            "schema:alternateName": "Sample collection method",
+            "schema:description": "collection method, property of the sampling activity",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "SampleCollectionMethod"
+        },
+        {
+            "@id": "ex:CharacteristicURI_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "CharacteristicURI",
+            "schema:alternateName": "Characteristic URI",
+            "schema:description": "resolvable URI that identifies the property measured for this analyte",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#anyURI",
+            "cdi:name": "CharacteristicURI"
+        },
+        {
+            "@id": "ex:ResultSampleFraction_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultSampleFractionText",
+            "schema:alternateName": "Result Sample Fraction",
+            "schema:description": "part of the original sample that was analyzed",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultSampleFractionText",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:sampleFractionDomain_35y",
+                "cdi:isDefinedBy": [
+                    "Dissolved",
+                    "Total"
+                ]
+            }
+        },
+        {
+            "@id": "ex:ResultValueTypeName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultValueTypeName",
+            "schema:alternateName": "Result value type",
+            "schema:description": "flag indicating if the result is direct from measurement, or estimated based on other factors",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultValueTypeName",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:valueTyepDomain_35hj",
+                "cdi:isDefinedBy": [
+                    "Actual",
+                    "Estimated"
+                ]
+            }
+        },
+        {
+            "@id": "ex:ResultComment_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultCommentText",
+            "schema:alternateName": "Result comment",
+            "schema:description": "free text for additional information to qualify the result value",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultCommentText"
+        },
+        {
+            "@id": "ex:DepthMeasure_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "DepthMeasure",
+            "schema:alternateName": "Depth",
+            "schema:description": "depth in well from which sample was taken, in feet.",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "DepthMeasure",
+            "cdi:simpleUnitOfMeasure": "feet"
+        },
+        {
+            "@id": "ex:ResultAnalyticalMethod_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "ResultAnalyticalMethod",
+            "schema:alternateName": "Analytical method identifier",
+            "schema:description": "analytical method used to determine concentration of analyte in sample. 25 methods reported in data; could be enum. Prefix is organization defining the method",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultAnalyticalMethod"
+        },
+        {
+            "@id": "ex:MethodName_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "MethodName",
+            "schema:alternateName": "Method name",
+            "schema:description": "Text label for analytical method used to determine concentration of analyte in sample. One to one mapping with ResultAnalyticalMethod",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "MethodName"
+        },
+        {
+            "@id": "ex:LastUpdated_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "LastUpdated",
+            "schema:alternateName": "Last update date",
+            "schema:description": "date of last update to this record",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#date",
+            "cdi:name": "LastUpdated"
+        },
+        {
+            "@id": "ex:nitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrogen",
+            "schema:alternateName": "Nitrogen concentration",
+            "schema:description": "Nitrogen concentration",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrogen",
+            "cdi:displayLabel": "Nitrogen concentration"
+        },
+        {
+            "@id": "ex:nitrate_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate",
+            "schema:alternateName": "Nitrate concentration",
+            "schema:description": "Nitrate concentration",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate",
+            "cdi:displayLabel": "Nitrate concentration"
+        },
+        {
+            "@id": "ex:orthophosphateasp_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Orthophosphate as P",
+            "schema:description": "Orthophosphate as P",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Orthophosphate as P"
+        },
+        {
+            "@id": "ex:ammoniaandammoniumasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Ammonia and ammonium as N",
+            "schema:description": "Ammonia and ammonium as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium as N",
+            "cdi:displayLabel": "Ammonia and ammonium as nitrogen (N)"
+        },
+        {
+            "@id": "ex:ammoniaandammoniumasnh4_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Ammonia and ammonium NH4",
+            "schema:description": "Ammonia and ammonium as NH4",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium NH4",
+            "cdi:displayLabel": "Ammonia and ammonium as NH4"
+        },
+        {
+            "@id": "ex:ammonia-nitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Ammonia-nitrogen",
+            "schema:description": "Ammonia-nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia-nitrogen",
+            "cdi:displayLabel": "Ammonia-nitrogen"
+        },
+        {
+            "@id": "ex:kjeldahlnitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Kjeldahl nitrogen",
+            "schema:description": "Kjeldahl nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Kjeldahl nitrogen",
+            "cdi:displayLabel": "Kjeldahl nitrogen"
+        },
+        {
+            "@id": "ex:nitratenitrite_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate + Nitrite",
+            "schema:description": "Nitrate + Nitrite",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate + Nitrite",
+            "cdi:displayLabel": "Nitrate + Nitrite"
+        },
+        {
+            "@id": "ex:nitratenitriteasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate + Nitrite as N",
+            "schema:description": "Nitrate + Nitrite as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate + Nitrite as N",
+            "cdi:displayLabel": "Nitrate + Nitrite as nitrogen (N)"
+        },
+        {
+            "@id": "ex:nitrateasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate as N",
+            "schema:description": "Nitrate as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate as N",
+            "cdi:displayLabel": "Nitrate as nitrogen (N)"
+        },
+        {
+            "@id": "ex:nitrateasno3_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate asNO3",
+            "schema:description": "Nitrate as NO3",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate asNO3",
+            "cdi:displayLabel": "Nitrate as NO3"
+        },
+        {
+            "@id": "ex:nitriteasn_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrite as N",
+            "schema:description": "Nitrite as N",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrite as N",
+            "cdi:displayLabel": "Nitrite as N"
+        },
+        {
+            "@id": "ex:nitriteasno2_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrite asNO2",
+            "schema:description": "Nitrite as NO2",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrite asNO2",
+            "cdi:displayLabel": "Nitrite as NO2"
+        },
+        {
+            "@id": "ex:nitrogenmixedforms_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrogen, mixed forms",
+            "schema:description": "Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrogen, mixed forms",
+            "cdi:displayLabel": "Nitrogen, mixed forms"
+        },
+        {
+            "@id": "ex:organicnitrogen_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Organic Nitrogen",
+            "schema:description": "Organic Nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Organic Nitrogen",
+            "cdi:displayLabel": "Organic Nitrogen"
+        },
+        {
+            "@id": "ex:orthophosphateaspo4_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Orthophosphate asPO4",
+            "schema:description": "Orthophosphate as PO4",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Orthophosphate asPO4",
+            "cdi:displayLabel": "Orthophosphate as PO4"
+        },
+        {
+            "@id": "ex:phosphorus_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Phosphorus",
+            "schema:description": "Phosphorus",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Phosphorus",
+            "cdi:displayLabel": "Phosphorus"
+        },
+        {
+            "@id": "ex:phosphorusasp_variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Phosphorus as P",
+            "schema:description": "Phosphorus as P",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Phosphorus as P",
+            "cdi:displayLabel": "Phosphorus as P"
+        }
+    ],
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload",
+                "cdi:TabularTextDataset"
+            ],
+            "schema:contentUrl": "https://github.com/CDIF/integrationPublic/TestCDIMetadata/NWISWaterQualityData.csv",
+            "schema:description": "testing serialization for long data with 19 columns.",
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:algorithm": "spdx:checksumAlgorithm_md5",
+                "spdx:checksumValue": "0BFA43A348"
+            },
+            "schema:contentSize": "0.154 Mb",
+            "schema:encodingFormat": ["text/csv"],
+            "dcterms:conformsTo": [],
+            "cdi:has_LocatorMapping": [
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultIdentifier_Variable"},
+                    "cdi:locator": "ResultIdentifier",
+                    "cdi:index": 0
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:ResultMeasure_Variable"},
+                    "cdi:locator": "ResultMeasureValue",
+                    "cdi:index": 1
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:UOM_Variable"},
+                    "cdi:locator": "UOM",
+                    "cdi:index": 2
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Characteristic_Variable"},
+                    "cdi:locator": "Characteristic",
+                    "cdi:index": 3
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_CharacteristicURI_Variable"},
+                    "cdi:locator": "CharacteristicURI",
+                    "cdi:index": 4
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityIdentifier_Variable"},
+                    "cdi:locator": "ActivityIdentifier",
+                    "cdi:index": 5
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityDateTime_Variable"},
+                    "cdi:locator": "ActivityDateTime",
+                    "cdi:index": 6
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ProjectName_Variable"},
+                    "cdi:locator": "ProjectName",
+                    "cdi:index": 7
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ActivityConductingOrganization_Variable"},
+                    "cdi:locator": "ActivityConductingOrganizationText",
+                    "cdi:index": 8
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_MonitoringLocationIdentifier_Variable"},
+                    "cdi:locator": "MonitoringLocationIdentifier",
+                    "cdi:index": 9
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Latitude_Variable"},
+                    "cdi:locator": "Latitude",
+                    "cdi:index": 10
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_Longitude_Variable"},
+                    "cdi:locator": "Longitude",
+                    "cdi:index": 11
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_SampleCollectionMethod_Variable"},
+                    "cdi:locator": "SampleCollectionMethod",
+                    "cdi:index": 12
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultSampleFraction_Variable"},
+                    "cdi:locator": "ResultSampleFractionText",
+                    "cdi:index": 13
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultValueTypeName_Variable"},
+                    "cdi:locator": "ResultValueTypeName",
+                    "cdi:index": 14
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultComment_Variable"},
+                    "cdi:locator": "ResultCommentText",
+                    "cdi:index": 15
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_DepthMeasure_Variable"},
+                    "cdi:locator": "DepthMeasure",
+                    "cdi:index": 16
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_ResultAnalyticalMethod_Variable"},
+                    "cdi:locator": "ResultAnalyticalMethod",
+                    "cdi:index": 17
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_MethodName_Variable"},
+                    "cdi:locator": "MethodName",
+                    "cdi:index": 18
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:_LastUpdated_Variable"},
+                    "cdi:locator": "LastUpdated",
+                    "cdi:index": 19
+                }
+            ],
+            "cdi:allowsDuplicates": false,
+            "cdi:arrayBase": 0,
+            "cdi:commentPrefix": "#",
+            "cdi:delimiter": ",",
+            "cdi:hasHeader": true,
+            "cdi:headerRowCount": 1,
+            "cdi:skipInitialSpace": true,
+            "cdi:isDelimited": true,
+            "cdi:isFixedWidth": false
+        }
+    ],
+    "prov:wasGeneratedBy":[ 
+    {
+        "@type": ["schema:Action", "prov:Activity"],
+        "@id": "ex:provtest_2335jh",
+        "name": "download and configure NWIS data",
+        "actionStatus": "CompletedActionStatus",
+        "agent": {"@id": "#person_3479"},
+        "result": {
+            "@type": "Dataset",
+            "@id": "https://doi.org/10.xxxxx/nwis_098bo"
+        },
+        "startTime": "2025-11-25T10:27:00-7",
+        "endTime": "2052-11-30T14:46:13-7",
+        "schema:object": {
+            "@type": "schema:WebSite",
+            "schema:url": "https://www.waterqualitydata.us/",
+            "schema:description": "The Water Quality Portal (WQP) is a cooperative service sponsored by the United States Geological Survey (USGS) and the Environmental Protection Agency (EPA). The WQP integrates publicly available water quality data from the USGS National Water Information System (NWIS) and the EPA Water Quality Exchange (WQX) Data Warehouse. The site provides a forms interface to select and download data."
+        },
+        "schema:actionProcess": {
+            "@type": "schema:HowTo",
+            "schema:description": "do some data wrangling, only want measure result rows that have a reported numeric result, and have a latitude/longitude location for the sampled well. Combine  scample collection method, analyticalmethod, start time fields into single fields.  Some results report unit of measure with 'as ...' (e.g. 'mg/l as P'); the 'as ...' for our analysis considered a different 'characteristicName', so remove from UOM and add to characteristicName ",
+            "schema:step": [
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 1,
+                    "schema:name": "query USGS/EPA water quality portal",
+                    "schema:description": "query parameters:countrycode=US & statecode=US:04 & countycode=US:04:019 & sampleMedia=water& &  sampleMedia=Water & characteristicType=Nutrient & mimeType=csv & providers=NWIS & providers=STORET, return Sample Results (physical/chemical metadata).  Query returns 5371 sample results From NWIS and STORET with 83 fields in the csv table. Load csv in Excel to process data."
+                },
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 2,
+                    "schema:name": "calculate latitude and longitude for some records",
+                    "schema:description": "calculate lat and long from USGS Monitoring locations that have NWIS ids like 'USGS-321658111082001', which encode location in the site id string. Formulas: latitude: =ROUND( MID(MonitoringLocationIdentifier,6,2)+(MID(MonitoringLocationIdentifier,8,2)+(MID(MonitoringLocationIdentifier,10,2)/60))/60,4); longigutde: =-1*ROUND(MID(MonitoringLocationIdentifier,12,3)+(MID(MonitoringLocationIdentifier,15,2)+(MID(MonitoringLocationIdentifier,17,2)/60))/60,4)"
+                },
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 3,
+                    "schema:name": "filter results",
+                    "schema:description": "Filters: ResultMeasureValue is numeric: select for records that have actual data; ActivityMediaSubdivisionName = 'Groundwater'. Get only groundwater data;  Latitude is Not Null. Select only sites that have lat/long position. Result is 516 rows."
+                },
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 4,
+                    "schema:name": "merge content of columns",
+                    "schema:description": "calculate **sampleCollectionMethod** =\"ID:\"& AG4& \"; context:\" & AH4 & \"; Name:\" & AI4 & \"; Equipment:\" & AK4.    **Calculate date** =TEXT('ActivityStartDate+ActivityStartTime/Time',\"yyyy-mm-dd\"\"T\"\"hh:mm:ss\")& IF(J4=\"MST\",\"-07:00\", IF(J4=\"MDT\",\"-06:00\", IF(J4=\"PST\",\"-08:00\", IF(J4=\"PDT\",\"-07:00\", IF(J4=\"UTC\",\"+00:00\",\"+00:00\"))))) [column J is 'ActivityStartTime/TimeZoneCode'].      Calculate **ResultAnalyticalMethod**:  'ResultAnalyticalMethod/MethodIdentifier' & \":\" & 'ResultAnalyticalMethod/MethodIdentifierContext'"
+                },
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 5,
+                    "schema:name": "Modify characteristicNames and unit of measure",
+                    "schema:description": "update characteristics to include the 'as xxx' concentration that is in the Units of measure in original data.  Update the UOM column to exclued 'as...' that is about the constituent measured. Generate example URIs for constitutents to use as propertyIDs based on CharacteristicName."
+                },
+                {
+                    "@type": "schema:HowToStep",
+                    "schema:position": 6,
+                    "schema:name": "Export as new csv, remove unneeded columns",
+                    "schema:description": "remove empty columns and columns used to calculate new columns. Final table has 515 rows and 19 columns."
+                }
+            ]
+        }
+    }
+    ],
+    "schema:subjectOf": {
+        "@id": "ex:537-pz63",
+        "@type": "schema:Dataset",
+        "schema:dateModified": "2025-12-02",
+        "schema:creator": [
+            {
+                "@id": "#person_3479",
+                "@type": "schema:Person",
+                "schema:name": "Richard, Stephen M.",
+                "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+                "schema:email": "smrTucson@email.org"
+            }
+        ],
+        "schema:about": {"@id": "ex:nwis.001"},
+        "schema:description": "metadata about documentation NWIS example long data",
+        "dcterms:conformsTo": [
+            {"@id": "cdif:profile_basic_1.0"},
+            {"@id": "cdif:profile_longData"},
+            {"@id": "cdif:profile_prov"}
+        ]
+    }
+}
