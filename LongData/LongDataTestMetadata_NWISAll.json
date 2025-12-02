@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-        "schema": "https://schema.org/",
+        "schema": "http://schema.org/",
         "dcterms": "http://purl.org/dc/terms/",
         "geosparql": "http://www.opengis.net/ont/geosparql#",
         "spdx": "http://spdx.org/rdf/terms#",
@@ -19,6 +19,7 @@
     "schema:name": "NWIS water quality data for Pima County, Arizona",
     "schema:description": " Water Quality data extracted from USGSN NSWIS. results use cdi descriptor, value pattern. Also have context information for station and activity, as well as method metadata for each result. ",
     "schema:identifier": "https://doi.org/10.xxxxx/nwis_098bo",
+    "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
     "cdi:isStructuredBy": {
         "@id": "ex:testLongStructure_w35u4",
         "@type": "cdi:LongDataStructure",
@@ -139,7 +140,7 @@
                 "cdi:qualifies": {"@id": "ex:identifier_component_e54763"}
             }
         ],
-        "allowsDuplicates": false
+        "cdi:allowsDuplicates": false
     },
     "schema:variableMeasured": [
         {
@@ -150,11 +151,12 @@
             ],
             "schema:name": "ResultIdentifier",
             "schame:alternateName": ["Result Identifier"],
-            "schema:propertyID": "",
-            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
-            "uses": "",
-            "name": "ResultIdentifier",
-            "displayLabel": "Result identifier"
+            "schema:description": "identifier for a single contstituent analysis result; unique in scope of NWIS",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:uses": "",
+            "cdi:name": "ResultIdentifier",
+            "cdi:displayLabel": "Result identifier"
         },
         {
             "@id": "ex:ResultMeasure_Variable",
@@ -164,13 +166,14 @@
             ],
             "schema:name": "ResultMeasureValue",
             "schema:alternateName": "ResultMeasureValue",
-            "schema:propertyID": "",
+            "schema:description": "result value for individual analyte indicated by value in the CharacteristicName field",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "schema:minValue": 0.01,
             "schema:maxValue": 14.07,
-            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-            "uses": "",
-            "name": "ResultMeasureValue",
-            "displayLabel": "Result measure value"
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:uses": "",
+            "cdi:name": "ResultMeasureValue",
+            "cdi:displayLabel": "Result measure value"
         },
         {
             "@id": "ex:UOM_Variable",
@@ -178,7 +181,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "UOM",
+            "schema:alternateName": "unit of measurement",
+            "schema:description": "string indicatign units of measure for the reported analysis result",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "UOM"
         },
         {
@@ -187,14 +194,13 @@
                 "cdi:DescriptorVariable",
                 "schema:PropertyValue"
             ],
-            "schema:propertyID": "",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:description": "Name of the analyte for which the result is reported in the ResultMeasureValue field",
             "schema:name": "Characteristic",
             "schema:alternateName": "Characteristic Name",
-            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
-            "uses": "",
-            "identifier": "",
-            "name": "Characteristic",
-            "displayLabel": "Characteristic name",
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "Characteristic",
+            "cdi:displayLabel": "Characteristic name",
             "cdi:takesSubstantiveValuesFrom": {
                 "@type": "cdi:DescriptorValueDomain",
                 "@id": "ex:characteristicsSubstantiveDomain_547jh",
@@ -231,7 +237,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ActivityIdentifier",
+            "schema:alternateName": "activity identifier",
+            "schema:description": "String that identifies a sampling and analysis activity, unique in scope of NWIS",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "ActivityIdentifier"
         },
         {
@@ -240,7 +250,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ActivityDateTime",
+            "schema:alternateName": "activity date time",
+            "schema:description": "Date and time that the analyzed sample was collected",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#dateTime",
             "cdi:name": "ActivityDateTime"
         },
         {
@@ -249,7 +263,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ProjectName",
+            "schema:alternateName": "Project name",
+            "schema:description": "Name of the project that sponsored the sampling and analysis activity",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "ProjectName"
         },
         {
@@ -258,7 +276,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ActivityConductingOrganizationText",
+            "schema:alternateName": "Activity sponsor organization",
+            "schema:description": "Name of organization responsible for the sampling and analysis event",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "ActivityConductingOrganizationText"
         },
         {
@@ -267,6 +289,10 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "MonitoringLocationIdentifier",
+            "schema:alternateName": "Sampling feature identifier",
+            "schema:description": "Identifier for the monitoring location, for groundwater this will be a well",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "MonitoringLocationIdentifier"
         },
@@ -276,6 +302,10 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Latitude",
+            "schema:alternateName": "latitude",
+            "schema:description": "latitude of sampled feature (monitoring location) in decimal degrees, WGS84",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Latitude"
         },
@@ -285,6 +315,10 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Longitude",
+            "schema:alternateName": "longitude",
+            "schema:description": "longitide of sampled feature (monitoring location) in decimal degrees east, WGS84",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Longitude"
         },
@@ -294,7 +328,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "SampleCollectionMethod",
+            "schema:alternateName": "Sample collection method",
+            "schema:description": "collection method, property of the sampling activity",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "SampleCollectionMethod"
         },
         {
@@ -303,7 +341,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "CharacteristicURI",
+            "schema:alternateName": "Characteristic URI",
+            "schema:description": "resolvable URI that identifies the property measured for this analyte",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#anyURI",
             "cdi:name": "CharacteristicURI"
         },
         {
@@ -312,8 +354,20 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-            "cdi:name": "ResultSampleFractionText"
+            "schema:name": "ResultSampleFractionText",
+            "schema:alternateName": "Result Sample Fraction",
+            "schema:description": "part of the original sample that was analyzed",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultSampleFractionText",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:sampleFractionDomain_35y",
+                "cdi:isDefinedBy": [
+                    "Dissolved",
+                    "Total"
+                ]
+            }
         },
         {
             "@id": "ex:ResultValueTypeName_Variable",
@@ -321,8 +375,20 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-            "cdi:name": "ResultValueTypeName"
+            "schema:name": "ResultValueTypeName",
+            "schema:alternateName": "Result value type",
+            "schema:description": "flag indicating if the result is direct from measurement, or estimated based on other factors",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "ResultValueTypeName",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:valueTyepDomain_35hj",
+                "cdi:isDefinedBy": [
+                    "Actual",
+                    "Estimated"
+                ]
+            }
         },
         {
             "@id": "ex:ResultComment_Variable",
@@ -330,7 +396,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ResultCommentText",
+            "schema:alternateName": "Result comment",
+            "schema:description": "free text for additional information to qualify the result value",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "ResultCommentText"
         },
         {
@@ -339,8 +409,13 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "DepthMeasure",
+            "schema:alternateName": "Depth",
+            "schema:description": "depth in well from which sample was taken, in feet.",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-            "cdi:name": "DepthMeasure"
+            "cdi:name": "DepthMeasure",
+            "cdi:simpleUnitOfMeasure": "feet"
         },
         {
             "@id": "ex:ResultAnalyticalMethod_Variable",
@@ -348,7 +423,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "ResultAnalyticalMethod",
+            "schema:alternateName": "Analytical method identifier",
+            "schema:description": "analytical method used to determine concentration of analyte in sample. 25 methods reported in data; could be enum. Prefix is organization defining the method",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "ResultAnalyticalMethod"
         },
         {
@@ -357,7 +436,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "MethodName",
+            "schema:alternateName": "Method name",
+            "schema:description": "Text label for analytical method used to determine concentration of analyte in sample. One to one mapping with ResultAnalyticalMethod",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "cdi:name": "MethodName"
         },
         {
@@ -366,7 +449,11 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
-            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:name": "LastUpdated",
+            "schema:alternateName": "Last update date",
+            "schema:description": "date of last update to this record",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#date",
             "cdi:name": "LastUpdated"
         },
         {
@@ -377,6 +464,8 @@
             ],
             "schema:name": "Nitrogen",
             "schema:alternateName": "Nitrogen concentration",
+            "schema:description": "Nitrogen concentration",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrogen",
             "cdi:displayLabel": "Nitrogen concentration"
@@ -387,6 +476,10 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate",
+            "schema:alternateName": "Nitrate concentration",
+            "schema:description": "Nitrate concentration",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrate",
             "cdi:displayLabel": "Nitrate concentration"
@@ -397,6 +490,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Orthophosphate as P",
+            "schema:description": "Orthophosphate as P",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Orthophosphate as P"
         },
@@ -406,6 +502,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Ammonia and ammonium as N",
+            "schema:description": "Ammonia and ammonium as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Ammonia and ammonium as N",
             "cdi:displayLabel": "Ammonia and ammonium as nitrogen (N)"
@@ -416,6 +515,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Ammonia and ammonium NH4",
+            "schema:description": "Ammonia and ammonium as NH4",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Ammonia and ammonium NH4",
             "cdi:displayLabel": "Ammonia and ammonium as NH4"
@@ -426,6 +528,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Ammonia-nitrogen",
+            "schema:description": "Ammonia-nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Ammonia-nitrogen",
             "cdi:displayLabel": "Ammonia-nitrogen"
@@ -436,6 +541,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Kjeldahl nitrogen",
+            "schema:description": "Kjeldahl nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Kjeldahl nitrogen",
             "cdi:displayLabel": "Kjeldahl nitrogen"
@@ -446,6 +554,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate + Nitrite",
+            "schema:description": "Nitrate + Nitrite",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrate + Nitrite",
             "cdi:displayLabel": "Nitrate + Nitrite"
@@ -456,6 +567,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate + Nitrite as N",
+            "schema:description": "Nitrate + Nitrite as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrate + Nitrite as N",
             "cdi:displayLabel": "Nitrate + Nitrite as nitrogen (N)"
@@ -466,6 +580,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate as N",
+            "schema:description": "Nitrate as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrate as N",
             "cdi:displayLabel": "Nitrate as nitrogen (N)"
@@ -476,6 +593,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate asNO3",
+            "schema:description": "Nitrate as NO3",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrate asNO3",
             "cdi:displayLabel": "Nitrate as NO3"
@@ -486,6 +606,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrite as N",
+            "schema:description": "Nitrite as N",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrite as N",
             "cdi:displayLabel": "Nitrite as N"
@@ -496,6 +619,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrite asNO2",
+            "schema:description": "Nitrite as NO2",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrite asNO2",
             "cdi:displayLabel": "Nitrite as NO2"
@@ -506,6 +632,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrogen, mixed forms",
+            "schema:description": "Nitrogen, mixed forms (NH3), (NH4), organic, (NO2) and (NO3)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Nitrogen, mixed forms",
             "cdi:displayLabel": "Nitrogen, mixed forms"
@@ -516,6 +645,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Organic Nitrogen",
+            "schema:description": "Organic Nitrogen",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Organic Nitrogen",
             "cdi:displayLabel": "Organic Nitrogen"
@@ -526,6 +658,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Orthophosphate asPO4",
+            "schema:description": "Orthophosphate as PO4",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Orthophosphate asPO4",
             "cdi:displayLabel": "Orthophosphate as PO4"
@@ -536,6 +671,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Phosphorus",
+            "schema:description": "Phosphorus",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Phosphorus",
             "cdi:displayLabel": "Phosphorus"
@@ -546,6 +684,9 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Phosphorus as P",
+            "schema:description": "Phosphorus as P",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
             "cdi:name": "Phosphorus as P",
             "cdi:displayLabel": "Phosphorus as P"
@@ -694,10 +835,32 @@
             "cdi:commentPrefix": "#",
             "cdi:delimiter": ",",
             "cdi:hasHeader": true,
-            "headerRowCount": 1,
-            "skipInitialSpace": true,
-            "isDelimited": true,
-            "isFixedWidth": false
+            "cdi:headerRowCount": 1,
+            "cdi:skipInitialSpace": true,
+            "cdi:isDelimited": true,
+            "cdi:isFixedWidth": false
         }
-    ]
+    ],
+    "prov:wasGeneratedBy":{
+        }, 
+    "schema:subjectOf": {
+        "@id": "ex:537-pz63",
+        "@type": "schema:Dataset",
+        "schema:dateModified": "2025-12-01",
+        "schema:creator": [
+            {
+                "@id": "https://ada.org/person/3479",
+                "@type": "schema:Person",
+                "schema:name": "Richard, Stephen M.",
+                "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+                "schema:email": "smrTucson@email.org"
+            }
+        ],
+        "schema:about": {"@id": "ex:nwis.001"},
+        "schema:description": "metadata about documentation NWIS example long data",
+        "dcterms:conformsTo": [
+            {"@id": "cdif:profile_basic_1.0"},
+            {"@id": "cdif:profile_longData"}
+        ]
+    }
 }

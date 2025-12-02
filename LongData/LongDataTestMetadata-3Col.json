@@ -11,15 +11,15 @@
         "xas": "http://www.cdi4exas.org/",
         "ex": "https://example.org/"
     },
-    "@id": "ex:nwis.001",
+    "@id": "ex:nwis.000",
     "@type": [
         "schema:Dataset",
         "cdi:LongDataset"
     ],
-    "schema:name": "test with long format, simple water quality data",
-    "schema:contentUrl": "https://github.com/Cross-Domain-Interoperability-Framework/data-structure-description/blob/main/LongData/nwisData3Column.txt",
+    "schema:name": "Test long format, simple water quality data",
     "schema:description": "",
     "schema:identifier": "https://doi.org/10.xxxxx/nwis_q347qh5",
+    "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
     "cdi:isStructuredBy": {
         "@id": "ex:testLongStructure_4808",
         "@type": "cdi:LongDataStructure",
@@ -51,8 +51,9 @@
                 "schema:PropertyValue"
             ],
             "schema:name": "ResultIdentifier",
-            "schame:alternateName": ["Result Identifier"],
-            "schema:propertyID": "",
+            "schema:alternateName": ["Result Identifier"],
+            "schema:description": "identifier for a single contstituent analysis result; unique in scope of NWIS",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "uses": "",
             "name": "ResultIdentifier",
@@ -66,7 +67,8 @@
             ],
             "schema:name": "ResultMeasureValue",
             "schema:alternateName": "ResultMeasureValue",
-            "schema:propertyID": "",
+            "schema:description": "result values for individual analyte indicated by value in the CharacteristicName field",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "schema:minValue": 0.01,
             "schema:maxValue": 14.07,
             "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
@@ -80,8 +82,9 @@
                 "cdi:DescriptorVariable",
                 "schema:PropertyValue"
             ],
-            "schema:propertyID": "",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
             "schema:name": "CharacteristicName",
+            "schema:description": "Name of the analyte for which the result is reported in the ResultMeasureValue field",
             "schema:alternateName": "Characteristic Name",
             "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
             "uses": "",
@@ -98,7 +101,7 @@
                     "cdi:isDefinedBy": [
                         {"@id": "ex:Nitrogen_Variable"},
                         {"@id": "ex:Nitrate_Variable"},
-                        {"@id": "ex:OrothoPhosphate_Variable"}
+                        {"@id": "ex:Orthophosphate_Variable"}
                     ]
                 }
             }
@@ -111,7 +114,9 @@
             ],
             "schema:name": "Nitrogen",
             "schema:alternateName": "Nitrogen concentration",
+            "schema:description": "concentration of Nitrogen in analyzed sample, reported in mg/l",
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:simpleUnitOfMeasure": "mg/l",
             "cdi:name": "Nitrogen",
             "cdi:displayLabel": "Nitrogen concentration"
         },
@@ -121,17 +126,23 @@
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Nitrate",
+            "schema:description": "concentration of nitrate (NO3) in analyzed sample, reported in mg/l",
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:simpleUnitOfMeasure": "mg/l",
             "cdi:name": "Nitrate",
             "cdi:displayLabel": "Nitrate concentration"
         },
         {
-            "@id": "ex:OrothoPhosphate_Variable",
+            "@id": "ex:Orthophosphate_Variable",
             "@type": [
                 "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
+            "schema:name": "Orthophosphate",
+            "schema:description": "concentration of orthophosphate in analyzed sample, reported in mg/l",
             "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:simpleUnitOfMeasure": "mg/l",
             "cdi:name": "Orthophosphate"
         }
     ],
@@ -141,7 +152,7 @@
                 "schema:DataDownload",
                 "cdi:TabularTextDataset"
             ],
-            "schema:contentUrl": "https://github.com/CDIF/integrationPublic/TestCDIMetadata/LongDataTest.json",
+            "schema:contentUrl": "https://github.com/Cross-Domain-Interoperability-Framework/data-structure-description/blob/main/LongData/nwisData3Column.txt",
             "schema:description": "testing serialization for simple long data with three columns. Water Quality data extracted from USGSN NSWIS",
             "spdx:checksum": {
                 "@type": "spdx:Checksum",
@@ -149,7 +160,7 @@
                 "spdx:checksumValue": "0BA77A348"
             },
             "schema:contentSize": "0.1 Mb",
-            "schema:encodingFormat": ["text/csv"],
+            "schema:encodingFormat": ["text/plain"],
             "dcterms:conformsTo": [],
             "cdi:has_LocatorMapping": [
                 {
@@ -176,10 +187,30 @@
             "cdi:commentPrefix": "#",
             "cdi:delimiter": "|",
             "cdi:hasHeader": true,
-            "headerRowCount": 1,
+            "cdi:headerRowCount": 1,
             "skipInitialSpace": true,
-            "isDelimited": true,
-            "isFixedWidth": false
+            "cdi:isDelimited": true,
+            "cdi:isFixedWidth": false
         }
-    ]
+    ],
+    "schema:subjectOf": {
+        "@id": "ex:537-3uyi",
+        "@type": "schema:Dataset",
+        "schema:dateModified": "2025-12-01",
+        "schema:creator": [
+            {
+                "@id": "https://ada.org/person/3479",
+                "@type": "schema:Person",
+                "schema:name": "Richard, Stephen M.",
+                "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+                "schema:email": "smrTucson@email.org"
+            }
+        ],
+        "schema:about": {"@id": "ex:nwis.000"},
+        "schema:description": "metadata about documentation NWIS example 3 column long data",
+        "dcterms:conformsTo": [
+            {"@id": "cdif:profile_basic_1.0"},
+            {"@id": "cdif:profile_longData"}
+        ]
+    }
 }
