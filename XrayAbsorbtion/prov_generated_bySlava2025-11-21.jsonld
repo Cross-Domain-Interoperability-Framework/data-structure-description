@@ -1,0 +1,181 @@
+{
+	"@context": [
+		"https://docs.ddialliance.org/DDI-CDI/1.0/model/encoding/json-ld/ddi-cdi.jsonld",
+		{
+			"schema": "http://schema.org/",
+			"dcterms": "http://purl.org/dc/terms/",
+			"cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+			"skos": "http://www.w3.org/2004/02/skos/core#",
+			"xas": "http://cdi4exas.org/",
+			"prov": "http://www.w3.org/ns/prov#"
+		}
+	],
+	"@graph": [
+		{
+			"@id": "xas:485749",
+			"@type": [
+				"schema:Dataset",
+				"schema:Product"
+			],
+			"prov:wasGeneratedBy": {
+				"@id": "ex:provevent_246376",
+				"@type": [
+					"prov:Event",
+					"xas:Analysis_Event"
+				],
+				"schema:identifier": "20241111_DSC_NU_OREX-803224-0_1",
+				"schema:startDate": "2008-04-10T21:58:50",
+				"prov:used": [
+					{
+						"@type": [
+							"schema:Thing",
+							"prov:Entity",
+							"xas:Beamline"
+						],
+						"schema:name": "13-BM-D",
+						"schema:identifier": "should have a registry with URIs",
+						"schema:additionalProperty": [
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:collimation"
+								},
+								"schema:value": "none"
+							},
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:focusing"
+								},
+								"schema:name": "focusing",
+								"schema:value": "???"
+							},
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:harmonic_rejection"
+								},
+								"schema:name": "harmonic_rejection",
+								"schema:value": "Rh-coated mirror, detuned"
+							}
+						]
+					},
+					{
+						"@type": [
+							"schema:Thing",
+							"xas:Monochromator"
+						],
+						"schema:name": "Si 111",
+						"schema:additionalProperty": [
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:d_spacing"
+								},
+								"schema:value": "3.13550",
+								"schema:unitText": "Angstrom"
+							}
+						]
+					},
+					{
+						"@id": "xas:Detector10cmN2",
+						"@type": [
+							"schema:Thing",
+							"xas:Detector"
+						],
+						"schema:name": "Detector",
+						"schema:additionalProperty": [
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:flux_measure_method"
+								},
+								"schema:name": "i0",
+								"schema:alternateName": "detector mode",
+								"schema:value": "10cm  N2"
+							}
+						],
+						"schema:additionalProperty": [
+							{
+								"@type": "schema:PropertyValue",
+								"schema:propertyID": {
+									"@id": "xas:flux_measure_method"
+								},
+								"schema:name": "i1",
+								"schema:alternateName": "detector mode",
+								"schema:value": "10cm  N2"
+							}
+						]
+					}
+				],
+				"schema:additionalProperty": [
+					{
+						"@type": "schema:PropertyValue",
+						"schema:propertyID": {
+							"@id": "xas:edge_energy"
+						},
+						"schema:value": "12658.0",
+						"schema:unitText": "eV"
+					}
+				],
+				"schema:location": {
+					"@type": [
+						"schema:Place",
+						"xas:Facility"
+					],
+					"schema:identifier": "https://ror.org/aps",
+					"schema:name": "APS",
+					"schema:additionalProperty": [
+						{
+							"@type": "schema:PropertyValue",
+							"schema:propertyID": {
+								"@id": "xas:facility_energy"
+							},
+							"schema:value": "7.00",
+							"schema:unitText": "GeV"
+						},
+						{
+							"@type": "schema:PropertyValue",
+							"schema:propertyID": {
+								"@id": "xas:xray_source_type"
+							},
+							"schema:value": "APS bending magnet"
+						}
+					]
+				},
+				"schema:mainEntity": {
+					"@type": "schema:Thing",
+					"schema:additionalType": [
+						"MaterialSample",
+						"https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+					],
+					"schema:name": "Na2SeO4",
+					"schema:additionalProperty": [
+						{
+							"@type": "schema:PropertyValue",
+							"schema:propertyID": {
+								"@id": "xas:porosity"
+							},
+							"schema:value": 27,
+							"schema:unitText": "percent"
+						},
+						{
+							"@type": "schema:PropertyValue",
+							"schema:propertyID": {
+								"@id": "xas:chemical_composition"
+							},
+							"schema:value": "Na2SeO4"
+						},
+						{
+							"@type": "schema:PropertyValue",
+							"schema:propertyID": {
+								"@id": "xas:sample_preparation"
+							},
+							"schema:value": "powder on tape, 6 layers"
+						}
+					]
+				}
+			}
+		}
+	]
+}
