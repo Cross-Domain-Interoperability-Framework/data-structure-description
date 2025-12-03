@@ -47,7 +47,7 @@
         {
             "@id": "ex:ResultIdentifier_Variable",
             "@type": [
-                "cdi:InstancrVariable",
+                "cdi:InstanceVariable",
                 "schema:PropertyValue"
             ],
             "schema:name": "ResultIdentifier",
