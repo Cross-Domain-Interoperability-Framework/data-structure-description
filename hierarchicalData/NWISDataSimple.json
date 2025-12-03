@@ -1,0 +1,80 @@
+[
+  {
+    "locationID": "USGS-321929111070601",
+    "latitude": 32.3247,
+    "longitude": -111.1183,
+    "dateObserved": "2016-02-08T15:00:00-07:00",
+    "results": [
+      {
+        "value": 1.83,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium as N",
+        "method": "Ammonia, wf, DA sal/hypo (NWQL)"
+      },
+      {
+        "value": 2.36,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium NH4",
+        "method": "Computation by NWIS algorithm"
+      },
+      {
+        "value": 8.87,
+        "unitCode": "mg/l",
+        "characteristic": "Nitrate + Nitrite as N",
+        "method": "NO3+NO2, wf, FCC,NaR, DA"
+      }
+    ]
+  },
+  {
+    "locationID": "USGS-321840111055001",
+    "latitude": 32.3111,
+    "longitude": -111.0972,
+    "dateObserved": "2016-02-09T13:30:00-07:00",
+    "results": [
+      {
+        "value": 0.02,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium as N",
+        "method": "Ammonia, wf, DA sal/hypo (NWQL)"
+      },
+      {
+        "value": 0.029,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium NH4",
+        "method": "Computation by NWIS algorithm"
+      },
+      {
+        "value": 6.03,
+        "unitCode": "mg/l",
+        "characteristic": "Nitrate + Nitrite as N",
+        "method": "NO3+NO2, wf, FCC,NaR, DA"
+      }
+    ]
+  },
+  {
+    "locationID": "USGS-321658111082001",
+    "latitude": 32.2828,
+    "longitude": -111.1389,
+    "dateObserved": "2003-03-13T11:15:00-07:00",
+    "results": [
+      {
+        "value": 0.04,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium as N",
+        "method": "Nutrients, wf, salicylate color"
+      },
+      {
+        "value": 0.053,
+        "unitCode": "mg/l",
+        "characteristic": "Ammonia and ammonium NH4",
+        "method": "Computation by NWIS algorithm"
+      },
+      {
+        "value": 12.3,
+        "unitCode": "mg/l",
+        "characteristic": "Nitrate + Nitrite as N",
+        "method": "Nutrients, wf, Cd reduct, color"
+      }
+    ]
+  }
+]

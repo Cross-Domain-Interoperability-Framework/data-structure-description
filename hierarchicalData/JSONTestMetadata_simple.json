@@ -1,0 +1,348 @@
+{
+    "@context": {
+        "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "schema": "https://schema.org/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geosparql": "http://www.opengis.net/ont/geosparql#",
+        "spdx": "http://spdx.org/rdf/terms#",
+        "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+        "time": "http://www.w3.org/2006/time#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xas": "http://www.cdi4exas.org/",
+        "ex": "https://example.org/"
+    },
+    "@id": "ex:nwis.5478",
+    "@type": ["schema:Dataset"],
+    "schema:name": "JSON serialization of NWIS data, simple",
+    "schema:contentUrl": "",
+    "schema:description": "",
+    "schema:identifier": "https://doi.org/10.xxxxx/nwis_654uijk",
+    "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
+    "cdi:isStructuredBy": {
+        "@id": "ex:testJSONStructure_4808",
+        "@type": "ex:JSONDataStructure",
+        "cdi:has_DataStructureComponent": [
+            {
+                "@id": "ex:identifier_component_e54763",
+                "@type": "cdi:IdentifierComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:LocationIdentifier_variable"}
+            },
+            {
+                "@id": "ex:latitude_component_546ik",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Latitude_Variable"}
+            },
+            {
+                "@id": "ex:longitude_component_m579",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Longitude_Variable"}
+            },
+            {
+                "@id": "ex:dateObserved_component_546i",
+                "@type": "cdi:DimensionComponent",
+                "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:DateObserved_Variable"}
+            },
+            {
+                "@id": "ex:results_component_56ik68",
+                "@type": "cdi:WideDataStructure",
+                "cdifq:nColumns": 4,
+                "schema:name": "results",
+                "schema:description": "analytical results associated with a sampling location are reported in an array with this structure. The number of results varies between samplind locations.",
+                "cdi:has_DataStructureComponent": [
+                    {
+                        "@id": "ex:value_component_4376",
+                        "@type": "cdi:VariableValueComponent",
+                        "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Value_Variable"}
+                    },
+                    {
+                        "@id": "ex:unitOfMeasure_component_45u7j",
+                        "@type": "cdi:AttributeComponent",
+                        "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:UnitCode_Variable"},
+                        "cdi:qualifies": {"@id": "ex:value_component_4376"}
+                    },
+                    {
+                        "@id": "ex:characteristic_component_57",
+                        "@type": "cdi:VariableDescriptorComponent",
+                        "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:_Characteristic_Variable"},
+                        "cdi:refersTo": {"@id": "ex:value_component_4376"}
+                    },
+                    {
+                        "@id": "ex:method_component_45u7j",
+                        "@type": "cdi:DimensionComponent",
+                        "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Method_Variable"}
+                    },
+                    {
+                        "@id": "ex:method_component_45u7t",
+                        "@type": "cdi:AttributeComponent",
+                        "cdi:isDefinedBy_InstanceVariable": {"@id": "ex:Method_Variable"},
+                        "cdi:qualifies": {"@id": "ex:value_component_4376"}
+                    }
+                ]
+            }
+        ],
+        "allowsDuplicates": false
+    },
+    "schema:variableMeasured": [
+        {
+            "@id": "ex:LocationIdentifier_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "locationID",
+            "schame:alternateName": ["Location identifier"],
+            "schema:description": "label to identify the sampling location",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "uses": "",
+            "name": "locationID",
+            "displayLabel": "Location identifier"
+        },
+        {
+            "@id": "ex:Latitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "latitude",
+            "schema:alternateName": "Latitude",
+            "schema:description": "Latitude of sample feature surface location",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:minValue": -90,
+            "schema:maxValue": 90,
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "name": "latitude",
+            "displayLabel": "Latitude"
+        },
+        {
+            "@id": "ex:Longitude_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:name": "longitude",
+            "schema:description": "Longitude of sample feature surface location",
+            "schema:alternateName": "Longitude",
+            "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:minValue": -180,
+            "schema:maxValue": 180,
+            "identifier": "",
+            "name": "longitude",
+            "displayLabel": "Longitude"
+        },
+        {
+            "@id": "ex:DateObserved_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "dateObserved",
+            "schema:description": "date and time water sample was collected",
+            "schema:alternateName": "Date of sample collection",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#dateTime",
+            "cdi:name": "dateObserved",
+            "cdi:displayLabel": "Date of sample collection"
+        },
+        {
+            "@id": "ex:Value_Variable",
+            "@type": [
+                "cdi:ReferenceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:name": "value",
+            "schema:name": "value",
+            "schema:description": "analysis result value for constituent specified by characteristic",
+            "cdi:displayLabel": "Result value"
+        },
+        {
+            "@id": "ex:Characteristic_Variable",
+            "@type": [
+                "cdi:DescriptorVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:name": "characteristic",
+            "schema:name": "characteristic",
+            "schema:description": "string to specify the kind of constiutent for a result value",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:characteristicDomain_r67k",
+                "description": "values in example data",
+                "cdi:isDefinedBy": [
+                    {
+                        "@id": "ex:ammonia_ammoniumAsN",
+                        "@type": "skos:Concept",
+                        "skos:prefLabel": "Ammonia and ammonium as N"
+                    },
+                    {
+                        "@id": "",
+                        "@type": "skos:Concept",
+                        "skos:prefLabel": "Ammonia and ammonium NH4"
+                    },
+                    {
+                        "@id": "ex:nitrate_nitriteAsN",
+                        "@type": "skos:Concept",
+                        "skos:prefLabel": "Nitrate + Nitrite as N"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "ex:UnitCode_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:name": "unitCode",
+            "schema:name": "unitCode",
+            "schema:description": "units of measure for result value",
+            "cdi:takesSubstantiveValuesFrom": {
+                "@type": "cdi:enumerationDomain",
+                "@id": "ex:unitOfMeasureDomain_3558u3",
+                "description": "Domain should be a skos:ConceptScheme; here assume the URI identify skos concepts, but add #notation because the values in the data are the 'codes' (skos:notation) in the vocabulary.  It might make sense to use schema.org defined term set?",
+                "cdi:isDefinedBy": [
+                    {"@id": "ex:https://vocab.org/uom/mgl#notation"},
+                    {"@id": "ex:https://vocab.org/uom/ugl#notation"}
+                ]
+            }
+        },
+        {
+            "@id": "ex:Method_Variable",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#string",
+            "cdi:name": "method",
+            "schema:name": "method",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "schema:description": "string label to identify analytical method for a constituent"
+        },
+        {
+            "@id": "ex:ammonia_ammoniumAsN",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Ammonia and ammonium as N",
+            "schema:description": "Ammonia and ammonium as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium as N",
+            "cdi:displayLabel": "Ammonia and ammonium as nitrogen (N)"
+        },
+        {
+            "@id": "ex:ammonia_ammoniumNH4",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Ammonia and ammonium NH4",
+            "schema:description": "Ammonia and ammonium as NH4",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Ammonia and ammonium NH4",
+            "cdi:displayLabel": "Ammonia and ammonium as NH4"
+        },
+        {
+            "@id": "ex:nitrate_nitriteAsN",
+            "@type": [
+                "cdi:InstanceVariable",
+                "schema:PropertyValue"
+            ],
+            "schema:name": "Nitrate + Nitrite as N",
+            "schema:description": "Nitrate + Nitrite as nitrogen (N)",
+            "schema:propertyID": ["http://www.opengis.net/def/nil/OGC/0/missing"],
+            "cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+            "cdi:name": "Nitrate + Nitrite as N",
+            "cdi:displayLabel": "Nitrate + Nitrite as nitrogen (N)"
+        }
+    ],
+    "schema:distribution": [
+        {
+            "@type": [
+                "schema:DataDownload",
+                "ex:JSONDataset"
+            ],
+            "schema:contentUrl": "https://github.com/Cross-Domain-Interoperability-Framework/data-structure-description/blob/main/hierarchicalData/NWISDataSimple.json",
+            "schema:description": "testing serialization for simple JSON data. Water Quality data extracted from USGSN NSWIS",
+            "spdx:checksum": {
+                "@type": "spdx:Checksum",
+                "spdx:algorithm": "spdx:checksumAlgorithm_md5",
+                "spdx:checksumValue": "0BA64848"
+            },
+            "schema:contentSize": "0.03 Mb",
+            "schema:encodingFormat": ["application/json"],
+            "dcterms:conformsTo": [],
+            "cdi:has_LocatorMapping": [
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:LocationIdentifier_Variable"},
+                    "cdi:locator": "//locationID"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:Latitude_Variable"},
+                    "cdi:locator": "//latitude"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:Longitude_Variable"},
+                    "cdi:locator": "//longitude"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:DateObserved_Variable"},
+                    "cdi:locator": "//dateObserved"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:Value_Variable"},
+                    "cdi:locator": "//results/value"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:UnitCode_Variable"},
+                    "cdi:locator": "//results/unitCode"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:Characteristic_Variable"},
+                    "cdi:locator": "//results/characteristic"
+                },
+                {
+                    "@type": "cdi:LocatorMapping",
+                    "cdi:formats": {"@id": "ex:Method_Variable"},
+                    "cdi:locator": "//results/method"
+                }
+            ]
+        }
+    ],
+    "schema:subjectOf": {
+        "@id": "ex:w46u67i",
+        "@type": "schema:Dataset",
+        "schema:dateModified": "2025-12-02",
+        "schema:creator": [
+            {
+                "@id": "https://ada.org/person/3479",
+                "@type": "schema:Person",
+                "schema:name": "Richard, Stephen M.",
+                "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+                "schema:email": "smrTucson@email.org"
+            }
+        ],
+        "schema:about": {"@id": "ex:nwis.5478"},
+        "schema:description": "metadata about NWIS example JSON data, simple",
+        "dcterms:conformsTo": [
+            {"@id": "cdif:profile_basic_1.0"},
+            {"@id": "cdif:profile_jsonData"}
+        ]
+    }
+}
