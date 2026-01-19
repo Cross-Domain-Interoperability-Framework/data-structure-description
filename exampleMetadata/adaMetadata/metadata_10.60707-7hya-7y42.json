@@ -1,0 +1,409 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_951",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "Gas Pycnometry Bundle Data for OREX-800023-0",
+  "schema:description": "Ideal gas pycnometry performed at JSC-ARES in glove box environment for grain density. Bundled data contains raw calibration files, raw measurement files of specimens, may contain raw measurement files of spheres of comparable volume, and log file. Also contains corrected volume for the specimen. Caveat-Due to unforeseen effects, data are not representative of true grain density.",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/7hya-7y42",
+    "schema:url": "https://doi.org/10.60707/7hya-7y42"
+  },
+  "schema:additionalType": [
+    "Gas pycnometry"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Macke, Robert",
+        "schema:identifier": "https://orcid.org/0000-0002-7387-6498",
+        "schema:email": "macke@jesuits.net"
+      }
+    ]
+  },
+  "schema:contributor": [
+    {
+      "@type": "schema:Role",
+      "schema:roleName": "Other",
+      "schema:contributor": {
+        "@type": "schema:Person",
+        "@id": "https://ada.org/person/437",
+        "schema:name": "Ryan, Andy",
+        "schema:identifier": "https://orcid.org/0000-0002-7535-8416",
+        "schema:email": "ajryan@orex.lpl.arizona.edu"
+      }
+    }
+  ],
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program."
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Gas pycnometry",
+    "schema:termCode": "GPYC"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2024-02-26T12:00:00Z",
+      "schema:identifier": "20240226_gpyc_jsc-ares_orex-800023-0_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Densinator - Custom-built glove-box mounted pycnometer",
+          "schema:identifier": "DENSINATOR"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/04xx4z452",
+        "schema:name": "NASA Johnson Space Center",
+        "schema:alternateName": "JSC-ARES"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-800023-0"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#object",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Object",
+      "schema:description": "Which objects measurements the following rows contain. The first row is sphere data, and the second row is the specimen data.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#mass",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Mass",
+      "schema:description": "Mass of the object. For the spheres, we use the nominal volume instead of weighing the object.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#vmeasured",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "V measured",
+      "schema:description": "measured volume of the spheres or the specimen. These data are taken directly from the raw pycnometer measurement results.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#stdev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "stdev",
+      "schema:description": "standard deviation of the volumes. These data are taken directly from the raw pycnometer results.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#vactualcorrected",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "V actual/corrected",
+      "schema:description": "For the spheres, this is the nominal actual volume of the spheres, hence, the same value as what is in column 2. For the specimen, it is the corrected volume calculated from the difference in sphere volumes.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#err",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "err",
+      "schema:description": "uncertainty calculated for the corrected volume, taking into account propagation of errors and the number of measurement loops performed. Blank for spheres.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawdens",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw Dens",
+      "schema:description": "Mass of object divided by uncorrected volume. Blank for spheres.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#corrdens",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Corr Dens",
+      "schema:description": "Mass of the object divided by the corrected volume. Blank for spheres.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#d407bfa24f2a347e635c444237cf691c",
+          "schema:name": "20240226_GPYC_JSC-ARES_OREX-800023-0_1_GPYCProcessedTabular_1.csv",
+          "schema:description": "Corrected sample volume and density for specimen OREX-800023-0 based on calibration sphere data. sha256:697b3a7eb38dc7cc8459760ef09c21cc55f690e5ffe0df535d3663107278a764 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 214,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:GPYCProcessedTabular"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#object"
+                  },
+                  "schema:name": "Object",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#mass"
+                  },
+                  "schema:name": "Mass",
+                  "schema:unitText": "g",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#vmeasured"
+                  },
+                  "schema:name": "V measured",
+                  "schema:unitText": "cm^3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 3,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#stdev"
+                  },
+                  "schema:name": "stdev",
+                  "schema:unitText": "cm^3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 4,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#vactualcorrected"
+                  },
+                  "schema:name": "V actual/corrected",
+                  "schema:unitText": "cm^3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 5,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#err"
+                  },
+                  "schema:name": "err",
+                  "schema:unitText": "cm^3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 6,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawdens"
+                  },
+                  "schema:name": "Raw Dens",
+                  "schema:unitText": "g cm^-3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 7,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#corrdens"
+                  },
+                  "schema:name": "Corr Dens",
+                  "schema:unitText": "g cm^-3",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 8,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "headerRowCount": 2,
+            "countRows": 2,
+            "countColumns": 8,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e873941f0e04db7370a0ff2a2151593a",
+          "schema:name": "20240226_GPYC_JSC-ARES_OREX-800023-0_1_GPYCProcessedTabular_1.yaml",
+          "schema:description": "sha256:ad447a482cdb916796c869c1129054ffa669a719da0149d415f702b8def1c0dd ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 1864,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#d407bfa24f2a347e635c444237cf691c"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_951",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-01-27",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_951"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/7hya-7y42",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:GPYCProcessedTabular"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      }
+    ]
+  }
+}

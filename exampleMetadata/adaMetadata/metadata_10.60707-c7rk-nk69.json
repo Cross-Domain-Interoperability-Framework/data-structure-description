@@ -1,0 +1,254 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2353",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "O-isotope and chemical compositions of olivine and pyroxene in Bennu measured in Hokkaido University",
+  "schema:description": "O-isotope and chemical compositions of olivine and pyroxene in Bennu measured in Hokkaido University",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/c7rk-nk69",
+    "schema:url": "https://doi.org/10.60707/c7rk-nk69"
+  },
+  "schema:additionalType": [
+    "Secondary ion mass spectrometry"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Kawasaki, Noriyuki",
+        "schema:identifier": "https://orcid.org/0000-0001-6502-6488",
+        "schema:email": "kawasaki@ep.sci.hokudai.ac.jp"
+      }
+    ]
+  },
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Secondary ion mass spectrometry",
+    "schema:termCode": "SIMS"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2024-02-29T01:42:37.400743Z",
+      "schema:identifier": "20240229_sims_hu_orex-803114-0_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Cameca IMS 1280",
+          "schema:identifier": "CIMS1280"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/04xt43068",
+        "schema:name": "Hokkaido University",
+        "schema:alternateName": "HU"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-803114-0"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#analysisname",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Analysis Name",
+      "schema:description": "Give the name of the analysis",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e33c861f26933556628c05ce2c571a99",
+          "schema:name": "20240229_SIMS_HU_OREX-803114-0_1_SIMSTabular_1.xlsx",
+          "schema:description": "O-isotope and chemical compositions of olivine and pyroxene in Bennu measured in Hokkaido University sha256:7ea29d8f618736ce64ca1dcb50815b6b280d878022ae7b89a393308ffe1a2564 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 21426,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:SIMSTabular"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#analysisname"
+                  },
+                  "schema:name": "Analysis Name",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "string"
+                  }
+                }
+              ]
+            },
+            "headerRowCount": 1,
+            "countRows": 28,
+            "countColumns": 1,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e8183b90de6e2b4c213b0eda74f6caf4",
+          "schema:name": "20240229_SIMS_HU_OREX-803114-0_1_SIMSTabular_1.yaml",
+          "schema:description": "sha256:6e93ce209a7652d4e962bdd90d60c019531138c716eef8eb29e4d97319c1856a ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 365,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#e33c861f26933556628c05ce2c571a99"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#8220c94640fafb25ef88262f8c447152",
+          "schema:name": "20240229_SIMS_HU_OREX-803114-0_1_methodDescription_1.pdf",
+          "schema:description": "description of the methods used for measuring oxygen isotopes with the IMS 1280 sha256:8729b3cbb00b34f665f3aa8bb6056dd1bd6f1fa6b836f6aae4126b2656bd9596 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 152362,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/pdf"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#4f481371b8b60aec81e14188976f10e0",
+          "schema:name": "20240229_SIMS_HU_OREX-803114-0_1_methodDescription_1.yaml",
+          "schema:description": "sha256:ef8f979681d692b668ec940edfcfda60fdbe536dd90f5a8cf345c85acffc1596 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 215,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#8220c94640fafb25ef88262f8c447152"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2353",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-03-11",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2353"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/c7rk-nk69",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:methodDescription"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:document"
+      },
+      {
+        "@id": "ada:SIMSTabular"
+      }
+    ]
+  }
+}

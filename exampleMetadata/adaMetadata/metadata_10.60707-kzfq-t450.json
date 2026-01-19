@@ -1,0 +1,644 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2072",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "Helium Gas Ultrapyc 5000 Micro Pycnometry Bundle Data for OREX-800123-0 after Atmospheric Exposure",
+  "schema:description": "Helium gas pycnometry performed at UCa after approximately three hours of atmospheric exposure for grain density measurement of Bennu angular lithology particle OREX-800123-0. The bundled data contains instrument calibration and verification results, grain density measurement results for sample OREX-800123-0, and methods description. These data apparently constrain a valid grain density.",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/kzfq-t450",
+    "schema:url": "https://doi.org/10.60707/kzfq-t450"
+  },
+  "schema:additionalType": [
+    "Gas pycnometry"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Hanton, Lincoln",
+        "schema:identifier": "https://orcid.org/0000-0001-5497-4554",
+        "schema:email": "ltjhanto@ucalgary.ca"
+      },
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Hildebrand, Alan",
+        "schema:identifier": "https://orcid.org/0000-0001-9926-2059",
+        "schema:email": "ahildebr@ucalgary.ca"
+      }
+    ]
+  },
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "Grant 22EXPOSICA from Planetary Exploration, Space Exploration, Canadian Space Agency. This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program."
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Gas pycnometry",
+    "schema:termCode": "GPYC"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2024-11-25T12:00:00Z",
+      "schema:identifier": "20241125_gpyc_uca_orex-800123-0_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Anton Paar Ultrapyc 5000 Micro Pycnometer",
+          "schema:identifier": "ULTRAPYC"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/03yjb2x39",
+        "schema:name": "University of Calgary",
+        "schema:alternateName": "UCa"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-800123-0"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#run",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "run",
+      "schema:description": "Number of measurement run. Last row is average of last nine runs.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#p0bar",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "p0 [bar]",
+      "schema:description": "Ambient pressure in laboratory.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#pibar",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pi [bar]",
+      "schema:description": "Absolute initial pressure in reference chamber.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#pfbar",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "pf [bar]",
+      "schema:description": "Absolute final pressure in reference and sample chamber.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#volcm3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "vol [cm3]",
+      "schema:description": "Volume of spacers and grain volume of sample",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#samplegrainvolumecm3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "sample grain volume [cm3]",
+      "schema:description": "Grain volume of sample, calculated by subtracting spacer volume from column 5.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#stdev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "stdev",
+      "schema:description": "Standard deviation (1 sigma) of sample grain volume measurements. Blank in all rows except Average of last nine runs.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#tempk",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "temp [K]",
+      "schema:description": "Temperature of instrument",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#timehhmmss",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "time [hh:mm:ss]",
+      "schema:description": "Instrument recorded time of run.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#densitygcm3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "density [g/cm3]",
+      "schema:description": "Calculated non-representative intermediate value based on sample mass, and spacer and sample grain volumes.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#samplegraindensitygcm3",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "sample grain density [g/cm3]",
+      "schema:description": "Measured sample grain density, calculated by dividing sample mass by volume in column 6.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#stdev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "stdev",
+      "schema:description": "Standard deviation (1 sigma) of sample grain density measurements. Blank in all rows except Average of last nine runs.",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#43f51851a902d7bcd5129069a9734591",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_GPYCRawTabular_1.csv",
+          "schema:description": "Ultrapyc 5000 Micro pycnometry (GPYC) data using helium gas for Bennu angular lithology particle OREX-800123-0 after atmospheric exposure. sha256:28ee730e773cd67226e2c297b82f5ca2620ee9255e8a7543686426514303c4d0 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 3114,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:GPYCRawTabular"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#run"
+                  },
+                  "schema:name": "run",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#p0bar"
+                  },
+                  "schema:name": "p0 [bar]",
+                  "schema:unitText": "bar",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#pibar"
+                  },
+                  "schema:name": "pi [bar]",
+                  "schema:unitText": "bar",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 3,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#pfbar"
+                  },
+                  "schema:name": "pf [bar]",
+                  "schema:unitText": "bar",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 4,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#volcm3"
+                  },
+                  "schema:name": "vol [cm3]",
+                  "schema:unitText": "centimetres cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 5,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#samplegrainvolumecm3"
+                  },
+                  "schema:name": "sample grain volume [cm3]",
+                  "schema:unitText": "centimetres cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 6,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#stdev"
+                  },
+                  "schema:name": "stdev",
+                  "schema:unitText": "centimetres cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 7,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#tempk"
+                  },
+                  "schema:name": "temp [K]",
+                  "schema:unitText": "Kelvin",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 8,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#timehhmmss"
+                  },
+                  "schema:name": "time [hh:mm:ss]",
+                  "schema:unitText": "hours:minutes:seconds",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 9,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#densitygcm3"
+                  },
+                  "schema:name": "density [g/cm3]",
+                  "schema:unitText": "grams per centimetre cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 10,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#samplegraindensitygcm3"
+                  },
+                  "schema:name": "sample grain density [g/cm3]",
+                  "schema:unitText": "grams per centimetre cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 11,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#stdev"
+                  },
+                  "schema:name": "stdev",
+                  "schema:unitText": "grams per centimetre cubed",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 12,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "headerRowCount": 43,
+            "countRows": 13,
+            "countColumns": 12,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#c2034a6efc5fac4667f7c1f12766c44c",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_GPYCRawTabular_1.yaml",
+          "schema:description": "sha256:e6a940261b836860e298abed832eb40540db6a6dc5b009841165c1026c7a6873 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 2288,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#43f51851a902d7bcd5129069a9734591"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#cae53ab5b64b96803a220aa43f6da35b",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_1.csv",
+          "schema:description": "Ultrapyc 5000 Micro pycnometer instrument calibration file for micro cell mode reference and sample chambers using helium gas to measure Bennu angular lithology particle OREX-800123-0. sha256:afe64dfb0ed1399397d3f7bc2c30afaceed8007ba95755818bed680a2967611f ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 2274,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#39d3425d35fc1eee692dba907dadc695",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_1.yaml",
+          "schema:description": "sha256:60eb152fa305c33f6605a03b11ea4361de47681d5b07fd15263fba8067a7ad01 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 324,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#cae53ab5b64b96803a220aa43f6da35b"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#176baf85ade5af97ca7fc30219cc367d",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_2.csv",
+          "schema:description": "Verification check file for Ultrapyc 5000 Micro pycnometer using helium gas, spacers and nano calibration sphere to confirm instrument reproducibility. This is the first verification check, which was done before measurement of sample OREX-800123-0. sha256:6146279ea763343e9bc4b081eba4393d8a834c4fcdd2e9bf50ca8497ae22c60f ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 2571,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#ace2b8f40e19c746f088fcfc882c3e7f",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_2.yaml",
+          "schema:description": "sha256:13b5c97d3d3ef801369fc7b2a7e844f922851cac17a2eb389e12577e632dd141 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 390,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#176baf85ade5af97ca7fc30219cc367d"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#986296f81d3818de040f076f65061201",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_3.csv",
+          "schema:description": "Verification check file for Ultrapyc 5000 Micro pycnometer using helium gas, spacers and nano calibration sphere to confirm instrument reproducibility. This is the second verification check, which was done after measurement of sample OREX-800123-0. sha256:17f96c230577955506017ea2df346008e9f998840a2785cae52af905292d270a ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 2466,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#bb834d6e782ac91d9aef1bc7f79efb21",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_calibrationFile_3.yaml",
+          "schema:description": "sha256:bb3d7a284897303ac2bdd8b56b378685455c51c8d4b782499fcc3fae255fcd1f ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 390,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#986296f81d3818de040f076f65061201"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#8f0ebf02f5de74cfdfa574a805f8b2ff",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_methodDescription_1.txt",
+          "schema:description": "Discussion of pycnometry theory and measurement limiting factors, calibration procedures, and sample handling and laboratory procedures. The small size of the Bennu angular lithology particle OREX-800123-0 required manufacturing custom spacers to reduce working volumes. Discussion of pycnometry operations, including calibration, verification and sample measurement. sha256:85a10ea90adcb85ca433add8852845cc5f3e95a958662e345d08e4b3326b1aa4 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 4354,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/plain"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#c802cb6d53a20925838e104e3d387a86",
+          "schema:name": "20241125_GPYC_UCa_OREX-800123-0_1_methodDescription_1.yaml",
+          "schema:description": "sha256:a582ee99119ffdbfe18667de99590f523e78f0834c3f5a73cbb5cc496bd18c87 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 513,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#8f0ebf02f5de74cfdfa574a805f8b2ff"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2072",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-01-27",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2072"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/kzfq-t450",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:methodDescription"
+      },
+      {
+        "@id": "ada:GPYCRawTabular"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:document"
+      },
+      {
+        "@id": "ada:calibrationFile"
+      }
+    ]
+  }
+}

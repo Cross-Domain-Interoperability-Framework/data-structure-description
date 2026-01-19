@@ -1,0 +1,246 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2719",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "OREX-803089-100",
+  "schema:description": "Survey data on OREX-803089-100; separate file folders for Images, Maps, and Point Spectra",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/ejdm-g828",
+    "schema:url": "https://doi.org/10.60707/ejdm-g828"
+  },
+  "schema:additionalType": [
+    "Scanning electron microscopy"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Wilbur, Zoe",
+        "schema:identifier": "https://orcid.org/0000-0002-5279-0417",
+        "schema:email": "wilburz@si.edu"
+      }
+    ]
+  },
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "OSIRIS-REx"
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Scanning electron microscopy",
+    "schema:termCode": "SEM"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2025-02-13T13:32:35.223487Z",
+      "schema:identifier": "20250213_sem_nmnh_orex-803089-100_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Thermo Fisher Quattro",
+          "schema:identifier": "TFQUATT"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/00cz47042",
+        "schema:name": "Smithsonian National Museum of Natural History",
+        "schema:alternateName": "NMNH"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-803089-100"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#None",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "None",
+      "schema:description": "keV",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#None",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "None",
+      "schema:description": "Counts",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#6bfebf5f6678d54070d8c12949b91f70",
+          "schema:name": "20250213_SEM_NMNH_OREX-803089-100_1_SEMEDSPointData_269.yaml",
+          "schema:description": "sha256:9ab25be859876fdd5a3baa9d707056b47feecdc648e0e4edb0c875bbb8fb3364 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 372,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#e61bb2c14cf2e7192243c3e708db61a1"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e61bb2c14cf2e7192243c3e708db61a1",
+          "schema:name": "20250213_SEM_NMNH_OREX-803089-100_1_SEMEDSPointData_269.zip",
+          "schema:description": "EDS point data taken at 15kV and ~0.5nA (header count varies depending on analysis) sha256:97fac1ed87b39bf7681433959a5d282af50a62acef570303c27d3134a0839141 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 424266,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/zip"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:SEMEDSPointData"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#None"
+                  },
+                  "schema:name": "None",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#None"
+                  },
+                  "schema:name": "None",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "headerRowCount": 600,
+            "countRows": 1536,
+            "countColumns": 2,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2719",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-04-07",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2719"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/ejdm-g828",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:SEMEDSPointData"
+      }
+    ]
+  }
+}

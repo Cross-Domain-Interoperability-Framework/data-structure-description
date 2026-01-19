@@ -1,0 +1,295 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2331",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "TEM imaging for space weathering in OREX-501017-102",
+  "schema:description": "STEM analysis of FIB section OREX-501017-102. Images show a solar wind irradiated layer at the surface. EELS analyses performed in two locations, one at surface and one at depth. The sample is composed of a fine-grained phyllosilicate matrix with magnetite, sulfides, carbonates, etc.",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/pte6-nf07",
+    "schema:url": "https://doi.org/10.60707/pte6-nf07"
+  },
+  "schema:additionalType": [
+    "Transmission Electron Microscopy"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Thompson, Michelle",
+        "schema:identifier": "https://orcid.org/0000-0003-0824-9225",
+        "schema:email": "mthompson@purdue.edu"
+      }
+    ]
+  },
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program."
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Transmission Electron Microscopy",
+    "schema:termCode": "TEM"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2024-02-06T12:00:00Z",
+      "schema:identifier": "20240206_tem_uaz_orex-501017-102_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Hitachi HF5000",
+          "schema:identifier": "HF5000"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/03m2x1q45",
+        "schema:name": "University of Arizona",
+        "schema:alternateName": "UAZ"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-501017-102"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#intensity",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Intensity",
+      "schema:description": "Surface Location",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#energylossev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Energy Loss (eV)",
+      "schema:description": "Surface Location",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#intensity",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Intensity",
+      "schema:description": "Depth Location",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#energylossev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Energy Loss (eV)",
+      "schema:description": "Depth Location",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#918e8b7d8de29e0f2241894f3ba19d16",
+          "schema:name": "20240206_TEM_UAZ_OREX-501017-102_1_STEMEELSTabular_240.csv",
+          "schema:description": "EELS Spectra from surface location and depth location. sha256:7c732963b88cad66dd43bd9705c5be35e6ea3d3a645dfd174ef01ccfc929a0ab ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 82305,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:STEMEELSTabular"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#intensity"
+                  },
+                  "schema:name": "Intensity",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#energylossev"
+                  },
+                  "schema:name": "Energy Loss (eV)",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#intensity"
+                  },
+                  "schema:name": "Intensity",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 3,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#energylossev"
+                  },
+                  "schema:name": "Energy Loss (eV)",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 4,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "countRows": 2048,
+            "countColumns": 4,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#4d8dc4b3c246167e935bd3415ac3d11e",
+          "schema:name": "20240206_TEM_UAZ_OREX-501017-102_1_STEMEELSTabular_240.yaml",
+          "schema:description": "sha256:dd3c3ac266e6c327e829eeb29634fc6dee94b699c79514751ba63e0e89d1c330 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 563,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#918e8b7d8de29e0f2241894f3ba19d16"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2331",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-03-09",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2331"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/pte6-nf07",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "ada:STEMEELSTabular"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      }
+    ]
+  }
+}

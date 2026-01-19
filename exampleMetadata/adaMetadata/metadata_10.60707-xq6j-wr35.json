@@ -1,0 +1,225 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2704",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "Electron tomography on a fluid inclusion in orex-501044-104",
+  "schema:description": "Using electron tomography to get a 3d reconstruction of a fluid inclusion in pyrrhotite in orex-501044-104. Using TitanX at Lawrence Berkeley National Laboratory",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/xq6j-wr35",
+    "schema:url": "https://doi.org/10.60707/xq6j-wr35"
+  },
+  "schema:additionalType": [
+    "Transmission Electron Microscopy"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Prince, Beau",
+        "schema:identifier": "https://orcid.org/0000-0001-6217-4290",
+        "schema:email": "beauprince@arizona.edu"
+      }
+    ]
+  },
+  "schema:contributor": [
+    {
+      "@type": "schema:Role",
+      "schema:roleName": "Researcher",
+      "schema:contributor": {
+        "@type": "schema:Person",
+        "@id": "https://ada.org/person/437",
+        "schema:name": "Zack Gainsforth",
+        "schema:identifier": "",
+        "schema:email": "zackg@berkeley.edu"
+      }
+    }
+  ],
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program."
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Transmission Electron Microscopy",
+    "schema:termCode": "TEM"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2024-06-05T12:00:00Z",
+      "schema:identifier": "20240605_tem_lbnl_orex-501044-104_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "TitanX TEM",
+          "schema:identifier": "TITANX"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/02jbv0t02",
+        "schema:name": "Lawrence Berkeley National Laboratory",
+        "schema:alternateName": "LBNL"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-501044-104"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#x",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "X",
+      "schema:description": "Height",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#y",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Y",
+      "schema:description": "Width",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#z",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Z",
+      "schema:description": "Energy",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#71ef8ae4f22a95fcb5657dec2284ffac",
+          "schema:name": "20240605_TEM_LBNL_OREX-501044-104_1_STEMEDSTomo_00001.emd",
+          "schema:description": "TomoData.emd sha256:eb870a35be5cef4b0b041ef0f152dcb46f613ae446cb520d3f35ec95de28ff3f ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 66834988,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/x-hdf5"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#2fff823831a75e2881d9d6349a6a244a",
+          "schema:name": "20240605_TEM_LBNL_OREX-501044-104_1_STEMEDSTomo_00001.yaml",
+          "schema:description": "sha256:07cd0a3f4e034af33d217d54d6b002f825263976530d19c2cd7963fef1bce8ae ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 375,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#71ef8ae4f22a95fcb5657dec2284ffac"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2704",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-04-03",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2704"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/xq6j-wr35",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:dataCube"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:STEMEDSTomo"
+      }
+    ]
+  }
+}

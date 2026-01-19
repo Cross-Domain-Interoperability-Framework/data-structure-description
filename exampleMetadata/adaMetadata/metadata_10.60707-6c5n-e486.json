@@ -1,0 +1,380 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_4",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "EA-IRMS Analysis, H for the sample OREX-501034-0; OREX-501035-0; OREX-501036-0; OREX-501037-0;OREX-501040-0",
+  "schema:description": "QuickLook Samples",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/6c5n-e486",
+    "schema:url": "https://doi.org/10.60707/6c5n-e486"
+  },
+  "schema:additionalType": [
+    "Elemental analysis - isotope ratio mass spectrometry"
+  ],
+  "schema:datePublished": "2024-06-20",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Foustoukos, Dionysis",
+        "schema:identifier": "https://orcid.org/0000-0001-8402-3717",
+        "schema:email": "dfoustoukos@carnegiescience.edu"
+      }
+    ]
+  },
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Elemental analysis - isotope ratio mass spectrometry",
+    "schema:termCode": "EA-IRMS"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2023-10-05T11:46:22.457349Z",
+      "schema:identifier": "20231005_ea-irms_cis_multisample_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Thermo Quest Finnigan DeltaPlus XL",
+          "schema:identifier": "TQFDPXL"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/04jr01610",
+        "schema:name": "Carnegie Institution for Science",
+        "schema:alternateName": "CIS"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-501040-0"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#sampleid",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Sample ID",
+      "schema:description": "Sample ID",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#amountmg",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "amount (mg)",
+      "schema:description": "amount(mg)",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#wth",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "wt% H",
+      "schema:description": "wt% H",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#stdev",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "stdev",
+      "schema:description": "stdev on wt% H",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#dd",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "dD",
+      "schema:description": "delta 2H values",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#error",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "error",
+      "schema:description": "error on dD",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e7ac25f28e0efe5d94a7765e771882d0",
+          "schema:name": "20231005_EA-IRMS_CIS_multiSample_1_EAIRMSCollection_1.yaml",
+          "schema:description": "sha256:80be6167ac71aff8320ae9a6b79ff333920d187b4be757ef63cdbdcb5eb21798 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 1122,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#c99e9e8b7640d8a8716581f30e18d861"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#c99e9e8b7640d8a8716581f30e18d861",
+          "schema:name": "20231005_EA-IRMS_CIS_multiSample_1_EAIRMSCollection_1.zip",
+          "schema:description": "EA-IRMS Analysis, H for the sample OREX-501034-0; OREX-501035-0; OREX-501036-0; OREX-501037-0;OREX-501040-0 - QuickLook samples sha256:1b5a48925d9a82660ff16bfbebc681b74125dac2cfca7094e717083de0050ad8 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 819577,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/zip"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:EAIRMSCollection"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#sampleid"
+                  },
+                  "schema:name": "Sample ID",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#amountmg"
+                  },
+                  "schema:name": "amount (mg)",
+                  "schema:unitText": "mg",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#wth"
+                  },
+                  "schema:name": "wt% H",
+                  "schema:unitText": "wt%",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 3,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#stdev"
+                  },
+                  "schema:name": "stdev",
+                  "schema:unitText": "wt%",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 4,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#dd"
+                  },
+                  "schema:name": "dD",
+                  "schema:unitText": "permil",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 5,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#error"
+                  },
+                  "schema:name": "error",
+                  "schema:unitText": "permil",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 6,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "countRows": 7,
+            "countColumns": 6,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None",
+            "massConsumed": "4.611 mg",
+            "elementType": "H"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#4933c4f6c3f40d74cc9acea74e667e67",
+          "schema:name": "20231005_EA-IRMS_CIS_multiSample_1_methodDescription_1.txt",
+          "schema:description": "Method Description sha256:fe485ae907b9f7f751e86ce12887c03e1a192177ee74c85bd00d25d7b40e6021 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 2996,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/plain"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#262656e50e01c00554f56cf606f57e8f",
+          "schema:name": "20231005_EA-IRMS_CIS_multiSample_1_methodDescription_1.yaml",
+          "schema:description": "sha256:ea4cbab94d3fd6a99f761db29ced1b4501fc8e380248e8eda836c9522746aa6d ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 159,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#4933c4f6c3f40d74cc9acea74e667e67"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_4",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2024-06-20",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_4"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/6c5n-e486",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:methodDescription"
+      },
+      {
+        "@id": "ada:EAIRMSCollection"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:document"
+      }
+    ]
+  }
+}

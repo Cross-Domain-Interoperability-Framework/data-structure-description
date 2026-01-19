@@ -1,0 +1,5110 @@
+{
+  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+  },
+  "@id": "ada:record_2243",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:name": "Q-ICP-MS Bulk elemental analyses of the three Bennu lithologies and the SEIWG and SOAWG bulk aggregates",
+  "schema:description": "The major and trace elemental analyses of the Bennu samples OREX-800117-107 (SEIWG bulk aggregate), OREX-800107-101 (SOAWG bulk aggregate), OREX-800055-103 (angular lithology), OREX-803231-101 (hummocky lithology), and OREX-800023-113 (mottled lithology). All samples, excluding the hummocky lithology, show simialr compositions which are close to the average CI chondrite composition. The SOAWG bulk aggregate does however show contamination of the elements W, La, Ce, and Mo. As for the hummocky lithology, it shows a distinct elemental composition, likely due to its disticnt mineralogic differences.",
+  "schema:identifier": {
+    "@type": "schema:PropertyValue",
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:value": "10.60707/fzjk-kt84",
+    "schema:url": "https://doi.org/10.60707/fzjk-kt84"
+  },
+  "schema:additionalType": [
+    "Quadrupole Inductively Coupled Plasma Mass Spectrometry"
+  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:license": [
+    "missing"
+  ],
+  "schema:url": "",
+  "schema:creator": {
+    "@list": [
+      {
+        "@id": "https://ada.org/person/5489",
+        "@type": "schema:Person",
+        "schema:name": "Koefoed, Piers",
+        "schema:identifier": "https://orcid.org/0000-0002-4036-6088",
+        "schema:email": "piers.koefoed@wustl.edu"
+      }
+    ]
+  },
+  "schema:funding": [
+    {
+      "@type": "schema:MonetaryGrant",
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program."
+    }
+  ],
+  "schema:measurementTechnique": {
+    "@type": "schema:DefinedTerm",
+    "schema:name": "Quadrupole Inductively Coupled Plasma Mass Spectrometry",
+    "schema:termCode": "Q-ICP-MS"
+  },
+  "prov:wasGeneratedBy": [
+    {
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2025-01-28T12:00:00Z",
+      "schema:identifier": "20250128_q-icp-ms_wustl_multisample_1",
+      "prov:used": [
+        {
+          "@type": [
+            "schema:Thing",
+            "prov:Entity",
+            "nxs:BaseClass/NXinstrument"
+          ],
+          "schema:name": "Thermo Fisher Scientific iCAP Q",
+          "schema:identifier": "iCAP-Q"
+        }
+      ],
+      "schema:location": {
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:identifier": "https://ror.org/01yc7t268",
+        "schema:name": "Washington University in St. Louis",
+        "schema:alternateName": "WUSTL"
+      },
+      "schema:mainEntity": [
+        {
+          "@type": [
+            "schema:Thing",
+            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+          ],
+          "schema:additionalType": [
+            "MaterialSample"
+          ],
+          "schema:identifier": ["OREX-803231-101"]
+        }
+      ]
+    }
+  ],
+  "schema:variableMeasured": [
+    {
+      "@id": "#samplelist",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "SampleList",
+      "schema:description": "List of samples analysed",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#samplename",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "SampleName",
+      "schema:description": "user defined sample name",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage7liked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 7Li (KED)",
+      "schema:description": "raw 7Li data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage23naked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 23Na (KED)",
+      "schema:description": "raw 23Na data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage24mgked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 24Mg (KED)",
+      "schema:description": "raw 24Mg data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage27alked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 27Al (KED)",
+      "schema:description": "raw 27Al data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage31pked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 31P (KED)",
+      "schema:description": "raw 31P data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage39kked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 39K (KED)",
+      "schema:description": "raw 39K data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage43caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 43Ca (KED)",
+      "schema:description": "raw 43Ca data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage44caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 44Ca (KED)",
+      "schema:description": "raw 44Ca data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage45scked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 45Sc (KED)",
+      "schema:description": "raw 45Sc data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage47tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 47Ti (KED)",
+      "schema:description": "raw 47Ti data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage48tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 48Ti (KED)",
+      "schema:description": "raw 48Ti data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage51vked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 51V (KED)",
+      "schema:description": "raw 51V data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage52crked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 52Cr (KED)",
+      "schema:description": "raw 52Cr data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage55mnked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 55Mn (KED)",
+      "schema:description": "raw 55Mn data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage56feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 56Fe (KED)",
+      "schema:description": "raw 56Fe data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage57feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 57Fe (KED)",
+      "schema:description": "raw 57Fe data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage59coked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 59Co (KED)",
+      "schema:description": "raw 59Co data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage60niked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 60Ni (KED)",
+      "schema:description": "raw 60Ni data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage63cuked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 63Cu (KED)",
+      "schema:description": "raw 63Cu data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage66znked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 66Zn (KED)",
+      "schema:description": "raw 66Zn data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage71gaked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 71Ga (KED)",
+      "schema:description": "raw 71Ga data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage75asked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 75As (KED)",
+      "schema:description": "raw 75As data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage77seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 77Se (KED)",
+      "schema:description": "raw 77Se data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage82seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 82Se (KED)",
+      "schema:description": "raw 82Se data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage85rbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 85Rb (KED)",
+      "schema:description": "raw 85Rb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage88srked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 88Sr (KED)",
+      "schema:description": "raw 88Sr data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage89yked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 89Y (KED)",
+      "schema:description": "raw 89Y data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage90zrked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 90Zr (KED)",
+      "schema:description": "raw 90Zr data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage93nbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 93Nb (KED)",
+      "schema:description": "raw 93Nb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage95moked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 95Mo (KED)",
+      "schema:description": "raw 95Mo data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage103rhked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 103Rh (KED)",
+      "schema:description": "raw 103Rh data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage107agked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 107Ag (KED)",
+      "schema:description": "raw 107Ag data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage111cdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 111Cd (KED)",
+      "schema:description": "raw 111Cd data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage115inked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 115In (KED)",
+      "schema:description": "raw 115In data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage121sbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 121Sb (KED)",
+      "schema:description": "raw 121Sb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage125teked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 125Te (KED)",
+      "schema:description": "raw 125Te data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage133csked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 133Cs (KED)",
+      "schema:description": "raw 133Cs data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage137baked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 137Ba (KED)",
+      "schema:description": "raw 137Ba data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage139laked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 139La (KED)",
+      "schema:description": "raw 139La data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage140ceked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 140Ce (KED)",
+      "schema:description": "raw 140Ce data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage141prked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 141Pr (KED)",
+      "schema:description": "raw 141Pr data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage146ndked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 146Nd (KED)",
+      "schema:description": "raw 146Nd data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage147smked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 147Sm (KED)",
+      "schema:description": "raw 147Sm data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage153euked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 153Eu (KED)",
+      "schema:description": "raw 153Eu data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage157gdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 157Gd (KED)",
+      "schema:description": "raw 157Gd data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage159tbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 159Tb (KED)",
+      "schema:description": "raw 159Tb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage163dyked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 163Dy (KED)",
+      "schema:description": "raw 163Dy data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage165hoked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 165Ho (KED)",
+      "schema:description": "raw 165Ho data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage166erked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 166Er (KED)",
+      "schema:description": "raw 166Er data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage169tmked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 169Tm (KED)",
+      "schema:description": "raw 169Tm data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage172ybked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 172Yb (KED)",
+      "schema:description": "raw 172Yb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage175luked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 175Lu (KED)",
+      "schema:description": "raw 175Lu data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage178hfked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 178Hf (KED)",
+      "schema:description": "raw 178Hf data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage181taked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 181Ta (KED)",
+      "schema:description": "raw 181Ta data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage182wked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 182W (KED)",
+      "schema:description": "raw 182W data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage185reked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 185Re (KED)",
+      "schema:description": "raw 185Re data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage193irked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 193Ir (KED)",
+      "schema:description": "raw 193Ir data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage195ptked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 195Pt (KED)",
+      "schema:description": "raw 195Pt data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage205tlked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 205Tl (KED)",
+      "schema:description": "raw 205Tl data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage206pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 206Pb (KED)",
+      "schema:description": "raw 206Pb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage207pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 207Pb (KED)",
+      "schema:description": "raw 207Pb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage208pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 208Pb (KED)",
+      "schema:description": "raw 208Pb data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage209biked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 209Bi (KED)",
+      "schema:description": "raw 209Bi data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage232thked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 232Th (KED)",
+      "schema:description": "raw 232Th data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawaverage238uked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.Average 238U (KED)",
+      "schema:description": "raw 238U data measured in KED mode",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd7liked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 7Li (KED)",
+      "schema:description": "instrament calculated error (RSD) for 7Li",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd23naked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 23Na (KED)",
+      "schema:description": "instrament calculated error (RSD) for 23Na",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd24mgked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 24Mg (KED)",
+      "schema:description": "instrament calculated error (RSD) for 24Mg",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd27alked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 27Al (KED)",
+      "schema:description": "instrament calculated error (RSD) for 27Al",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd31pked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 31P (KED)",
+      "schema:description": "instrament calculated error (RSD) for 31P",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd39kked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 39K (KED)",
+      "schema:description": "instrament calculated error (RSD) for 39K",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd43caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 43Ca (KED)",
+      "schema:description": "instrament calculated error (RSD) for 43Ca",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd44caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 44Ca (KED)",
+      "schema:description": "instrament calculated error (RSD) for 44Ca",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd45scked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 45Sc (KED)",
+      "schema:description": "instrament calculated error (RSD) for 45Sc",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd47tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 47Ti (KED)",
+      "schema:description": "instrament calculated error (RSD) for 47Ti",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd48tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 48Ti (KED)",
+      "schema:description": "instrament calculated error (RSD) for 48Ti",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd51vked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 51V (KED)",
+      "schema:description": "instrament calculated error (RSD) for 51V",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd52crked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 52Cr (KED)",
+      "schema:description": "instrament calculated error (RSD) for 52Cr",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd52mnked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 52Mn (KED)",
+      "schema:description": "instrament calculated error (RSD) for 52Mn",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd56feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 56Fe (KED)",
+      "schema:description": "instrament calculated error (RSD) for 56Fe",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd57feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 57Fe (KED)",
+      "schema:description": "instrament calculated error (RSD) for 57Fe",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd59coked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 59Co (KED)",
+      "schema:description": "instrament calculated error (RSD) for 59Co",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd60niked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 60Ni (KED)",
+      "schema:description": "instrament calculated error (RSD) for 60Ni",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd63cuked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 63Cu (KED)",
+      "schema:description": "instrament calculated error (RSD) for 63Cu",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd66znked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 66Zn (KED)",
+      "schema:description": "instrament calculated error (RSD) for 66Zn",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd71gaked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 71Ga (KED)",
+      "schema:description": "instrament calculated error (RSD) for 71Ga",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd75asked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 75As (KED)",
+      "schema:description": "instrament calculated error (RSD) for 75As",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd77seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 77Se (KED)",
+      "schema:description": "instrament calculated error (RSD) for 77Se",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd82seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 82Se (KED)",
+      "schema:description": "instrament calculated error (RSD) for 82Se",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd85rbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 85Rb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 85Rb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd88srked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 88Sr (KED)",
+      "schema:description": "instrament calculated error (RSD) for 88Sr",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd89yked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 89Y (KED)",
+      "schema:description": "instrament calculated error (RSD) for 89Y",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd90zrked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 90Zr (KED)",
+      "schema:description": "instrament calculated error (RSD) for 90Zr",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd93nbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 93Nb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 93Nb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd95moked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 95Mo (KED)",
+      "schema:description": "instrament calculated error (RSD) for 95Mo",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd103rhked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 103Rh (KED)",
+      "schema:description": "instrament calculated error (RSD) for 103Rh",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd107agked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 107Ag (KED)",
+      "schema:description": "instrament calculated error (RSD) for 107Ag",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd111cdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 111Cd (KED)",
+      "schema:description": "instrament calculated error (RSD) for 111Cd",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd115inked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 115In (KED)",
+      "schema:description": "instrament calculated error (RSD) for 115In",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd121sbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 121Sb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 121Sb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd125teked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 125Te (KED)",
+      "schema:description": "instrament calculated error (RSD) for 125Te",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd133csked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 133Cs (KED)",
+      "schema:description": "instrament calculated error (RSD) for 133Cs",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd137baked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 137Ba (KED)",
+      "schema:description": "instrament calculated error (RSD) for 137Ba",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd139laked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 139La (KED)",
+      "schema:description": "instrament calculated error (RSD) for 139La",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd140ceked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 140Ce (KED)",
+      "schema:description": "instrament calculated error (RSD) for 140Ce",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd141prked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 141Pr (KED)",
+      "schema:description": "instrament calculated error (RSD) for 141Pr",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd146ndked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 146Nd (KED)",
+      "schema:description": "instrament calculated error (RSD) for 146Nd",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd147smked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 147Sm (KED)",
+      "schema:description": "instrament calculated error (RSD) for 147Sm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd153euked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 153Eu (KED)",
+      "schema:description": "instrament calculated error (RSD) for 153Eu",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd157gdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 157Gd (KED)",
+      "schema:description": "instrament calculated error (RSD) for 157Gd",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd159tbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 159Tb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 159Tb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd163dyked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 163Dy (KED)",
+      "schema:description": "instrament calculated error (RSD) for 163Dy",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd165hoked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 165Ho (KED)",
+      "schema:description": "instrament calculated error (RSD) for 165Ho",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd166erked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 166Er (KED)",
+      "schema:description": "instrament calculated error (RSD) for 166Er",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd169tmked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 169Tm (KED)",
+      "schema:description": "instrament calculated error (RSD) for 169Tm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd172ybked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 172Yb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 172Yb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd175luked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 175Lu (KED)",
+      "schema:description": "instrament calculated error (RSD) for 175Lu",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd178hfked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 178Hf (KED)",
+      "schema:description": "instrament calculated error (RSD) for 178Hf",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd181taked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 181Ta (KED)",
+      "schema:description": "instrament calculated error (RSD) for 181Ta",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd182wked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 182W (KED)",
+      "schema:description": "instrament calculated error (RSD) for 182W",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd185reked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 185Re (KED)",
+      "schema:description": "instrament calculated error (RSD) for 185Re",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd193irked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 193Ir (KED)",
+      "schema:description": "instrament calculated error (RSD) for 193Ir",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd195ptked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 195Pt (KED)",
+      "schema:description": "instrament calculated error (RSD) for 195Pt",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd205tlked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 205Tl (KED)",
+      "schema:description": "instrament calculated error (RSD) for 205Tl",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd206pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 206Pb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 206Pb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd207pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 207Pb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 207Pb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd208pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 208Pb (KED)",
+      "schema:description": "instrament calculated error (RSD) for 208Pb",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd209biked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 209Bi (KED)",
+      "schema:description": "instrament calculated error (RSD) for 209Bi",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd232thked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 232Th (KED)",
+      "schema:description": "instrament calculated error (RSD) for 232Th",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#rawrsd238uked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "Raw.RSD 238U (KED)",
+      "schema:description": "instrament calculated error (RSD) for 238U",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage7liked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 7Li (KED)",
+      "schema:description": "calculated concentraions of 7Li in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage23naked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 23Na (KED)",
+      "schema:description": "calculated concentraions of 23Na in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage24mgked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 24Mg (KED)",
+      "schema:description": "calculated concentraions of 24Mg in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage27alked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 27Al (KED)",
+      "schema:description": "calculated concentraions of 27Al in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage31pked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 31P (KED)",
+      "schema:description": "calculated concentraions of 31P in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage39kked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 39K (KED)",
+      "schema:description": "calculated concentraions of 39K in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage43caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 43Ca (KED)",
+      "schema:description": "calculated concentraions of 43Ca in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage44caked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 44Ca (KED)",
+      "schema:description": "calculated concentraions of 44Ca in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage45scked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 45Sc (KED)",
+      "schema:description": "calculated concentraions of 45Sc in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage47tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 47Ti (KED)",
+      "schema:description": "calculated concentraions of 47Ti in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage48tiked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 48Ti (KED)",
+      "schema:description": "calculated concentraions of 48Ti in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage51vked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 51V (KED)",
+      "schema:description": "calculated concentraions of 51V in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage52crked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 52Cr (KED)",
+      "schema:description": "calculated concentraions of 52Cr in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage55mnked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 55Mn (KED)",
+      "schema:description": "calculated concentraions of 55Mn in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage56feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 56Fe (KED)",
+      "schema:description": "calculated concentraions of 56Fe in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage57feked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 57Fe (KED)",
+      "schema:description": "calculated concentraions of 57Fe in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage59coked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 59Co (KED)",
+      "schema:description": "calculated concentraions of 59Co in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage60niked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 60Ni (KED)",
+      "schema:description": "calculated concentraions of 60Ni in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage63cuked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 63Cu (KED)",
+      "schema:description": "calculated concentraions of 63Cu in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage66znked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 66Zn (KED)",
+      "schema:description": "calculated concentraions of 66Zn in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage71gaked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 71Ga (KED)",
+      "schema:description": "calculated concentraions of 71Ga in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage75asked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 75As (KED)",
+      "schema:description": "calculated concentraions of 75As in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage77seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 77Se (KED)",
+      "schema:description": "calculated concentraions of 77Se in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage82seked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 82Se (KED)",
+      "schema:description": "calculated concentraions of 82Se in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage85rbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 85Rb (KED)",
+      "schema:description": "calculated concentraions of 85Rb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage88srked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 88Sr (KED)",
+      "schema:description": "calculated concentraions of 88Sr in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage89yked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 89Y (KED)",
+      "schema:description": "calculated concentraions of 89Y in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage90zrked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 90Zr (KED)",
+      "schema:description": "calculated concentraions of 90Zr in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage93nbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 93Nb (KED)",
+      "schema:description": "calculated concentraions of 93Nb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage95moked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 95Mo (KED)",
+      "schema:description": "calculated concentraions of 95Mo in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage103rhked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 103Rh (KED)",
+      "schema:description": "calculated concentraions of 103Rh in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage107agked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 107Ag (KED)",
+      "schema:description": "calculated concentraions of 107Ag in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage111cdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 111Cd (KED)",
+      "schema:description": "calculated concentraions of 111Cd in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage115inked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 115In (KED)",
+      "schema:description": "calculated concentraions of 115In in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage121sbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 121Sb (KED)",
+      "schema:description": "calculated concentraions of 121Sb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage125teked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 125Te (KED)",
+      "schema:description": "calculated concentraions of 125Te in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage133csked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 133Cs (KED)",
+      "schema:description": "calculated concentraions of 133Cs in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage137baked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 137Ba (KED)",
+      "schema:description": "calculated concentraions of 137Ba in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage139laked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 139La (KED)",
+      "schema:description": "calculated concentraions of 139La in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage140ceked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 140Ce (KED)",
+      "schema:description": "calculated concentraions of 140Ca in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage141prked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 141Pr (KED)",
+      "schema:description": "calculated concentraions of 141Pr in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage146ndked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 146Nd (KED)",
+      "schema:description": "calculated concentraions of 146Nd in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage147smked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 147Sm (KED)",
+      "schema:description": "calculated concentraions of 147Sm in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage153euked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 153Eu (KED)",
+      "schema:description": "calculated concentraions of 153Eu in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage157gdked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 157Gd (KED)",
+      "schema:description": "calculated concentraions of 157Gd in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage159tbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 159Tb (KED)",
+      "schema:description": "calculated concentraions of 159Tb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage163dyked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 163Dy (KED)",
+      "schema:description": "calculated concentraions of 163Dy in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage165hoked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 165Ho (KED)",
+      "schema:description": "calculated concentraions of 165Ho in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage166erked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 166Er (KED)",
+      "schema:description": "calculated concentraions of 166Er in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage169tmked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 169Tm (KED)",
+      "schema:description": "calculated concentraions of 169Tm in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage172ybked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 172Yb (KED)",
+      "schema:description": "calculated concentraions of 172Yb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage175luked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 175Lu (KED)",
+      "schema:description": "calculated concentraions of 175Lu in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage178hfked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 178Hf (KED)",
+      "schema:description": "calculated concentraions of 178Hf in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage181taked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 181Ta (KED)",
+      "schema:description": "calculated concentraions of 181Ta in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage182wked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 182W (KED)",
+      "schema:description": "calculated concentraions of 182W in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage185reked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 185Re (KED)",
+      "schema:description": "calculated concentraions of 185Re in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage193irked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 193Ir (KED)",
+      "schema:description": "calculated concentraions of 193Ir in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage195ptked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 195Pt (KED)",
+      "schema:description": "calculated concentraions of 195Pt in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage205tlked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 205Tl (KED)",
+      "schema:description": "calculated concentraions of 205Tl in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage208pbked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 208Pb (KED)",
+      "schema:description": "calculated concentraions of 208Pb in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage209biked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 209Bi (KED)",
+      "schema:description": "calculated concentraions of 209Bi in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage232thked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 232Th (KED)",
+      "schema:description": "calculated concentraions of 232Th in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "#extcalaverage238uked",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:name": "ExtCal.Average 238U (KED)",
+      "schema:description": "calculated concentraions of 238U in ppm",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "schema:distribution": [
+    {
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:contentUrl": "",
+      "schema:hasPart": [
+        {
+          "@type": "schema:Dataset",
+          "@id": "#ae658595157f0d7ecf830a013c7c357e",
+          "schema:name": "20250128_Q-ICP-MS_WUSTL_multiSample_1_QICPMSRawTabular_1.csv",
+          "schema:description": "Raw iCAPQ ICP-MS data sha256:15dae93d3b61d9ac8178040cff8a08a0b35711aa6cbfacd64ad2e96f93d1805e ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 241348,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "text/csv"
+          ],
+          "fileDetail": {
+            "@type": [
+              "cdi:PhysicalDataSet",
+              "ada:tabularData"
+            ],
+            "componentType": {
+              "@type": "ada:QICPMSRawTabular"
+            },
+            "cdi:isStructuredBy": {
+              "@type": "cdi:WideDataStructure",
+              "cdi:has_DataStructureComponent": [
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#samplelist"
+                  },
+                  "schema:name": "SampleList",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 1,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#samplename"
+                  },
+                  "schema:name": "SampleName",
+                  "schema:unitText": "None",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 2,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage7liked"
+                  },
+                  "schema:name": "Raw.Average 7Li (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 3,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage23naked"
+                  },
+                  "schema:name": "Raw.Average 23Na (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 4,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage24mgked"
+                  },
+                  "schema:name": "Raw.Average 24Mg (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 5,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage27alked"
+                  },
+                  "schema:name": "Raw.Average 27Al (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 6,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage31pked"
+                  },
+                  "schema:name": "Raw.Average 31P (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 7,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage39kked"
+                  },
+                  "schema:name": "Raw.Average 39K (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 8,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage43caked"
+                  },
+                  "schema:name": "Raw.Average 43Ca (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 9,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage44caked"
+                  },
+                  "schema:name": "Raw.Average 44Ca (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 10,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage45scked"
+                  },
+                  "schema:name": "Raw.Average 45Sc (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 11,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage47tiked"
+                  },
+                  "schema:name": "Raw.Average 47Ti (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 12,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage48tiked"
+                  },
+                  "schema:name": "Raw.Average 48Ti (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 13,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage51vked"
+                  },
+                  "schema:name": "Raw.Average 51V (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 14,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage52crked"
+                  },
+                  "schema:name": "Raw.Average 52Cr (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 15,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage55mnked"
+                  },
+                  "schema:name": "Raw.Average 55Mn (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 16,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage56feked"
+                  },
+                  "schema:name": "Raw.Average 56Fe (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 17,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage57feked"
+                  },
+                  "schema:name": "Raw.Average 57Fe (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 18,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage59coked"
+                  },
+                  "schema:name": "Raw.Average 59Co (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 19,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage60niked"
+                  },
+                  "schema:name": "Raw.Average 60Ni (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 20,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage63cuked"
+                  },
+                  "schema:name": "Raw.Average 63Cu (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 21,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage66znked"
+                  },
+                  "schema:name": "Raw.Average 66Zn (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 22,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage71gaked"
+                  },
+                  "schema:name": "Raw.Average 71Ga (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 23,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage75asked"
+                  },
+                  "schema:name": "Raw.Average 75As (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 24,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage77seked"
+                  },
+                  "schema:name": "Raw.Average 77Se (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 25,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage82seked"
+                  },
+                  "schema:name": "Raw.Average 82Se (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 26,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage85rbked"
+                  },
+                  "schema:name": "Raw.Average 85Rb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 27,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage88srked"
+                  },
+                  "schema:name": "Raw.Average 88Sr (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 28,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage89yked"
+                  },
+                  "schema:name": "Raw.Average 89Y (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 29,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage90zrked"
+                  },
+                  "schema:name": "Raw.Average 90Zr (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 30,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage93nbked"
+                  },
+                  "schema:name": "Raw.Average 93Nb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 31,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage95moked"
+                  },
+                  "schema:name": "Raw.Average 95Mo (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 32,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage103rhked"
+                  },
+                  "schema:name": "Raw.Average 103Rh (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 33,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage107agked"
+                  },
+                  "schema:name": "Raw.Average 107Ag (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 34,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage111cdked"
+                  },
+                  "schema:name": "Raw.Average 111Cd (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 35,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage115inked"
+                  },
+                  "schema:name": "Raw.Average 115In (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 36,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage121sbked"
+                  },
+                  "schema:name": "Raw.Average 121Sb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 37,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage125teked"
+                  },
+                  "schema:name": "Raw.Average 125Te (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 38,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage133csked"
+                  },
+                  "schema:name": "Raw.Average 133Cs (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 39,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage137baked"
+                  },
+                  "schema:name": "Raw.Average 137Ba (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 40,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage139laked"
+                  },
+                  "schema:name": "Raw.Average 139La (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 41,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage140ceked"
+                  },
+                  "schema:name": "Raw.Average 140Ce (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 42,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage141prked"
+                  },
+                  "schema:name": "Raw.Average 141Pr (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 43,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage146ndked"
+                  },
+                  "schema:name": "Raw.Average 146Nd (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 44,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage147smked"
+                  },
+                  "schema:name": "Raw.Average 147Sm (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 45,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage153euked"
+                  },
+                  "schema:name": "Raw.Average 153Eu (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 46,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage157gdked"
+                  },
+                  "schema:name": "Raw.Average 157Gd (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 47,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage159tbked"
+                  },
+                  "schema:name": "Raw.Average 159Tb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 48,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage163dyked"
+                  },
+                  "schema:name": "Raw.Average 163Dy (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 49,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage165hoked"
+                  },
+                  "schema:name": "Raw.Average 165Ho (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 50,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage166erked"
+                  },
+                  "schema:name": "Raw.Average 166Er (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 51,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage169tmked"
+                  },
+                  "schema:name": "Raw.Average 169Tm (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 52,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage172ybked"
+                  },
+                  "schema:name": "Raw.Average 172Yb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 53,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage175luked"
+                  },
+                  "schema:name": "Raw.Average 175Lu (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 54,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage178hfked"
+                  },
+                  "schema:name": "Raw.Average 178Hf (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 55,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage181taked"
+                  },
+                  "schema:name": "Raw.Average 181Ta (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 56,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage182wked"
+                  },
+                  "schema:name": "Raw.Average 182W (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 57,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage185reked"
+                  },
+                  "schema:name": "Raw.Average 185Re (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 58,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage193irked"
+                  },
+                  "schema:name": "Raw.Average 193Ir (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 59,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage195ptked"
+                  },
+                  "schema:name": "Raw.Average 195Pt (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 60,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage205tlked"
+                  },
+                  "schema:name": "Raw.Average 205Tl (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 61,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage206pbked"
+                  },
+                  "schema:name": "Raw.Average 206Pb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 62,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage207pbked"
+                  },
+                  "schema:name": "Raw.Average 207Pb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 63,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage208pbked"
+                  },
+                  "schema:name": "Raw.Average 208Pb (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 64,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage209biked"
+                  },
+                  "schema:name": "Raw.Average 209Bi (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 65,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage232thked"
+                  },
+                  "schema:name": "Raw.Average 232Th (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 66,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawaverage238uked"
+                  },
+                  "schema:name": "Raw.Average 238U (KED)",
+                  "schema:unitText": "counts",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 67,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd7liked"
+                  },
+                  "schema:name": "Raw.RSD 7Li (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 68,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd23naked"
+                  },
+                  "schema:name": "Raw.RSD 23Na (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 69,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd24mgked"
+                  },
+                  "schema:name": "Raw.RSD 24Mg (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 70,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd27alked"
+                  },
+                  "schema:name": "Raw.RSD 27Al (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 71,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd31pked"
+                  },
+                  "schema:name": "Raw.RSD 31P (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 72,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd39kked"
+                  },
+                  "schema:name": "Raw.RSD 39K (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 73,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd43caked"
+                  },
+                  "schema:name": "Raw.RSD 43Ca (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 74,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd44caked"
+                  },
+                  "schema:name": "Raw.RSD 44Ca (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 75,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd45scked"
+                  },
+                  "schema:name": "Raw.RSD 45Sc (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 76,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd47tiked"
+                  },
+                  "schema:name": "Raw.RSD 47Ti (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 77,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd48tiked"
+                  },
+                  "schema:name": "Raw.RSD 48Ti (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 78,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd51vked"
+                  },
+                  "schema:name": "Raw.RSD 51V (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 79,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd52crked"
+                  },
+                  "schema:name": "Raw.RSD 52Cr (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 80,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd52mnked"
+                  },
+                  "schema:name": "Raw.RSD 52Mn (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 81,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd56feked"
+                  },
+                  "schema:name": "Raw.RSD 56Fe (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 82,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd57feked"
+                  },
+                  "schema:name": "Raw.RSD 57Fe (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 83,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd59coked"
+                  },
+                  "schema:name": "Raw.RSD 59Co (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 84,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd60niked"
+                  },
+                  "schema:name": "Raw.RSD 60Ni (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 85,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd63cuked"
+                  },
+                  "schema:name": "Raw.RSD 63Cu (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 86,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd66znked"
+                  },
+                  "schema:name": "Raw.RSD 66Zn (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 87,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd71gaked"
+                  },
+                  "schema:name": "Raw.RSD 71Ga (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 88,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd75asked"
+                  },
+                  "schema:name": "Raw.RSD 75As (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 89,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd77seked"
+                  },
+                  "schema:name": "Raw.RSD 77Se (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 90,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd82seked"
+                  },
+                  "schema:name": "Raw.RSD 82Se (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 91,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd85rbked"
+                  },
+                  "schema:name": "Raw.RSD 85Rb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 92,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd88srked"
+                  },
+                  "schema:name": "Raw.RSD 88Sr (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 93,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd89yked"
+                  },
+                  "schema:name": "Raw.RSD 89Y (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 94,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd90zrked"
+                  },
+                  "schema:name": "Raw.RSD 90Zr (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 95,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd93nbked"
+                  },
+                  "schema:name": "Raw.RSD 93Nb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 96,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd95moked"
+                  },
+                  "schema:name": "Raw.RSD 95Mo (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 97,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd103rhked"
+                  },
+                  "schema:name": "Raw.RSD 103Rh (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 98,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd107agked"
+                  },
+                  "schema:name": "Raw.RSD 107Ag (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 99,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd111cdked"
+                  },
+                  "schema:name": "Raw.RSD 111Cd (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 100,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd115inked"
+                  },
+                  "schema:name": "Raw.RSD 115In (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 101,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd121sbked"
+                  },
+                  "schema:name": "Raw.RSD 121Sb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 102,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd125teked"
+                  },
+                  "schema:name": "Raw.RSD 125Te (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 103,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd133csked"
+                  },
+                  "schema:name": "Raw.RSD 133Cs (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 104,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd137baked"
+                  },
+                  "schema:name": "Raw.RSD 137Ba (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 105,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd139laked"
+                  },
+                  "schema:name": "Raw.RSD 139La (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 106,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd140ceked"
+                  },
+                  "schema:name": "Raw.RSD 140Ce (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 107,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd141prked"
+                  },
+                  "schema:name": "Raw.RSD 141Pr (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 108,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd146ndked"
+                  },
+                  "schema:name": "Raw.RSD 146Nd (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 109,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd147smked"
+                  },
+                  "schema:name": "Raw.RSD 147Sm (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 110,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd153euked"
+                  },
+                  "schema:name": "Raw.RSD 153Eu (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 111,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd157gdked"
+                  },
+                  "schema:name": "Raw.RSD 157Gd (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 112,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd159tbked"
+                  },
+                  "schema:name": "Raw.RSD 159Tb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 113,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd163dyked"
+                  },
+                  "schema:name": "Raw.RSD 163Dy (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 114,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd165hoked"
+                  },
+                  "schema:name": "Raw.RSD 165Ho (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 115,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd166erked"
+                  },
+                  "schema:name": "Raw.RSD 166Er (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 116,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd169tmked"
+                  },
+                  "schema:name": "Raw.RSD 169Tm (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 117,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd172ybked"
+                  },
+                  "schema:name": "Raw.RSD 172Yb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 118,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd175luked"
+                  },
+                  "schema:name": "Raw.RSD 175Lu (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 119,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd178hfked"
+                  },
+                  "schema:name": "Raw.RSD 178Hf (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 120,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd181taked"
+                  },
+                  "schema:name": "Raw.RSD 181Ta (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 121,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd182wked"
+                  },
+                  "schema:name": "Raw.RSD 182W (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 122,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd185reked"
+                  },
+                  "schema:name": "Raw.RSD 185Re (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 123,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd193irked"
+                  },
+                  "schema:name": "Raw.RSD 193Ir (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 124,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd195ptked"
+                  },
+                  "schema:name": "Raw.RSD 195Pt (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 125,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd205tlked"
+                  },
+                  "schema:name": "Raw.RSD 205Tl (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 126,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd206pbked"
+                  },
+                  "schema:name": "Raw.RSD 206Pb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 127,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd207pbked"
+                  },
+                  "schema:name": "Raw.RSD 207Pb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 128,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd208pbked"
+                  },
+                  "schema:name": "Raw.RSD 208Pb (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 129,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd209biked"
+                  },
+                  "schema:name": "Raw.RSD 209Bi (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 130,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd232thked"
+                  },
+                  "schema:name": "Raw.RSD 232Th (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 131,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#rawrsd238uked"
+                  },
+                  "schema:name": "Raw.RSD 238U (KED)",
+                  "schema:unitText": "percent",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 132,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage7liked"
+                  },
+                  "schema:name": "ExtCal.Average 7Li (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 133,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage23naked"
+                  },
+                  "schema:name": "ExtCal.Average 23Na (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 134,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage24mgked"
+                  },
+                  "schema:name": "ExtCal.Average 24Mg (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 135,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage27alked"
+                  },
+                  "schema:name": "ExtCal.Average 27Al (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 136,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage31pked"
+                  },
+                  "schema:name": "ExtCal.Average 31P (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 137,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage39kked"
+                  },
+                  "schema:name": "ExtCal.Average 39K (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 138,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage43caked"
+                  },
+                  "schema:name": "ExtCal.Average 43Ca (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 139,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage44caked"
+                  },
+                  "schema:name": "ExtCal.Average 44Ca (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 140,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage45scked"
+                  },
+                  "schema:name": "ExtCal.Average 45Sc (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 141,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage47tiked"
+                  },
+                  "schema:name": "ExtCal.Average 47Ti (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 142,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage48tiked"
+                  },
+                  "schema:name": "ExtCal.Average 48Ti (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 143,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage51vked"
+                  },
+                  "schema:name": "ExtCal.Average 51V (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 144,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage52crked"
+                  },
+                  "schema:name": "ExtCal.Average 52Cr (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 145,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage55mnked"
+                  },
+                  "schema:name": "ExtCal.Average 55Mn (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 146,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage56feked"
+                  },
+                  "schema:name": "ExtCal.Average 56Fe (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 147,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage57feked"
+                  },
+                  "schema:name": "ExtCal.Average 57Fe (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 148,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage59coked"
+                  },
+                  "schema:name": "ExtCal.Average 59Co (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 149,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage60niked"
+                  },
+                  "schema:name": "ExtCal.Average 60Ni (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 150,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage63cuked"
+                  },
+                  "schema:name": "ExtCal.Average 63Cu (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 151,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage66znked"
+                  },
+                  "schema:name": "ExtCal.Average 66Zn (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 152,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage71gaked"
+                  },
+                  "schema:name": "ExtCal.Average 71Ga (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 153,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage75asked"
+                  },
+                  "schema:name": "ExtCal.Average 75As (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 154,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage77seked"
+                  },
+                  "schema:name": "ExtCal.Average 77Se (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 155,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage82seked"
+                  },
+                  "schema:name": "ExtCal.Average 82Se (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 156,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage85rbked"
+                  },
+                  "schema:name": "ExtCal.Average 85Rb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 157,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage88srked"
+                  },
+                  "schema:name": "ExtCal.Average 88Sr (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 158,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage89yked"
+                  },
+                  "schema:name": "ExtCal.Average 89Y (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 159,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage90zrked"
+                  },
+                  "schema:name": "ExtCal.Average 90Zr (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 160,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage93nbked"
+                  },
+                  "schema:name": "ExtCal.Average 93Nb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 161,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage95moked"
+                  },
+                  "schema:name": "ExtCal.Average 95Mo (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 162,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage103rhked"
+                  },
+                  "schema:name": "ExtCal.Average 103Rh (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 163,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage107agked"
+                  },
+                  "schema:name": "ExtCal.Average 107Ag (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 164,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage111cdked"
+                  },
+                  "schema:name": "ExtCal.Average 111Cd (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 165,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage115inked"
+                  },
+                  "schema:name": "ExtCal.Average 115In (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 166,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage121sbked"
+                  },
+                  "schema:name": "ExtCal.Average 121Sb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 167,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage125teked"
+                  },
+                  "schema:name": "ExtCal.Average 125Te (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 168,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage133csked"
+                  },
+                  "schema:name": "ExtCal.Average 133Cs (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 169,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage137baked"
+                  },
+                  "schema:name": "ExtCal.Average 137Ba (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 170,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage139laked"
+                  },
+                  "schema:name": "ExtCal.Average 139La (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 171,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage140ceked"
+                  },
+                  "schema:name": "ExtCal.Average 140Ce (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 172,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage141prked"
+                  },
+                  "schema:name": "ExtCal.Average 141Pr (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 173,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage146ndked"
+                  },
+                  "schema:name": "ExtCal.Average 146Nd (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 174,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage147smked"
+                  },
+                  "schema:name": "ExtCal.Average 147Sm (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 175,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage153euked"
+                  },
+                  "schema:name": "ExtCal.Average 153Eu (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 176,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage157gdked"
+                  },
+                  "schema:name": "ExtCal.Average 157Gd (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 177,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage159tbked"
+                  },
+                  "schema:name": "ExtCal.Average 159Tb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 178,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage163dyked"
+                  },
+                  "schema:name": "ExtCal.Average 163Dy (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 179,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage165hoked"
+                  },
+                  "schema:name": "ExtCal.Average 165Ho (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 180,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage166erked"
+                  },
+                  "schema:name": "ExtCal.Average 166Er (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 181,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage169tmked"
+                  },
+                  "schema:name": "ExtCal.Average 169Tm (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 182,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage172ybked"
+                  },
+                  "schema:name": "ExtCal.Average 172Yb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 183,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage175luked"
+                  },
+                  "schema:name": "ExtCal.Average 175Lu (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 184,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage178hfked"
+                  },
+                  "schema:name": "ExtCal.Average 178Hf (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 185,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage181taked"
+                  },
+                  "schema:name": "ExtCal.Average 181Ta (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 186,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage182wked"
+                  },
+                  "schema:name": "ExtCal.Average 182W (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 187,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage185reked"
+                  },
+                  "schema:name": "ExtCal.Average 185Re (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 188,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage193irked"
+                  },
+                  "schema:name": "ExtCal.Average 193Ir (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 189,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage195ptked"
+                  },
+                  "schema:name": "ExtCal.Average 195Pt (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 190,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage205tlked"
+                  },
+                  "schema:name": "ExtCal.Average 205Tl (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 191,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage208pbked"
+                  },
+                  "schema:name": "ExtCal.Average 208Pb (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 192,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage209biked"
+                  },
+                  "schema:name": "ExtCal.Average 209Bi (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 193,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage232thked"
+                  },
+                  "schema:name": "ExtCal.Average 232Th (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 194,
+                    "cdi:physicalDataType": "None"
+                  }
+                },
+                {
+                  "@type": "cdi:MeasureComponent",
+                  "cdi:isDefinedBy_InstanceVariable": {
+                    "@id": "#extcalaverage238uked"
+                  },
+                  "schema:name": "ExtCal.Average 238U (KED)",
+                  "schema:unitText": "ppm",
+                  "cdi:has": {
+                    "@type": "cdi:ValueMapping",
+                    "cdi:hasIndex": 195,
+                    "cdi:physicalDataType": "None"
+                  }
+                }
+              ]
+            },
+            "headerRowCount": 3,
+            "countRows": 118,
+            "countColumns": 195,
+            "xCoordCol": "None",
+            "yCoordCol": "None",
+            "zCoordCol": "None"
+          }
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#b484550aaaa064556e7318d2a816db75",
+          "schema:name": "20250128_Q-ICP-MS_WUSTL_multiSample_1_QICPMSRawTabular_1.yaml",
+          "schema:description": "sha256:eb325a7727f6731901efcddf5307bcba63b5d77d120438e720f272f0db0c528f ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 26771,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#ae658595157f0d7ecf830a013c7c357e"
+            }
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#e650f96d64a3d9dd229a35f1aa3633a3",
+          "schema:name": "20250128_Q-ICP-MS_WUSTL_multiSample_1_methodDescription_1.pdf",
+          "schema:description": "method and data processing description sha256:672b6eb87cc9fb4f25659590544f44ca560fb5d68e9f56b437ada2de555ecca2 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 83011,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/pdf"
+          ]
+        },
+        {
+          "@type": "schema:Dataset",
+          "@id": "#a5586044d453d2d93e49be77d71ee6d4",
+          "schema:name": "20250128_Q-ICP-MS_WUSTL_multiSample_1_methodDescription_1.yaml",
+          "schema:description": "sha256:6075756ccfcd7daa6b72423830869c110e8e84475c8c947852c07ccec6ea9cb7 ; ",
+          "schema:size": {
+            "@type": "schema:QuantitativeValue",
+            "schema:value": 203,
+            "schema:unitText": "byte"
+          },
+          "schema:encodingFormat": [
+            "application/yaml"
+          ],
+          "schema:about": [
+            {
+              "@id": "#e650f96d64a3d9dd229a35f1aa3633a3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "schema:subjectOf": {
+    "@id": "ada:metadata_2243",
+    "@type": "schema:Dataset",
+    "schema:dateModified": "2025-03-04",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": "schema:Person",
+      "schema:name": "Richard, Stephen M.",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:email": "smrTucson@email.org"
+    },
+    "schema:about": {
+      "@id": "ada:record_2243"
+    },
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/fzjk-kt84",
+    "dcterms:conformsTo": [
+      {
+        "@id": "ada:tabularData"
+      },
+      {
+        "@id": "CDIF_basic_1.0"
+      },
+      {
+        "@id": "ada:methodDescription"
+      },
+      {
+        "@id": "ada:metadata"
+      },
+      {
+        "@id": "ada:document"
+      },
+      {
+        "@id": "ada:QICPMSRawTabular"
+      }
+    ]
+  }
+}
