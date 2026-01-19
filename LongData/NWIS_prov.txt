@@ -1,0 +1,52 @@
+https://www.waterqualitydata.us/#countrycode=US&statecode=US%3A04&countycode=US%3A04%3A019&sampleMedia=water&sampleMedia=Water&characteristicType=Nutrient&mimeType=csv&providers=NWIS&providers=STORET
+
+https://www.waterqualitydata.us/
+#countrycode=US&
+statecode=US%3A04&
+countycode=US%3A04%3A019&
+sampleMedia=water&
+sampleMedia=Water&
+characteristicType=Nutrient&
+mimeType=csv&
+providers=NWIS&
+providers=STORET
+
+workflow:
+query www.waterqualitydata.us  with the following parameters:
+countrycode=US&
+statecode=US%3A04&
+countycode=US%3A04%3A019&
+sampleMedia=water&
+sampleMedia=Water&
+characteristicType=Nutrient&
+mimeType=csv&
+providers=NWIS&
+providers=STORET
+
+Query URL: https://www.waterqualitydata.us/#countrycode=US&statecode=US%3A04&countycode=US%3A04%3A019&sampleMedia=water&sampleMedia=Water&characteristicType=Nutrient&mimeType=csv&providers=NWIS&providers=STORET
+
+returns 85 fields on 5206 records as csv formatted tabular text
+Load csv file into excel
+
+filter for 
+	ResultMeasureValue not Null
+	ActivityMediaSubdivisionName = 'Groundwater'
+	calculate lat and long fromUSGS Monitoring locations taht have NWIS ids that encode location
+	
+	Latitude is Not Null
+	calculatare sampleCollectionMethod ="ID:"&AG4&"; context:" & AH4 &"; Name:" & AI4 & "; Equipment:" & AK4
+	calculate date =TEXT(ActivityStartDate+ActivityStartTime/Time,"yyyy-mm-dd""T""hh:mm:ss")&
+		IF(J4="MST","-07:00",
+		IF(J4="MDT","-06:00",
+		IF(J4="PST","-08:00",
+		IF(J4="PDT","-07:00",
+		IF(J4="UTC","+00:00","+00:00")))))
+	
+	update characteristics to include the 'as xxx' concentration that is in the Units of measure in original data 
+	update UOM column to exclued 'as...' that is about the constituent measured.
+	Generate example URIs for constitutents (US EPA probably has vocabulary)
+	calculate ResultAnalyticalMethod:  ResultAnalyticalMethod/MethodIdentifier & ":" & ResultAnalyticalMethod/MethodIdentifierContext
+
+
+
+
