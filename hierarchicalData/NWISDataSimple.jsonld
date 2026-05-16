@@ -1,0 +1,101 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "ex": "https://example.org/"
+  },
+  "@graph": [
+    {
+      "@id": "ex:MonitoringLocation/USGS-321929111070601",
+      "@type": "ex:MonitoringLocation",
+      "ex:locationName": "USGS-321929111070601",
+      "schema:latitude": 32.3247,
+      "schema:longitude": -111.1183,
+      "ex:dateObserved": "2016-02-08T15:00:00-07:00",
+      "ex:results": [
+        {
+          "@type": "ex:Result",
+          "schema:value": 1.83,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium as N",
+          "ex:method": "Ammonia, wf, DA sal/hypo (NWQL)"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 2.36,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium NH4",
+          "ex:method": "Computation by NWIS algorithm"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 8.87,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Nitrate + Nitrite as N",
+          "ex:method": "NO3+NO2, wf, FCC,NaR, DA"
+        }
+      ]
+    },
+    {
+      "@id": "ex:MonitoringLocation/USGS-321840111055001",
+      "@type": "ex:MonitoringLocation",
+      "ex:locationName": "USGS-321840111055001",
+      "schema:latitude": 32.3111,
+      "schema:longitude": -111.0972,
+      "ex:dateObserved": "2016-02-09T13:30:00-07:00",
+      "ex:results": [
+        {
+          "@type": "ex:Result",
+          "schema:value": 0.02,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium as N",
+          "ex:method": "Ammonia, wf, DA sal/hypo (NWQL)"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 0.029,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium NH4",
+          "ex:method": "Computation by NWIS algorithm"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 6.03,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Nitrate + Nitrite as N",
+          "ex:method": "NO3+NO2, wf, FCC,NaR, DA"
+        }
+      ]
+    },
+    {
+      "@id": "ex:MonitoringLocation/USGS-321658111082001",
+      "@type": "ex:MonitoringLocation",
+      "ex:locationName": "USGS-321658111082001",
+      "schema:latitude": 32.2828,
+      "schema:longitude": -111.1389,
+      "ex:dateObserved": "2003-03-13T11:15:00-07:00",
+      "ex:results": [
+        {
+          "@type": "ex:Result",
+          "schema:value": 0.04,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium as N",
+          "ex:method": "Nutrients, wf, salicylate color"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 0.053,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Ammonia and ammonium NH4",
+          "ex:method": "Computation by NWIS algorithm"
+        },
+        {
+          "@type": "ex:Result",
+          "schema:value": 12.3,
+          "schema:unitCode": "mg/l",
+          "ex:characteristic": "Nitrate + Nitrite as N",
+          "ex:method": "Nutrients, wf, Cd reduct, color"
+        }
+      ]
+    }
+  ]
+}
