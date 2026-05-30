@@ -6,6 +6,7 @@ This repository holds the published artifacts for the **CDIF Data Structure prof
 
 ## Specification
 
+- **[CDIFDataStructureImplementationGuide.md](CDIFDataStructureImplementationGuide.md)** — Implementation guide (auto-generated draft; hand-curated content pending).
 - **[cdifDataStructureStructuredSchema.json](cdifDataStructureStructuredSchema.json)** — Resolved JSON Schema (Draft 2020-12) generated from the source register.
 - **[dataStructureRules.shacl](dataStructureRules.shacl)** — Self-contained SHACL shapes, merged from every composing building block plus the profile-level shapes.
 - **[CDIFDataStructure-frame.jsonld](CDIFDataStructure-frame.jsonld)** — JSON-LD frame used by `FrameAndValidate.py`.

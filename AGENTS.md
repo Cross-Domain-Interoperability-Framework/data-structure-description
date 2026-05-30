@@ -6,6 +6,7 @@ This repository publishes the **CDIF Data Structure profile module** (`cdifDataS
 
 ## Key files
 
+- `CDIFDataStructureImplementationGuide.md` — implementation guide (auto-generated draft from the StructuredSchema; hand-curated content pending)
 - `cdifDataStructureStructuredSchema.json` — JSON Schema (generated)
 - `dataStructureRules.shacl` — merged SHACL shapes (generated)
 - `CDIFDataStructure-frame.jsonld` — JSON-LD frame used by `FrameAndValidate.py`
