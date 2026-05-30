@@ -1,10 +1,31 @@
 # CDIF Data Structure Profile — Implementation Guide
 
-> **Draft.** This guide was auto-generated from the StructuredSchema. Edit freely — descriptions, ordering, and the introductory prose should be curated by hand.
+The data structure profile defined metadata elements to document a data structure based on a set of represented variables, their role as components in a data implementation, value domains assigned to variables. This profile introduces the concept of a represented variable in the CDIF framework, as a logical variable that plays a role in a data structure, but is not bound to a particular physical datatype or position in the data serialization. Represented variable roles in the data structure are documented via a data structure component class.
 
-# Purpose and scope
+Adds data-structure description to a CDIF metadata record. Defines the cdi:DataStructure family of types ($defs DataStructure / DimensionalDataStructure / LongDataStructure / WideDataStructure, plus the supporting Component / Key / RepresentedVariable types). A distribution attaches a structure via cdi:isStructuredBy on its schema:DataDownload item; the structure value is one of the four DataStructure variants. 
 
-The **CDIF Data Structure profile module** (`cdifDataStructure`) — see the source register description for the module's purpose. *(Replace this stub paragraph with a hand-written purpose statement.)*
+# Table of contents
+
+- [Conformance](#conformance)
+  - [Validation](#validation)
+- [DataDownload Properties added by the CDIF Data Structure Profile](#datadownload-properties-added-by-the-cdif-data-structure-profile)
+  - [schema:isStructuredBy](#schemaisstructuredby)
+- [Class Definitions](#class-definitions)
+  - [AttributeComponent](#sec-attributecomponent)
+  - [cdi:DimensionalDataStructure](#cdidimensionaldatastructure)
+  - [cdi:LongDataStructure](#cdilongdatastructure)
+  - [cdi:WideDataStructure](#cdiwidedatastructure)
+  - [cdif:DimensionComponent](#cdifdimensioncomponent)
+  - [cdif:RepresentedVariable](#sec-cdifrepresentedvariable)
+  - [CdifCodelistConcept](#sec-cdifcodelistconcept)
+  - [ForeignKey](#sec-foreignkey)
+  - [Identifier](#sec-identifier)
+  - [IdentifierComponent](#sec-identifiercomponent)
+  - [MeasureComponent](#sec-measurecomponent)
+  - [PrimaryKey](#sec-primarykey)
+  - [VariableDescriptorComponent](#sec-variabledescriptorcomponent)
+  - [VariableValueComponent](#sec-variablevaluecomponent)
+- [Provenance of the artifacts](#provenance-of-the-artifacts)
 
 # Conformance
 
@@ -18,7 +39,6 @@ A resource conforms to the CDIF Data Structure profile when its catalog record d
   ]
 }
 ```
-
 Other properties added in this profile are optional; conformance requires only that the constraints in the JSON Schema and SHACL rules are satisfied.
 
 ## Validation
@@ -31,66 +51,138 @@ Two validators ship with this repository:
 python FrameAndValidate.py examples/<file>.json --validate \
   --schema cdifDataStructureStructuredSchema.json --frame <frame.jsonld>
 ```
-
 Validation is **open-world**: properties not described by the profile are allowed.
 
-# Provenance of the artifacts
+# DataDownload Properties added by the CDIF Data Structure Profile
 
-The schema and SHACL files are generated from the canonical source register, [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks):
+## schema:isStructuredBy
 
-- `cdifDataStructureStructuredSchema.json` ← `tools/resolve_schema.py cdifDataStructure`
-- `dataStructureRules.shacl` ← `tools/validate_shacl.py cdifDataStructure --emit-shapes`
+- property of a schema:DataDownload that links to an externally defined data structure via an object reference, or includes a DataStructure definition in line.  Value is one of cdi:WideDataStructure, cdi:DimensionalDataStructure, cdi:LongDataStructure,  
 
-Source profile directory: `_sources/profiles/cdifProfile/cdifDataStructure/`.
-
-# Dataset Properties added by the CDIF Data Structure Profile
-
-## schema:Dataset {#sec-schema-dataset}
-
-Adds data-structure description to a CDIF metadata record. Defines the cdi:DataStructure family of types ($defs DataStructure / DimensionalDataStructure / LongDataStructure / WideDataStructure, plus the supporting Component / Key / RepresentedVariable types). A distribution attaches a structure via cdi:isStructuredBy on its schema:DataDownload item; the structure value is any of the four DataStructure variants. Metadata records must declare conformance to cdif/data_structure/1.0.
-
-### schema:subjectOf
-
-- **Cardinality:** Optional
-- **Content:** —
-
-### schema:distribution
-
-- **Cardinality:** Optional
-- **Content:** array of object
+- 
 
 # Class Definitions
 
-## Identifier {#sec-identifier}
+## AttributeComponent {#sec-attributecomponent}
 
-Properties for a schema.org identifier (schema:PropertyValue pattern). **Union-type policy:** In CDIF profile UML models an attribute typed as schema:Identifier / schema:PropertyValue is represented by a single attribute of that class type. The JSON Schema implementation permits the property value to be EITHER a plain string (interpreted as the bare identifier value) OR a full schema:PropertyValue object (with explicit @type, propertyID, value). Consumers should accept either form.
+- Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.
 
 ### @type
 
-- **Cardinality:** Optional
+- **Cardinality:** Required
 - **Content:** array of string
 
-### schema:propertyID
+### @id
 
 - **Cardinality:** Optional
 - **Content:** string
-- **Description:** In this context for the schema:PropertyValue, this field is an identifier for the identifier schema, e.g. DOI, ARK. Get values from https://registry.identifiers.org/registry/ for interoperability
+- **Description:** Identifier for this AttributeComponent node
 
-### schema:value
+### cdi:qualifies
+
+- **Cardinality:** Optional
+- **Content:** array of one of: object, [object reference](#/$defs/CdifDataStructureComponent_id-reference)
+
+### cdi:identifier
+
+- **Cardinality:** Optional
+- **Content:** [object reference](#/$defs/Identifier)
+- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
+
+### cdif:isDefinedBy_RepresentedVariable
+
+- **Cardinality:** Optional
+- **Content:** cdif:RepresentedVariable or object reference to cdif:Represented Variable
+
+### cdi:semantic
+
+- **Cardinality:** Optional
+- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
+- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
+
+## cdi:DimensionalDataStructure
+
+- Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.
+
+### @type
+
+- array of strings, contains 'cdi:DimensionalDataStructure'
+
+### cdi:has_DataStructureComponent
+
+- array of links to data structure components that link representedVariables to roles in the data structure. Values are one of **cdif:DimensionComponent**, **cdif:MeasureComponent**, or **cdif:AttributeComponent**
+
+### cdi:has_PrimaryKey
+
+- property that specifies variables in the structure that uniquely identify a unit in the population described. value: cdif:PrimaryKey or object reference to a cdif:PrimaryKey. 
+
+### cdi:has_ForeignKey
+
+- specifies a variable with values that identify data records in a different dataset. value: cdif:ForeignKey or object reference to a cdif:ForeignKey. 
+
+## cdi:LongDataStructure
+
+- Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.
+
+### @type
+
+- array of strings, contains 'cdi:LongDataStructure'
+
+### cdi:has_DataStructureComponent
+
+- array of links to data structure components that link representedVariables to roles in the data structure. Values are one of **cdif:IdentifierComponent**, **cdif:VariableDescriptorComponent**, **cdif:VariableValueComponent**, or **cdif:AttributeComponent**
+
+### cdi:has_PrimaryKey
+
+- property that specifies variables in the structure that uniquely identify a unit in the population described. value: cdif:PrimaryKey or object reference to a cdif:PrimaryKey. 
+
+### cdi:has_ForeignKey
+
+- specifies a variable with values that identify data records in a different dataset. value: cdif:ForeignKey or object reference to a cdif:ForeignKey. 
+
+## cdi:WideDataStructure
+
+- Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components. Each record represents properties for one unit (instance) in the population described by the dataset.
+
+### @type
+
+- array of strings, contains 'cdi:WideDataStructure'
+
+### cdi:has_DataStructureComponent
+
+- array of links to data structure components that link representedVariables to roles in the data structure. Values are one of **cdif:IdentifierComponent**, **cdif:MeasureComponent**, or **cdif:AttributeComponent**
+
+### cdi:has_PrimaryKey
+
+- property that specifies variables in the structure that uniquely identify a unit in the population described. value: cdif:PrimaryKey or object reference to a cdif:PrimaryKey. 
+
+### cdi:has_ForeignKey
+
+- specifies a variable with values that identify data records in a different dataset. value: cdif:ForeignKey or object reference to a cdif:ForeignKey. 
+
+## cdif:DimensionComponent
+
+- Role given to a represented variable that acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional "cube".  Components are part of a compound identifier in which each variable is an axis in a coordinate system addressing a location in a matrix. These variables are often categorical, but also commonly include time, space or other continuous phenomena. Dimensions typically encompass a limited range of values, and are quantized.
+
+### @type
+
+- **Cardinality:** Required
+- **Content:** array of string, contains 'cdif:VariableValueComponent'
+
+### @id
 
 - **Cardinality:** Optional
 - **Content:** string
-- **Description:** the identifier string. E.g. 10.5066/F7VX0DMQ
+- **Description:** Identifier for this node
 
-### schema:url
+### cdif:isDefinedBy_RepresentedVariable
 
 - **Cardinality:** Optional
-- **Content:** string
-- **Description:** web-resolveable string for the identifier; host name part is location of a resolver that will return some representation for the given identifier value. E.g. https://doi.org/10.5066/F7VX0DMQ
+- **Content:** cdif:RepresentedVariable or object reference to cdif:Represented Variable
 
-## CdifRepresentedVariable {#sec-cdifrepresentedvariable}
+## cdif:RepresentedVariable {#sec-cdifrepresentedvariable}
 
-Conceptual variable with a substantive value domain specified.
+- Conceptual variable with a substantive value domain specified.
 
 ### @type
 
@@ -185,210 +277,18 @@ Conceptual variable with a substantive value domain specified.
 - **Cardinality:** Optional
 - **Content:** array of one of: object, [object reference](#/$defs/CdifRepresentedVariable_id-reference)
 
-## id-reference {#sec-id-reference}
+### id-reference {#sec-id-reference}
 
-Reference to a node defined elsewhere in the document via its @id.
-
-### @id
-
-- **Cardinality:** Required
-- **Content:** string
-
-## IdentifierComponent {#sec-identifiercomponent}
-
-Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.
-
-### @type
-
-- **Cardinality:** Required
-- **Content:** array of string
+- Reference to a node defined elsewhere in the document via its @id.
 
 ### @id
 
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Identifier for this IdentifierComponent node
-
-### cdif:isDefinedBy_RepresentedVariable
-
 - **Cardinality:** Required
-- **Content:** one of: [object reference](#/$defs/CdifRepresentedVariable), [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-## MeasureComponent {#sec-measurecomponent}
-
-Role given to a represented variable in the context of a data structure to hold the observed/derived values.
-
-### @type
-
-- **Cardinality:** Required
-- **Content:** array of string
-
-### @id
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Identifier for this MeasureComponent node
-
-### cdif:name
-
-- **Cardinality:** Optional
-- **Content:** array of string
-- **Description:** Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
-
-### cdi:identifier
-
-- **Cardinality:** Optional
-- **Content:** [object reference](#/$defs/Identifier)
-- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
-
-### cdif:isDefinedBy_RepresentedVariable
-
-- **Cardinality:** Optional
-- **Content:** one of: [object reference](#/$defs/CdifRepresentedVariable), [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-### cdi:semantic
-
-- **Cardinality:** Optional
-- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
-- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
-
-## AttributeComponent {#sec-attributecomponent}
-
-Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.
-
-### @type
-
-- **Cardinality:** Required
-- **Content:** array of string
-
-### @id
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Identifier for this AttributeComponent node
-
-### cdi:qualifies
-
-- **Cardinality:** Optional
-- **Content:** array of one of: object, [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-### cdi:identifier
-
-- **Cardinality:** Optional
-- **Content:** [object reference](#/$defs/Identifier)
-- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
-
-### cdif:isDefinedBy_RepresentedVariable
-
-- **Cardinality:** Optional
-- **Content:** one of: [object reference](#/$defs/CdifRepresentedVariable), [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-### cdi:semantic
-
-- **Cardinality:** Optional
-- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
-- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
-
-## VariableValueComponent {#sec-variablevaluecomponent}
-
-Role given to a represented variable in the context of a data structure to record values of multiple variables.
-
-### @type
-
-- **Cardinality:** Required
-- **Content:** array of string
-
-### @id
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Identifier for this VariableValueComponent node
-
-### cdi:identifier
-
-- **Cardinality:** Optional
-- **Content:** [object reference](#/$defs/Identifier)
-- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
-
-### cdif:isDefinedBy_RepresentedVariable
-
-- **Cardinality:** Optional
-- **Content:** one of: [object reference](#/$defs/CdifRepresentedVariable), [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-### cdi:semantic
-
-- **Cardinality:** Optional
-- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
-- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
-
-## VariableDescriptorComponent {#sec-variabledescriptorcomponent}
-
-Role given to a represented variable in the context of a data structure to provide codes for variable identification.
-
-### @type
-
-- **Cardinality:** Required
-- **Content:** array of string
-
-### @id
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Identifier for this VariableDescriptorComponent node
-
-### cdif:isDefinedBy_DescriptorVariable
-
-- **Cardinality:** Required
-- **Content:** object
-- **Description:** Variable that provides codes for variable identification in the context of a data structure. Descriptor Variables hold values which reference the logical variables in the data set, indicating which one the associated value in the corresponding Reference Variable is a measure/value for. Descriptor Variables are presentational variables found only in Long Data Sets.
-
-### cdi:refersTo
-
-- **Cardinality:** Optional
-- **Content:** [object reference](#/$defs/CdifDataStructureComponent_id-reference)
-
-### cdi:identifier
-
-- **Cardinality:** Optional
-- **Content:** [object reference](#/$defs/Identifier)
-- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
-
-### cdi:semantic
-
-- **Cardinality:** Optional
-- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
-- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
-
-## LanguageTaggedValue {#sec-languagetaggedvalue}
-
-An RDF literal value with a language tag, serialized as a JSON-LD value object. Inlined from skosConcept (the resolver does not preserve cross-file '#/$defs/...' fragment refs).
-
-### @value
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** The text content.
-
-### @language
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** BCP 47 language tag (e.g. en, fr, de).
-
-## cdifConceptOrTerm {#sec-cdifconceptorterm}
-
-## CdifRepresentedVariable_id-reference {#sec-cdifrepresentedvariable-id-reference}
-
-Reference to a node defined elsewhere in the document via its @id.
-
-### @id
-
-- **Cardinality:** Required
-- **Content:** string
+- **Content:** string that identifies an object in the local document, or might be an external identifier.
 
 ## CdifCodelistConcept {#sec-cdifcodelistconcept}
 
-A SKOS Concept constrained for CDIF codelist use. Must have a resolvable @id, skos:inScheme, skos:notation, and skos:prefLabel. Becasue JSON-LD is an open-world implementation, any other skos properties may be included.
+- A SKOS Concept constrained for CDIF codelist use. Must have a resolvable @id, skos:inScheme, skos:notation, and skos:prefLabel. Becasue JSON-LD is an open-world implementation, any other skos properties may be included.
 
 ### @id
 
@@ -432,40 +332,14 @@ A SKOS Concept constrained for CDIF codelist use. Must have a resolvable @id, sk
 - **Content:** array of object
 - **Description:** Broader (parent) concepts. Required on any concept that appears as a skos:narrower value of another concept. CDIF requires both directions to be explicit for hierarchy traversal.
 
-## SkosConcept_LanguageTaggedValue {#sec-skosconcept-languagetaggedvalue}
-
-An RDF literal value with a language tag, serialized as a JSON-LD value object.
-
-### @value
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** The text content.
-
-### @language
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** BCP 47 language tag (e.g. en, fr, de).
-
-## ConceptRef {#sec-conceptref}
-
-A reference to a SKOS Concept by URI.
-
-### @id
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** URI of the referenced concept.
-
 ## ForeignKey {#sec-foreignkey}
 
-Role of a set of data structure components for content referencing purposes
+- a set of variables whose values uniquely identify a related record in another dataset, for content referencing purposes.
 
 ### @type
 
 - **Cardinality:** Required
-- **Content:** array of string
+- **Content:** array of strings, contains 'cdi:ForeignKey'
 
 ### @id
 
@@ -473,31 +347,107 @@ Role of a set of data structure components for content referencing purposes
 - **Content:** string
 - **Description:** Identifier for this ForeignKey node
 
+### cdi:isComposedOf
+
+- array of objects that include a reference to a cdif:RepresentedVariable in the DataStructure and a cdif:position property with an integer value that orders the variable in an order key structure.
+
+### cdi:references
+
+-- an object reference to a primary key in a different dataset. type: id-reference'
+
+## Identifier {#sec-identifier}
+
+- Properties for a schema.org identifier (schema:PropertyValue pattern). **Union-type policy:** In CDIF profile UML models an attribute typed as schema:Identifier / schema:PropertyValue is represented by a single attribute of that class type. The JSON Schema implementation permits the property value to be EITHER a plain string (interpreted as the bare identifier value) OR a full schema:PropertyValue object (with explicit @type, propertyID, value). Consumers should accept either form.
+
+### @type
+
+- **Cardinality:** Optional
+- **Content:** 'schema:PropertyValue'
+
+### schema:propertyID
+
+- **Cardinality:** Optional
+- **Content:** string
+- **Description:** In this context for the schema:PropertyValue, this field is an identifier for the identifier schema, e.g. DOI, ARK. Get values from https://registry.identifiers.org/registry/ for interoperability
+
+### schema:value
+
+- **Cardinality:** Optional
+- **Content:** string
+- **Description:** the identifier string. E.g. 10.5066/F7VX0DMQ
+
+### schema:url
+
+- **Cardinality:** Optional
+- **Content:** string
+- **Description:** web-resolveable string for the identifier; host name part is location of a resolver that will return some representation for the given identifier value. E.g. https://doi.org/10.5066/F7VX0DMQ
+
+## IdentifierComponent {#sec-identifiercomponent}
+
+- Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.
+
+### @type
+
+- **Cardinality:** Required
+- **Content:** array of string
+
+### @id
+
+- **Cardinality:** Optional
+- **Content:** string
+- **Description:** Identifier for this IdentifierComponent node
+
+### cdif:isDefinedBy_RepresentedVariable
+
+- **Cardinality:** Required
+- **Content:**  cdif:RepresentedVariable or object reference to cdif:Represented Variable
+
+## MeasureComponent {#sec-measurecomponent}
+
+- Role given to a represented variable in the context of a data structure to hold the observed/derived values.
+
+### @type
+
+- **Cardinality:** Required
+- **Content:** array of string
+
+### @id
+
+- **Cardinality:** Optional
+- **Content:** string
+- **Description:** Identifier for this MeasureComponent node
+
+### cdif:name
+
+- **Cardinality:** Optional
+- **Content:** array of string
+- **Description:** Human understandable name (liguistic signifier, word, phrase, or mnemonic). May follow ISO/IEC 11179-5 naming principles, and have context provided to specify usage.
+
 ### cdi:identifier
 
 - **Cardinality:** Optional
 - **Content:** [object reference](#/$defs/Identifier)
 - **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
 
-### cdi:isComposedOf
+### cdif:isDefinedBy_RepresentedVariable
 
 - **Cardinality:** Optional
-- **Content:** array of —
+- **Content:** cdif:RepresentedVariable or object reference to cdif:Represented Variable)
 
-### cdi:references
+### cdi:semantic
 
 - **Cardinality:** Optional
-- **Content:** one of: [object reference](#/$defs/PrimaryKey), [object reference](#/$defs/id-reference)
-- **Description:** references a primary key in a different dataset
+- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
+- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
 
 ## PrimaryKey {#sec-primarykey}
 
-set of Variables that uniquely identify a data instance. Array order of cdif:isComposedOf items is the position; no intermediate ComponentPosition wrapper.
+-set of Variables that uniquely identify a data instance. Array order of cdif:isComposedOf items is the cdif:position; no intermediate ComponentPosition wrapper.
 
 ### @type
 
 - **Cardinality:** Required
-- **Content:** array of string
+- **Content:** array of strings, contains 'cdif:PrimaryKey'
 
 ### @id
 
@@ -507,27 +457,77 @@ set of Variables that uniquely identify a data instance. Array order of cdif:isC
 
 ### cdif:isComposedOf
 
+- array of objects that include a reference to a cdif:RepresentedVariable in the datastructure and a cdif:position property with an integer value that orders the variable in an order key structure.
+
+## VariableDescriptorComponent {#sec-variabledescriptorcomponent}
+
+- Role given to a represented variable in the context of a data structure to provide codes for variable identification.
+
+### @type
+
 - **Cardinality:** Required
-- **Content:** array of —
-- **Description:** List of variables or @id-reference. Array order of cdif:isComposedOf items is the position; no intermediate ComponentPosition wrapper.
-
-## CdifDataStructureComponent_id-reference {#sec-cdifdatastructurecomponent-id-reference}
-
-Reference to a node defined elsewhere in the document via its @id.
+- **Content:** array of string
 
 ### @id
 
-- **Cardinality:** Required
+- **Cardinality:** Optional
 - **Content:** string
+- **Description:** Identifier for this VariableDescriptorComponent node
 
-## CdifDataStructureComponent_cdifConceptOrTerm {#sec-cdifdatastructurecomponent-cdifconceptorterm}
+### cdif:isDefinedBy_DescriptorVariable
 
-## CdifConceptScheme_ConceptRef {#sec-cdifconceptscheme-conceptref}
+- **Cardinality:** Required
+- **Content:** object
+- **Description:** Variable that provides codes for variable identification in the context of a data structure. Descriptor Variables hold values which reference the logical variables in the data set, indicating which one the associated value in the corresponding Reference Variable is a measure/value for. Descriptor Variables are presentational variables found only in Long Data Sets.
 
-Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.
+### cdi:refersTo
+
+- **Cardinality:** Optional
+- **Content:** [object reference](#/$defs/CdifDataStructureComponent_id-reference)
+
+### cdi:identifier
+
+- **Cardinality:** Optional
+- **Content:** [object reference](#/$defs/Identifier)
+- **Description:** Identifier for objects requiring short- or long-lasting referencing and management.
+
+### cdi:semantic
+
+- **Cardinality:** Optional
+- **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
+- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
+
+## VariableValueComponent {#sec-variablevaluecomponent}
+
+- Role given to a represented variable in the context of a data structure to record values of multiple variables. The descriptor component value specifies the property that the variable value is asserting for the unit identified by the identifier component.
+
+### @type
+
+- **Cardinality:** Required
+- **Content:** array of string, contains 'cdif:VariableValueComponent'
 
 ### @id
 
-- **Cardinality:** Required
+- **Cardinality:** Optional
 - **Content:** string
-- **Description:** URI of the referenced concept.
+- **Description:** Identifier for this node
+
+### cdif:isDefinedBy_RepresentedVariable
+
+- **Cardinality:** Optional
+- **Content:** one of: object reference or #/$defs/CdifRepresentedVariable
+
+### cdi:semantic
+
+- **Cardinality:** Optional
+- **Content:** array of one of: string, object reference, or #/$defs/cdifConceptOrTerm.
+- **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
+
+# Provenance of the artifacts
+
+The schema and SHACL files are generated from the canonical source register, [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks):
+
+- `cdifDataStructureStructuredSchema.json` ← `tools/resolve_schema.py cdifDataStructure`
+- `dataStructureRules.shacl` ← `tools/validate_shacl.py cdifDataStructure --emit-shapes`
+
+Source profile directory: `_sources/profiles/cdifProfile/cdifDataStructure/`.
