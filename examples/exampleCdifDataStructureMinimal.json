@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "ex": "https://example.org/"
+  },
+  "@type": ["cdi:DataStructure"],
+  "@id": "ex:struct/observations",
+  "cdi:has_DataStructureComponent": [
+    { "@id": "ex:component/observationValue" }
+  ]
+}

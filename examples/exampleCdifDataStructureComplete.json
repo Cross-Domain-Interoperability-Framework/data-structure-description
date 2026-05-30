@@ -1,0 +1,144 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ex": "https://example.org/"
+  },
+  "@type": [
+    "cdi:LongDataStructure"
+  ],
+  "@id": "ex:struct/vitalsLong",
+  "cdi:has_DataStructureComponent": [
+    {
+      "@type": [
+        "cdi:IdentifierComponent"
+      ],
+      "@id": "ex:struct/vitalsLong/comp/patientId",
+      "cdif:isDefinedBy_RepresentedVariable": {
+        "@type": [
+          "cdi:RepresentedVariable"
+        ],
+        "@id": "ex:struct/vitalsLong/rv/patientId",
+        "cdif:name": [
+          "patient_id"
+        ],
+        "cdi:hasIntendedDataType": {
+          "@type": [
+            "cdi:ControlledVocabularyEntry"
+          ],
+          "cdi:entryValue": [
+            "xsd:string"
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "cdi:VariableDescriptorComponent"
+      ],
+      "@id": "ex:struct/vitalsLong/comp/measureName",
+      "cdif:isDefinedBy_DescriptorVariable": {
+        "@type": [
+          "cdi:DescriptorVariable"
+        ],
+        "@id": "ex:struct/vitalsLong/dv/measureName",
+        "cdif:name": [
+          "measure_name"
+        ],
+        "cdif:hasValuesFrom": {
+          "@type": [
+            "cdi:DescriptorValueDomain"
+          ],
+          "@id": "ex:struct/vitalsLong/vd/measureName",
+          "cdif:takesValuesFrom": [
+            {
+              "cdif:value": "heart_rate",
+              "cdif:isDefinedBy": {
+                "@id": "ex:struct/vitalsLong/rv/heartRate"
+              }
+            },
+            {
+              "cdif:value": "systolic_bp",
+              "cdif:isDefinedBy": {
+                "@id": "ex:struct/vitalsLong/rv/systolicBP"
+              }
+            }
+          ]
+        }
+      },
+      "cdi:refersTo": {
+        "@id": "ex:struct/vitalsLong/comp/measureValue"
+      }
+    },
+    {
+      "@type": [
+        "cdi:VariableValueComponent"
+      ],
+      "@id": "ex:struct/vitalsLong/comp/measureValue",
+      "cdif:isDefinedBy_RepresentedVariable": {
+        "@type": [
+          "cdi:RepresentedVariable"
+        ],
+        "@id": "ex:struct/vitalsLong/rv/measureValue",
+        "cdif:name": [
+          "measure_value"
+        ],
+        "cdi:hasIntendedDataType": {
+          "@type": [
+            "cdi:ControlledVocabularyEntry"
+          ],
+          "cdi:entryValue": [
+            "xsd:decimal"
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "cdi:AttributeComponent"
+      ],
+      "@id": "ex:struct/vitalsLong/comp/observedAt",
+      "cdi:qualifies": [
+        {
+          "@id": "ex:struct/vitalsLong/comp/measureValue"
+        }
+      ],
+      "cdif:isDefinedBy_RepresentedVariable": {
+        "@type": [
+          "cdi:RepresentedVariable"
+        ],
+        "@id": "ex:struct/vitalsLong/rv/observedAt",
+        "cdif:name": [
+          "observed_at"
+        ],
+        "cdi:hasIntendedDataType": {
+          "@type": [
+            "cdi:ControlledVocabularyEntry"
+          ],
+          "cdi:entryValue": [
+            "xsd:dateTime"
+          ]
+        }
+      }
+    }
+  ],
+  "cdi:has_PrimaryKey": {
+    "@type": [
+      "cdif:PrimaryKey"
+    ],
+    "@id": "ex:struct/vitalsLong/pk",
+    "cdif:isComposedOf": [
+      {
+        "@id": "ex:var/patientId"
+      },
+      {
+        "@id": "ex:var/measureName"
+      },
+      {
+        "@id": "ex:var/observedAt"
+      }
+    ]
+  }
+}
