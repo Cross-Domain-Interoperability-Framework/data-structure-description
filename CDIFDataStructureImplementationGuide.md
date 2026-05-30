@@ -11,20 +11,20 @@ Adds data-structure description to a CDIF metadata record. Defines the cdi:DataS
 - [DataDownload Properties added by the CDIF Data Structure Profile](#datadownload-properties-added-by-the-cdif-data-structure-profile)
   - [schema:isStructuredBy](#schemaisstructuredby)
 - [Class Definitions](#class-definitions)
-  - [AttributeComponent](#sec-attributecomponent)
+  - [AttributeComponent](#attributecomponent)
   - [cdi:DimensionalDataStructure](#cdidimensionaldatastructure)
   - [cdi:LongDataStructure](#cdilongdatastructure)
   - [cdi:WideDataStructure](#cdiwidedatastructure)
   - [cdif:DimensionComponent](#cdifdimensioncomponent)
-  - [cdif:RepresentedVariable](#sec-cdifrepresentedvariable)
-  - [CdifCodelistConcept](#sec-cdifcodelistconcept)
-  - [ForeignKey](#sec-foreignkey)
-  - [Identifier](#sec-identifier)
-  - [IdentifierComponent](#sec-identifiercomponent)
-  - [MeasureComponent](#sec-measurecomponent)
-  - [PrimaryKey](#sec-primarykey)
-  - [VariableDescriptorComponent](#sec-variabledescriptorcomponent)
-  - [VariableValueComponent](#sec-variablevaluecomponent)
+  - [cdif:RepresentedVariable](#cdifrepresentedvariable)
+  - [CdifCodelistConcept](#cdifcodelistconcept)
+  - [ForeignKey](#foreignkey)
+  - [Identifier](#identifier)
+  - [IdentifierComponent](#identifiercomponent)
+  - [MeasureComponent](#measurecomponent)
+  - [PrimaryKey](#primarykey)
+  - [VariableDescriptorComponent](#variabledescriptorcomponent)
+  - [VariableValueComponent](#variablevaluecomponent)
 - [Provenance of the artifacts](#provenance-of-the-artifacts)
 
 # Conformance
@@ -63,7 +63,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 # Class Definitions
 
-## AttributeComponent {#sec-attributecomponent}
+## AttributeComponent
 
 - Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.
 
@@ -180,7 +180,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Cardinality:** Optional
 - **Content:** cdif:RepresentedVariable or object reference to cdif:Represented Variable
 
-## cdif:RepresentedVariable {#sec-cdifrepresentedvariable}
+## cdif:RepresentedVariable
 
 - Conceptual variable with a substantive value domain specified.
 
@@ -277,7 +277,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Cardinality:** Optional
 - **Content:** array of one of: object, [object reference](#/$defs/CdifRepresentedVariable_id-reference)
 
-### id-reference {#sec-id-reference}
+### id-reference
 
 - Reference to a node defined elsewhere in the document via its @id.
 
@@ -286,7 +286,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Cardinality:** Required
 - **Content:** string that identifies an object in the local document, or might be an external identifier.
 
-## CdifCodelistConcept {#sec-cdifcodelistconcept}
+## CdifCodelistConcept
 
 - A SKOS Concept constrained for CDIF codelist use. Must have a resolvable @id, skos:inScheme, skos:notation, and skos:prefLabel. Becasue JSON-LD is an open-world implementation, any other skos properties may be included.
 
@@ -332,7 +332,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:** array of object
 - **Description:** Broader (parent) concepts. Required on any concept that appears as a skos:narrower value of another concept. CDIF requires both directions to be explicit for hierarchy traversal.
 
-## ForeignKey {#sec-foreignkey}
+## ForeignKey
 
 - a set of variables whose values uniquely identify a related record in another dataset, for content referencing purposes.
 
@@ -355,7 +355,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 -- an object reference to a primary key in a different dataset. type: id-reference'
 
-## Identifier {#sec-identifier}
+## Identifier
 
 - Properties for a schema.org identifier (schema:PropertyValue pattern). **Union-type policy:** In CDIF profile UML models an attribute typed as schema:Identifier / schema:PropertyValue is represented by a single attribute of that class type. The JSON Schema implementation permits the property value to be EITHER a plain string (interpreted as the bare identifier value) OR a full schema:PropertyValue object (with explicit @type, propertyID, value). Consumers should accept either form.
 
@@ -382,7 +382,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:** string
 - **Description:** web-resolveable string for the identifier; host name part is location of a resolver that will return some representation for the given identifier value. E.g. https://doi.org/10.5066/F7VX0DMQ
 
-## IdentifierComponent {#sec-identifiercomponent}
+## IdentifierComponent
 
 - Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.
 
@@ -402,7 +402,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Cardinality:** Required
 - **Content:**  cdif:RepresentedVariable or object reference to cdif:Represented Variable
 
-## MeasureComponent {#sec-measurecomponent}
+## MeasureComponent
 
 - Role given to a represented variable in the context of a data structure to hold the observed/derived values.
 
@@ -440,7 +440,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
 - **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
 
-## PrimaryKey {#sec-primarykey}
+## PrimaryKey
 
 -set of Variables that uniquely identify a data instance. Array order of cdif:isComposedOf items is the cdif:position; no intermediate ComponentPosition wrapper.
 
@@ -459,7 +459,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 - array of objects that include a reference to a cdif:RepresentedVariable in the datastructure and a cdif:position property with an integer value that orders the variable in an order key structure.
 
-## VariableDescriptorComponent {#sec-variabledescriptorcomponent}
+## VariableDescriptorComponent
 
 - Role given to a represented variable in the context of a data structure to provide codes for variable identification.
 
@@ -497,7 +497,7 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:** array of one of: string, [object reference](#/$defs/CdifDataStructureComponent_cdifConceptOrTerm)
 - **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
 
-## VariableValueComponent {#sec-variablevaluecomponent}
+## VariableValueComponent
 
 - Role given to a represented variable in the context of a data structure to record values of multiple variables. The descriptor component value specifies the property that the variable value is asserting for the unit identified by the identifier component.
 
