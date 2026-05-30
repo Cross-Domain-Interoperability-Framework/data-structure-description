@@ -34,7 +34,7 @@ Source profile: `_sources/profiles/cdifProfile/cdifDataStructure/`.
 
 ## Working materials
 
-This repository also contains background and exploratory material from the profile's development — DDI-CDI samples and discussion notes (`DDI-CDI_SimpleSample.zip`, `DDI-CDI-forDataIntegration.txt`, `DataTypesDiscussion.txt`), sample data files (`ExampleData/`, `LongData/`, `TestCDIMetadata/`, `XrayAbsorbtion/`, `hierarchicalData/`, `hdf5Work/`), and reference documents (`Documents/`, `PhysicalDataset2025.xmi`, SDMX glossary, format-description figures). These are kept for traceability and are not part of the release-artifact set.
+Background and exploratory material from the profile's development is kept under `archive/` for traceability — DDI-CDI samples and discussion notes, sample data files (`archive/ExampleData/`, `archive/LongData/`, `archive/TestCDIMetadata/`, `archive/XrayAbsorbtion/`, `archive/hierarchicalData/`, `archive/exampleMetadata/`), reference documents (`archive/PhysicalDataset2025.xmi`, SDMX glossary, format-description figures), and the earlier psdi/UML drafts. The `Documents/` directory holds the curated reference docs (`Documents/CDIF-DescribingDatasetStructure.md`, `Documents/hdf5Work/`). None of these are part of the release-artifact set.
 
 ## Development branch
 

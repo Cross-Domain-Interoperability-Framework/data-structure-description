@@ -24,13 +24,15 @@ Source profile dir: `metadataBuildingBlocks/_sources/profiles/cdifProfile/cdifDa
 
 ## Working materials (non-release)
 
-Working scratch material is kept at the repo root for traceability:
+Working scratch material is kept under `archive/` for traceability:
 
-- DDI-CDI references — `DDI-CDI_SimpleSample.zip`, `DDI-CDI-forDataIntegration.txt`, `DataTypesDiscussion.txt`
-- Sample data — `ExampleData/`, `LongData/`, `TestCDIMetadata/`, `XrayAbsorbtion/`, `hierarchicalData/`, `hdf5Work/`
-- Reference docs — `Documents/`, `PhysicalDataset2025.xmi`, SDMX glossary, format-description figures
+- DDI-CDI references — `archive/DDI-CDI_SimpleSample.zip`, `archive/DDI-CDI-forDataIntegration.txt`, `archive/DataTypesDiscussion.txt`
+- Sample data — `archive/ExampleData/`, `archive/LongData/`, `archive/TestCDIMetadata/`, `archive/XrayAbsorbtion/`, `archive/hierarchicalData/`, `archive/exampleMetadata/`
+- Reference material — `archive/PhysicalDataset2025.xmi`, `archive/SDMX_Glossary_*.docx`, format-description figures, the earlier psdi/UML drafts
 
-Do not treat these as part of the release artifact set; the canonical release files are the `*StructuredSchema.json`, `*Rules.shacl`, `*-frame.jsonld`, `FrameAndValidate.py`, and `examples/`.
+Curated reference docs live under `Documents/` (`Documents/CDIF-DescribingDatasetStructure.md`, `Documents/hdf5Work/`).
+
+Do not treat any of this as part of the release artifact set; the canonical release files are the `*StructuredSchema.json`, `*Rules.shacl`, `*-frame.jsonld`, `FrameAndValidate.py`, and `examples/`.
 
 ## Example conventions
 
