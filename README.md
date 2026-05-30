@@ -1,79 +1,44 @@
-# CDIF Data Structure Description
+# CDIF Data Structure (profile module)
 
-Properties and patterns for documenting the internal structure of datasets, including variables, data types, physical layout, and value domains. This repository develops the CDIF data description and integration profile using DDI-CDI (Data Documentation Initiative - Cross Domain Integration) concepts mapped to schema.org JSON-LD.
+This repository holds the published artifacts for the **CDIF Data Structure profile module** — the `cdifDataStructure` building block from the [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks) source register.
 
-## Documentation
+> **Scope.** `cdifDataStructure` carries machine-readable data-structure metadata: keys, components, foreign keys, and the dimensional/long/wide structure variants. It is consumed by the composite application profile [doc-discoverydatadescriptionstructure](https://github.com/Cross-Domain-Interoperability-Framework/doc-discoverydatadescriptionstructure).
 
-- **[Documents/CDIF-DescribingDatasetStructure.md](Documents/CDIF-DescribingDatasetStructure.md)** — Discussion of how to describe structured data (arrays, hierarchical, dimensional) using DDI-CDI concepts
-- **[psdi-metadata-cdif-implementation.md](psdi-metadata-cdif-implementation.md)** — How PSDI (Physical Sciences Data Infrastructure) implements CDIF metadata recommendations
+## Specification
 
-## Example data and metadata
+- **[cdifDataStructureStructuredSchema.json](cdifDataStructureStructuredSchema.json)** — Resolved JSON Schema (Draft 2020-12) generated from the source register.
+- **[dataStructureRules.shacl](dataStructureRules.shacl)** — Self-contained SHACL shapes, merged from every composing building block plus the profile-level shapes.
+- **[CDIFDataStructure-frame.jsonld](CDIFDataStructure-frame.jsonld)** — JSON-LD frame used by `FrameAndValidate.py`.
 
-### ExampleData
+## Examples
 
-Source data files in various formats used for testing DDI-CDI JSON-LD documentation:
+`examples/` holds JSON-LD examples illustrating the dimensional, long, wide, and minimal-complete data-structure shapes. Validate one with:
 
-- `SimpleSample.csv` / `.jsonld` — Simple tabular CSV with CDI metadata
-- `xdi_example_ss.xdi` / `nonxafs_2d.xdi` — X-ray Data Interchange (XDI) format files
-- `Therm_6_2.hdf` — HDF5 data file
-- `20231120_002_1mg_Murchison_Smithsonian.cdf` — CDF (Common Data Format) file
-- `csvTable-DDICDI.jsonld` — CSV table documented with DDI-CDI
+```bash
+python FrameAndValidate.py examples/exampleCdifDataStructureComplete.json --validate
+```
 
-### TestCDIMetadata
+`FrameAndValidate.py` frames the document against `CDIFDataStructure-frame.jsonld`, array-wraps the multi-valued properties, then validates against the JSON Schema. Validation is open-world: unknown properties pass.
 
-CDI-DDI metadata instances documenting the example data, in JSON-LD format:
+## Synced from metadataBuildingBlocks
 
-- `CDIF-XAS-FullExample.jsonLD` — Full XAS (X-ray Absorption Spectroscopy) metadata
-- `CDIFmin-XAS.jsonLD` — Minimal XAS metadata
-- `ESS11-subset_DDICDI.jsonld` — European Social Survey subset
-- `WeatherObsKeyValue_DDICDI.jsonld` — Weather observations in key-value format
-- `se_na2so4-XDI-CDI-CDIF.jsonld` — Sodium selenate XAS with CDI data structure
-- `HealthResearchdata-WorldFairWP7.json` — WorldFAIR health research data
+These generated artifacts are re-synced when the source register changes:
 
-### exampleMetadata
+| file | source command |
+|---|---|
+| `cdifDataStructureStructuredSchema.json` | `python tools/resolve_schema.py cdifDataStructure -o cdifDataStructureStructuredSchema.json` |
+| `dataStructureRules.shacl` | `python tools/validate_shacl.py cdifDataStructure --emit-shapes dataStructureRules.shacl` |
 
-Additional metadata examples organized by domain:
+Source profile: `_sources/profiles/cdifProfile/cdifDataStructure/`.
 
-- `CDIF2026/` — Current CDIF 2026 schema examples
-- `FeXAS/` — Iron X-ray absorption spectroscopy
-- `CMIP-NetCDF/` — Climate model NetCDF metadata
-- `ESS11/` — European Social Survey
-- SDMX examples (merchandise trade statistics, Pacific fisheries)
+## Working materials
 
-### LongData
+This repository also contains background and exploratory material from the profile's development — DDI-CDI samples and discussion notes (`DDI-CDI_SimpleSample.zip`, `DDI-CDI-forDataIntegration.txt`, `DataTypesDiscussion.txt`), sample data files (`ExampleData/`, `LongData/`, `TestCDIMetadata/`, `XrayAbsorbtion/`, `hierarchicalData/`, `hdf5Work/`), and reference documents (`Documents/`, `PhysicalDataset2025.xmi`, SDMX glossary, format-description figures). These are kept for traceability and are not part of the release-artifact set.
 
-Long/narrow format data examples (NWIS water quality data) with DDI-CDI metadata demonstrating `DescriptorComponent` and `ReferenceValueComponent` roles.
+## Development branch
 
-### XrayAbsorbtion
-
-X-ray absorption spectroscopy metadata examples with various levels of CDI-CDI detail.
-
-### hierarchicalData
-
-Hierarchical JSON data with CDI-DDI metadata (NWIS water quality as JSON structure).
-
-### hdf5Work
-
-Python scripts and metadata for reading HDF5 and NetCDF files and extracting structure metadata.
-
-## Background materials
-
-- `EC_GeoCodes_encodingFormat.xlsx` — Compilation of file formats from EarthCube GeoCodes catalog, scoping the spectrum of data serialization schemes
-- `SDMX_3-1-0_SECTION_2_FINAL.pdf` — SDMX statistical data exchange standard
-- `PhysicalDataset2025.xmi` — UML model for physical dataset structure
-- `newModel.qea` — Enterprise Architect model file
-
-### Archive
-
-The `archive/` directory contains earlier versions of XAS mapping documents, the ADA-CDIF Reader tool, presentation materials, and working documents from the CDIF-for-XAS development.
-
-## Related repositories
-
-- **[cdif-core](https://github.com/Cross-Domain-Interoperability-Framework/core)** — CDIF Core profile (base properties)
-- **[Discovery](https://github.com/Cross-Domain-Interoperability-Framework/Discovery)** — CDIF Discovery profile (spatial, temporal, variables)
-- **[metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks)** — Building block schemas including CDIFDataDescriptionProfile, cdifDataDescription, cdifTabularData, cdifLongData, cdifDataCube
-- **[validation](https://github.com/Cross-Domain-Interoperability-Framework/validation)** — Validation tools (JSON Schema, SHACL, framing)
+Active work for the 2026-06 review revision is on the `reviewRevision202606` branch. `main` reflects the prior release state. New changes should target the review branch; it is merged to main on release.
 
 ## License
 
-See [LICENSE](LICENSE).
+This work is dedicated to the public domain under [CC0 1.0 Universal](LICENSE).
