@@ -29,6 +29,8 @@ Adds data-structure description to a CDIF metadata record. Defines the cdi:DataS
 
 # Conformance
 
+[↑ Back to TOC](#table-of-contents)
+
 A resource conforms to the CDIF Data Structure profile when its catalog record declares conformance to the profile identifier. The catalog record is carried on `schema:subjectOf` as a `dcat:CatalogRecord`:
 
 ```json
@@ -43,6 +45,8 @@ Other properties added in this profile are optional; conformance requires only t
 
 ## Validation
 
+[↑ Back to TOC](#table-of-contents)
+
 Two validators ship with this repository:
 - **JSON Schema** — `cdifDataStructureStructuredSchema.json` (Draft 2020-12), generated from the source register.
 - **SHACL** — `dataStructureRules.shacl`, a self-contained shapes graph merged from every composing building block plus the profile-level shapes.
@@ -55,7 +59,11 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 # DataDownload Properties added by the CDIF Data Structure Profile
 
+[↑ Back to TOC](#table-of-contents)
+
 ## schema:isStructuredBy
+
+[↑ Back to TOC](#table-of-contents)
 
 - property of a schema:DataDownload that links to an externally defined data structure via an object reference, or includes a DataStructure definition in line.  Value is one of cdi:WideDataStructure, cdi:DimensionalDataStructure, cdi:LongDataStructure,  
 
@@ -63,7 +71,11 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 # Class Definitions
 
+[↑ Back to TOC](#table-of-contents)
+
 ## AttributeComponent
+
+[↑ Back to TOC](#table-of-contents)
 
 - Role given to a represented variable in the context of a data structure to qualify observations or provide other types of supplementary information.
 
@@ -102,6 +114,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## cdi:DimensionalDataStructure
 
+[↑ Back to TOC](#table-of-contents)
+
 - Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.
 
 ### @type
@@ -121,6 +135,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 - specifies a variable with values that identify data records in a different dataset. value: cdif:ForeignKey or object reference to a cdif:ForeignKey. 
 
 ## cdi:LongDataStructure
+
+[↑ Back to TOC](#table-of-contents)
 
 - Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.
 
@@ -142,6 +158,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## cdi:WideDataStructure
 
+[↑ Back to TOC](#table-of-contents)
+
 - Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components. Each record represents properties for one unit (instance) in the population described by the dataset.
 
 ### @type
@@ -162,6 +180,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## cdif:DimensionComponent
 
+[↑ Back to TOC](#table-of-contents)
+
 - Role given to a represented variable that acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional "cube".  Components are part of a compound identifier in which each variable is an axis in a coordinate system addressing a location in a matrix. These variables are often categorical, but also commonly include time, space or other continuous phenomena. Dimensions typically encompass a limited range of values, and are quantized.
 
 ### @type
@@ -181,6 +201,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:** cdif:RepresentedVariable or object reference to cdif:Represented Variable
 
 ## cdif:RepresentedVariable
+
+[↑ Back to TOC](#table-of-contents)
 
 - Conceptual variable with a substantive value domain specified.
 
@@ -288,6 +310,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## CdifCodelistConcept
 
+[↑ Back to TOC](#table-of-contents)
+
 - A SKOS Concept constrained for CDIF codelist use. Must have a resolvable @id, skos:inScheme, skos:notation, and skos:prefLabel. Becasue JSON-LD is an open-world implementation, any other skos properties may be included.
 
 ### @id
@@ -334,6 +358,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## ForeignKey
 
+[↑ Back to TOC](#table-of-contents)
+
 - a set of variables whose values uniquely identify a related record in another dataset, for content referencing purposes.
 
 ### @type
@@ -356,6 +382,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 -- an object reference to a primary key in a different dataset. type: id-reference'
 
 ## Identifier
+
+[↑ Back to TOC](#table-of-contents)
 
 - Properties for a schema.org identifier (schema:PropertyValue pattern). **Union-type policy:** In CDIF profile UML models an attribute typed as schema:Identifier / schema:PropertyValue is represented by a single attribute of that class type. The JSON Schema implementation permits the property value to be EITHER a plain string (interpreted as the bare identifier value) OR a full schema:PropertyValue object (with explicit @type, propertyID, value). Consumers should accept either form.
 
@@ -384,6 +412,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## IdentifierComponent
 
+[↑ Back to TOC](#table-of-contents)
+
 - Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.
 
 ### @type
@@ -403,6 +433,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Content:**  cdif:RepresentedVariable or object reference to cdif:Represented Variable
 
 ## MeasureComponent
+
+[↑ Back to TOC](#table-of-contents)
 
 - Role given to a represented variable in the context of a data structure to hold the observed/derived values.
 
@@ -442,6 +474,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## PrimaryKey
 
+[↑ Back to TOC](#table-of-contents)
+
 -set of Variables that uniquely identify a data instance. Array order of cdif:isComposedOf items is the cdif:position; no intermediate ComponentPosition wrapper.
 
 ### @type
@@ -460,6 +494,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 - array of objects that include a reference to a cdif:RepresentedVariable in the datastructure and a cdif:position property with an integer value that orders the variable in an order key structure.
 
 ## VariableDescriptorComponent
+
+[↑ Back to TOC](#table-of-contents)
 
 - Role given to a represented variable in the context of a data structure to provide codes for variable identification.
 
@@ -499,6 +535,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 
 ## VariableValueComponent
 
+[↑ Back to TOC](#table-of-contents)
+
 - Role given to a represented variable in the context of a data structure to record values of multiple variables. The descriptor component value specifies the property that the variable value is asserting for the unit identified by the identifier component.
 
 ### @type
@@ -524,6 +562,8 @@ Validation is **open-world**: properties not described by the profile are allowe
 - **Description:** Qualifies the purpose or use expressed as a paired external controlled vocabulary.
 
 # Provenance of the artifacts
+
+[↑ Back to TOC](#table-of-contents)
 
 The schema and SHACL files are generated from the canonical source register, [metadataBuildingBlocks](https://github.com/Cross-Domain-Interoperability-Framework/metadataBuildingBlocks):
 
