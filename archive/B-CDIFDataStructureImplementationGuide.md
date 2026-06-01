@@ -44,7 +44,6 @@ See also [graphical presentation of the Data Structure profile model](https://cr
   - [cdi:SubstantiveValueDomain](#cdisubstantivevaluedomain)
   - [cdi:SentinelValueDomain](#cdisentinelvaluedomain)
   - [cdif:EnumerationDomain](#cdifenumerationdomain)
-  - [CdifCodelistConcept](#cdifcodelistconcept)
   - [cdif:ValueAndConceptDescription](#cdifvalueandconceptdescription)
 - [Validation](#validation)
 - [Provenance of the artifacts](#provenance-of-the-artifacts)
@@ -164,7 +163,7 @@ The Data Structure profile adds one property to each `schema:DataDownload` distr
 - **Cardinality:** Required (≥1)
 - **Content:** array; each item is one of `cdif:IdentifierComponent`, `cdif:VariableDescriptorComponent`, `cdif:VariableValueComponent`, `cdif:AttributeComponent`.
 
-( cdi:LongDataStructure inherits `cdi:has_PrimaryKey` and `cdi:has_ForeignKey` from `cdi:DataStructure`.)
+(Inherits `cdi:has_PrimaryKey` and `cdi:has_ForeignKey` from `cdi:DataStructure`.)
 
 ## cdi:WideDataStructure
 
@@ -905,56 +904,6 @@ Used in this profile in `cdi:semantic`, `cdi:hasIntendedDataType`, `cdi:describe
 - **Cardinality:** Optional
 - **Content:** string
 - **Description:** Intent or reason for the enumerated domain.
-
-## CdifCodelistConcept
-
-[↑ Back to TOC](#table-of-contents)
-
-*Authoritative definition: [CDIF Codelist profile](https://github.com/Cross-Domain-Interoperability-Framework/profile-codelist/blob/reviewRevision202606/CDIFCodelistImplementationGuide.md).*
-
-- A SKOS Concept constrained for CDIF codelist use. Must have a resolvable `@id`, `skos:inScheme`, `skos:notation`, and `skos:prefLabel`. Because JSON-LD is an open-world implementation, any other SKOS properties may be included. Used here as the value type of the codelist concepts that populate a `cdif:EnumerationDomain` referenced from a `cdi:SubstantiveValueDomain`.
-
-### @id
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** Globally unique, resolvable URI for this concept.
-
-### skos:inScheme
-
-- **Cardinality:** Required
-- **Content:** array of object
-- **Description:** The concept scheme this concept belongs to. Required for CDIF codelist concepts.
-
-### skos:prefLabel
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** Preferred lexical label for this concept. A single string, a single language-tagged value, or an array of language-tagged values. Each language should appear at most once.
-
-### skos:notation
-
-- **Cardinality:** Required
-- **Content:** string
-- **Description:** Classification code for this concept within a scheme.
-
-### skos:definition
-
-- **Cardinality:** Optional
-- **Content:** string
-- **Description:** Formal definition of this concept. Optional for CDIF codelist concepts. A plain string.
-
-### skos:narrower
-
-- **Cardinality:** Optional
-- **Content:** array of object
-- **Description:** Narrower (child) concepts. If present, each inline concept must also declare `skos:broader` pointing back to the parent concept. Both `skos:narrower` and `skos:broader` must be explicit in CDIF codelists.
-
-### skos:broader
-
-- **Cardinality:** Optional
-- **Content:** array of object
-- **Description:** Broader (parent) concepts. Required on any concept that appears as a `skos:narrower` value of another concept. CDIF requires both directions to be explicit for hierarchy traversal.
 
 ## cdif:ValueAndConceptDescription
 
