@@ -66,7 +66,7 @@ An instance document that includes this profile must declare conformance:
 "schema:subjectOf": {
   "@type": ["schema:CreativeWork"], "schema:additionalType": ["dcat:CatalogRecord"],
   "dcterms:conformsTo": [
-    "https://w3id.org/cdif/data_structure/1.0"
+    "https://w3id.org/cdif/data_structure/1.1"
   ]
 }
 ```
@@ -598,7 +598,7 @@ These classes appear in the DataStructure UML model because the profile referenc
 
 - **Cardinality:** Required, repeatable
 - **Content:** object reference
-- **Description:** Identifiers for the conformance classes/profiles the metadata record follows. For the Data Structure profile this must include `https://w3id.org/cdif/data_structure/1.0`. Records that also conform to Core, Discovery, Data Description (etc.) list those profile identifiers as well.
+- **Description:** Identifiers for the conformance classes/profiles the metadata record follows. For the Data Structure profile this must include `https://w3id.org/cdif/data_structure/1.1`. Records that also conform to Core, Discovery, Data Description (etc.) list those profile identifiers as well.
 
 ### schema:description
 

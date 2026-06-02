@@ -1,11 +1,73 @@
 @prefix cdi: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
 @prefix cdif: <https://cdif.org/0.1/> .
 @prefix cdifd: <https://cdif.org/validation/0.1/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cdifd:CDIFCodelistConceptShape a sh:NodeShape ;
+    sh:message "A CDIF codelist concept must have a resolvable IRI as @id." ;
+    sh:nodeKind sh:IRI ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:message "skos:notation is required on every concept." ;
+            sh:minCount 1 ;
+            sh:path skos:notation ],
+        [ a sh:PropertyShape ;
+            sh:class skos:ConceptScheme ;
+            sh:maxCount 1 ;
+            sh:message "Every concept must declare skos:inScheme referencing its ConceptScheme." ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ],
+        [ a sh:PropertyShape ;
+            sh:message "skos:prefLabel is required on every concept." ;
+            sh:minCount 1 ;
+            sh:path skos:prefLabel ] ;
+    sh:targetClass skos:Concept .
+
+cdifd:CDIFCodelistConformsToShape a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:hasValue <https://w3id.org/cdif/codelist/1.1> ;
+            sh:message "A subjectOf catalog record on a CDIF codelist must include dcterms:conformsTo <https://w3id.org/cdif/codelist/1.1>." ;
+            sh:minCount 1 ;
+            sh:path dcterms:conformsTo ] ;
+    sh:target [ a sh:SPARQLTarget ;
+            sh:prefixes cdifd: ;
+            sh:select """\r
+                PREFIX schema: <http://schema.org/>\r
+                SELECT ?this WHERE {\r
+                    ?dataset schema:subjectOf ?this .\r
+                }\r
+            """ ] .
+
+cdifd:CDIFCodelistShape a sh:NodeShape ;
+    sh:message "A CDIF codelist must have a resolvable IRI as @id.",
+        "Either schema:license or schema:conditionsOfAccess must be provided." ;
+    sh:nodeKind sh:IRI ;
+    sh:or ( [ a sh:PropertyShape ;
+                sh:minCount 1 ;
+                sh:path schema:license ] [ a sh:PropertyShape ;
+                sh:minCount 1 ;
+                sh:path schema:conditionsOfAccess ] ) ;
+    sh:property [ a sh:PropertyShape ;
+            sh:message "schema:identifier is required on a CDIF codelist (string or PropertyValue)." ;
+            sh:minCount 1 ;
+            sh:path schema:identifier ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:message "schema:dateModified is required (ISO 8601 date string)." ;
+            sh:minCount 1 ;
+            sh:path schema:dateModified ],
+        [ a sh:PropertyShape ;
+            sh:class skos:Concept ;
+            sh:message "A codelist must declare at least one skos:hasTopConcept." ;
+            sh:minCount 1 ;
+            sh:path skos:hasTopConcept ] ;
+    sh:targetClass skos:ConceptScheme .
 
 cdifd:CDIFDefinedTermShape a sh:NodeShape ;
     sh:message "A DefinedTerm must have a name (label), an identifier, OR a termCode. All three are recommended." ;
