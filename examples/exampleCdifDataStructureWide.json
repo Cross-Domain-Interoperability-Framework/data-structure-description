@@ -2,7 +2,7 @@
   "@context": {
     "schema": "http://schema.org/",
     "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-    "cdif": "https://cdif.org/0.1/",
+    "cdif": "https://w3id.org/cdif/",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "ex": "https://example.org/"
   },

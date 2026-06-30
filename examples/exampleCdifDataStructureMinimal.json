@@ -1,11 +1,59 @@
 {
   "@context": {
     "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://w3id.org/cdif/",
     "ex": "https://example.org/"
   },
-  "@type": ["cdi:DataStructure"],
+  "@type": [
+    "cdi:WideDataStructure"
+  ],
   "@id": "ex:struct/observations",
   "cdi:has_DataStructureComponent": [
-    { "@id": "ex:component/observationValue" }
+    {
+      "@type": [
+        "cdi:IdentifierComponent"
+      ],
+      "@id": "ex:struct/observations/comp/observationId",
+      "cdif:isDefinedBy_RepresentedVariable": {
+        "@type": [
+          "cdi:RepresentedVariable"
+        ],
+        "@id": "ex:struct/observations/rv/observationId",
+        "cdif:name": [
+          "observation_id"
+        ],
+        "cdi:hasIntendedDataType": {
+          "@type": [
+            "cdi:ControlledVocabularyEntry"
+          ],
+          "cdi:entryValue": [
+            "xsd:string"
+          ]
+        }
+      }
+    },
+    {
+      "@type": [
+        "cdi:MeasureComponent"
+      ],
+      "@id": "ex:struct/observations/comp/observationValue",
+      "cdif:isDefinedBy_RepresentedVariable": {
+        "@type": [
+          "cdi:RepresentedVariable"
+        ],
+        "@id": "ex:struct/observations/rv/observationValue",
+        "cdif:name": [
+          "observation_value"
+        ],
+        "cdi:hasIntendedDataType": {
+          "@type": [
+            "cdi:ControlledVocabularyEntry"
+          ],
+          "cdi:entryValue": [
+            "xsd:decimal"
+          ]
+        }
+      }
+    }
   ]
 }
