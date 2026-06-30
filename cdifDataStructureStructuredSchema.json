@@ -3,372 +3,874 @@
   "title": "DDI-CDI Data Structure",
   "description": "Adds data-structure description to a CDIF metadata record. Defines the cdi:DataStructure family of types ($defs DataStructure / DimensionalDataStructure / LongDataStructure / WideDataStructure, plus the supporting Component / Key / RepresentedVariable types). A distribution attaches a structure via cdi:isStructuredBy on its schema:DataDownload item; the structure value is any of the four DataStructure variants. Metadata records must declare conformance to cdif/data_structure/1.0.",
   "type": "object",
-  "properties": {
-    "schema:subjectOf": {
-      "properties": {
-        "dcterms:conformsTo": {
-          "contains": {
-            "type": "object",
-            "properties": {
-              "@id": {
-                "const": "https://w3id.org/cdif/data_structure/1.1"
+  "if": {
+    "required": [
+      "@type"
+    ],
+    "properties": {
+      "@type": {
+        "type": "array",
+        "contains": {
+          "enum": [
+            "cdi:DataStructure",
+            "cdi:DimensionalDataStructure",
+            "cdi:LongDataStructure",
+            "cdi:WideDataStructure"
+          ]
+        }
+      }
+    }
+  },
+  "then": {
+    "description": "Standalone data-structure object (one of the four variants).",
+    "anyOf": [
+      {
+        "type": "object",
+        "description": "Data organization based on reusable data structure components.",
+        "properties": {
+          "@type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "cdi:DataStructure"
+            },
+            "minItems": 1
+          },
+          "@id": {
+            "type": "string",
+            "description": "Identifier for this DataStructure node"
+          },
+          "cdi:has_ForeignKey": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ForeignKey"
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            },
+            "minItems": 1
+          },
+          "cdi:has_DataStructureComponent": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "title": "DDI-CDI Data Structure Component",
+                  "description": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
+                  "anyOf": [
+                    {
+                      "$ref": "#/$defs/IdentifierComponent"
+                    },
+                    {
+                      "$ref": "#/$defs/MeasureComponent"
+                    },
+                    {
+                      "$ref": "#/$defs/AttributeComponent"
+                    },
+                    {
+                      "$ref": "#/$defs/DimensionComponent"
+                    },
+                    {
+                      "$ref": "#/$defs/VariableValueComponent"
+                    },
+                    {
+                      "$ref": "#/$defs/VariableDescriptorComponent"
+                    }
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            },
+            "minItems": 1
+          },
+          "cdi:has_PrimaryKey": {
+            "$ref": "#/$defs/PrimaryKey"
+          }
+        },
+        "required": [
+          "@type",
+          "cdi:has_DataStructureComponent"
+        ]
+      },
+      {
+        "type": "object",
+        "description": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
+        "properties": {
+          "@type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "cdi:DimensionalDataStructure"
+            },
+            "minItems": 1
+          },
+          "@id": {
+            "type": "string",
+            "description": "Identifier for this DimensionalDataStructure node"
+          },
+          "cdi:has_DataStructureComponent": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/IdentifierComponent"
+                },
+                {
+                  "$ref": "#/$defs/MeasureComponent"
+                },
+                {
+                  "$ref": "#/$defs/AttributeComponent"
+                },
+                {
+                  "$ref": "#/$defs/DimensionComponent"
+                }
+              ]
+            },
+            "minItems": 1
+          },
+          "cdi:has_PrimaryKey": {
+            "$ref": "#/$defs/PrimaryKey"
+          },
+          "cdi:has_ForeignKey": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ForeignKey"
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "cdi:has_DataStructureComponent"
+        ]
+      },
+      {
+        "type": "object",
+        "description": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
+        "properties": {
+          "@type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "cdi:LongDataStructure"
+            },
+            "minItems": 1
+          },
+          "@id": {
+            "type": "string",
+            "description": "Identifier for this LongDataStructure node"
+          },
+          "cdi:has_DataStructureComponent": {
+            "type": "array",
+            "description": "A LongDataStructure must include exactly one IdentifierComponent, exactly one VariableDescriptorComponent, exactly one VariableValueComponent, plus zero or more AttributeComponents.",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/IdentifierComponent"
+                },
+                {
+                  "$ref": "#/$defs/VariableDescriptorComponent"
+                },
+                {
+                  "$ref": "#/$defs/VariableValueComponent"
+                },
+                {
+                  "$ref": "#/$defs/AttributeComponent"
+                }
+              ]
+            },
+            "allOf": [
+              {
+                "contains": {
+                  "$ref": "#/$defs/IdentifierComponent"
+                },
+                "minContains": 1,
+                "maxContains": 1
+              },
+              {
+                "contains": {
+                  "$ref": "#/$defs/VariableDescriptorComponent"
+                },
+                "minContains": 1,
+                "maxContains": 1
+              },
+              {
+                "contains": {
+                  "$ref": "#/$defs/VariableValueComponent"
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            ],
+            "minItems": 3
+          },
+          "cdi:has_PrimaryKey": {
+            "$ref": "#/$defs/PrimaryKey"
+          }
+        },
+        "required": [
+          "@type",
+          "cdi:has_DataStructureComponent"
+        ]
+      },
+      {
+        "type": "object",
+        "description": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
+        "properties": {
+          "@type": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "contains": {
+              "const": "cdi:WideDataStructure"
+            },
+            "minItems": 1
+          },
+          "@id": {
+            "type": "string",
+            "description": "Identifier for this WideDataStructure node"
+          },
+          "cdi:has_DataStructureComponent": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/IdentifierComponent"
+                },
+                {
+                  "$ref": "#/$defs/MeasureComponent"
+                },
+                {
+                  "$ref": "#/$defs/AttributeComponent"
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            },
+            "minItems": 1
+          },
+          "cdi:has_PrimaryKey": {
+            "$ref": "#/$defs/PrimaryKey"
+          },
+          "cdi:has_ForeignKey": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/ForeignKey"
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "@type",
+          "cdi:has_DataStructureComponent"
+        ]
+      }
+    ]
+  },
+  "else": {
+    "description": "A CDIF dataset described by a data structure. Must declare conformance to data_structure/1.1 and attach the structure to a distribution.",
+    "required": [
+      "schema:subjectOf"
+    ],
+    "properties": {
+      "schema:subjectOf": {
+        "required": [
+          "dcterms:conformsTo"
+        ],
+        "properties": {
+          "dcterms:conformsTo": {
+            "contains": {
+              "type": "object",
+              "properties": {
+                "@id": {
+                  "const": "https://w3id.org/cdif/data_structure/1.1"
+                }
               }
             }
           }
         }
-      }
-    },
-    "schema:distribution": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "cdi:isStructuredBy": {
-            "description": "Reusable data-structure description for this distribution. One of the four DataStructure variants (DataStructure, Dimensional, Long, Wide), or an @id reference to one declared elsewhere in the document.",
-            "anyOf": [
-              {
-                "type": "object",
-                "description": "Data organization based on reusable data structure components.",
-                "properties": {
-                  "@type": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
+      },
+      "schema:distribution": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "cdi:isStructuredBy": {
+              "description": "Reusable data-structure description for this distribution. One of the four DataStructure variants (DataStructure, Dimensional, Long, Wide) as an inline definition, or an @id reference to one declared elsewhere in the document or published at a resolvable URI. (A profile may further require the inline form via SHACL.)",
+              "anyOf": [
+                {
+                  "type": "object",
+                  "description": "Data organization based on reusable data structure components.",
+                  "properties": {
+                    "@type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "contains": {
+                        "const": "cdi:DataStructure"
+                      },
+                      "minItems": 1
                     },
-                    "contains": {
-                      "const": "cdi:DataStructure"
+                    "@id": {
+                      "type": "string",
+                      "description": "Identifier for this DataStructure node"
                     },
-                    "minItems": 1
-                  },
-                  "@id": {
-                    "type": "string",
-                    "description": "Identifier for this DataStructure node"
-                  },
-                  "cdi:has_ForeignKey": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/ForeignKey"
-                        },
-                        {
-                          "$ref": "#/$defs/id-reference"
-                        }
-                      ]
-                    },
-                    "minItems": 1
-                  },
-                  "cdi:has_DataStructureComponent": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "title": "DDI-CDI Data Structure Component",
-                          "description": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
-                          "anyOf": [
-                            {
-                              "$ref": "#/$defs/IdentifierComponent"
-                            },
-                            {
-                              "$ref": "#/$defs/MeasureComponent"
-                            },
-                            {
-                              "$ref": "#/$defs/AttributeComponent"
-                            },
-                            {
-                              "type": "object",
-                              "description": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".  AG: references to the variables which are the components of a compound identifier, in which each variable is a single field - an axis - in a coordinate system addressing a location in a matrix. These variables are often categorical, but also commonly include time. Unlike other Components, they may be ordered using instances of cdi:ComponentPosition.",
-                              "properties": {
-                                "@type": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "string"
-                                  },
-                                  "contains": {
-                                    "const": "cdi:DimensionComponent"
-                                  },
-                                  "minItems": 1
-                                },
-                                "@id": {
-                                  "type": "string",
-                                  "description": "Identifier for this DimensionComponent node"
-                                },
-                                "cdif:isDefinedBy_RepresentedVariable": {
-                                  "anyOf": [
-                                    {
-                                      "$ref": "#/$defs/CdifRepresentedVariable"
-                                    },
-                                    {
-                                      "$ref": "#/$defs/CdifDataStructureComponent_id-reference"
-                                    }
-                                  ]
-                                }
-                              },
-                              "required": [
-                                "@type",
-                                "cdif:isDefinedBy_RepresentedVariable"
-                              ]
-                            },
-                            {
-                              "$ref": "#/$defs/VariableValueComponent"
-                            },
-                            {
-                              "$ref": "#/$defs/VariableDescriptorComponent"
-                            }
-                          ]
-                        },
-                        {
-                          "$ref": "#/$defs/id-reference"
-                        }
-                      ]
-                    },
-                    "minItems": 1
-                  },
-                  "cdi:has_PrimaryKey": {
-                    "$ref": "#/$defs/PrimaryKey"
-                  }
-                },
-                "required": [
-                  "@type",
-                  "cdi:has_DataStructureComponent"
-                ]
-              },
-              {
-                "type": "object",
-                "description": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
-                "properties": {
-                  "@type": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    },
-                    "contains": {
-                      "const": "cdi:DimensionalDataStructure"
-                    },
-                    "minItems": 1
-                  },
-                  "@id": {
-                    "type": "string",
-                    "description": "Identifier for this DimensionalDataStructure node"
-                  },
-                  "cdi:has_DataStructureComponent": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/IdentifierComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/MeasureComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/AttributeComponent"
-                        },
-                        {
-                          "type": "object",
-                          "description": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".  AG: references to the variables which are the components of a compound identifier, in which each variable is a single field - an axis - in a coordinate system addressing a location in a matrix. These variables are often categorical, but also commonly include time. Unlike other Components, they may be ordered using instances of cdi:ComponentPosition.",
-                          "properties": {
-                            "@type": {
-                              "type": "array",
-                              "items": {
-                                "type": "string"
-                              },
-                              "contains": {
-                                "const": "cdi:DimensionComponent"
-                              },
-                              "minItems": 1
-                            },
-                            "@id": {
-                              "type": "string",
-                              "description": "Identifier for this DimensionComponent node"
-                            },
-                            "cdif:isDefinedBy_RepresentedVariable": {
-                              "anyOf": [
-                                {
-                                  "$ref": "#/$defs/CdifRepresentedVariable"
-                                },
-                                {
-                                  "$ref": "#/$defs/CdifDataStructureComponent_id-reference"
-                                }
-                              ]
-                            }
+                    "cdi:has_ForeignKey": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/ForeignKey"
                           },
-                          "required": [
-                            "@type",
-                            "cdif:isDefinedBy_RepresentedVariable"
-                          ]
-                        }
-                      ]
-                    },
-                    "minItems": 1
-                  },
-                  "cdi:has_PrimaryKey": {
-                    "$ref": "#/$defs/PrimaryKey"
-                  },
-                  "cdi:has_ForeignKey": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/ForeignKey"
-                        },
-                        {
-                          "$ref": "#/$defs/id-reference"
-                        }
-                      ]
-                    },
-                    "minItems": 1
-                  }
-                },
-                "required": [
-                  "@type",
-                  "cdi:has_DataStructureComponent"
-                ]
-              },
-              {
-                "type": "object",
-                "description": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
-                "properties": {
-                  "@type": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
-                    },
-                    "contains": {
-                      "const": "cdi:LongDataStructure"
-                    },
-                    "minItems": 1
-                  },
-                  "@id": {
-                    "type": "string",
-                    "description": "Identifier for this LongDataStructure node"
-                  },
-                  "cdi:has_DataStructureComponent": {
-                    "type": "array",
-                    "description": "A LongDataStructure must include exactly one IdentifierComponent, exactly one VariableDescriptorComponent, exactly one VariableValueComponent, plus zero or more AttributeComponents.",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/IdentifierComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/VariableDescriptorComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/VariableValueComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/AttributeComponent"
-                        }
-                      ]
-                    },
-                    "allOf": [
-                      {
-                        "contains": {
-                          "$ref": "#/$defs/IdentifierComponent"
-                        },
-                        "minContains": 1,
-                        "maxContains": 1
+                          {
+                            "$ref": "#/$defs/id-reference"
+                          }
+                        ]
                       },
-                      {
-                        "contains": {
-                          "$ref": "#/$defs/VariableDescriptorComponent"
-                        },
-                        "minContains": 1,
-                        "maxContains": 1
+                      "minItems": 1
+                    },
+                    "cdi:has_DataStructureComponent": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "title": "DDI-CDI Data Structure Component",
+                            "description": "Role given to a represented variable in the context of a long or wide data structure to identify the units associated to data points, and in dimensional and key value data structures to provide identifying fields for the instance values.",
+                            "anyOf": [
+                              {
+                                "$ref": "#/$defs/IdentifierComponent"
+                              },
+                              {
+                                "$ref": "#/$defs/MeasureComponent"
+                              },
+                              {
+                                "$ref": "#/$defs/AttributeComponent"
+                              },
+                              {
+                                "$ref": "#/$defs/DimensionComponent"
+                              },
+                              {
+                                "$ref": "#/$defs/VariableValueComponent"
+                              },
+                              {
+                                "$ref": "#/$defs/VariableDescriptorComponent"
+                              }
+                            ]
+                          },
+                          {
+                            "$ref": "#/$defs/id-reference"
+                          }
+                        ]
                       },
-                      {
-                        "contains": {
-                          "$ref": "#/$defs/VariableValueComponent"
-                        },
-                        "minContains": 1,
-                        "maxContains": 1
-                      }
-                    ],
-                    "minItems": 3
+                      "minItems": 1
+                    },
+                    "cdi:has_PrimaryKey": {
+                      "$ref": "#/$defs/PrimaryKey"
+                    }
                   },
-                  "cdi:has_PrimaryKey": {
-                    "$ref": "#/$defs/PrimaryKey"
-                  }
+                  "required": [
+                    "@type",
+                    "cdi:has_DataStructureComponent"
+                  ]
                 },
-                "required": [
-                  "@type",
-                  "cdi:has_DataStructureComponent"
-                ]
-              },
-              {
-                "type": "object",
-                "description": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
-                "properties": {
-                  "@type": {
-                    "type": "array",
-                    "items": {
-                      "type": "string"
+                {
+                  "type": "object",
+                  "description": "Structure of a dimensional data set (organized collection of multidimensional data). It is described by dimension, measure and attribute components.",
+                  "properties": {
+                    "@type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "contains": {
+                        "const": "cdi:DimensionalDataStructure"
+                      },
+                      "minItems": 1
                     },
-                    "contains": {
-                      "const": "cdi:WideDataStructure"
+                    "@id": {
+                      "type": "string",
+                      "description": "Identifier for this DimensionalDataStructure node"
                     },
-                    "minItems": 1
-                  },
-                  "@id": {
-                    "type": "string",
-                    "description": "Identifier for this WideDataStructure node"
-                  },
-                  "cdi:has_DataStructureComponent": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/IdentifierComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/MeasureComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/AttributeComponent"
-                        },
-                        {
-                          "$ref": "#/$defs/id-reference"
-                        }
-                      ]
+                    "cdi:has_DataStructureComponent": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/IdentifierComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/MeasureComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/AttributeComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/DimensionComponent"
+                          }
+                        ]
+                      },
+                      "minItems": 1
                     },
-                    "minItems": 1
-                  },
-                  "cdi:has_PrimaryKey": {
-                    "$ref": "#/$defs/PrimaryKey"
-                  },
-                  "cdi:has_ForeignKey": {
-                    "type": "array",
-                    "items": {
-                      "anyOf": [
-                        {
-                          "$ref": "#/$defs/ForeignKey"
-                        },
-                        {
-                          "$ref": "#/$defs/id-reference"
-                        }
-                      ]
+                    "cdi:has_PrimaryKey": {
+                      "$ref": "#/$defs/PrimaryKey"
                     },
-                    "minItems": 1
-                  }
+                    "cdi:has_ForeignKey": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/ForeignKey"
+                          },
+                          {
+                            "$ref": "#/$defs/id-reference"
+                          }
+                        ]
+                      },
+                      "minItems": 1
+                    }
+                  },
+                  "required": [
+                    "@type",
+                    "cdi:has_DataStructureComponent"
+                  ]
                 },
-                "required": [
-                  "@type",
-                  "cdi:has_DataStructureComponent"
-                ]
-              },
-              {
-                "$ref": "#/$defs/id-reference"
-              }
-            ]
+                {
+                  "type": "object",
+                  "description": "Structure of a long dataset (organized collection of long data). It is described by identifier, measure, attribute, variable descriptor and variable value components.",
+                  "properties": {
+                    "@type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "contains": {
+                        "const": "cdi:LongDataStructure"
+                      },
+                      "minItems": 1
+                    },
+                    "@id": {
+                      "type": "string",
+                      "description": "Identifier for this LongDataStructure node"
+                    },
+                    "cdi:has_DataStructureComponent": {
+                      "type": "array",
+                      "description": "A LongDataStructure must include exactly one IdentifierComponent, exactly one VariableDescriptorComponent, exactly one VariableValueComponent, plus zero or more AttributeComponents.",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/IdentifierComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/VariableDescriptorComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/VariableValueComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/AttributeComponent"
+                          }
+                        ]
+                      },
+                      "allOf": [
+                        {
+                          "contains": {
+                            "$ref": "#/$defs/IdentifierComponent"
+                          },
+                          "minContains": 1,
+                          "maxContains": 1
+                        },
+                        {
+                          "contains": {
+                            "$ref": "#/$defs/VariableDescriptorComponent"
+                          },
+                          "minContains": 1,
+                          "maxContains": 1
+                        },
+                        {
+                          "contains": {
+                            "$ref": "#/$defs/VariableValueComponent"
+                          },
+                          "minContains": 1,
+                          "maxContains": 1
+                        }
+                      ],
+                      "minItems": 3
+                    },
+                    "cdi:has_PrimaryKey": {
+                      "$ref": "#/$defs/PrimaryKey"
+                    }
+                  },
+                  "required": [
+                    "@type",
+                    "cdi:has_DataStructureComponent"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "description": "Structure of a wide dataset (organized collection of wide data). It is described by identifier, measure and attribute components.",
+                  "properties": {
+                    "@type": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "contains": {
+                        "const": "cdi:WideDataStructure"
+                      },
+                      "minItems": 1
+                    },
+                    "@id": {
+                      "type": "string",
+                      "description": "Identifier for this WideDataStructure node"
+                    },
+                    "cdi:has_DataStructureComponent": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/IdentifierComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/MeasureComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/AttributeComponent"
+                          },
+                          {
+                            "$ref": "#/$defs/id-reference"
+                          }
+                        ]
+                      },
+                      "minItems": 1
+                    },
+                    "cdi:has_PrimaryKey": {
+                      "$ref": "#/$defs/PrimaryKey"
+                    },
+                    "cdi:has_ForeignKey": {
+                      "type": "array",
+                      "items": {
+                        "anyOf": [
+                          {
+                            "$ref": "#/$defs/ForeignKey"
+                          },
+                          {
+                            "$ref": "#/$defs/id-reference"
+                          }
+                        ]
+                      },
+                      "minItems": 1
+                    }
+                  },
+                  "required": [
+                    "@type",
+                    "cdi:has_DataStructureComponent"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/id-reference"
+                }
+              ]
+            }
           }
         }
       }
     }
   },
   "$defs": {
+    "cdifConceptOrTerm": {
+      "description": "A SKOS concept identified by URI, a schema:DefinedTerm, or an inline cdif:Concept. Shared shape used wherever a CDIF property carries either a controlled-vocabulary reference or an inline concept definition.",
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "@id": {
+              "type": "string",
+              "description": "reference to a skos concept for the data type"
+            }
+          }
+        },
+        {
+          "description": "schema.org Defined Term schema.\n\n**Union-type policy:** In CDIF profile UML models an attribute typed as\nschema:DefinedTerm is represented by a single attribute of that class type.\nThe JSON Schema implementation permits the property value to be EITHER a\nplain string (interpreted as schema:name or schema:termCode in the default\nvocabulary) OR a full schema:DefinedTerm object (with explicit @type, name,\nidentifier, termCode, inDefinedTermSet). Consumers should accept either form.\n\nNote that this differs from the cdif Concept policy: a Concept (skos:Concept)\nin CDIF profiles MUST be a controlled-vocabulary entry (object form or\n@id-reference) — plain strings are not permitted for Concept-typed values\nbecause vocabulary identity cannot be recovered from an unscoped label.\n",
+          "type": "object",
+          "properties": {
+            "@type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "contains": {
+                "const": "schema:DefinedTerm"
+              },
+              "minItems": 1
+            },
+            "schema:name": {
+              "type": "string",
+              "description": "text label for the term that is useful to human user"
+            },
+            "schema:identifier": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/Identifier"
+                }
+              ]
+            },
+            "schema:inDefinedTermSet": {
+              "type": "string",
+              "description": "Name for the controlled vocabulary responsible for this keyword."
+            },
+            "schema:termCode": {
+              "type": "string",
+              "description": "A representative code for this keyword in the controlled vocabulary. Analogous to skos:Notation"
+            }
+          },
+          "allOf": [
+            {
+              "required": [
+                "@type"
+              ]
+            },
+            {
+              "anyOf": [
+                {
+                  "required": [
+                    "schema:name"
+                  ]
+                },
+                {
+                  "required": [
+                    "schema:identifier"
+                  ]
+                },
+                {
+                  "required": [
+                    "schema:termCode"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "@context": {
+              "description": "JSON-LD context declaring the skos namespace prefix. May be a single object or an array of strings and objects.",
+              "type": "object",
+              "properties": {
+                "skos": {
+                  "const": "http://www.w3.org/2004/02/skos/core#"
+                }
+              },
+              "required": [
+                "skos"
+              ]
+            },
+            "@id": {
+              "type": "string",
+              "description": "URI identifier for this concept."
+            },
+            "@type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "contains": {
+                "const": "skos:Concept"
+              },
+              "minItems": 1
+            },
+            "skos:prefLabel": {
+              "description": "Preferred lexical label for this concept. A single string, a single language-tagged value, or an array of language-tagged values. Each language should appear at most once.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/LanguageTaggedValue"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/LanguageTaggedValue"
+                  }
+                }
+              ]
+            },
+            "skos:notation": {
+              "description": "Classification code for this concept within a scheme.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "skos:definition": {
+              "description": "Formal explanation of the meaning of this concept.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/LanguageTaggedValue"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/LanguageTaggedValue"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "skos:note": {
+              "description": "General note about this concept.",
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "$ref": "#/$defs/LanguageTaggedValue"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "anyOf": [
+                      {
+                        "type": "string"
+                      },
+                      {
+                        "$ref": "#/$defs/LanguageTaggedValue"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "skos:inScheme": {
+              "description": "Concept scheme(s) this concept belongs to.",
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "@id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "@id"
+                  ]
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "@id": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  }
+                }
+              ]
+            },
+            "skos:broader": {
+              "description": "Broader (parent) concepts in the hierarchy. Items are inline concept objects or @id references.",
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "description": "Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.",
+                    "properties": {
+                      "@id": {
+                        "type": "string",
+                        "description": "URI of the referenced concept."
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  },
+                  {
+                    "$comment": "circular-ref"
+                  }
+                ]
+              }
+            },
+            "skos:narrower": {
+              "description": "Narrower (child) concepts in the hierarchy. Items are inline concept objects or @id references.",
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "object",
+                    "description": "Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.",
+                    "properties": {
+                      "@id": {
+                        "type": "string",
+                        "description": "URI of the referenced concept."
+                      }
+                    },
+                    "required": [
+                      "@id"
+                    ]
+                  },
+                  {
+                    "$comment": "circular-ref"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "@type",
+            "skos:prefLabel"
+          ]
+        }
+      ]
+    },
     "Identifier": {
-      "description": "Properties for a schema.org identifier (schema:PropertyValue pattern).\n\n**Union-type policy:** In CDIF profile UML models an attribute typed as\nschema:Identifier / schema:PropertyValue is represented by a single attribute\nof that class type. The JSON Schema implementation permits the property value\nto be EITHER a plain string (interpreted as the bare identifier value) OR a\nfull schema:PropertyValue object (with explicit @type, propertyID, value).\nConsumers should accept either form.\n",
+      "description": "Properties for a schema.org identifier (schema:PropertyValue pattern).\n**Union-type policy:** In CDIF profile UML models an attribute typed as\nschema:Identifier / schema:PropertyValue is represented by a single attribute\nof that class type. The JSON Schema implementation permits the property value\nto be EITHER a plain string (interpreted as the bare identifier value) OR a\nfull schema:PropertyValue object (with explicit @type, propertyID, value).\nConsumers should accept either form.\n",
       "type": "object",
       "properties": {
         "@type": {
@@ -631,20 +1133,73 @@
                                     }
                                   },
                                   "schema:subjectOf": {
-                                    "type": "array",
-                                    "items": {
-                                      "type": "object",
-                                      "properties": {
-                                        "@id": {
+                                    "description": "Catalog record describing this codelist as CDIF-conformant metadata. Must declare conformance to the cdifCodelist profile via dcterms:conformsTo and be typed as schema:Dataset with schema:additionalType including dcat:CatalogRecord.",
+                                    "type": "object",
+                                    "properties": {
+                                      "@type": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "string"
+                                        },
+                                        "contains": {
+                                          "const": "schema:Dataset"
+                                        },
+                                        "minItems": 1
+                                      },
+                                      "schema:additionalType": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "string"
+                                        },
+                                        "contains": {
+                                          "const": "dcat:CatalogRecord"
+                                        },
+                                        "minItems": 1
+                                      },
+                                      "dcterms:conformsTo": {
+                                        "type": "array",
+                                        "items": {
+                                          "type": "object",
+                                          "properties": {
+                                            "@id": {
+                                              "type": "string"
+                                            }
+                                          },
+                                          "required": [
+                                            "@id"
+                                          ]
+                                        },
+                                        "contains": {
                                           "type": "object",
                                           "properties": {
                                             "@id": {
                                               "const": "https://w3id.org/cdif/codelist/1.1"
                                             }
                                           }
-                                        }
+                                        },
+                                        "minItems": 1
+                                      },
+                                      "@id": {
+                                        "type": "string",
+                                        "description": "Identifier for the catalog record."
+                                      },
+                                      "schema:about": {
+                                        "type": "object",
+                                        "properties": {
+                                          "@id": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "@id"
+                                        ]
                                       }
-                                    }
+                                    },
+                                    "required": [
+                                      "@type",
+                                      "schema:additionalType",
+                                      "dcterms:conformsTo"
+                                    ]
                                   }
                                 },
                                 "anyOf": [
@@ -1032,20 +1587,73 @@
                                   }
                                 },
                                 "schema:subjectOf": {
-                                  "type": "array",
-                                  "items": {
-                                    "type": "object",
-                                    "properties": {
-                                      "@id": {
+                                  "description": "Catalog record describing this codelist as CDIF-conformant metadata. Must declare conformance to the cdifCodelist profile via dcterms:conformsTo and be typed as schema:Dataset with schema:additionalType including dcat:CatalogRecord.",
+                                  "type": "object",
+                                  "properties": {
+                                    "@type": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      },
+                                      "contains": {
+                                        "const": "schema:Dataset"
+                                      },
+                                      "minItems": 1
+                                    },
+                                    "schema:additionalType": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "string"
+                                      },
+                                      "contains": {
+                                        "const": "dcat:CatalogRecord"
+                                      },
+                                      "minItems": 1
+                                    },
+                                    "dcterms:conformsTo": {
+                                      "type": "array",
+                                      "items": {
+                                        "type": "object",
+                                        "properties": {
+                                          "@id": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "@id"
+                                        ]
+                                      },
+                                      "contains": {
                                         "type": "object",
                                         "properties": {
                                           "@id": {
                                             "const": "https://w3id.org/cdif/codelist/1.1"
                                           }
                                         }
-                                      }
+                                      },
+                                      "minItems": 1
+                                    },
+                                    "@id": {
+                                      "type": "string",
+                                      "description": "Identifier for the catalog record."
+                                    },
+                                    "schema:about": {
+                                      "type": "object",
+                                      "properties": {
+                                        "@id": {
+                                          "type": "string"
+                                        }
+                                      },
+                                      "required": [
+                                        "@id"
+                                      ]
                                     }
-                                  }
+                                  },
+                                  "required": [
+                                    "@type",
+                                    "schema:additionalType",
+                                    "dcterms:conformsTo"
+                                  ]
                                 }
                               },
                               "anyOf": [
@@ -2192,7 +2800,7 @@
                 "type": "string"
               },
               {
-                "$ref": "#/$defs/CdifDataStructureComponent_cdifConceptOrTerm"
+                "$ref": "#/$defs/cdifConceptOrTerm"
               }
             ]
           },
@@ -2266,7 +2874,7 @@
                           "type": "string"
                         },
                         {
-                          "$ref": "#/$defs/CdifDataStructureComponent_cdifConceptOrTerm"
+                          "$ref": "#/$defs/cdifConceptOrTerm"
                         }
                       ]
                     },
@@ -2307,7 +2915,7 @@
                 "type": "string"
               },
               {
-                "$ref": "#/$defs/CdifDataStructureComponent_cdifConceptOrTerm"
+                "$ref": "#/$defs/cdifConceptOrTerm"
               }
             ]
           },
@@ -2317,6 +2925,40 @@
       },
       "required": [
         "@type"
+      ]
+    },
+    "DimensionComponent": {
+      "type": "object",
+      "description": "Role given to a represented variable in the context of a dimensional data structure to identify the universes associated with data points. The variable acts as a field in the compound identifier (the key structure) to disambiguate the cells in the multi-dimensional \"cube\".  AG: references to the variables which are the components of a compound identifier, in which each variable is a single field - an axis - in a coordinate system addressing a location in a matrix. These variables are often categorical, but also commonly include time. Unlike other Components, they may be ordered using instances of cdi:ComponentPosition.",
+      "properties": {
+        "@type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "contains": {
+            "const": "cdi:DimensionComponent"
+          },
+          "minItems": 1
+        },
+        "@id": {
+          "type": "string",
+          "description": "Identifier for this DimensionComponent node"
+        },
+        "cdif:isDefinedBy_RepresentedVariable": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/CdifRepresentedVariable"
+            },
+            {
+              "$ref": "#/$defs/CdifDataStructureComponent_id-reference"
+            }
+          ]
+        }
+      },
+      "required": [
+        "@type",
+        "cdif:isDefinedBy_RepresentedVariable"
       ]
     },
     "VariableValueComponent": {
@@ -2359,7 +3001,7 @@
                 "type": "string"
               },
               {
-                "$ref": "#/$defs/CdifDataStructureComponent_cdifConceptOrTerm"
+                "$ref": "#/$defs/cdifConceptOrTerm"
               }
             ]
           },
@@ -2498,7 +3140,7 @@
                 "type": "string"
               },
               {
-                "$ref": "#/$defs/CdifDataStructureComponent_cdifConceptOrTerm"
+                "$ref": "#/$defs/cdifConceptOrTerm"
               }
             ]
           },
@@ -2526,249 +3168,6 @@
       },
       "required": [
         "@value"
-      ]
-    },
-    "cdifConceptOrTerm": {
-      "anyOf": [
-        {
-          "type": "object",
-          "properties": {
-            "@id": {
-              "type": "string",
-              "description": "reference to a skos concept for the data type"
-            }
-          }
-        },
-        {
-          "description": "schema.org Defined Term schema.\n\n**Union-type policy:** In CDIF profile UML models an attribute typed as\nschema:DefinedTerm is represented by a single attribute of that class type.\nThe JSON Schema implementation permits the property value to be EITHER a\nplain string (interpreted as schema:name or schema:termCode in the default\nvocabulary) OR a full schema:DefinedTerm object (with explicit @type, name,\nidentifier, termCode, inDefinedTermSet). Consumers should accept either form.\n\nNote that this differs from the cdif Concept policy: a Concept (skos:Concept)\nin CDIF profiles MUST be a controlled-vocabulary entry (object form or\n@id-reference) — plain strings are not permitted for Concept-typed values\nbecause vocabulary identity cannot be recovered from an unscoped label.\n",
-          "type": "object",
-          "properties": {
-            "@type": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "contains": {
-                "const": "schema:DefinedTerm"
-              },
-              "minItems": 1
-            },
-            "schema:name": {
-              "type": "string",
-              "description": "text label for the term that is useful to human user"
-            },
-            "schema:identifier": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/Identifier"
-                }
-              ]
-            },
-            "schema:inDefinedTermSet": {
-              "type": "string",
-              "description": "Name for the controlled vocabulary responsible for this keyword."
-            },
-            "schema:termCode": {
-              "type": "string",
-              "description": "A representative code for this keyword in the controlled vocabulary. Analogous to skos:Notation"
-            }
-          },
-          "allOf": [
-            {
-              "required": [
-                "@type"
-              ]
-            },
-            {
-              "anyOf": [
-                {
-                  "required": [
-                    "schema:name"
-                  ]
-                },
-                {
-                  "required": [
-                    "schema:identifier"
-                  ]
-                },
-                {
-                  "required": [
-                    "schema:termCode"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "@context": {
-              "description": "JSON-LD context declaring the skos namespace prefix. May be a single object or an array of strings and objects.",
-              "type": "object",
-              "properties": {
-                "skos": {
-                  "const": "http://www.w3.org/2004/02/skos/core#"
-                }
-              },
-              "required": [
-                "skos"
-              ]
-            },
-            "@id": {
-              "type": "string",
-              "description": "URI identifier for this concept."
-            },
-            "@type": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "contains": {
-                "const": "skos:Concept"
-              },
-              "minItems": 1
-            },
-            "skos:prefLabel": {
-              "description": "Preferred lexical label for this concept. A single string, a single language-tagged value, or an array of language-tagged values. Each language should appear at most once.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/$defs/LanguageTaggedValue"
-                  }
-                }
-              ]
-            },
-            "skos:notation": {
-              "description": "Classification code for this concept within a scheme.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "skos:definition": {
-              "description": "Formal explanation of the meaning of this concept.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/LanguageTaggedValue"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:note": {
-              "description": "General note about this concept.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/LanguageTaggedValue"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:inScheme": {
-              "description": "Concept scheme(s) this concept belongs to.",
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "@id": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "@id"
-                  ]
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "@id": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "@id"
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:broader": {
-              "description": "Broader (parent) concepts in the hierarchy. Items are inline concept objects or @id references.",
-              "type": "array",
-              "items": {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/CdifConceptScheme_ConceptRef"
-                  },
-                  {
-                    "$comment": "circular-ref"
-                  }
-                ]
-              }
-            },
-            "skos:narrower": {
-              "description": "Narrower (child) concepts in the hierarchy. Items are inline concept objects or @id references.",
-              "type": "array",
-              "items": {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/CdifConceptScheme_ConceptRef"
-                  },
-                  {
-                    "$comment": "circular-ref"
-                  }
-                ]
-              }
-            }
-          },
-          "required": [
-            "@type",
-            "skos:prefLabel",
-            "skos:notation"
-          ]
-        }
       ]
     },
     "CdifRepresentedVariable_id-reference": {
@@ -2921,10 +3320,6 @@
           "type": "string",
           "description": "Identifier for this ForeignKey node"
         },
-        "cdi:identifier": {
-          "$ref": "#/$defs/Identifier",
-          "description": "Identifier for objects requiring short- or long-lasting referencing and management."
-        },
         "cdi:isComposedOf": {
           "type": "array",
           "items": {
@@ -2957,15 +3352,8 @@
           "minItems": 1
         },
         "cdi:references": {
-          "description": "references a primary key in a different dataset",
-          "anyOf": [
-            {
-              "$ref": "#/$defs/PrimaryKey"
-            },
-            {
-              "$ref": "#/$defs/id-reference"
-            }
-          ]
+          "$ref": "#/$defs/id-reference",
+          "description": "references a primary key in a different dataset"
         }
       },
       "required": [
@@ -2993,18 +3381,11 @@
         },
         "cdif:isComposedOf": {
           "type": "array",
-          "description": "List of variables or @id-reference. Array order of cdif:isComposedOf items is the position; no intermediate ComponentPosition wrapper.",
+          "description": "List @id-references to representedVariables in this dataStructure. Array order of cdif:isComposedOf items is the position; no intermediate ComponentPosition wrapper.",
           "items": {
             "allOf": [
               {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/CdifRepresentedVariable"
-                  },
-                  {
-                    "$ref": "#/$defs/id-reference"
-                  }
-                ]
+                "$ref": "#/$defs/id-reference"
               },
               {
                 "type": "object",
@@ -3035,262 +3416,6 @@
       "properties": {
         "@id": {
           "type": "string"
-        }
-      },
-      "required": [
-        "@id"
-      ]
-    },
-    "CdifDataStructureComponent_cdifConceptOrTerm": {
-      "anyOf": [
-        {
-          "type": "object",
-          "properties": {
-            "@id": {
-              "type": "string",
-              "description": "reference to a skos concept for the data type"
-            }
-          }
-        },
-        {
-          "description": "schema.org Defined Term schema.\n\n**Union-type policy:** In CDIF profile UML models an attribute typed as\nschema:DefinedTerm is represented by a single attribute of that class type.\nThe JSON Schema implementation permits the property value to be EITHER a\nplain string (interpreted as schema:name or schema:termCode in the default\nvocabulary) OR a full schema:DefinedTerm object (with explicit @type, name,\nidentifier, termCode, inDefinedTermSet). Consumers should accept either form.\n\nNote that this differs from the cdif Concept policy: a Concept (skos:Concept)\nin CDIF profiles MUST be a controlled-vocabulary entry (object form or\n@id-reference) — plain strings are not permitted for Concept-typed values\nbecause vocabulary identity cannot be recovered from an unscoped label.\n",
-          "type": "object",
-          "properties": {
-            "@type": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "contains": {
-                "const": "schema:DefinedTerm"
-              },
-              "minItems": 1
-            },
-            "schema:name": {
-              "type": "string",
-              "description": "text label for the term that is useful to human user"
-            },
-            "schema:identifier": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/Identifier"
-                }
-              ]
-            },
-            "schema:inDefinedTermSet": {
-              "type": "string",
-              "description": "Name for the controlled vocabulary responsible for this keyword."
-            },
-            "schema:termCode": {
-              "type": "string",
-              "description": "A representative code for this keyword in the controlled vocabulary. Analogous to skos:Notation"
-            }
-          },
-          "allOf": [
-            {
-              "required": [
-                "@type"
-              ]
-            },
-            {
-              "anyOf": [
-                {
-                  "required": [
-                    "schema:name"
-                  ]
-                },
-                {
-                  "required": [
-                    "schema:identifier"
-                  ]
-                },
-                {
-                  "required": [
-                    "schema:termCode"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "object",
-          "properties": {
-            "@context": {
-              "description": "JSON-LD context declaring the skos namespace prefix. May be a single object or an array of strings and objects.",
-              "type": "object",
-              "properties": {
-                "skos": {
-                  "const": "http://www.w3.org/2004/02/skos/core#"
-                }
-              },
-              "required": [
-                "skos"
-              ]
-            },
-            "@id": {
-              "type": "string",
-              "description": "URI identifier for this concept."
-            },
-            "@type": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              },
-              "contains": {
-                "const": "skos:Concept"
-              },
-              "minItems": 1
-            },
-            "skos:prefLabel": {
-              "description": "Preferred lexical label for this concept. A single string, a single language-tagged value, or an array of language-tagged values. Each language should appear at most once.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/$defs/LanguageTaggedValue"
-                  }
-                }
-              ]
-            },
-            "skos:notation": {
-              "description": "Classification code for this concept within a scheme.",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            },
-            "skos:definition": {
-              "description": "Formal explanation of the meaning of this concept.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/LanguageTaggedValue"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:note": {
-              "description": "General note about this concept.",
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "$ref": "#/$defs/LanguageTaggedValue"
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "anyOf": [
-                      {
-                        "type": "string"
-                      },
-                      {
-                        "$ref": "#/$defs/LanguageTaggedValue"
-                      }
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:inScheme": {
-              "description": "Concept scheme(s) this concept belongs to.",
-              "anyOf": [
-                {
-                  "type": "object",
-                  "properties": {
-                    "@id": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "@id"
-                  ]
-                },
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "@id": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "@id"
-                    ]
-                  }
-                }
-              ]
-            },
-            "skos:broader": {
-              "description": "Broader (parent) concepts in the hierarchy. Items are inline concept objects or @id references.",
-              "type": "array",
-              "items": {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/CdifConceptScheme_ConceptRef"
-                  },
-                  {
-                    "$comment": "circular-ref"
-                  }
-                ]
-              }
-            },
-            "skos:narrower": {
-              "description": "Narrower (child) concepts in the hierarchy. Items are inline concept objects or @id references.",
-              "type": "array",
-              "items": {
-                "anyOf": [
-                  {
-                    "$ref": "#/$defs/CdifConceptScheme_ConceptRef"
-                  },
-                  {
-                    "$comment": "circular-ref"
-                  }
-                ]
-              }
-            }
-          },
-          "required": [
-            "@type",
-            "skos:prefLabel",
-            "skos:notation"
-          ]
-        }
-      ]
-    },
-    "CdifConceptScheme_ConceptRef": {
-      "type": "object",
-      "description": "Reference (by URI) to a skos:Concept defined elsewhere. Used inside skos:broader / skos:narrower as the @id-reference alternative to an inline Concept.",
-      "properties": {
-        "@id": {
-          "type": "string",
-          "description": "URI of the referenced concept."
         }
       },
       "required": [

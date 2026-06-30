@@ -1,5 +1,4 @@
 @prefix cdi: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/> .
-@prefix cdif: <https://cdif.org/0.1/> .
 @prefix cdifd: <https://cdif.org/validation/0.1/shacl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -36,11 +35,11 @@ cdifd:CDIFCodelistConformsToShape a sh:NodeShape ;
             sh:path dcterms:conformsTo ] ;
     sh:target [ a sh:SPARQLTarget ;
             sh:prefixes cdifd: ;
-            sh:select """\r
-                PREFIX schema: <http://schema.org/>\r
-                SELECT ?this WHERE {\r
-                    ?dataset schema:subjectOf ?this .\r
-                }\r
+            sh:select """
+                PREFIX schema: <http://schema.org/>
+                SELECT ?this WHERE {
+                    ?dataset schema:subjectOf ?this .
+                }
             """ ] .
 
 cdifd:CDIFCodelistShape a sh:NodeShape ;
@@ -199,9 +198,9 @@ cdifd:cdifDataStructure_LongDataStructureShape a sh:NodeShape ;
 cdifd:cdifDataStructure_PrimaryKeyShape a sh:NodeShape ;
     sh:property [ sh:message "A cdif:PrimaryKey must carry at least one cdif:isComposedOf entry." ;
             sh:minCount 1 ;
-            sh:path cdif:isComposedOf ;
+            sh:path <https://w3id.org/cdif/isComposedOf> ;
             sh:severity sh:Violation ] ;
-    sh:targetClass cdif:PrimaryKey .
+    sh:targetClass <https://w3id.org/cdif/PrimaryKey> .
 
 cdifd:cdifDataStructure_WideDataStructureShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:WideDataStructure must carry at least one cdi:has_DataStructureComponent." ;
@@ -210,10 +209,22 @@ cdifd:cdifDataStructure_WideDataStructureShape a sh:NodeShape ;
             sh:severity sh:Violation ] ;
     sh:targetClass cdi:WideDataStructure .
 
+cdifd:cdifDataStructure_inlineStructureShape a sh:NodeShape ;
+    sh:sparql [ sh:message "A self-contained data-structure description must define the structure inline: a distribution's cdi:isStructuredBy must carry cdi:has_DataStructureComponent, not be a bare @id reference." ;
+            sh:select """
+			SELECT $this WHERE {
+				$this <http://schema.org/distribution> ?dist .
+				?dist <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/isStructuredBy> ?s .
+				FILTER NOT EXISTS { ?s <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/has_DataStructureComponent> ?c }
+			}
+		""" ;
+            sh:severity sh:Violation ] ;
+    sh:targetClass schema:Dataset .
+
 cdifd:cdifDescriptorValueDomainShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:DescriptorValueDomain must carry at least one cdif:takesValuesFrom entry." ;
             sh:minCount 1 ;
-            sh:path cdif:takesValuesFrom ;
+            sh:path <https://w3id.org/cdif/takesValuesFrom> ;
             sh:severity sh:Violation ] ;
     sh:targetClass cdi:DescriptorValueDomain .
 
@@ -221,14 +232,14 @@ cdifd:cdifDescriptorVariableShape a sh:NodeShape ;
     sh:property [ sh:maxCount 1 ;
             sh:message "A cdi:DescriptorVariable must reference exactly one cdi:DescriptorValueDomain via cdif:hasValuesFrom." ;
             sh:minCount 1 ;
-            sh:path cdif:hasValuesFrom ;
+            sh:path <https://w3id.org/cdif/hasValuesFrom> ;
             sh:severity sh:Violation ] ;
     sh:targetClass cdi:DescriptorVariable .
 
 cdifd:cdifDimensionComponentShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:DimensionComponent must carry cdif:isDefinedBy_RepresentedVariable (the RepresentedVariable it is a role of)." ;
             sh:minCount 1 ;
-            sh:path cdif:isDefinedBy_RepresentedVariable ;
+            sh:path <https://w3id.org/cdif/isDefinedBy_RepresentedVariable> ;
             sh:severity sh:Violation ] ;
     sh:targetClass cdi:DimensionComponent .
 
@@ -240,76 +251,76 @@ cdifd:cdifEnumerationDomainShape a sh:NodeShape ;
             sh:severity sh:Warning ],
         [ sh:message "A cdif:EnumerationDomain must carry cdif:references (a skos:ConceptScheme or @id-reference to the codification)" ;
             sh:minCount 1 ;
-            sh:path cdif:references ;
+            sh:path <https://w3id.org/cdif/references> ;
             sh:severity sh:Violation ],
         [ sh:message "A cdif:EnumerationDomain may include a cdif:identifier (schema:identifier / PropertyValue)" ;
-            sh:path cdif:identifier ;
+            sh:path <https://w3id.org/cdif/identifier> ;
             sh:severity sh:Info ],
         [ sh:message "A cdif:EnumerationDomain may include a cdif:purpose describing intent or use" ;
-            sh:path cdif:purpose ;
+            sh:path <https://w3id.org/cdif/purpose> ;
             sh:severity sh:Info ] ;
-    sh:targetClass cdif:EnumerationDomain .
+    sh:targetClass <https://w3id.org/cdif/EnumerationDomain> .
 
 cdifd:cdifIdentifierComponentShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:IdentifierComponent must carry cdif:isDefinedBy_RepresentedVariable (the RepresentedVariable it is a role of)." ;
             sh:minCount 1 ;
-            sh:path cdif:isDefinedBy_RepresentedVariable ;
+            sh:path <https://w3id.org/cdif/isDefinedBy_RepresentedVariable> ;
             sh:severity sh:Violation ] ;
     sh:targetClass cdi:IdentifierComponent .
 
 cdifd:cdifRepresentedVariable_ConceptSystemShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:ConceptSystem may carry cdif:has_Concept members (the concepts it structures)." ;
-            sh:path cdif:has_Concept ;
+            sh:path <https://w3id.org/cdif/has_Concept> ;
             sh:severity sh:Info ] ;
     sh:targetClass cdi:ConceptSystem .
 
 cdifd:cdifRepresentedVariable_RepresentedVariableShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:RepresentedVariable should carry at least one cdif:name (ObjectName)." ;
             sh:minCount 1 ;
-            sh:path cdif:name ;
+            sh:path <https://w3id.org/cdif/name> ;
             sh:severity sh:Warning ],
         [ sh:message "cdif:isDefinedBy_Concept may link the RepresentedVariable to the SKOS concept(s) it represents." ;
-            sh:path cdif:isDefinedBy_Concept ;
+            sh:path <https://w3id.org/cdif/isDefinedBy_Concept> ;
             sh:severity sh:Info ] ;
     sh:targetClass cdi:RepresentedVariable .
 
 cdifd:cdifRepresentedVariable_UnitTypeShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:UnitType should carry at least one cdif:name (ObjectName)." ;
             sh:minCount 1 ;
-            sh:path cdif:name ;
+            sh:path <https://w3id.org/cdif/name> ;
             sh:severity sh:Warning ] ;
     sh:targetClass cdi:UnitType .
 
 cdifd:cdifSentinelValueDomainShape a sh:NodeShape ;
     sh:message "A cdif:SentinelValueDomain must carry at least one of cdif:takesValuesFrom or cdif:recommendedDataType" ;
     sh:or ( [ sh:minCount 1 ;
-                sh:path cdif:takesValuesFrom ] [ sh:minCount 1 ;
-                sh:path cdif:recommendedDataType ] ) ;
+                sh:path <https://w3id.org/cdif/takesValuesFrom> ] [ sh:minCount 1 ;
+                sh:path <https://w3id.org/cdif/recommendedDataType> ] ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:message "A cdif:SentinelValueDomain should carry a cdif:displayLabel (human-readable label)" ;
             sh:minCount 1 ;
-            sh:path cdif:displayLabel ;
+            sh:path <https://w3id.org/cdif/displayLabel> ;
             sh:severity sh:Warning ] ;
     sh:severity sh:Violation ;
-    sh:targetClass cdif:SentinelValueDomain .
+    sh:targetClass <https://w3id.org/cdif/SentinelValueDomain> .
 
 cdifd:cdifSubstantiveValueDomainShape a sh:NodeShape ;
     sh:message "A cdif:SubstantiveValueDomain must carry at least one of cdif:takesValuesFrom or cdif:recommendedDataType" ;
     sh:or ( [ sh:minCount 1 ;
-                sh:path cdif:takesValuesFrom ] [ sh:minCount 1 ;
-                sh:path cdif:recommendedDataType ] ) ;
+                sh:path <https://w3id.org/cdif/takesValuesFrom> ] [ sh:minCount 1 ;
+                sh:path <https://w3id.org/cdif/recommendedDataType> ] ) ;
     sh:property [ sh:datatype xsd:string ;
             sh:message "A cdif:SubstantiveValueDomain should carry a cdif:displayLabel (human-readable label)" ;
             sh:minCount 1 ;
-            sh:path cdif:displayLabel ;
+            sh:path <https://w3id.org/cdif/displayLabel> ;
             sh:severity sh:Warning ] ;
     sh:severity sh:Violation ;
-    sh:targetClass cdif:SubstantiveValueDomain .
+    sh:targetClass <https://w3id.org/cdif/SubstantiveValueDomain> .
 
 cdifd:cdifVariableDescriptorComponentShape a sh:NodeShape ;
     sh:property [ sh:message "A cdi:VariableDescriptorComponent must carry an inline cdi:DescriptorVariable via cdif:isDefinedBy_DescriptorVariable." ;
             sh:minCount 1 ;
-            sh:path cdif:isDefinedBy_DescriptorVariable ;
+            sh:path <https://w3id.org/cdif/isDefinedBy_DescriptorVariable> ;
             sh:severity sh:Violation ],
         [ sh:class cdi:VariableValueComponent ;
             sh:maxCount 1 ;
