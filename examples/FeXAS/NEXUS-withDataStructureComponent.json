@@ -10,7 +10,7 @@
     "time": "http://www.w3.org/2006/time#",
     "sf": "http://www.opengis.net/ont/sf#",
     "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-    "cdif": "https://cdif.org/0.1/",
+    "cdif": "https://w3id.org/cdif/",
     "csvw": "http://www.w3.org/ns/csvw#",
     "skos": "http://www.w3.org/2004/02/skos/core#",
     "ada": "https://ada.astromat.org/metadata/",
@@ -20,8 +20,7 @@
   "@id": "xas:fe_c3d.001",
   "@type": [
     "schema:Dataset",
-    "schema:Product",
-    "cdi:Dataset"
+    "schema:Product"
   ],
   "cdi:isStructuredBy": {
     "@id": "ex:testComplexStructure_346",
@@ -109,7 +108,11 @@
               "cdi:IdentifierComponent"
             ],
             "cdi:has_ValueMappingPosition": 0,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:Monochromator_Energy_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:Monochromator_Energy_Variable"
+              }
+            ],
             "cdi:name": "energy"
           },
           {
@@ -117,7 +120,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 1,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:tscaler_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:tscaler_Variable"
+              }
+            ],
             "cdi:name": "tscaler"
           },
           {
@@ -125,7 +132,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 2,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:Incident_Intensity_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:Incident_Intensity_Variable"
+              }
+            ],
             "cdi:name": "i0"
           },
           {
@@ -133,7 +144,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 3,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:i1_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:i1_Variable"
+              }
+            ],
             "cdi:name": "i1"
           },
           {
@@ -141,7 +156,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 4,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:i2_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:i2_Variable"
+              }
+            ],
             "cdi:name": "i2"
           },
           {
@@ -149,7 +168,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 5,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:sum_outputcounts_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:sum_outputcounts_Variable"
+              }
+            ],
             "cdi:name": "sum_outputcounts"
           },
           {
@@ -157,7 +180,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 6,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:sum_fe_ka_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:sum_fe_ka_Variable"
+              }
+            ],
             "cdi:name": "sum_fe_ka"
           },
           {
@@ -165,7 +192,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 7,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:outputcounts_mcal_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:outputcounts_mcal_Variable"
+              }
+            ],
             "cdi:name": "outputcounts_mca1"
           },
           {
@@ -173,7 +204,11 @@
               "cdi:MeasureComponent"
             ],
             "cdi:has_ValueMappingPosition": 8,
-            "cdi:isDefinedBy_RepresentedVariable": "xas:outputcounts_mca2_Variable",
+            "cdif:isDefinedBy_RepresentedVariable": [
+              {
+                "@id": "xas:outputcounts_mca2_Variable"
+              }
+            ],
             "cdi:name": "outputcounts_mca2"
           }
         ],
@@ -289,7 +324,9 @@
         }
       ],
       "dcterms:conformsTo": [
-        "https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md"
+        {
+          "@id": "https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md"
+        }
       ],
       "schema:contentSize": "30 kb",
       "schema:contentUrl": "https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi",
@@ -318,12 +355,17 @@
       "schame:alternateName": [
         "Monochromator energy",
         "mono energy"
+      ],
+      "cdif:uses": [
+        {
+          "@id": "xas:Monochromator_Energy_Variable"
+        }
       ]
     },
     {
       "@id": "xas:Incident_Intensity_Variable",
       "@type": [
-        "http://example.org/base/InstanceVariable",
+        "cdi:InstanceVariable",
         "schema:PropertyValue"
       ],
       "schema:alternateName": [
@@ -333,7 +375,12 @@
       "schema:propertyID": [
         "xas:Incident_Intensity"
       ],
-      "schema:unitText": "counts"
+      "schema:unitText": "counts",
+      "cdif:uses": [
+        {
+          "@id": "xas:Incident_Intensity_Variable"
+        }
+      ]
     },
     {
       "@id": "xas:Fluorescence_Intensity_Variable",
@@ -348,7 +395,12 @@
       "schema:propertyID": [
         "xas:Fluorescence_Intensity"
       ],
-      "schema:unitText": "counts"
+      "schema:unitText": "counts",
+      "cdif:uses": [
+        {
+          "@id": "xas:sum_fe_ka_Variable"
+        }
+      ]
     },
     {
       "@id": "xas:Raw_Data_Variable",
@@ -360,10 +412,91 @@
         "raw data array"
       ],
       "schema:name": "data"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "tscaler",
+      "cdif:uses": [
+        {
+          "@id": "xas:tscaler_Variable"
+        }
+      ],
+      "@id": "xas:tscaler_IV"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "i1",
+      "cdif:uses": [
+        {
+          "@id": "xas:i1_Variable"
+        }
+      ],
+      "@id": "xas:i1_IV"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "i2",
+      "cdif:uses": [
+        {
+          "@id": "xas:i2_Variable"
+        }
+      ],
+      "@id": "xas:i2_IV"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "sum outputcounts",
+      "cdif:uses": [
+        {
+          "@id": "xas:sum_outputcounts_Variable"
+        }
+      ],
+      "@id": "xas:sum_outputcounts_IV"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "outputcounts mcal",
+      "cdif:uses": [
+        {
+          "@id": "xas:outputcounts_mcal_Variable"
+        }
+      ],
+      "@id": "xas:outputcounts_mcal_IV"
+    },
+    {
+      "@type": [
+        "cdi:InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "schema:name": "outputcounts mca2",
+      "cdif:uses": [
+        {
+          "@id": "xas:outputcounts_mca2_Variable"
+        }
+      ],
+      "@id": "xas:outputcounts_mca2_IV"
     }
   ],
   "schema:subjectOf": {
-    "@type": "dcat:CatalogRecord",
+    "@type": [
+      "schema:Dataset",
+      "dcat:CatalogRecord"
+    ],
     "schema:additionalType": [
       {
         "@id": "dcat:CatalogRecord"
@@ -378,7 +511,20 @@
       },
       {
         "@id": "https://w3id.org/cdif/data_description/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_structure/1.1"
       }
-    ]
-  }
+    ],
+    "@id": "xas:fe_c3d.001_metadata",
+    "schema:about": {
+      "@id": "xas:fe_c3d.001"
+    }
+  },
+  "schema:dateModified": "2024-01-01",
+  "schema:license": [
+    {
+      "@id": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ]
 }
