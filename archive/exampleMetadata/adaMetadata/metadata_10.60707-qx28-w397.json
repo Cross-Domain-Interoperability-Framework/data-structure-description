@@ -1,457 +1,228 @@
 {
-  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
   "@context": {
-    "schema": "https://schema.org/",
+    "schema": "http://schema.org/",
     "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "ada": "https://ada.astromat.org/metadata/",
-    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/"
   },
   "@id": "ada:record_1067",
   "@type": [
     "schema:Dataset",
     "schema:Product"
   ],
-  "schema:name": "Bulk oxygen isotope analysis of finer fraction of bulk aggregate sample OREX-803137-0",
-  "schema:description": "Laser assisted fluorination of a bulk sample of finer fraction of aggregate Bennu sample from TAGSAM",
-  "schema:identifier": {
-    "@type": "schema:PropertyValue",
-    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
-    "schema:value": "10.60707/qx28-w397",
-    "schema:url": "https://doi.org/10.60707/qx28-w397"
-  },
   "schema:additionalType": [
     "Laser Assisted Fluorination for Bulk Oxygen Isotope Ratio Measurements"
   ],
-  "schema:datePublished": "2025-12-31",
-  "schema:license": [
-    "missing"
+  "schema:contributor": [
+    {
+      "@id": "_:b0",
+      "@type": [
+        "schema:Role"
+      ],
+      "schema:contributor": {
+        "@id": "https://ada.org/person/437",
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": "james.malley@open.ac.uk",
+        "schema:identifier": "",
+        "schema:name": ""
+      },
+      "schema:roleName": "Other"
+    }
   ],
-  "schema:url": "",
   "schema:creator": {
     "@list": [
       {
         "@id": "https://ada.org/person/5489",
-        "@type": "schema:Person",
-        "schema:name": "Franchi, Ian",
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": "ian.franchi@open.ac.uk",
         "schema:identifier": "https://orcid.org/0000-0003-4151-0480",
-        "schema:email": "ian.franchi@open.ac.uk"
+        "schema:name": "Franchi, Ian"
       }
     ]
   },
-  "schema:contributor": [
+  "schema:datePublished": "2025-12-31",
+  "schema:description": "Laser assisted fluorination of a bulk sample of finer fraction of aggregate Bennu sample from TAGSAM",
+  "schema:distribution": [
     {
-      "@type": "schema:Role",
-      "schema:roleName": "Other",
-      "schema:contributor": {
-        "@type": "schema:Person",
-        "@id": "https://ada.org/person/437",
-        "schema:name": "",
-        "schema:identifier": "",
-        "schema:email": "james.malley@open.ac.uk"
-      }
+      "@id": "_:b1",
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:contentUrl": "",
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:hasPart": [
+        {
+          "@id": "http://example.org/base/#77a90cee16ef22e1999673328f544cba",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "Processed data sha256:a1c5d7e66494d9361ce2f68c9c1262deb9be07ed5c70408d383ad86a1f7191ab ; ",
+          "schema:encodingFormat": "text/csv",
+          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_LAFProcessed_1.csv",
+          "schema:size": {
+            "@id": "_:b2",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 337
+          }
+        },
+        {
+          "@id": "http://example.org/base/#65cf4e2f5fda2c3452a836541c8851df",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#77a90cee16ef22e1999673328f544cba",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Processed data sha256:a1c5d7e66494d9361ce2f68c9c1262deb9be07ed5c70408d383ad86a1f7191ab ; ",
+            "schema:encodingFormat": "text/csv",
+            "schema:name": "20240222_LAF_OU_OREX-803137-0_1_LAFProcessed_1.csv",
+            "schema:size": {
+              "@id": "_:b2",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 337
+            }
+          },
+          "schema:description": "sha256:c03171c41bd6fc2ed42d64593cfd1aa60ecf0b57d6c37bc2611fdffe30a94533 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_LAFProcessed_1.yaml",
+          "schema:size": {
+            "@id": "_:b3",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 1177
+          }
+        },
+        {
+          "@id": "http://example.org/base/#18ac3775cd8e40ba0b76ddbccdd2ee62",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "description of the methods and data processing sha256:2195d87142461f462271bba6b0782f69a47968b6bcc6da9a891e5b827e94ec0f ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_methodDescription_1.pdf",
+          "schema:size": {
+            "@id": "_:b4",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 47153
+          }
+        },
+        {
+          "@id": "http://example.org/base/#82200c7349a4e6c3579683ec53cbf560",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#18ac3775cd8e40ba0b76ddbccdd2ee62",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "description of the methods and data processing sha256:2195d87142461f462271bba6b0782f69a47968b6bcc6da9a891e5b827e94ec0f ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240222_LAF_OU_OREX-803137-0_1_methodDescription_1.pdf",
+            "schema:size": {
+              "@id": "_:b4",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 47153
+            }
+          },
+          "schema:description": "sha256:3cb8fe112676740feaf7ca5bbbe93bc4957ad49e0ac22e1f24579b7b2260508b ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_methodDescription_1.yaml",
+          "schema:size": {
+            "@id": "_:b5",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 201
+          }
+        }
+      ]
     }
   ],
   "schema:funding": [
     {
-      "@type": "schema:MonetaryGrant",
-      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program. Oxygen isotope work supported by STFC Grant ST/Y000188/1."
+      "@id": "_:b6",
+      "@type": [
+        "schema:MonetaryGrant"
+      ],
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program. Oxygen isotope work supported by STFC Grant ST/Y000188/1.",
+      "schema:name": "Missing"
     }
   ],
-  "schema:measurementTechnique": {
-    "@type": "schema:DefinedTerm",
-    "schema:name": "Laser Assisted Fluorination for Bulk Oxygen Isotope Ratio Measurements",
-    "schema:termCode": "LAF"
+  "schema:identifier": {
+    "@id": "_:b7",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:url": "https://doi.org/10.60707/qx28-w397",
+    "schema:value": "10.60707/qx28-w397"
   },
-  "prov:wasGeneratedBy": [
+  "schema:license": [
+    "missing"
+  ],
+  "schema:measurementTechnique": [
     {
+      "@id": "_:b8",
       "@type": [
-        "schema:Event",
-        "xas:AnalysisEvent",
-        "prov:Activity"
+        "schema:DefinedTerm"
       ],
-      "schema:startDate": "2024-02-22T12:00:00Z",
-      "schema:identifier": "20240222_laf_ou_orex-803137-0_1",
-      "prov:used": [
-        {
-          "@type": [
-            "schema:Thing",
-            "prov:Entity",
-            "nxs:BaseClass/NXinstrument"
-          ],
-          "schema:name": "Thermo MAT 253",
-          "schema:identifier": "TMAT253"
-        }
-      ],
-      "schema:location": {
-        "@type": [
-          "schema:Place",
-          "nxs:BaseClass/NXsource"
-        ],
-        "schema:identifier": "https://ror.org/05mzfcs16",
-        "schema:name": "Open University",
-        "schema:alternateName": "OU"
-      },
-      "schema:mainEntity": [
-        {
-          "@type": [
-            "schema:Thing",
-            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
-          ],
-          "schema:additionalType": [
-            "MaterialSample"
-          ],
-          "schema:identifier": ["OREX-803137-0"]
-        }
-      ]
+      "schema:name": "Laser Assisted Fluorination for Bulk Oxygen Isotope Ratio Measurements",
+      "schema:termCode": "LAF"
     }
   ],
-  "schema:variableMeasured": [
-    {
-      "@id": "#date",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "DATE",
-      "schema:description": "Date of measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#sample",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "SAMPLE",
-      "schema:description": "Sample name",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#weight",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "WEIGHT",
-      "schema:description": "Weight in mg",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d17",
-      "schema:description": "17O/16O isotopic composiiton experessed as delta value relative to SMOW",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17se",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d17SE",
-      "schema:description": "Standard error on 17O/16O measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d18",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d18",
-      "schema:description": "18O/16O isotopic composiiton experessed as delta value relative to SMOW",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d18se",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d18SE",
-      "schema:description": "Standard error on 18O/16O measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "D17",
-      "schema:description": "17O excess relative to terrestrial value expressed in per mil",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17se",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "D17SE",
-      "schema:description": "Standard error on 17O excess measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    }
-  ],
-  "schema:distribution": [
-    {
-      "@type": [
-        "schema:DataDownload"
-      ],
-      "schema:encodingFormat": [
-        "application/zip"
-      ],
-      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
-      "schema:contentUrl": "",
-      "schema:hasPart": [
-        {
-          "@type": "schema:Dataset",
-          "@id": "#77a90cee16ef22e1999673328f544cba",
-          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_LAFProcessed_1.csv",
-          "schema:description": "Processed data sha256:a1c5d7e66494d9361ce2f68c9c1262deb9be07ed5c70408d383ad86a1f7191ab ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 337,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "text/csv"
-          ],
-          "fileDetail": {
-            "@type": [
-              "cdi:PhysicalDataSet",
-              "ada:tabularData"
-            ],
-            "componentType": {
-              "@type": "ada:LAFProcessed"
-            },
-            "cdi:isStructuredBy": {
-              "@type": "cdi:WideDataStructure",
-              "cdi:has_DataStructureComponent": [
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#date"
-                  },
-                  "schema:name": "DATE",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 1,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#sample"
-                  },
-                  "schema:name": "SAMPLE",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 2,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#weight"
-                  },
-                  "schema:name": "WEIGHT",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 3,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17"
-                  },
-                  "schema:name": "d17",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 4,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17se"
-                  },
-                  "schema:name": "d17SE",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 5,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d18"
-                  },
-                  "schema:name": "d18",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 6,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d18se"
-                  },
-                  "schema:name": "d18SE",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 7,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17"
-                  },
-                  "schema:name": "D17",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 8,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17se"
-                  },
-                  "schema:name": "D17SE",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 9,
-                    "cdi:physicalDataType": "None"
-                  }
-                }
-              ]
-            },
-            "countRows": 3,
-            "countColumns": 9,
-            "xCoordCol": "None",
-            "yCoordCol": "None",
-            "zCoordCol": "None",
-            "elementAnalyzed": "oxygen",
-            "sampleMassConsumed": 2.4,
-            "sampleType": "Bennu aggregate"
-          }
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#65cf4e2f5fda2c3452a836541c8851df",
-          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_LAFProcessed_1.yaml",
-          "schema:description": "sha256:c03171c41bd6fc2ed42d64593cfd1aa60ecf0b57d6c37bc2611fdffe30a94533 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 1177,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#77a90cee16ef22e1999673328f544cba"
-            }
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#18ac3775cd8e40ba0b76ddbccdd2ee62",
-          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_methodDescription_1.pdf",
-          "schema:description": "description of the methods and data processing sha256:2195d87142461f462271bba6b0782f69a47968b6bcc6da9a891e5b827e94ec0f ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 47153,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#82200c7349a4e6c3579683ec53cbf560",
-          "schema:name": "20240222_LAF_OU_OREX-803137-0_1_methodDescription_1.yaml",
-          "schema:description": "sha256:3cb8fe112676740feaf7ca5bbbe93bc4957ad49e0ac22e1f24579b7b2260508b ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 201,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#18ac3775cd8e40ba0b76ddbccdd2ee62"
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "schema:name": "Bulk oxygen isotope analysis of finer fraction of bulk aggregate sample OREX-803137-0",
   "schema:subjectOf": {
     "@id": "ada:metadata_1067",
-    "@type": "schema:Dataset",
-    "schema:dateModified": "2025-01-27",
-    "schema:maintainer": {
-      "@id": "https://ada.org/person/3479",
-      "@type": "schema:Person",
-      "schema:name": "Richard, Stephen M.",
-      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-      "schema:email": "smrTucson@email.org"
-    },
-    "schema:about": {
-      "@id": "ada:record_1067"
-    },
-    "schema:description": "metadata about documentation for https://doi.org/10.60707/qx28-w397",
+    "@type": [
+      "schema:Dataset"
+    ],
     "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/manifest/1.1"
+      },
       {
         "@id": "ada:tabularData"
       },
@@ -459,7 +230,7 @@
         "@id": "ada:LAFProcessed"
       },
       {
-        "@id": "CDIF_basic_1.0"
+        "@id": "http://example.org/base/CDIF_basic_1.0"
       },
       {
         "@id": "ada:methodDescription"
@@ -470,6 +241,160 @@
       {
         "@id": "ada:document"
       }
-    ]
-  }
+    ],
+    "schema:about": {
+      "@id": "ada:record_1067"
+    },
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:dateModified": "2025-01-27",
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/qx28-w397",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    }
+  },
+  "schema:url": "",
+  "schema:variableMeasured": [
+    {
+      "@id": "http://example.org/base/#date",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Date of measurement",
+      "schema:name": "DATE",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#sample",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Sample name",
+      "schema:name": "SAMPLE",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#weight",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Weight in mg",
+      "schema:name": "WEIGHT",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d17",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "17O/16O isotopic composiiton experessed as delta value relative to SMOW",
+        "17O excess relative to terrestrial value expressed in per mil"
+      ],
+      "schema:name": [
+        "d17",
+        "D17"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d17se",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Standard error on 17O/16O measurement",
+        "Standard error on 17O excess measurement"
+      ],
+      "schema:name": [
+        "d17SE",
+        "D17SE"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d18",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "18O/16O isotopic composiiton experessed as delta value relative to SMOW",
+      "schema:name": "d18",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d18se",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Standard error on 18O/16O measurement",
+      "schema:name": "d18SE",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b9",
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:identifier": "20240222_laf_ou_orex-803137-0_1",
+      "schema:location": {
+        "@id": "_:b10",
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:alternateName": [
+          "OU"
+        ],
+        "schema:identifier": "https://ror.org/05mzfcs16",
+        "schema:name": "Open University"
+      },
+      "schema:mainEntity": {
+        "@id": "_:b11",
+        "@type": [
+          "schema:Thing",
+          "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+        ],
+        "schema:additionalType": [
+          "MaterialSample"
+        ],
+        "schema:identifier": "OREX-803137-0"
+      },
+      "schema:startDate": "2024-02-22T12:00:00Z"
+    }
+  ],
+  "schema:dateModified": "2025-12-31"
 }

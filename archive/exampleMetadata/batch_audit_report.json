@@ -1,0 +1,1919 @@
+{
+  "count": 88,
+  "clean": 71,
+  "with_errors": 17,
+  "broken": 0,
+  "per_file": [
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-08fx-rj13.json",
+      "filename": "metadata_10.60707-08fx-rj13.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 10,
+      "schema_error_sample": [
+        "schema:variableMeasured/5/schema:name: ['20Ne', '\u00b120Ne'] is not of type 'string'",
+        "schema:variableMeasured/5/schema:description: ['Measured 20Ne ion signal, in counts per second (cps)', 'Uncertainty of the 20Ne ion signal, in counts per second (cps)'] is not of type 'string'",
+        "schema:variableMeasured/6/schema:name: ['21Ne', '\u00b121Ne'] is not of type 'string'",
+        "schema:variableMeasured/6/schema:description: ['Measured 21Ne ion signal, in counts per second (cps)', 'Uncertainty of the 21Ne ion signal, in counts per second (cps)'] is not of type 'string'",
+        "schema:variableMeasured/7/schema:name: ['22Ne', '\u00b122Ne'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-08fx-rj13.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-0y88-ps96.json",
+      "filename": "metadata_10.60707-0y88-ps96.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-0y88-ps96.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-1k0j-p360.json",
+      "filename": "metadata_10.60707-1k0j-p360.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-1k0j-p360.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-1svq-4w22.json",
+      "filename": "metadata_10.60707-1svq-4w22.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-1svq-4w22.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-2arx-b516.json",
+      "filename": "metadata_10.60707-2arx-b516.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-2arx-b516.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-2j0t-gq80.json",
+      "filename": "metadata_10.60707-2j0t-gq80.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-2j0t-gq80.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-2mdz-qh58.json",
+      "filename": "metadata_10.60707-2mdz-qh58.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-2mdz-qh58.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-3kzn-r786.json",
+      "filename": "metadata_10.60707-3kzn-r786.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-3kzn-r786.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-3qvv-wy22.json",
+      "filename": "metadata_10.60707-3qvv-wy22.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-3qvv-wy22.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-4b5r-q306.json",
+      "filename": "metadata_10.60707-4b5r-q306.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-4b5r-q306.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-4fpx-9425.json",
+      "filename": "metadata_10.60707-4fpx-9425.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-4fpx-9425.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-4q94-c237.json",
+      "filename": "metadata_10.60707-4q94-c237.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 2,
+      "schema_error_sample": [
+        "schema:variableMeasured/7/schema:name: ['d17O 2 sigma err', 'D17O 2 sigma err'] is not of type 'string'",
+        "schema:variableMeasured/7/schema:description: ['the calculated 2 sigma error associated with the 17O/16O spot analysis and calibration', 'the calculated 2 sigma error associated with the D17O spot analysis based on the standard deviation of standards analysed alongside the sample'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-4q94-c237.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-4v1z-b208.json",
+      "filename": "metadata_10.60707-4v1z-b208.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-4v1z-b208.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-5856-1y66.json",
+      "filename": "metadata_10.60707-5856-1y66.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-5856-1y66.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-64vm-zd18.json",
+      "filename": "metadata_10.60707-64vm-zd18.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-64vm-zd18.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-66gm-xn41.json",
+      "filename": "metadata_10.60707-66gm-xn41.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-66gm-xn41.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-6c5n-e486.json",
+      "filename": "metadata_10.60707-6c5n-e486.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-6c5n-e486.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-7hya-7y42.json",
+      "filename": "metadata_10.60707-7hya-7y42.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-7hya-7y42.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-85yk-sr06.json",
+      "filename": "metadata_10.60707-85yk-sr06.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-85yk-sr06.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-89td-7k08.json",
+      "filename": "metadata_10.60707-89td-7k08.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-89td-7k08.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-8pcs-xg15.json",
+      "filename": "metadata_10.60707-8pcs-xg15.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-8pcs-xg15.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-8ybe-rc54.json",
+      "filename": "metadata_10.60707-8ybe-rc54.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-8ybe-rc54.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-917f-kr66.json",
+      "filename": "metadata_10.60707-917f-kr66.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-917f-kr66.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-bb22-mj07.json",
+      "filename": "metadata_10.60707-bb22-mj07.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-bb22-mj07.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-bdq3-px39.json",
+      "filename": "metadata_10.60707-bdq3-px39.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-bdq3-px39.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-by2q-ts31.json",
+      "filename": "metadata_10.60707-by2q-ts31.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-by2q-ts31.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-c39r-0r37.json",
+      "filename": "metadata_10.60707-c39r-0r37.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-c39r-0r37.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-c7rk-nk69.json",
+      "filename": "metadata_10.60707-c7rk-nk69.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-c7rk-nk69.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-d62h-j641.json",
+      "filename": "metadata_10.60707-d62h-j641.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-d62h-j641.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-dzcq-ym02.json",
+      "filename": "metadata_10.60707-dzcq-ym02.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-dzcq-ym02.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-ejdm-g828.json",
+      "filename": "metadata_10.60707-ejdm-g828.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 1,
+      "schema_error_sample": [
+        "schema:variableMeasured/0/schema:description: ['keV', 'Counts'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-ejdm-g828.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-ek2k-3171.json",
+      "filename": "metadata_10.60707-ek2k-3171.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-ek2k-3171.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-emjy-za09.json",
+      "filename": "metadata_10.60707-emjy-za09.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-emjy-za09.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-epbg-vr71.json",
+      "filename": "metadata_10.60707-epbg-vr71.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-epbg-vr71.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-esk8-v556.json",
+      "filename": "metadata_10.60707-esk8-v556.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-esk8-v556.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-fgat-bv38.json",
+      "filename": "metadata_10.60707-fgat-bv38.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-fgat-bv38.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-fj10-mc96.json",
+      "filename": "metadata_10.60707-fj10-mc96.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-fj10-mc96.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-fwkp-de27.json",
+      "filename": "metadata_10.60707-fwkp-de27.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-fwkp-de27.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-fzjk-kt84.json",
+      "filename": "metadata_10.60707-fzjk-kt84.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-fzjk-kt84.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-g5n1-0d67.json",
+      "filename": "metadata_10.60707-g5n1-0d67.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-g5n1-0d67.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-gy8c-9d52.json",
+      "filename": "metadata_10.60707-gy8c-9d52.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-gy8c-9d52.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-h0dk-6y68.json",
+      "filename": "metadata_10.60707-h0dk-6y68.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-h0dk-6y68.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-h1pn-e892.json",
+      "filename": "metadata_10.60707-h1pn-e892.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-h1pn-e892.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-h795-9n84.json",
+      "filename": "metadata_10.60707-h795-9n84.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-h795-9n84.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-htk9-f770.json",
+      "filename": "metadata_10.60707-htk9-f770.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-htk9-f770.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-j16b-6288.json",
+      "filename": "metadata_10.60707-j16b-6288.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-j16b-6288.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-j6f9-tp89.json",
+      "filename": "metadata_10.60707-j6f9-tp89.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-j6f9-tp89.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-kzfq-t450.json",
+      "filename": "metadata_10.60707-kzfq-t450.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 1,
+      "schema_error_sample": [
+        "schema:variableMeasured/6/schema:description: ['Standard deviation (1 sigma) of sample grain volume measurements. Blank in all rows except Average of last nine runs.', 'Standard deviation (1 sigma) of sample grain density measurements. Blank in all rows except Average of last nine runs.'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-kzfq-t450.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-m388-cb55.json",
+      "filename": "metadata_10.60707-m388-cb55.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-m388-cb55.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-mayf-0w17.json",
+      "filename": "metadata_10.60707-mayf-0w17.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-mayf-0w17.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-nm1b-bz91.json",
+      "filename": "metadata_10.60707-nm1b-bz91.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-nm1b-bz91.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-papb-7t64.json",
+      "filename": "metadata_10.60707-papb-7t64.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-papb-7t64.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-pjmn-ap50.json",
+      "filename": "metadata_10.60707-pjmn-ap50.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-pjmn-ap50.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-pmm3-st23.json",
+      "filename": "metadata_10.60707-pmm3-st23.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-pmm3-st23.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-ps65-7j23.json",
+      "filename": "metadata_10.60707-ps65-7j23.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 1,
+      "schema_error_sample": [
+        "schema:variableMeasured/0/schema:description: ['mass spectrum 1', 'mass spectrum 2', 'mass spectrum 3', 'mass spectrum 4', 'mass spectrum 5', 'mass spectrum 6', 'mass spectrum 7', 'mass spectrum 8', 'mass spectrum 9', 'mass spectrum 10', 'mass spectrum 11', 'mass spectrum 12', 'mass spectrum 13', 'mass spectrum 14', 'mass spectrum 15', 'mass spectrum 16', 'mass spectrum 17', 'mass spectrum 18', 'mass spectrum 19', 'mass spectrum 20', 'mass spectrum 21', 'mass spectrum 22', 'mass spectrum 23', 'mass spectrum 24', 'mass spectrum 25', 'mass spectrum 26', 'mass spectrum 27', 'mass spectrum 28', 'mass spectrum 29', 'mass spectrum 30'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-ps65-7j23.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-pte6-nf07.json",
+      "filename": "metadata_10.60707-pte6-nf07.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 2,
+      "schema_error_sample": [
+        "schema:variableMeasured/0/schema:description: ['Surface Location', 'Depth Location'] is not of type 'string'",
+        "schema:variableMeasured/1/schema:description: ['Surface Location', 'Depth Location'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-pte6-nf07.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-q4b0-v203.json",
+      "filename": "metadata_10.60707-q4b0-v203.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-q4b0-v203.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-qx28-w397.json",
+      "filename": "metadata_10.60707-qx28-w397.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 4,
+      "schema_error_sample": [
+        "schema:variableMeasured/3/schema:name: ['d17', 'D17'] is not of type 'string'",
+        "schema:variableMeasured/3/schema:description: ['17O/16O isotopic composiiton experessed as delta value relative to SMOW', '17O excess relative to terrestrial value expressed in per mil'] is not of type 'string'",
+        "schema:variableMeasured/4/schema:name: ['d17SE', 'D17SE'] is not of type 'string'",
+        "schema:variableMeasured/4/schema:description: ['Standard error on 17O/16O measurement', 'Standard error on 17O excess measurement'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-qx28-w397.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-r8hy-7y50.json",
+      "filename": "metadata_10.60707-r8hy-7y50.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-r8hy-7y50.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-rd8a-6z91.json",
+      "filename": "metadata_10.60707-rd8a-6z91.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-rd8a-6z91.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-rm08-bg04.json",
+      "filename": "metadata_10.60707-rm08-bg04.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-rm08-bg04.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-sjkk-h605.json",
+      "filename": "metadata_10.60707-sjkk-h605.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 1,
+      "schema_error_sample": [
+        "schema:variableMeasured/0/schema:description: ['Sample ID', 'Source folder', 'Source filename', 'Atoms of 132Xe', 'Nominal Error on Atoms of 132Xe (1 sigma)', 'Isotope Ratio 124Xe/132Xe', 'Error on Isotope Ratio 124Xe/132Xe (1 sigma)', 'Isotope Ratio 126Xe/132Xe', 'Error on Isotope Ratio 126Xe/132Xe (1 sigma)', 'Isotope Ratio 128Xe/132Xe', 'Error on Isotope Ratio 128Xe/132Xe (1 sigma)', 'Isotope Ratio 129Xe/132Xe', 'Error on Isotope Ratio 129Xe/132Xe (1 sigma)', 'Isotope Ratio 130Xe/132Xe', 'Error on Isotope Ratio 130Xe/132Xe (1 sigma)', 'Isotope Ratio 131Xe/132Xe', 'Error on Isotope Ratio 131Xe/132Xe (1 sigma)', 'Isotope Ratio 132Xe/132Xe', 'Error on Isotope Ratio 132Xe/132Xe (1 sigma)', 'Isotope Ratio 134Xe/132Xe', 'Error on Isotope Ratio 134Xe/132Xe (1 sigma)', 'Isotope Ratio 136Xe/132Xe', 'Error on Isotope Ratio 136e/132Xe (1 sigma)'] is not of type 'string'"
+      ],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-sjkk-h605.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-sk9h-2550.json",
+      "filename": "metadata_10.60707-sk9h-2550.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-sk9h-2550.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-srdv-7b95.json",
+      "filename": "metadata_10.60707-srdv-7b95.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-srdv-7b95.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-t0gq-7t37.json",
+      "filename": "metadata_10.60707-t0gq-7t37.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-t0gq-7t37.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-twd0-6a40.json",
+      "filename": "metadata_10.60707-twd0-6a40.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-twd0-6a40.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-v87p-2k76.json",
+      "filename": "metadata_10.60707-v87p-2k76.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-v87p-2k76.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-vjcy-by10.json",
+      "filename": "metadata_10.60707-vjcy-by10.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-vjcy-by10.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-wg35-6e70.json",
+      "filename": "metadata_10.60707-wg35-6e70.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-wg35-6e70.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-wspc-wg10.json",
+      "filename": "metadata_10.60707-wspc-wg10.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-wspc-wg10.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-xbby-kj41.json",
+      "filename": "metadata_10.60707-xbby-kj41.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-xbby-kj41.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-xnxf-m505.json",
+      "filename": "metadata_10.60707-xnxf-m505.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-xnxf-m505.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-xq6j-wr35.json",
+      "filename": "metadata_10.60707-xq6j-wr35.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-xq6j-wr35.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-xzeg-2x24.json",
+      "filename": "metadata_10.60707-xzeg-2x24.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-xzeg-2x24.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-y3a1-7706.json",
+      "filename": "metadata_10.60707-y3a1-7706.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-y3a1-7706.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-yv1f-jb20.json",
+      "filename": "metadata_10.60707-yv1f-jb20.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-yv1f-jb20.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\adaMetadata\\metadata_10.60707-zh1b-jk54.json",
+      "filename": "metadata_10.60707-zh1b-jk54.json",
+      "source_subdir": "adaMetadata",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "CoreDiscovery",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-corediscovery\\examples\\adaMetadata\\metadata_10.60707-zh1b-jk54.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\CDIF2026\\cdif_10.60707-0y88-ps96.json",
+      "filename": "cdif_10.60707-0y88-ps96.json",
+      "source_subdir": "CDIF2026",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": true,
+      "patched_funding": true,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1",
+        "https://w3id.org/cdif/manifest/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-discoverydatadescription\\examples\\CDIF2026\\cdif_10.60707-0y88-ps96.json",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\CDIF2026\\cdif_se_na2so4-xdi.jsonLD",
+      "filename": "cdif_se_na2so4-xdi.jsonLD",
+      "source_subdir": "CDIF2026",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 0,
+      "schema_error_sample": [],
+      "target_path": "doc-discoverydatadescription\\examples\\CDIF2026\\cdif_se_na2so4-xdi.jsonLD",
+      "moved": true,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\CMIP-NetCDF\\NetCDF-CDIF-UKESM1-0-LL.jsonLD",
+      "filename": "NetCDF-CDIF-UKESM1-0-LL.jsonLD",
+      "source_subdir": "CMIP-NetCDF",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 6,
+      "schema_error_sample": [
+        "schema:distribution/0: {'@id': '_:b1', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['CF-1.7 CMIP-6.2'], 'schema:contentSize': '940378 kb', 'schema:contentUrl': 'https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CDRMIP/MOHC/UKESM1-0-LL/1pctCO2-cdr/r1i1p1f2/Amon/hur/gn/v20200425/hur_Amon_UKESM1-0-LL_1pctCO2-cdr_r1i1p1f2_gn_255001-263912.ncOriginal', 'schema:description': 'Distribution = PhysicalDataSet NetCDF file', 'schema:encodingFormat': [\"application/x-netcdf;profile='cf'\"], 'spdx:checksum': {'@id': '_:b13', '@type': ['spdx:Checksum'], 'spdx:algorithm': 'spdx:checksumAlgorithm_SHA256', 'spdx:checksumValue': 'a0d81f58f72578a0f62c4574c0233df103df201386b94fe0ff3c0f85be1987c5'}} is not valid under any of the given schemas",
+        "schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/3/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema"
+      ],
+      "target_path": "doc-discoverydatadescription\\examples\\CMIP-NetCDF\\NetCDF-CDIF-UKESM1-0-LL.jsonLD",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\ESS11\\ESS11-subset_DDICDI.jsonld",
+      "filename": "ESS11-subset_DDICDI.jsonld",
+      "source_subdir": "ESS11",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [],
+      "validated_against": "cdifCore",
+      "schema_errors": 12,
+      "schema_error_sample": [
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf/dcterms:conformsTo: [] should be non-empty",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property",
+        "schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema"
+      ],
+      "target_path": "profile-datastructure\\examples\\ESS11\\ESS11-subset_DDICDI.jsonld",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\ESS11-subset_DDICDI.jsonld",
+      "filename": "ESS11-subset_DDICDI.jsonld",
+      "source_subdir": ".",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [],
+      "validated_against": "cdifCore",
+      "schema_errors": 12,
+      "schema_error_sample": [
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf/dcterms:conformsTo: [] should be non-empty",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property",
+        "schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema"
+      ],
+      "target_path": "profile-datastructure\\examples\\ESS11-subset_DDICDI.jsonld",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\FeXAS\\FeXAS_Fe_c3d.001-NEXUS-HDF5-cdi-CDIF.jsonLD",
+      "filename": "FeXAS_Fe_c3d.001-NEXUS-HDF5-cdi-CDIF.jsonLD",
+      "source_subdir": "FeXAS",
+      "normalized_schema": true,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 6,
+      "schema_error_sample": [
+        "schema:distribution/0: {'@id': '_:b2', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['nexus v2024.02', 'NXxas'], 'schema:contentSize': '2.6 Mb', 'schema:contentUrl': 'https://millenia.cars.aps.anl.gov/nxxas/MultiSpectrumFiles/FeXAS.nxs', 'schema:description': 'HDF5 file declared to conform with NEXUS NXxas application definition; the described data is one NEXUS entry in this file, which contains 26 total spectra, each as separate NEXUS entry', 'schema:encodingFormat': ['application/x-hdf5'], 'spdx:checksum': {'@id': '_:b85', '@type': ['spdx:Checksum'], 'spdx:algorithm': 'spdx:checksumAlgorithm_md5', 'spdx:checksumValue': '0BA77A348'}} is not valid under any of the given schemas",
+        "schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/3/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema"
+      ],
+      "target_path": "doc-discoverydatadescription\\examples\\FeXAS\\FeXAS_Fe_c3d.001-NEXUS-HDF5-cdi-CDIF.jsonLD",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\FeXAS\\NEXUS-withDataStructureComponent.json",
+      "filename": "NEXUS-withDataStructureComponent.json",
+      "source_subdir": "FeXAS",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 8,
+      "schema_error_sample": [
+        "@type/2: 'cdi:Dataset' is not one of ['schema:CreativeWork', 'schema:SoftwareApplication', 'schema:SoftwareSourceCode', 'schema:Product', 'schema:WebAPI', 'schema:Dataset', 'schema:DigitalDocument', 'schema:Collection', 'schema:ImageObject', 'schema:DataCatalog', 'schema:DefinedTermSet', 'schema:MediaObject']",
+        "schema:distribution/0: {'@type': ['schema:DataDownload', 'cdi:StructuredDataset'], 'cdi:allowsDuplicates': False, 'cdi:has_LocatorMapping': [{'@type': ['cdi:LocatorMapping'], 'cdifq:length': 443, 'cdi:formats': {'@id': 'xas:Monochromator_Energy_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:maxValue': 7380.83, 'schema:minValue': 7052, 'schema:name': 'energy', 'schema:propertyID': ['xas:Monochromator_Energy'], 'schema:unitText': 'eV', 'schame:alternateName': ['Monochromator energy', 'mono energy']}, 'cdi:locator': 'Fe_c3d.001/instrument/monochromator/energy'}, {'@type': ['cdi:LocatorMapping'], 'cdi:formats': {'@id': 'xas:Incident_Intensity_Variable', '@type': ['http://example.org/base/InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': 'Monitor intensity', 'schema:name': 'i0', 'schema:propertyID': 'xas:Incident_Intensity', 'schema:unitText': 'counts'}, 'cdi:locator': 'Fe_c3d.001/instrument/i0/data'}, {'@type': ['cdi:LocatorMapping'], 'cdi:formats': {'@id': 'xas:Fluorescence_Intensity_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': ['fluorescence intensity'], 'schema:name': 'ifluor', 'schema:propertyID': ['xas:Fluorescence_Intensity'], 'schema:unitText': 'counts'}, 'cdi:locator': 'Fe_c3d.001/instrument/ifluor/data'}, {'@type': ['cdi:LocatorMapping'], 'cdifq:shape': [443, 9], 'cdi:formats': {'@id': 'xas:Raw_Data_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': ['raw data array'], 'schema:name': 'data'}, 'cdi:locator': 'Fe_c3d.001/scan/data'}], 'dcterms:conformsTo': ['https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md'], 'schema:contentSize': '30 kb', 'schema:contentUrl': 'https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi', 'schema:description': 'Distribution = PhysicalDataSet text file conformant with XDI specification', 'schema:encodingFormat': ['text/plain']} is not valid under any of the given schemas",
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property"
+      ],
+      "target_path": "doc-discoverydatadescription\\examples\\FeXAS\\NEXUS-withDataStructureComponent.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\FeXAS\\NEXUS-withDataStructureComponentSimplified.json",
+      "filename": "NEXUS-withDataStructureComponentSimplified.json",
+      "source_subdir": "FeXAS",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 8,
+      "schema_error_sample": [
+        "@type/2: 'cdi:Dataset' is not one of ['schema:CreativeWork', 'schema:SoftwareApplication', 'schema:SoftwareSourceCode', 'schema:Product', 'schema:WebAPI', 'schema:Dataset', 'schema:DigitalDocument', 'schema:Collection', 'schema:ImageObject', 'schema:DataCatalog', 'schema:DefinedTermSet', 'schema:MediaObject']",
+        "schema:distribution/0: {'@type': ['schema:DataDownload', 'cdi:StructuredDataset'], 'cdi:allowsDuplicates': False, 'cdi:has_LocatorMapping': [{'@type': ['cdi:LocatorMapping'], 'cdifq:length': 443, 'cdi:formats': {'@id': 'xas:Monochromator_Energy_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:maxValue': 7380.83, 'schema:minValue': 7052, 'schema:name': 'energy', 'schema:propertyID': ['xas:Monochromator_Energy'], 'schema:unitText': 'eV', 'schame:alternateName': ['Monochromator energy', 'mono energy']}, 'cdi:locator': 'Fe_c3d.001/instrument/monochromator/energy'}, {'@type': ['cdi:LocatorMapping'], 'cdi:formats': {'@id': 'xas:Incident_Intensity_Variable', '@type': ['http://example.org/base/InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': 'Monitor intensity', 'schema:name': 'i0', 'schema:propertyID': 'xas:Incident_Intensity', 'schema:unitText': 'counts'}, 'cdi:locator': 'Fe_c3d.001/instrument/i0/data'}, {'@type': ['cdi:LocatorMapping'], 'cdi:formats': {'@id': 'xas:Fluorescence_Intensity_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': ['fluorescence intensity'], 'schema:name': 'ifluor', 'schema:propertyID': ['xas:Fluorescence_Intensity'], 'schema:unitText': 'counts'}, 'cdi:locator': 'Fe_c3d.001/instrument/ifluor/data'}, {'@type': ['cdi:LocatorMapping'], 'cdifq:shape': [443, 9], 'cdi:formats': {'@id': 'xas:Raw_Data_Variable', '@type': ['cdi:InstanceVariable', 'schema:PropertyValue'], 'schema:alternateName': ['raw data array'], 'schema:name': 'data'}, 'cdi:locator': 'Fe_c3d.001/scan/data'}], 'dcterms:conformsTo': ['nexus v2024.02', 'NXxas'], 'schema:contentSize': '2.6 Mb', 'schema:contentUrl': 'https://github.com/XraySpectroscopy/XASDataLibrary/blob/master/data/Se/Se_Na2SeO4_rt_01.xdi', 'schema:description': 'Distribution = PhysicalDataSet text file conformant with XDI specification', 'schema:encodingFormat': ['application/x-hdf5'], 'spdx:checksum': {'@type': ['spdx:Checksum'], 'spdx:algorithm': 'spdx:checksumAlgorithm_md5', 'spdx:checksumValue': '0BA77A348'}} is not valid under any of the given schemas",
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property"
+      ],
+      "target_path": "doc-discoverydatadescription\\examples\\FeXAS\\NEXUS-withDataStructureComponentSimplified.json",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\OIH-PROVe1ba5a1368cea8b1d6591ba932c910b26859892e.jsonld",
+      "filename": "OIH-PROVe1ba5a1368cea8b1d6591ba932c910b26859892e.jsonld",
+      "source_subdir": ".",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [],
+      "validated_against": "cdifCore",
+      "schema_errors": 12,
+      "schema_error_sample": [
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf/dcterms:conformsTo: [] should be non-empty",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property",
+        "schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema"
+      ],
+      "target_path": "profile-datastructure\\examples\\OIH-PROVe1ba5a1368cea8b1d6591ba932c910b26859892e.jsonld",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\se_na2so4\\se_na2so4-XDI-CDI-CDIF.jsonLD",
+      "filename": "se_na2so4-XDI-CDI-CDIF.jsonLD",
+      "source_subdir": "se_na2so4",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [],
+      "validated_against": "cdifCore",
+      "schema_errors": 12,
+      "schema_error_sample": [
+        "schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'",
+        "schema:subjectOf/dcterms:conformsTo: [] should be non-empty",
+        "schema:subjectOf: 'schema:about' is a required property",
+        "schema:subjectOf: '@id' is a required property",
+        "schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema"
+      ],
+      "target_path": "profile-datastructure\\examples\\se_na2so4\\se_na2so4-XDI-CDI-CDIF.jsonLD",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    },
+    {
+      "path": "C:\\GithubC\\CDIF\\profile-datastructure\\archive\\exampleMetadata\\WDCC_NetCDF\\sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.jsonLD",
+      "filename": "sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.jsonLD",
+      "source_subdir": "WDCC_NetCDF",
+      "normalized_schema": false,
+      "injected_subjectOf": true,
+      "backfilled_dateModified": false,
+      "patched_funding": false,
+      "detected": [
+        "https://w3id.org/cdif/core/1.1",
+        "https://w3id.org/cdif/discovery/1.1",
+        "https://w3id.org/cdif/data_description/1.1"
+      ],
+      "validated_against": "DiscoveryDataDescription",
+      "schema_errors": 4,
+      "schema_error_sample": [
+        "schema:distribution/0: {'@id': '_:b1', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['CF-1.7 CMIP-6.2'], 'schema:contentSize': '55703 kb', 'schema:contentUrl': 'http://esgf3.dkrz.de/thredds/fileServer/cmip6/ScenarioMIP/AWI/AWI-CM-1-1-MR/ssp370/r1i1p1f1/fx/sftlf/gn/v20200511/sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.nc', 'schema:description': 'Distribution = PhysicalDataSet NetCDF file', 'schema:encodingFormat': [\"application/x-netcdf;profile='cf'\"], 'spdx:checksum': {'@id': '_:b9', '@type': ['spdx:Checksum'], 'spdx:algorithm': 'spdx:checksumAlgorithm_SHA256', 'spdx:checksumValue': '11402560ac58899ebf139a0374502710b926fff366ca5c0f52fbd492377aa975'}} is not valid under any of the given schemas",
+        "schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema",
+        "schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema"
+      ],
+      "target_path": "doc-discoverydatadescription\\examples\\WDCC_NetCDF\\sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.jsonLD",
+      "moved": false,
+      "parse_error": null,
+      "framing_error": null
+    }
+  ]
+}

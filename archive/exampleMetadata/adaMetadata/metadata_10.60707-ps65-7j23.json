@@ -1,1006 +1,288 @@
 {
-  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
   "@context": {
-    "schema": "https://schema.org/",
+    "schema": "http://schema.org/",
     "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "ada": "https://ada.astromat.org/metadata/",
-    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/"
   },
   "@id": "ada:record_903",
   "@type": [
     "schema:Dataset",
     "schema:Product"
   ],
-  "schema:name": "Xenon Isotopic Analysis of OSIRIS REx sample 803060-0",
-  "schema:description": "The dataset includes numbers of atoms of 132Xe and isotope ratios of the other xenon isotopes to 132Xe for each of a series of laser step heating analyses of the sample.  Xenon was released from the sample and admitted into the RELAX (Refrigerator Enhanced Laser Analyser for Xenon) time-of-flight, resonance ionization mass spectrometer at the University of Manchester for xenon isotopic analysis.  56 distinct, sequentially increasing temperature steps were analysed and calibrated with reference to air aliquots and blanks. Temperature was increased by increasing the power delivered to the sample by a fiber laser.  The purpose of the dataset is to test Hypothesis 4 of the OSIRIS-REx Sample Analysis Plan.  The data reveal a bulk xenon isotopic composition similar to Average Carbonaceous Chondrite Xenon, consisting of Q-Xe with excesses of 134Xe and 136Xe consistent with the presence of presolar nanodiamonds hosting Xe-HL; the presence of presolar material supports Hypotheses 3.2: Bennu contains dust grains that condensed in the gaseous envelopes around ancient stars or the ejecta of novae or supernovae (Lauretta et al. 2015) and 4.3: The initial constituents of Bennu%E2%80%99s parent asteroid were materials that were inherited from the protosolar molecular cloud or were formed and altered in the protoplanetary disk, largely composed of: presolar grains, chondrules, refractory inclusions, crystalline and amorphous silicates, metals, sulfides, oxides, phosphates, organic compounds (SOM and IOM), ices (e.g., H2O, CO2, NH3, etc.),  The close similarity of bulk xenon signature to AVCC supports Hypothesis 4.4: Bennu%E2%80%99s parent asteroid accreted in the outer protoplanetary disk, beyond Jupiter, as recorded by distinct isotopic anomalies in a variety of elements (e.g., O, Ca, Ti, Cr, Ni, Zr, Mo, Ru, Pd, Ba, Nd, etc.) (Rowe et al. 1994; McKeegan et al. 1998; Trinquier et al. 2007; Leya et al. 2008; Warren 2011; Connelly et al. 2012; Kruijer et al. 2020; Mezger et al. 2020; Schrader et al. 2020). The presence of excess 129Xe from decay of 129I (half life 16 Myr) in low temperature releases supports Hypothesis 4.1 The initial constituents of Bennu%E2%80%99s parent asteroid formed over several million years of solar system history, starting at a t0 of 4.567 Gyr (Kita et al. 2013; Pape et al. 2019; Connelly et al. 2012) and Hypothesis 5.1: Bennu%E2%80%99s parent asteroid was heated by the decay of short-lived radionuclides for ~10 Myr after accretion (e.g., Miyamoto 1991; Steele et al. 2017).",
-  "schema:identifier": {
-    "@type": "schema:PropertyValue",
-    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
-    "schema:value": "10.60707/ps65-7j23",
-    "schema:url": "https://doi.org/10.60707/ps65-7j23"
-  },
   "schema:additionalType": [
     "Resonance ionization time of flight noble gas mass spectrometry"
   ],
-  "schema:datePublished": "2025-12-31",
-  "schema:license": [
-    "missing"
-  ],
-  "schema:url": "",
   "schema:creator": {
     "@list": [
       {
         "@id": "https://ada.org/person/5489",
-        "@type": "schema:Person",
-        "schema:name": "Crowther, Sarah",
-        "schema:identifier": "https://orcid.org/0000-0002-5396-1775",
-        "schema:email": "sarah.crowther@manchester.ac.uk"
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": [
+          "sarah.crowther@manchester.ac.uk",
+          "jamie.gilmour@manchester.ac.uk"
+        ],
+        "schema:identifier": [
+          "https://orcid.org/0000-0002-5396-1775",
+          "https://orcid.org/0000-0003-1990-8636"
+        ],
+        "schema:name": [
+          "Crowther, Sarah",
+          "Gilmour, Jamie"
+        ]
       },
       {
         "@id": "https://ada.org/person/5489",
-        "@type": "schema:Person",
-        "schema:name": "Gilmour, Jamie",
-        "schema:identifier": "https://orcid.org/0000-0003-1990-8636",
-        "schema:email": "jamie.gilmour@manchester.ac.uk"
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": [
+          "sarah.crowther@manchester.ac.uk",
+          "jamie.gilmour@manchester.ac.uk"
+        ],
+        "schema:identifier": [
+          "https://orcid.org/0000-0002-5396-1775",
+          "https://orcid.org/0000-0003-1990-8636"
+        ],
+        "schema:name": [
+          "Crowther, Sarah",
+          "Gilmour, Jamie"
+        ]
       }
     ]
   },
-  "schema:funding": [
-    {
-      "@type": "schema:MonetaryGrant",
-      "schema:description": "Science and Technology Facilities Council (UK) ST/V000675/1 and ST/Y002369/1"
-    }
-  ],
-  "schema:measurementTechnique": {
-    "@type": "schema:DefinedTerm",
-    "schema:name": "Resonance ionization time of flight noble gas mass spectrometry",
-    "schema:termCode": "RI-TOF-NGMS"
-  },
-  "prov:wasGeneratedBy": [
-    {
-      "@type": [
-        "schema:Event",
-        "xas:AnalysisEvent",
-        "prov:Activity"
-      ],
-      "schema:startDate": "2024-01-16T15:35:26.997928Z",
-      "schema:identifier": "20240116_ri-tof-ngms_uom_orex-803060-0_1",
-      "prov:used": [
-        {
-          "@type": [
-            "schema:Thing",
-            "prov:Entity",
-            "nxs:BaseClass/NXinstrument"
-          ],
-          "schema:name": "RELAX; RELAX",
-          "schema:identifier": "RELAX"
-        }
-      ],
-      "schema:location": {
-        "@type": [
-          "schema:Place",
-          "nxs:BaseClass/NXsource"
-        ],
-        "schema:identifier": "https://ror.org/02aswte26",
-        "schema:name": "University of Manchester; University of Manchester RISTOF",
-        "schema:alternateName": "UoM"
-      },
-      "schema:mainEntity": [
-        {
-          "@type": [
-            "schema:Thing",
-            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
-          ],
-          "schema:additionalType": [
-            "MaterialSample"
-          ],
-          "schema:identifier": ["OREX-803060-0"]
-        }
-      ]
-    }
-  ],
-  "schema:variableMeasured": [
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 1",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 2",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 3",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 4",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 5",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 6",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 7",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 8",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 9",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 10",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 11",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 12",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 13",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 14",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 15",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 16",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 17",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 18",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 19",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 20",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 21",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 22",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 23",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 24",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 25",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 26",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 27",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 28",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 29",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#None",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "None",
-      "schema:description": "mass spectrum 30",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    }
-  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:description": "The dataset includes numbers of atoms of 132Xe and isotope ratios of the other xenon isotopes to 132Xe for each of a series of laser step heating analyses of the sample.  Xenon was released from the sample and admitted into the RELAX (Refrigerator Enhanced Laser Analyser for Xenon) time-of-flight, resonance ionization mass spectrometer at the University of Manchester for xenon isotopic analysis.  56 distinct, sequentially increasing temperature steps were analysed and calibrated with reference to air aliquots and blanks. Temperature was increased by increasing the power delivered to the sample by a fiber laser.  The purpose of the dataset is to test Hypothesis 4 of the OSIRIS-REx Sample Analysis Plan.  The data reveal a bulk xenon isotopic composition similar to Average Carbonaceous Chondrite Xenon, consisting of Q-Xe with excesses of 134Xe and 136Xe consistent with the presence of presolar nanodiamonds hosting Xe-HL; the presence of presolar material supports Hypotheses 3.2: Bennu contains dust grains that condensed in the gaseous envelopes around ancient stars or the ejecta of novae or supernovae (Lauretta et al. 2015) and 4.3: The initial constituents of Bennu%E2%80%99s parent asteroid were materials that were inherited from the protosolar molecular cloud or were formed and altered in the protoplanetary disk, largely composed of: presolar grains, chondrules, refractory inclusions, crystalline and amorphous silicates, metals, sulfides, oxides, phosphates, organic compounds (SOM and IOM), ices (e.g., H2O, CO2, NH3, etc.),  The close similarity of bulk xenon signature to AVCC supports Hypothesis 4.4: Bennu%E2%80%99s parent asteroid accreted in the outer protoplanetary disk, beyond Jupiter, as recorded by distinct isotopic anomalies in a variety of elements (e.g., O, Ca, Ti, Cr, Ni, Zr, Mo, Ru, Pd, Ba, Nd, etc.) (Rowe et al. 1994; McKeegan et al. 1998; Trinquier et al. 2007; Leya et al. 2008; Warren 2011; Connelly et al. 2012; Kruijer et al. 2020; Mezger et al. 2020; Schrader et al. 2020). The presence of excess 129Xe from decay of 129I (half life 16 Myr) in low temperature releases supports Hypothesis 4.1 The initial constituents of Bennu%E2%80%99s parent asteroid formed over several million years of solar system history, starting at a t0 of 4.567 Gyr (Kita et al. 2013; Pape et al. 2019; Connelly et al. 2012) and Hypothesis 5.1: Bennu%E2%80%99s parent asteroid was heated by the decay of short-lived radionuclides for ~10 Myr after accretion (e.g., Miyamoto 1991; Steele et al. 2017).",
   "schema:distribution": [
     {
+      "@id": "_:b0",
       "@type": [
         "schema:DataDownload"
       ],
+      "schema:contentUrl": "",
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
       "schema:encodingFormat": [
         "application/zip"
       ],
-      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
-      "schema:contentUrl": "",
       "schema:hasPart": [
         {
-          "@type": "schema:Dataset",
-          "@id": "#6559588ac004e45b544fe54bfe08451d",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_RITOFNGMSCollection_1.yaml",
-          "schema:description": "sha256:cd58184cc78ef857b9c92f894d75f319ffc92c80d2a28adc1a5db95ce2685444 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 2560,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
+          "@id": "http://example.org/base/#6559588ac004e45b544fe54bfe08451d",
+          "@type": [
+            "schema:Dataset"
           ],
-          "schema:about": [
-            {
-              "@id": "#49ec209c01e81b1ba13da40bf00592d6"
-            }
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#49ec209c01e81b1ba13da40bf00592d6",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_RITOFNGMSCollection_1.zip",
-          "schema:description": "Time of Flight Mass Spectra.  Each file contains 30 time-of-flight mass spectra collected consecutively over 5 minutes, 10s per analysis.  Gas analysed was either released from sample, air calibration, or blank.  Sampling rate is 1 ns.  Folder NQ68_ac1 contains air calibrations.  Folder NQ68_1 contains sample analyses and blanks. These analyses were taken sequentially as laid out in the metadata diary file.  Within each folder file numbers increase sequentially with time.  The overall time sequence can be found in the metadata diary file.  Blanks are used to correct air calibrations and sample analyses.  Blank corrected air calibrations  are used to correct sample analyses to generate finalized data. sha256:130528402f9ecd537a85492e719cf4ddfbacd5e07212f8741d6e0c124d3770ad ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 7777103,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/zip"
-          ],
-          "fileDetail": {
+          "schema:about": {
+            "@id": "http://example.org/base/#49ec209c01e81b1ba13da40bf00592d6",
             "@type": [
-              "cdi:PhysicalDataSet",
-              "ada:tabularData"
+              "schema:Dataset"
             ],
-            "componentType": {
-              "@type": "ada:RITOFNGMSCollection"
-            },
-            "cdi:isStructuredBy": {
-              "@type": "cdi:WideDataStructure",
-              "cdi:has_DataStructureComponent": [
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 1,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 2,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 3,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 4,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 5,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 6,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 7,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 8,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 9,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 10,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 11,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 12,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 13,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 14,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 15,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 16,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 17,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 18,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 19,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 20,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 21,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 22,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 23,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 24,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 25,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 26,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 27,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 28,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 29,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#None"
-                  },
-                  "schema:name": "None",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 30,
-                    "cdi:physicalDataType": "None"
-                  }
-                }
-              ]
-            },
-            "countRows": 898,
-            "countColumns": 30,
-            "xCoordCol": "None",
-            "yCoordCol": "None",
-            "zCoordCol": "None"
+            "schema:description": "Time of Flight Mass Spectra.  Each file contains 30 time-of-flight mass spectra collected consecutively over 5 minutes, 10s per analysis.  Gas analysed was either released from sample, air calibration, or blank.  Sampling rate is 1 ns.  Folder NQ68_ac1 contains air calibrations.  Folder NQ68_1 contains sample analyses and blanks. These analyses were taken sequentially as laid out in the metadata diary file.  Within each folder file numbers increase sequentially with time.  The overall time sequence can be found in the metadata diary file.  Blanks are used to correct air calibrations and sample analyses.  Blank corrected air calibrations  are used to correct sample analyses to generate finalized data. sha256:130528402f9ecd537a85492e719cf4ddfbacd5e07212f8741d6e0c124d3770ad ; ",
+            "schema:encodingFormat": "application/zip",
+            "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_RITOFNGMSCollection_1.zip",
+            "schema:size": {
+              "@id": "_:b2",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 7777103
+            }
+          },
+          "schema:description": "sha256:cd58184cc78ef857b9c92f894d75f319ffc92c80d2a28adc1a5db95ce2685444 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_RITOFNGMSCollection_1.yaml",
+          "schema:size": {
+            "@id": "_:b1",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 2560
           }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#9b29d6c44c699438da8fd65836ebfb74",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_instrumentMetadata_1.csv",
+          "@id": "http://example.org/base/#49ec209c01e81b1ba13da40bf00592d6",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "Time of Flight Mass Spectra.  Each file contains 30 time-of-flight mass spectra collected consecutively over 5 minutes, 10s per analysis.  Gas analysed was either released from sample, air calibration, or blank.  Sampling rate is 1 ns.  Folder NQ68_ac1 contains air calibrations.  Folder NQ68_1 contains sample analyses and blanks. These analyses were taken sequentially as laid out in the metadata diary file.  Within each folder file numbers increase sequentially with time.  The overall time sequence can be found in the metadata diary file.  Blanks are used to correct air calibrations and sample analyses.  Blank corrected air calibrations  are used to correct sample analyses to generate finalized data. sha256:130528402f9ecd537a85492e719cf4ddfbacd5e07212f8741d6e0c124d3770ad ; ",
+          "schema:encodingFormat": "application/zip",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_RITOFNGMSCollection_1.zip",
+          "schema:size": {
+            "@id": "_:b2",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 7777103
+          }
+        },
+        {
+          "@id": "http://example.org/base/#9b29d6c44c699438da8fd65836ebfb74",
+          "@type": [
+            "schema:Dataset"
+          ],
           "schema:description": "Metadata for Time of Flight Mass Spectra (RITOFNGMS). sha256:314599d071f3fe8c0c0606852f4cde6c27694df799f695bec0c40c742c1b42b6 ; ",
+          "schema:encodingFormat": "text/csv",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_instrumentMetadata_1.csv",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 23819,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "text/csv"
-          ]
+            "@id": "_:b3",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 23819
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#4a5448699ca6732bdf6ba738bc1adef7",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_instrumentMetadata_1.yaml",
+          "@id": "http://example.org/base/#4a5448699ca6732bdf6ba738bc1adef7",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#9b29d6c44c699438da8fd65836ebfb74",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Metadata for Time of Flight Mass Spectra (RITOFNGMS). sha256:314599d071f3fe8c0c0606852f4cde6c27694df799f695bec0c40c742c1b42b6 ; ",
+            "schema:encodingFormat": "text/csv",
+            "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_instrumentMetadata_1.csv",
+            "schema:size": {
+              "@id": "_:b3",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 23819
+            }
+          },
           "schema:description": "sha256:3967da74714f9979b5804fb2db2a977d97f9501ea1eb3150794eb3641c2c5aa7 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_instrumentMetadata_1.yaml",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 287,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#9b29d6c44c699438da8fd65836ebfb74"
-            }
-          ]
+            "@id": "_:b4",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 287
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#d672d54128017aad9017715225a691b6",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_methodDescription_1.pdf",
+          "@id": "http://example.org/base/#d672d54128017aad9017715225a691b6",
+          "@type": [
+            "schema:Dataset"
+          ],
           "schema:description": "Method Description for Time of Flight Mass Spectra (RITOFNGMS). sha256:be3e86b003fc7065791c6756468853b53fe63520df5e3f950b80933d4a5e2d24 ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_methodDescription_1.pdf",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 346315,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
+            "@id": "_:b5",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 346315
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#484ae1c847c9b59f0db3bb9937aec5cb",
-          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_methodDescription_1.yaml",
-          "schema:description": "sha256:879eb930ecf5151094adfc5dab89ac55049828e224c5d6f00e463d139b664464 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 213,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
+          "@id": "http://example.org/base/#484ae1c847c9b59f0db3bb9937aec5cb",
+          "@type": [
+            "schema:Dataset"
           ],
-          "schema:about": [
-            {
-              "@id": "#d672d54128017aad9017715225a691b6"
+          "schema:about": {
+            "@id": "http://example.org/base/#d672d54128017aad9017715225a691b6",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Method Description for Time of Flight Mass Spectra (RITOFNGMS). sha256:be3e86b003fc7065791c6756468853b53fe63520df5e3f950b80933d4a5e2d24 ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_methodDescription_1.pdf",
+            "schema:size": {
+              "@id": "_:b5",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 346315
             }
-          ]
+          },
+          "schema:description": "sha256:879eb930ecf5151094adfc5dab89ac55049828e224c5d6f00e463d139b664464 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240116_RI-TOF-NGMS_UoM_OREX-803060-0_1_methodDescription_1.yaml",
+          "schema:size": {
+            "@id": "_:b6",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 213
+          }
         }
       ]
     }
   ],
+  "schema:funding": [
+    {
+      "@id": "_:b7",
+      "@type": [
+        "schema:MonetaryGrant"
+      ],
+      "schema:description": "Science and Technology Facilities Council (UK) ST/V000675/1 and ST/Y002369/1",
+      "schema:name": "Missing"
+    }
+  ],
+  "schema:identifier": {
+    "@id": "_:b8",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:url": "https://doi.org/10.60707/ps65-7j23",
+    "schema:value": "10.60707/ps65-7j23"
+  },
+  "schema:license": [
+    "missing"
+  ],
+  "schema:measurementTechnique": [
+    {
+      "@id": "_:b9",
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Resonance ionization time of flight noble gas mass spectrometry",
+      "schema:termCode": "RI-TOF-NGMS"
+    }
+  ],
+  "schema:name": "Xenon Isotopic Analysis of OSIRIS REx sample 803060-0",
   "schema:subjectOf": {
     "@id": "ada:metadata_903",
-    "@type": "schema:Dataset",
-    "schema:dateModified": "2024-07-17",
-    "schema:maintainer": {
-      "@id": "https://ada.org/person/3479",
-      "@type": "schema:Person",
-      "schema:name": "Richard, Stephen M.",
-      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-      "schema:email": "smrTucson@email.org"
-    },
-    "schema:about": {
-      "@id": "ada:record_903"
-    },
-    "schema:description": "metadata about documentation for https://doi.org/10.60707/ps65-7j23",
+    "@type": [
+      "schema:Dataset"
+    ],
     "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/manifest/1.1"
+      },
       {
         "@id": "ada:image"
       },
@@ -1008,7 +290,7 @@
         "@id": "ada:tabularData"
       },
       {
-        "@id": "CDIF_basic_1.0"
+        "@id": "http://example.org/base/CDIF_basic_1.0"
       },
       {
         "@id": "ada:methodDescription"
@@ -1025,6 +307,107 @@
       {
         "@id": "ada:RITOFNGMSCollection"
       }
-    ]
-  }
+    ],
+    "schema:about": {
+      "@id": "ada:record_903"
+    },
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:dateModified": "2024-07-17",
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/ps65-7j23",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    }
+  },
+  "schema:url": "",
+  "schema:variableMeasured": [
+    {
+      "@id": "http://example.org/base/#None",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "mass spectrum 1",
+        "mass spectrum 2",
+        "mass spectrum 3",
+        "mass spectrum 4",
+        "mass spectrum 5",
+        "mass spectrum 6",
+        "mass spectrum 7",
+        "mass spectrum 8",
+        "mass spectrum 9",
+        "mass spectrum 10",
+        "mass spectrum 11",
+        "mass spectrum 12",
+        "mass spectrum 13",
+        "mass spectrum 14",
+        "mass spectrum 15",
+        "mass spectrum 16",
+        "mass spectrum 17",
+        "mass spectrum 18",
+        "mass spectrum 19",
+        "mass spectrum 20",
+        "mass spectrum 21",
+        "mass spectrum 22",
+        "mass spectrum 23",
+        "mass spectrum 24",
+        "mass spectrum 25",
+        "mass spectrum 26",
+        "mass spectrum 27",
+        "mass spectrum 28",
+        "mass spectrum 29",
+        "mass spectrum 30"
+      ],
+      "schema:name": "None",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b10",
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:identifier": "20240116_ri-tof-ngms_uom_orex-803060-0_1",
+      "schema:location": {
+        "@id": "_:b11",
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:alternateName": [
+          "UoM"
+        ],
+        "schema:identifier": "https://ror.org/02aswte26",
+        "schema:name": "University of Manchester; University of Manchester RISTOF"
+      },
+      "schema:mainEntity": {
+        "@id": "_:b12",
+        "@type": [
+          "schema:Thing",
+          "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+        ],
+        "schema:additionalType": [
+          "MaterialSample"
+        ],
+        "schema:identifier": "OREX-803060-0"
+      },
+      "schema:startDate": "2024-01-16T15:35:26.997928Z"
+    }
+  ],
+  "schema:dateModified": "2025-12-31"
 }

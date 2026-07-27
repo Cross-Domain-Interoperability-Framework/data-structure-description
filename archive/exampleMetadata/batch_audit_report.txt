@@ -1,0 +1,197 @@
+CDIF metadata archive audit report
+Files:      88
+Clean:      71
+With errs:  17
+Broken:     0
+
+======================================================================
+PER-FILE
+======================================================================
+filename                                                    validated_against                             errs  notes
+  metadata_10.60707-08fx-rj13.json                          CoreDiscovery                                   10  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-0y88-ps96.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-1k0j-p360.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-1svq-4w22.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-2arx-b516.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-2j0t-gq80.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-2mdz-qh58.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-3kzn-r786.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-3qvv-wy22.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-4b5r-q306.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-4fpx-9425.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-4q94-c237.json                          CoreDiscovery                                    2  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-4v1z-b208.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-5856-1y66.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-64vm-zd18.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-66gm-xn41.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-6c5n-e486.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-7hya-7y42.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-85yk-sr06.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-89td-7k08.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-8pcs-xg15.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-8ybe-rc54.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-917f-kr66.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-bb22-mj07.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-bdq3-px39.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-by2q-ts31.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-c39r-0r37.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-c7rk-nk69.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-d62h-j641.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-dzcq-ym02.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-ejdm-g828.json                          CoreDiscovery                                    1  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-ek2k-3171.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-emjy-za09.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-epbg-vr71.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-esk8-v556.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-fgat-bv38.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-fj10-mc96.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-fwkp-de27.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-fzjk-kt84.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-g5n1-0d67.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-gy8c-9d52.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-h0dk-6y68.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-h1pn-e892.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-h795-9n84.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-htk9-f770.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-j16b-6288.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-j6f9-tp89.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-kzfq-t450.json                          CoreDiscovery                                    1  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-m388-cb55.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-mayf-0w17.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-nm1b-bz91.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-papb-7t64.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-pjmn-ap50.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-pmm3-st23.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-ps65-7j23.json                          CoreDiscovery                                    1  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-pte6-nf07.json                          CoreDiscovery                                    2  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-q4b0-v203.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-qx28-w397.json                          CoreDiscovery                                    4  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-r8hy-7y50.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-rd8a-6z91.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-rm08-bg04.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-sjkk-h605.json                          CoreDiscovery                                    1  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-sk9h-2550.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-srdv-7b95.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-t0gq-7t37.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-twd0-6a40.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-v87p-2k76.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-vjcy-by10.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-wg35-6e70.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-wspc-wg10.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-xbby-kj41.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-xnxf-m505.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-xq6j-wr35.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-xzeg-2x24.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-y3a1-7706.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-yv1f-jb20.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  metadata_10.60707-zh1b-jk54.json                          CoreDiscovery                                    0  schema-IRI-fix, subjectOf-injected
+  cdif_10.60707-0y88-ps96.json                              DiscoveryDataDescription                         0  schema-IRI-fix, subjectOf-injected
+  cdif_se_na2so4-xdi.jsonLD                                 DiscoveryDataDescription                         0  subjectOf-injected
+  NetCDF-CDIF-UKESM1-0-LL.jsonLD                            DiscoveryDataDescription                         6  subjectOf-injected
+  ESS11-subset_DDICDI.jsonld                                cdifCore                                        12  subjectOf-injected
+  ESS11-subset_DDICDI.jsonld                                cdifCore                                        12  subjectOf-injected
+  FeXAS_Fe_c3d.001-NEXUS-HDF5-cdi-CDIF.jsonLD               DiscoveryDataDescription                         6  schema-IRI-fix, subjectOf-injected
+  NEXUS-withDataStructureComponent.json                     DiscoveryDataDescription                         8  subjectOf-injected
+  NEXUS-withDataStructureComponentSimplified.json           DiscoveryDataDescription                         8  subjectOf-injected
+  OIH-PROVe1ba5a1368cea8b1d6591ba932c910b26859892e.jsonld   cdifCore                                        12  subjectOf-injected
+  se_na2so4-XDI-CDI-CDIF.jsonLD                             cdifCore                                        12  subjectOf-injected
+  sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.jsonLD          DiscoveryDataDescription                         4  subjectOf-injected
+
+======================================================================
+TOP FAILURE SAMPLES
+======================================================================
+
+  metadata_10.60707-08fx-rj13.json  (validated against CoreDiscovery)
+    schema:variableMeasured/5/schema:name: ['20Ne', '±20Ne'] is not of type 'string'
+    schema:variableMeasured/5/schema:description: ['Measured 20Ne ion signal, in counts per second (cps)', 'Uncertainty of the 20Ne ion signal, in counts per second (cps)'] is not of type 'string'
+    schema:variableMeasured/6/schema:name: ['21Ne', '±21Ne'] is not of type 'string'
+    schema:variableMeasured/6/schema:description: ['Measured 21Ne ion signal, in counts per second (cps)', 'Uncertainty of the 21Ne ion signal, in counts per second (cps)'] is not of type 'string'
+    schema:variableMeasured/7/schema:name: ['22Ne', '±22Ne'] is not of type 'string'
+
+  metadata_10.60707-4q94-c237.json  (validated against CoreDiscovery)
+    schema:variableMeasured/7/schema:name: ['d17O 2 sigma err', 'D17O 2 sigma err'] is not of type 'string'
+    schema:variableMeasured/7/schema:description: ['the calculated 2 sigma error associated with the 17O/16O spot analysis and calibration', 'the calculated 2 sigma error associated with the D17O spot ana
+
+  metadata_10.60707-ejdm-g828.json  (validated against CoreDiscovery)
+    schema:variableMeasured/0/schema:description: ['keV', 'Counts'] is not of type 'string'
+
+  metadata_10.60707-kzfq-t450.json  (validated against CoreDiscovery)
+    schema:variableMeasured/6/schema:description: ['Standard deviation (1 sigma) of sample grain volume measurements. Blank in all rows except Average of last nine runs.', 'Standard deviation (1 sigma) of
+
+  metadata_10.60707-ps65-7j23.json  (validated against CoreDiscovery)
+    schema:variableMeasured/0/schema:description: ['mass spectrum 1', 'mass spectrum 2', 'mass spectrum 3', 'mass spectrum 4', 'mass spectrum 5', 'mass spectrum 6', 'mass spectrum 7', 'mass spectrum 8', '
+
+  metadata_10.60707-pte6-nf07.json  (validated against CoreDiscovery)
+    schema:variableMeasured/0/schema:description: ['Surface Location', 'Depth Location'] is not of type 'string'
+    schema:variableMeasured/1/schema:description: ['Surface Location', 'Depth Location'] is not of type 'string'
+
+  metadata_10.60707-qx28-w397.json  (validated against CoreDiscovery)
+    schema:variableMeasured/3/schema:name: ['d17', 'D17'] is not of type 'string'
+    schema:variableMeasured/3/schema:description: ['17O/16O isotopic composiiton experessed as delta value relative to SMOW', '17O excess relative to terrestrial value expressed in per mil'] is not of typ
+    schema:variableMeasured/4/schema:name: ['d17SE', 'D17SE'] is not of type 'string'
+    schema:variableMeasured/4/schema:description: ['Standard error on 17O/16O measurement', 'Standard error on 17O excess measurement'] is not of type 'string'
+
+  metadata_10.60707-sjkk-h605.json  (validated against CoreDiscovery)
+    schema:variableMeasured/0/schema:description: ['Sample ID', 'Source folder', 'Source filename', 'Atoms of 132Xe', 'Nominal Error on Atoms of 132Xe (1 sigma)', 'Isotope Ratio 124Xe/132Xe', 'Error on Is
+
+  NetCDF-CDIF-UKESM1-0-LL.jsonLD  (validated against DiscoveryDataDescription)
+    schema:distribution/0: {'@id': '_:b1', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['CF-1.7 CMIP-6.2'], 'schema:contentSize': '940378 kb', 'sc
+    schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/3/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+
+  ESS11-subset_DDICDI.jsonld  (validated against cdifCore)
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf/dcterms:conformsTo: [] should be non-empty
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+    schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema
+
+  ESS11-subset_DDICDI.jsonld  (validated against cdifCore)
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf/dcterms:conformsTo: [] should be non-empty
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+    schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema
+
+  FeXAS_Fe_c3d.001-NEXUS-HDF5-cdi-CDIF.jsonLD  (validated against DiscoveryDataDescription)
+    schema:distribution/0: {'@id': '_:b2', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['nexus v2024.02', 'NXxas'], 'schema:contentSize': '2.6 Mb'
+    schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/3/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+
+  NEXUS-withDataStructureComponent.json  (validated against DiscoveryDataDescription)
+    @type/2: 'cdi:Dataset' is not one of ['schema:CreativeWork', 'schema:SoftwareApplication', 'schema:SoftwareSourceCode', 'schema:Product', 'schema:WebAPI', 'schema:Dataset', 'schema:DigitalDocument', '
+    schema:distribution/0: {'@type': ['schema:DataDownload', 'cdi:StructuredDataset'], 'cdi:allowsDuplicates': False, 'cdi:has_LocatorMapping': [{'@type': ['cdi:LocatorMapping'], 'cdifq:length': 443, 'cdi
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+
+  NEXUS-withDataStructureComponentSimplified.json  (validated against DiscoveryDataDescription)
+    @type/2: 'cdi:Dataset' is not one of ['schema:CreativeWork', 'schema:SoftwareApplication', 'schema:SoftwareSourceCode', 'schema:Product', 'schema:WebAPI', 'schema:Dataset', 'schema:DigitalDocument', '
+    schema:distribution/0: {'@type': ['schema:DataDownload', 'cdi:StructuredDataset'], 'cdi:allowsDuplicates': False, 'cdi:has_LocatorMapping': [{'@type': ['cdi:LocatorMapping'], 'cdifq:length': 443, 'cdi
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+
+  OIH-PROVe1ba5a1368cea8b1d6591ba932c910b26859892e.jsonld  (validated against cdifCore)
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf/dcterms:conformsTo: [] should be non-empty
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+    schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema
+
+  se_na2so4-XDI-CDI-CDIF.jsonLD  (validated against cdifCore)
+    schema:subjectOf/@type: 'dcat:CatalogRecord' is not of type 'array'
+    schema:subjectOf/dcterms:conformsTo: [] should be non-empty
+    schema:subjectOf: 'schema:about' is a required property
+    schema:subjectOf: '@id' is a required property
+    schema:subjectOf/dcterms:conformsTo: [] does not contain items matching the given schema
+
+  sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.jsonLD  (validated against DiscoveryDataDescription)
+    schema:distribution/0: {'@id': '_:b1', '@type': ['schema:DataDownload', 'PhysicalDataSet'], 'allowsDuplicates': False, 'dcterms:conformsTo': ['CF-1.7 CMIP-6.2'], 'schema:contentSize': '55703 kb', 'sch
+    schema:variableMeasured/0/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/1/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema
+    schema:variableMeasured/2/@type: ['InstanceVariable', 'schema:PropertyValue'] does not contain items matching the given schema

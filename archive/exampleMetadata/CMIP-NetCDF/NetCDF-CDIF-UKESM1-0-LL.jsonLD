@@ -1,323 +1,267 @@
 {
-	"@context": {
-		"@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-		"schema": "http://schema.org/",
-		"dcterms": "http://purl.org/dc/terms/",
-		"geosparql": "http://www.opengis.net/ont/geosparql#",
-		"spdx": "http://spdx.org/rdf/terms#",
-		"cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-		"time": "http://www.w3.org/2006/time#",
-		"skos": "http://www.w3.org/2004/02/skos/core#",
-		"nc": "https://ex.org/netcdf/",
-		"esgf": "http://purl.org/esgf/definitions/",
-		"prov": "http://www.w3.org/ns/prov#"
-	},
-	"@graph": [
-		{
-			"@id": "nc:487y54",
-			"@type": [
-				"schema:Dataset",
-				"schema:Product"
-			],
-			"schema:additionalType": "model-output",
-			"schema:name": "UKESM1-0-LL output prepared for CMIP6",
-			"schema:description": "experiment: 1 percent per year decrease in CO2 from 4xCO2. atmos: MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km). ocean: NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
-			"schema:identifier": {
-				"@type": "schema:PropertyValue",
-				"schema:propertyID": "https://doi.org/10.17487/RFC3650",
-				"schema:value": "hdl:21.14100/a3e747b3-4aaf-4726-b21e-1f69860cff4c",
-				"schema:url": "https://hdl.handle.net/21.14100/a3e747b3-4aaf-4726-b21e-1f69860cff4c"
-			},
-			"schema:dateModified": "2020-04-21T15:21:28Z",
-			"schema:publisher": {
-				"@type": "schema:Organization",
-				"@id": "#aps",
-				"schema:name": "Met Office Hadley Centre",
-				"schema:address": "Fitzroy Road, Exeter, Devon, EX1 3PB, UK"
-			},
-			"schema:license": ["Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."],
-			"schema:distribution": [
-				{
-					"@type": [
-						"schema:DataDownload",
-						"cdi:PhysicalDataSet"
-					],
-					"schema:contentUrl": "https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CDRMIP/MOHC/UKESM1-0-LL/1pctCO2-cdr/r1i1p1f2/Amon/hur/gn/v20200425/hur_Amon_UKESM1-0-LL_1pctCO2-cdr_r1i1p1f2_gn_255001-263912.ncOriginal",
-					"spdx:checksum": {
-						"@type": "spdx:Checksum",
-						"spdx:algorithm": "spdx:checksumAlgorithm_SHA256",
-						"spdx:checksumValue": "a0d81f58f72578a0f62c4574c0233df103df201386b94fe0ff3c0f85be1987c5"
-					},
-					"schema:description": "Distribution = PhysicalDataSet NetCDF file",
-					"schema:contentSize": "940378 kb",
-					"schema:encodingFormat": ["application/x-netcdf;profile='cf'"],
-					"dcterms:conformsTo": ["CF-1.7 CMIP-6.2"],
-					"cdi:allowsDuplicates": false,
-					"cdi:isStructuredBy": {
-						"@type": "DimensionalDataStructure",
-						"schema:description": "not all the variables are described in this test example",
-						"has_DataStructureComponent": [
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:time"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "time",
-									"length": 1080
-								}
-							},
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:pressure"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "plev",
-									"length": 19
-								}
-							},
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:latitude"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "lat",
-									"length": 144
-								}
-							},
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:longitude"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "lon",
-									"length": 192
-								}
-							},
-							{
-								"@type": "MeasureComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:relative_humidity"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "hur(time, plev, lat, lon)",
-									"shape": [
-										1080,
-										19,
-										144,
-										192
-									]
-								}
-							}
-						],
-						"allowsDuplicates": false
-					}
-				}
-			],
-			"schema:keywords": [
-				"relative humidity",
-				"CMIP6"
-			],
-			"prov:wasGeneratedBy": {
-				"@type": [
-					"schema:Event",
-					"schema:Product",
-					"prov:Activity"
-				],
-				"schema:startDate": "2008-04-10T21:58:50",
-				"prov:used": [
-					{
-						"@type": ["schema:SoftwareApplication"],
-						"schema:name": "CMIP6 model",
-						"schema:description": "2020-04-21T15:15:03Z ; CMOR rewrote data to be consistent with CMIP6, CF-1.7 CMIP-6.2 and CF standards.; 2020-04-21T15:14:47Z MIP Convert v1.3.4, Python v2.7.16, Iris v2.2.0, Numpy v1.15.4, cftime v1.0.0b1.",
-						"schema:version": "3.4.0",
-						"schema:identifier": ""
-					}
-				]
-			},
-			"schema:variableMeasured": [
-				{
-					"@id": "esgf:time",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:name": "Time, days since 1850-01-01",
-					"schema:alternateName": "T",
-					"schema:description": "note that the range of values reported would correspond to about 525 years in the future...",
-					"schema:propertyID": "esgf:timeConcept",
-					"schema:unitText": "day",
-					"cdi:identifier": "missing",
-					"cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"cdi:simpleUnitOfMeasure": "day",
-					"cdi:uses": "esgf:timeConcept",
-					"cdi:name": "T",
-					"cdi:displayLabel": "Time, days since 1850-01-01",
-					"defaultFillValue": 9.969209968386869e+36,
-					"schema:minValue": 252015,
-					"schema:maxValue": 284385
-				},
-				{
-					"@id": "esgf:relative_humidity",
-					"@type": [
-						"InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:name": "relative_humidity",
-					"schema:alternateName": "",
-					"schema:description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.Monitor intensity",
-					"schema:propertyID": "esfg:relative_humidityConcept",
-					"schema:unitText": "percent",
-					"cdi:identifier": "http://purl.obolibrary.org/obo/AGRO_00000637",
-					"cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"cdi:uses": "esfg:relative_humidityConcept",
-					"cdi:displayLabel": "relative humidity",
-					"missing_value": 1e+20,
-					"defaultFillValue": 1e+20
-				},
-				{
-					"@id": "esgf:pressure",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:description": "Air pressure as a proxy for vertical position in the atmosphere. Highest value is at Earth Surface. The values for this dimension are an enumeration of 19 standard (CF) pressure values used in CMIP models",
-					"schema:propertyID": "esgf:pressureConcept",
-					"schema:unitText": "Pascals",
-					"schema:name": "plev",
-					"schema:alternateName": "Air pressure elevation",
-					"physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"identifier": "",
-					"uses": "",
-					"name": "plev",
-					"displayLabel": "Air Pressure elevation",
-					"substantiveValueDomain": {
-						"@type": "cdi:EnumerationDomain",
-						"values": [
-							100000,
-							92500,
-							85000,
-							70000,
-							60000,
-							50000,
-							40000,
-							30000,
-							25000,
-							20000,
-							15000,
-							10000,
-							7000,
-							5000,
-							3000,
-							2000,
-							1000,
-							500,
-							100
-						]
-					}
-				},
-				{
-					"@id": "esgf:latitude",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:description": "",
-					"schema:propertyID": "esgf:latitudeConcept",
-					"schema:unitText": "degree",
-					"schema:name": "latitude",
-					"schema:alternateName": "Latitude",
-					"physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"identifier": "",
-					"uses": "esgf:latitudeConcept",
-					"name": "latitude",
-					"displayLabel": "Latitude",
-					"schema:minValue": -89.375,
-					"schema:maxValue": 89.375
-				},
-				{
-					"@id": "esgf:longitude",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:description": "longitude description",
-					"schema:propertyID": "esgf:longitudeConcept",
-					"schema:unitText": "degree",
-					"schema:name": "longitude",
-					"schema:alternateName": "Longitude",
-					"cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"cdi:identifier": "",
-					"cdi:uses": "esgf:longitudeConcept",
-					"cdi:name": "longitude",
-					"cdi:displayLabel": "Longitude",
-					"schema:minValue": 0.9375,
-					"schema:maxValue": 359.0625
-				}
-			],
-			"schema:subjectOf": {
-				"@id": "nc:ja51-pz63",
-				"@type": "schema:Dataset",
-				"schema:dateModified": "2025-11-12",
-				"schema:creator": [
-					{
-						"@id": "https://ada.org/person/3479",
-						"@type": "schema:Person",
-						"schema:name": "Richard, Stephen M.",
-						"schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-						"schema:email": "smrTucson@email.org"
-					}
-				],
-				"schema:about": {"@id": "nc:487y54"},
-				"schema:description": "metadata about documentation for NetCDF dataset",
-				"dcterms:conformsTo": [
-					{"@id": "cdif:profile_basic_1.0"},
-					{"@id": "cdif:profile_x-netcdfCDIF"}
-				]
-			}
-		},
-		{
-			"@id": "#esgfDict",
-			"@type": "skos:ConceptScheme",
-			"dcterms:title": "CMIP relative humidity model product dictionary",
-			"dcterms:description": "A SKOS vocabulary of variables in example CMIP file. In a production system, this would be expected to be an external resource, included here only for convienence"
-		},
-		{
-			"@id": "esgf:timeConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict"},
-			"skos:prefLabel": "Temporal interval in CMIP model",
-			"skos:definition": "A time interval defined in the CMIP model framework, e.g. with a 360 day year, with the starting datum at 1850-01-01"
-		},
-		{
-			"@id": "esgf:z-pressureConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict"},
-			"skos:prefLabel": "Air Pressure",
-			"skos:definition": "Air Pressure is used as proxy for vertical position in atmosphere; values increase downward, highest pressure is at Earth Surface.",
-			"defaultFillValue": 9.969209968386869e+36
-		},
-		{
-			"@id": "esgf:latitudeConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict"},
-			"skos:prefLabel": "Latitude",
-			"skos:definition": "definition of latitude",
-			"defaultFillValue": 9.969209968386869e+36
-		},
-		{
-			"@id": "esgf:longitudeConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict"},
-			"skos:prefLabel": "Longitude",
-			"skos:definition": "definition of longitude, east positive",
-			"defaultFillValue": 9.969209968386869e+36
-		},
-		{
-			"@id": "esgf:relative_humidityConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict"},
-			"skos:prefLabel": "Relative Humidity",
-			"skos:definition": "A measure of the amount of water vapor in the air relative to the amount required to saturate the air under the observation temperature and pressure",
-			"defaultFillValue": 9.969209968386869e+36
-		}
-	]
+  "@context": {
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/",
+    "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "nc": "https://ex.org/netcdf/",
+    "esgf": "http://purl.org/esgf/definitions/"
+  },
+  "@id": "nc:487y54",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:additionalType": [
+    "model-output"
+  ],
+  "schema:dateModified": "2020-04-21T15:21:28Z",
+  "schema:description": "experiment: 1 percent per year decrease in CO2 from 4xCO2. atmos: MetUM-HadGEM3-GA7.1 (N96; 192 x 144 longitude/latitude; 85 levels; top level 85 km). ocean: NEMO-HadGEM3-GO6.0 (eORCA1 tripolar primarily 1 deg with meridional refinement down to 1/3 degree in the tropics; 360 x 330 longitude/latitude; 75 levels; top grid cell 0-1 m)",
+  "schema:distribution": [
+    {
+      "@id": "_:b1",
+      "@type": [
+        "schema:DataDownload",
+        "PhysicalDataSet"
+      ],
+      "allowsDuplicates": false,
+      "dcterms:conformsTo": [
+        "CF-1.7 CMIP-6.2"
+      ],
+      "schema:contentSize": "940378 kb",
+      "schema:contentUrl": "https://esgf.ceda.ac.uk/thredds/fileServer/esg_cmip6/CMIP6/CDRMIP/MOHC/UKESM1-0-LL/1pctCO2-cdr/r1i1p1f2/Amon/hur/gn/v20200425/hur_Amon_UKESM1-0-LL_1pctCO2-cdr_r1i1p1f2_gn_255001-263912.ncOriginal",
+      "schema:description": "Distribution = PhysicalDataSet NetCDF file",
+      "schema:encodingFormat": [
+        "application/x-netcdf;profile='cf'"
+      ],
+      "spdx:checksum": {
+        "@id": "_:b13",
+        "@type": [
+          "spdx:Checksum"
+        ],
+        "spdx:algorithm": "spdx:checksumAlgorithm_SHA256",
+        "spdx:checksumValue": "a0d81f58f72578a0f62c4574c0233df103df201386b94fe0ff3c0f85be1987c5"
+      }
+    }
+  ],
+  "schema:identifier": {
+    "@id": "_:b14",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://doi.org/10.17487/RFC3650",
+    "schema:url": "https://hdl.handle.net/21.14100/a3e747b3-4aaf-4726-b21e-1f69860cff4c",
+    "schema:value": "hdl:21.14100/a3e747b3-4aaf-4726-b21e-1f69860cff4c"
+  },
+  "schema:keywords": [
+    "relative humidity",
+    "CMIP6"
+  ],
+  "schema:license": [
+    "Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+  ],
+  "schema:name": "UKESM1-0-LL output prepared for CMIP6",
+  "schema:subjectOf": {
+    "@id": "nc:ja51-pz63",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_description/1.1"
+      }
+    ],
+    "schema:about": {
+      "@id": "nc:487y54"
+    },
+    "schema:creator": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    },
+    "schema:dateModified": "2025-11-12",
+    "schema:description": "metadata about documentation for NetCDF dataset",
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ]
+  },
+  "schema:variableMeasured": [
+    {
+      "@id": "esgf:time",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "defaultFillValue": 9.969209968386869e+36,
+      "displayLabel": "Time, days since 1850-01-01",
+      "identifier": "missing",
+      "name": "T",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "simpleUnitOfMeasure": "day",
+      "uses": "esgf:timeConcept",
+      "schema:alternateName": [
+        "T"
+      ],
+      "schema:description": "note that the range of values reported would correspond to about 525 years in the future...",
+      "schema:maxValue": 284385,
+      "schema:minValue": 252015,
+      "schema:name": "Time, days since 1850-01-01",
+      "schema:propertyID": [
+        "esgf:timeConcept"
+      ],
+      "schema:unitText": "day"
+    },
+    {
+      "@id": "esgf:relative_humidity",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "defaultFillValue": 1e+20,
+      "displayLabel": "relative humidity",
+      "identifier": "http://purl.obolibrary.org/obo/AGRO_00000637",
+      "missing_value": 1e+20,
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "esfg:relative_humidityConcept",
+      "schema:alternateName": [
+        ""
+      ],
+      "schema:description": "The relative humidity with respect to liquid water for T> 0 C, and with respect to ice for T<0 C.Monitor intensity",
+      "schema:name": "relative_humidity",
+      "schema:propertyID": [
+        "esfg:relative_humidityConcept"
+      ],
+      "schema:unitText": "percent"
+    },
+    {
+      "@id": "esgf:pressure",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "displayLabel": "Air Pressure elevation",
+      "identifier": "",
+      "name": "plev",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "substantiveValueDomain": {
+        "@id": "_:b15",
+        "@type": [
+          "EnumerationDomain"
+        ],
+        "values": [
+          100000,
+          92500,
+          85000,
+          70000,
+          60000,
+          50000,
+          40000,
+          30000,
+          25000,
+          20000,
+          15000,
+          10000,
+          7000,
+          5000,
+          3000,
+          2000,
+          1000,
+          500,
+          100
+        ]
+      },
+      "uses": "",
+      "schema:alternateName": [
+        "Air pressure elevation"
+      ],
+      "schema:description": "Air pressure as a proxy for vertical position in the atmosphere. Highest value is at Earth Surface. The values for this dimension are an enumeration of 19 standard (CF) pressure values used in CMIP models",
+      "schema:name": "plev",
+      "schema:propertyID": [
+        "esgf:pressureConcept"
+      ],
+      "schema:unitText": "Pascals"
+    },
+    {
+      "@id": "esgf:latitude",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "displayLabel": "Latitude",
+      "identifier": "",
+      "name": "latitude",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "esgf:latitudeConcept",
+      "schema:alternateName": [
+        "Latitude"
+      ],
+      "schema:description": "",
+      "schema:maxValue": 89.375,
+      "schema:minValue": -89.375,
+      "schema:name": "latitude",
+      "schema:propertyID": [
+        "esgf:latitudeConcept"
+      ],
+      "schema:unitText": "degree"
+    },
+    {
+      "@id": "esgf:longitude",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "displayLabel": "Longitude",
+      "identifier": "",
+      "name": "longitude",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "esgf:longitudeConcept",
+      "schema:alternateName": [
+        "Longitude"
+      ],
+      "schema:description": "longitude description",
+      "schema:maxValue": 359.0625,
+      "schema:minValue": 0.9375,
+      "schema:name": "longitude",
+      "schema:propertyID": [
+        "esgf:longitudeConcept"
+      ],
+      "schema:unitText": "degree"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b16",
+      "@type": [
+        "schema:Event",
+        "schema:Product",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2008-04-10T21:58:50"
+    }
+  ]
 }

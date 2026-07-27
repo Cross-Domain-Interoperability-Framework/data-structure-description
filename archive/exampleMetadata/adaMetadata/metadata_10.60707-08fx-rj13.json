@@ -1,700 +1,261 @@
 {
-  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
   "@context": {
-    "schema": "https://schema.org/",
+    "schema": "http://schema.org/",
     "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "ada": "https://ada.astromat.org/metadata/",
-    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/"
   },
   "@id": "ada:record_524",
   "@type": [
     "schema:Dataset",
     "schema:Product"
   ],
-  "schema:name": "Neon, argon, and nitrogen analysis using the Noblesse-HR",
-  "schema:description": "Step-heating Ne-Ar-N analyses of single aggregate particle OREX-803034-0 (0.1578 mg) were performed using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility.",
-  "schema:identifier": {
-    "@type": "schema:PropertyValue",
-    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
-    "schema:value": "10.60707/08fx-rj13",
-    "schema:url": "https://doi.org/10.60707/08fx-rj13"
-  },
   "schema:additionalType": [
     "Noble gas and Nitrogen Static Mass Spectrometry"
   ],
-  "schema:datePublished": "2025-12-31",
-  "schema:license": [
-    "missing"
-  ],
-  "schema:url": "",
   "schema:creator": {
     "@list": [
       {
         "@id": "https://ada.org/person/5489",
-        "@type": "schema:Person",
-        "schema:name": "Fueri, Evelyn",
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": "evelyn.furi@univ-lorraine.fr",
         "schema:identifier": "https://orcid.org/0000-0002-7680-2478",
-        "schema:email": "evelyn.furi@univ-lorraine.fr"
+        "schema:name": "Fueri, Evelyn"
       }
     ]
   },
-  "schema:funding": [
-    {
-      "@type": "schema:MonetaryGrant",
-      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program. This work was cofunded by the European Union (ERC, IRONIS, 10187562). Support from the French Space Agency (CNES) is also acknowledged."
-    }
-  ],
-  "schema:measurementTechnique": {
-    "@type": "schema:DefinedTerm",
-    "schema:name": "Noble gas and Nitrogen Static Mass Spectrometry",
-    "schema:termCode": "NG-NS-MS"
-  },
-  "prov:wasGeneratedBy": [
-    {
-      "@type": [
-        "schema:Event",
-        "xas:AnalysisEvent",
-        "prov:Activity"
-      ],
-      "schema:startDate": "2024-01-18T15:41:27.994673Z",
-      "schema:identifier": "20240118_ng-ns-ms_cnrs-crpg_orex-803034-0_1",
-      "prov:used": [
-        {
-          "@type": [
-            "schema:Thing",
-            "prov:Entity",
-            "nxs:BaseClass/NXinstrument"
-          ],
-          "schema:name": "(CNRS-CRPG)Nu Instruments Noblesse HR",
-          "schema:identifier": "NOBLESSE-CNRS-CRPG"
-        }
-      ],
-      "schema:location": {
-        "@type": [
-          "schema:Place",
-          "nxs:BaseClass/NXsource"
-        ],
-        "schema:identifier": "https://ror.org/011nqat45",
-        "schema:name": "Centre de Recherches Petrographiques et Geochimiques (Nancy, France)",
-        "schema:alternateName": "CNRS-CRPG"
-      },
-      "schema:mainEntity": [
-        {
-          "@type": [
-            "schema:Thing",
-            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
-          ],
-          "schema:additionalType": [
-            "MaterialSample"
-          ],
-          "schema:identifier": ["OREX-803034-0"]
-        }
-      ]
-    }
-  ],
-  "schema:variableMeasured": [
-    {
-      "@id": "#date",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Date",
-      "schema:description": "Date of analysis (month/day/year)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#sample",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Sample",
-      "schema:description": "Identifier of the Ne standard aliquot, laser chamber blank or sample aliquot",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#laserpower",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Laser power",
-      "schema:description": "Laser power used for gas extraction (X % of the total power of 32 W)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#cycles",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Cycles",
-      "schema:description": "Number of cycles for the neon analysis",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#trap",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Trap",
-      "schema:description": "Trap current used (in \ud835\udecdA)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#20ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "20Ne",
-      "schema:description": "Measured 20Ne ion signal, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#20ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "\u00b120Ne",
-      "schema:description": "Uncertainty of the 20Ne ion signal, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#21ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "21Ne",
-      "schema:description": "Measured 21Ne ion signal, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#21ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "\u00b121Ne",
-      "schema:description": "Uncertainty of the 21Ne ion signal, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#22ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "22Ne",
-      "schema:description": "Measured 22Ne ion signal, in counts per second (cps), corrected for CO2++",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#22ne",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "\u00b122Ne",
-      "schema:description": "Uncertainty of the 22Ne ion signal, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#40ar",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "40Ar++",
-      "schema:description": "Measured 40Ar++ ion signal at mass 20, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#co2",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "CO2+",
-      "schema:description": "Measured CO2+ ion signal at mass 44, in counts per second (cps)",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#2022",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "20/22",
-      "schema:description": "Measured 20Ne/22Ne ratio, corrected for CO2++",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#2022",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "\u00b120/22",
-      "schema:description": "Uncertainty of the 20Ne/22Ne ratio",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#2122",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "21/22",
-      "schema:description": "Measured 21Ne/22Ne ratio, corrected for CO2++",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#2122",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "\u00b121/22",
-      "schema:description": "Uncertainty of the 21Ne/22Ne ratio",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#dilution",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Dilution",
-      "schema:description": "Volume-dilution-factor",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    }
-  ],
+  "schema:datePublished": "2025-12-31",
+  "schema:description": "Step-heating Ne-Ar-N analyses of single aggregate particle OREX-803034-0 (0.1578 mg) were performed using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility.",
   "schema:distribution": [
     {
+      "@id": "_:b0",
       "@type": [
         "schema:DataDownload"
       ],
+      "schema:contentUrl": "",
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
       "schema:encodingFormat": [
         "application/zip"
       ],
-      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
-      "schema:contentUrl": "",
       "schema:hasPart": [
         {
-          "@type": "schema:Dataset",
-          "@id": "#5ae22fc68e97feb8f07da023920e2f0e",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_NGNSMSRaw_11.csv",
-          "schema:description": "Raw neon data acquired with the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:f962af0b2e2f02752aa258a58cede1263f05c7a78e3b9d162da960368f7dc54b ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 4808,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "text/csv"
+          "@id": "http://example.org/base/#5ae22fc68e97feb8f07da023920e2f0e",
+          "@type": [
+            "schema:Dataset"
           ],
-          "fileDetail": {
+          "schema:description": "Raw neon data acquired with the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:f962af0b2e2f02752aa258a58cede1263f05c7a78e3b9d162da960368f7dc54b ; ",
+          "schema:encodingFormat": "text/csv",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_NGNSMSRaw_11.csv",
+          "schema:size": {
+            "@id": "_:b1",
             "@type": [
-              "cdi:PhysicalDataSet",
-              "ada:tabularData"
+              "schema:QuantitativeValue"
             ],
-            "componentType": {
-              "@type": "ada:NGNSMSRaw"
-            },
-            "cdi:isStructuredBy": {
-              "@type": "cdi:WideDataStructure",
-              "cdi:has_DataStructureComponent": [
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#date"
-                  },
-                  "schema:name": "Date",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 1,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#sample"
-                  },
-                  "schema:name": "Sample",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 2,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#laserpower"
-                  },
-                  "schema:name": "Laser power",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 3,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#cycles"
-                  },
-                  "schema:name": "Cycles",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 4,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#trap"
-                  },
-                  "schema:name": "Trap",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 5,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#20ne"
-                  },
-                  "schema:name": "20Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 6,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#20ne"
-                  },
-                  "schema:name": "\u00b120Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 7,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#21ne"
-                  },
-                  "schema:name": "21Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 8,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#21ne"
-                  },
-                  "schema:name": "\u00b121Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 9,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#22ne"
-                  },
-                  "schema:name": "22Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 10,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#22ne"
-                  },
-                  "schema:name": "\u00b122Ne",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 11,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#40ar"
-                  },
-                  "schema:name": "40Ar++",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 12,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#co2"
-                  },
-                  "schema:name": "CO2+",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 13,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#2022"
-                  },
-                  "schema:name": "20/22",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 14,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#2022"
-                  },
-                  "schema:name": "\u00b120/22",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 15,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#2122"
-                  },
-                  "schema:name": "21/22",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 16,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#2122"
-                  },
-                  "schema:name": "\u00b121/22",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 17,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#dilution"
-                  },
-                  "schema:name": "Dilution",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 18,
-                    "cdi:physicalDataType": "None"
-                  }
-                }
-              ]
-            },
-            "headerRowCount": 1,
-            "countRows": 42,
-            "countColumns": 18,
-            "xCoordCol": "None",
-            "yCoordCol": "None",
-            "zCoordCol": "None"
+            "schema:unitText": "byte",
+            "schema:value": 4808
           }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#d640488b65b53b6bcc1abcb66b3cde7e",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_NGNSMSRaw_11.yaml",
+          "@id": "http://example.org/base/#d640488b65b53b6bcc1abcb66b3cde7e",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#5ae22fc68e97feb8f07da023920e2f0e",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Raw neon data acquired with the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:f962af0b2e2f02752aa258a58cede1263f05c7a78e3b9d162da960368f7dc54b ; ",
+            "schema:encodingFormat": "text/csv",
+            "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_NGNSMSRaw_11.csv",
+            "schema:size": {
+              "@id": "_:b1",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 4808
+            }
+          },
           "schema:description": "sha256:28956d5947eedf6cc3e4f38924dbd5db1890e5773a458608c08f0065c31b64b3 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_NGNSMSRaw_11.yaml",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 2281,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#5ae22fc68e97feb8f07da023920e2f0e"
-            }
-          ]
+            "@id": "_:b2",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 2281
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#3eaec0f86900d58d874bd7c18bedb156",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_logFile_1.pdf",
+          "@id": "http://example.org/base/#3eaec0f86900d58d874bd7c18bedb156",
+          "@type": [
+            "schema:Dataset"
+          ],
           "schema:description": "Run log of step-heating neon, argon, and nitrogen analyses of single OSIRIS-REx aggregate particles using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:0204277917f82a93082549d6a8e28859db70c1408a69f6485aac1c5045b168fb ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_logFile_1.pdf",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 24661,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
+            "@id": "_:b3",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 24661
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#1be6d4504e4304b01315215dd21f12cf",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_logFile_1.yaml",
+          "@id": "http://example.org/base/#1be6d4504e4304b01315215dd21f12cf",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#3eaec0f86900d58d874bd7c18bedb156",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Run log of step-heating neon, argon, and nitrogen analyses of single OSIRIS-REx aggregate particles using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:0204277917f82a93082549d6a8e28859db70c1408a69f6485aac1c5045b168fb ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_logFile_1.pdf",
+            "schema:size": {
+              "@id": "_:b3",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 24661
+            }
+          },
           "schema:description": "sha256:55f43d419986495f8b032d9441eae5ce987010ad48731a51dbbbed347f36c64b ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_logFile_1.yaml",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 516,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#3eaec0f86900d58d874bd7c18bedb156"
-            }
-          ]
+            "@id": "_:b4",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 516
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#119a3e2d68e13f7a68ed6cbdf0e2ac4d",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_methodDescription_1.pdf",
+          "@id": "http://example.org/base/#119a3e2d68e13f7a68ed6cbdf0e2ac4d",
+          "@type": [
+            "schema:Dataset"
+          ],
           "schema:description": "Naming scheme and method description for neon, argon, and nitrogen data acquired using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:9f492c17e6730b7832e6fbf67b7e9ca4cd9b3076e8cc96d71a4d63e234fff449 ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_methodDescription_1.pdf",
           "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 56062,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
+            "@id": "_:b5",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 56062
+          }
         },
         {
-          "@type": "schema:Dataset",
-          "@id": "#6720072d494f6ec857a89be51a601a71",
-          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_methodDescription_1.yaml",
-          "schema:description": "sha256:69df351ae7c7902520684f6183b808be15bce84616662567bd7dc8ae9a70dd56 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 505,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
+          "@id": "http://example.org/base/#6720072d494f6ec857a89be51a601a71",
+          "@type": [
+            "schema:Dataset"
           ],
-          "schema:about": [
-            {
-              "@id": "#119a3e2d68e13f7a68ed6cbdf0e2ac4d"
+          "schema:about": {
+            "@id": "http://example.org/base/#119a3e2d68e13f7a68ed6cbdf0e2ac4d",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Naming scheme and method description for neon, argon, and nitrogen data acquired using the Noblesse-HR noble gas mass spectrometer at CRPGs noble gas facility sha256:9f492c17e6730b7832e6fbf67b7e9ca4cd9b3076e8cc96d71a4d63e234fff449 ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_methodDescription_1.pdf",
+            "schema:size": {
+              "@id": "_:b5",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 56062
             }
-          ]
+          },
+          "schema:description": "sha256:69df351ae7c7902520684f6183b808be15bce84616662567bd7dc8ae9a70dd56 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240118_NG-NS-MS_CNRS-CRPG_OREX-803034-0_1_methodDescription_1.yaml",
+          "schema:size": {
+            "@id": "_:b6",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 505
+          }
         }
       ]
     }
   ],
+  "schema:funding": [
+    {
+      "@id": "_:b7",
+      "@type": [
+        "schema:MonetaryGrant"
+      ],
+      "schema:description": "This material is supported by NASA under contract NNM10AA11C issued through the New Frontiers program. This work was cofunded by the European Union (ERC, IRONIS, 10187562). Support from the French Space Agency (CNES) is also acknowledged.",
+      "schema:name": "Missing"
+    }
+  ],
+  "schema:identifier": {
+    "@id": "_:b8",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:url": "https://doi.org/10.60707/08fx-rj13",
+    "schema:value": "10.60707/08fx-rj13"
+  },
+  "schema:license": [
+    "missing"
+  ],
+  "schema:measurementTechnique": [
+    {
+      "@id": "_:b9",
+      "@type": [
+        "schema:DefinedTerm"
+      ],
+      "schema:name": "Noble gas and Nitrogen Static Mass Spectrometry",
+      "schema:termCode": "NG-NS-MS"
+    }
+  ],
+  "schema:name": "Neon, argon, and nitrogen analysis using the Noblesse-HR",
   "schema:subjectOf": {
     "@id": "ada:metadata_524",
-    "@type": "schema:Dataset",
-    "schema:dateModified": "2024-06-28",
-    "schema:maintainer": {
-      "@id": "https://ada.org/person/3479",
-      "@type": "schema:Person",
-      "schema:name": "Richard, Stephen M.",
-      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-      "schema:email": "smrTucson@email.org"
-    },
-    "schema:about": {
-      "@id": "ada:record_524"
-    },
-    "schema:description": "metadata about documentation for https://doi.org/10.60707/08fx-rj13",
+    "@type": [
+      "schema:Dataset"
+    ],
     "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/manifest/1.1"
+      },
       {
         "@id": "ada:tabularData"
       },
@@ -702,7 +263,7 @@
         "@id": "ada:NGNSMSRaw"
       },
       {
-        "@id": "CDIF_basic_1.0"
+        "@id": "http://example.org/base/CDIF_basic_1.0"
       },
       {
         "@id": "ada:methodDescription"
@@ -716,6 +277,250 @@
       {
         "@id": "ada:logFile"
       }
-    ]
-  }
+    ],
+    "schema:about": {
+      "@id": "ada:record_524"
+    },
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:dateModified": "2024-06-28",
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/08fx-rj13",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    }
+  },
+  "schema:url": "",
+  "schema:variableMeasured": [
+    {
+      "@id": "http://example.org/base/#date",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Date of analysis (month/day/year)",
+      "schema:name": "Date",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#sample",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Identifier of the Ne standard aliquot, laser chamber blank or sample aliquot",
+      "schema:name": "Sample",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#laserpower",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Laser power used for gas extraction (X % of the total power of 32 W)",
+      "schema:name": "Laser power",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#cycles",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Number of cycles for the neon analysis",
+      "schema:name": "Cycles",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#trap",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Trap current used (in \ud835\udecdA)",
+      "schema:name": "Trap",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#20ne",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Measured 20Ne ion signal, in counts per second (cps)",
+        "Uncertainty of the 20Ne ion signal, in counts per second (cps)"
+      ],
+      "schema:name": [
+        "20Ne",
+        "\u00b120Ne"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#21ne",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Measured 21Ne ion signal, in counts per second (cps)",
+        "Uncertainty of the 21Ne ion signal, in counts per second (cps)"
+      ],
+      "schema:name": [
+        "21Ne",
+        "\u00b121Ne"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#22ne",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Measured 22Ne ion signal, in counts per second (cps), corrected for CO2++",
+        "Uncertainty of the 22Ne ion signal, in counts per second (cps)"
+      ],
+      "schema:name": [
+        "22Ne",
+        "\u00b122Ne"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#40ar",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Measured 40Ar++ ion signal at mass 20, in counts per second (cps)",
+      "schema:name": "40Ar++",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#co2",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Measured CO2+ ion signal at mass 44, in counts per second (cps)",
+      "schema:name": "CO2+",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#2022",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Measured 20Ne/22Ne ratio, corrected for CO2++",
+        "Uncertainty of the 20Ne/22Ne ratio"
+      ],
+      "schema:name": [
+        "20/22",
+        "\u00b120/22"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#2122",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "Measured 21Ne/22Ne ratio, corrected for CO2++",
+        "Uncertainty of the 21Ne/22Ne ratio"
+      ],
+      "schema:name": [
+        "21/22",
+        "\u00b121/22"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#dilution",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Volume-dilution-factor",
+      "schema:name": "Dilution",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b10",
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:identifier": "20240118_ng-ns-ms_cnrs-crpg_orex-803034-0_1",
+      "schema:location": {
+        "@id": "_:b11",
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:alternateName": [
+          "CNRS-CRPG"
+        ],
+        "schema:identifier": "https://ror.org/011nqat45",
+        "schema:name": "Centre de Recherches Petrographiques et Geochimiques (Nancy, France)"
+      },
+      "schema:mainEntity": {
+        "@id": "_:b12",
+        "@type": [
+          "schema:Thing",
+          "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+        ],
+        "schema:additionalType": [
+          "MaterialSample"
+        ],
+        "schema:identifier": "OREX-803034-0"
+      },
+      "schema:startDate": "2024-01-18T15:41:27.994673Z"
+    }
+  ],
+  "schema:dateModified": "2025-12-31"
 }

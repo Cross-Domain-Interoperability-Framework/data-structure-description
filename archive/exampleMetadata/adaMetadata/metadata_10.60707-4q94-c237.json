@@ -1,664 +1,279 @@
 {
-  "@schema": "https://w3id.org/adaJSONLD/schema/1.0",
   "@context": {
-    "schema": "https://schema.org/",
+    "schema": "http://schema.org/",
     "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
     "geosparql": "http://www.opengis.net/ont/geosparql#",
     "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
     "ada": "https://ada.astromat.org/metadata/",
-    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/"
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/"
   },
   "@id": "ada:record_926",
   "@type": [
     "schema:Dataset",
     "schema:Product"
   ],
-  "schema:name": "NanoSIMS O isotopic analysis of precursor silicates in sample OREX-501059-0",
-  "schema:description": "Small oliivne, pyrovene and other silicate and oxide phases exist within the matrix of Bennu samples. These phases are the remnants of the precursor components that formed the original Bennu parent asteroid. The oxygen isotopic composititon of these grains helps constrain the nature of what Bennus parent formed from, and where in the protoplanetary disk this happened.",
-  "schema:identifier": {
-    "@type": "schema:PropertyValue",
-    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
-    "schema:value": "10.60707/4q94-c237",
-    "schema:url": "https://doi.org/10.60707/4q94-c237"
-  },
   "schema:additionalType": [
     "Nanoscale secondary ion mass spectrometry"
   ],
-  "schema:datePublished": "2025-12-31",
-  "schema:license": [
-    "missing"
+  "schema:contributor": [
+    {
+      "@id": "_:b0",
+      "@type": [
+        "schema:Role"
+      ],
+      "schema:contributor": {
+        "@id": "https://ada.org/person/437",
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": "xuchao.zhao@open.ac.uk",
+        "schema:identifier": "",
+        "schema:name": ""
+      },
+      "schema:roleName": "Other"
+    }
   ],
-  "schema:url": "",
   "schema:creator": {
     "@list": [
       {
         "@id": "https://ada.org/person/5489",
-        "@type": "schema:Person",
-        "schema:name": "Franchi, Ian",
+        "@type": [
+          "schema:Person"
+        ],
+        "schema:email": "ian.franchi@open.ac.uk",
         "schema:identifier": "https://orcid.org/0000-0003-4151-0480",
-        "schema:email": "ian.franchi@open.ac.uk"
+        "schema:name": "Franchi, Ian"
       }
     ]
   },
-  "schema:contributor": [
+  "schema:datePublished": "2025-12-31",
+  "schema:description": "Small oliivne, pyrovene and other silicate and oxide phases exist within the matrix of Bennu samples. These phases are the remnants of the precursor components that formed the original Bennu parent asteroid. The oxygen isotopic composititon of these grains helps constrain the nature of what Bennus parent formed from, and where in the protoplanetary disk this happened.",
+  "schema:distribution": [
     {
-      "@type": "schema:Role",
-      "schema:roleName": "Other",
-      "schema:contributor": {
-        "@type": "schema:Person",
-        "@id": "https://ada.org/person/437",
-        "schema:name": "",
-        "schema:identifier": "",
-        "schema:email": "xuchao.zhao@open.ac.uk"
-      }
+      "@id": "_:b1",
+      "@type": [
+        "schema:DataDownload"
+      ],
+      "schema:contentUrl": "",
+      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
+      "schema:encodingFormat": [
+        "application/zip"
+      ],
+      "schema:hasPart": [
+        {
+          "@id": "http://example.org/base/#70b46947c29eb75e9f88758e7c23d8da",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "processed NanoSIMS data sha256:69dab2eb772473588b46df4a54f6fde53c4a3d28f8d0fed76eb9608291bf5db5 ; ",
+          "schema:encodingFormat": "text/csv",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_NanoSIMSTabular_1.csv",
+          "schema:size": {
+            "@id": "_:b2",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 2587
+          }
+        },
+        {
+          "@id": "http://example.org/base/#941577854dc8418ba9e5cd85265ec062",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#70b46947c29eb75e9f88758e7c23d8da",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "processed NanoSIMS data sha256:69dab2eb772473588b46df4a54f6fde53c4a3d28f8d0fed76eb9608291bf5db5 ; ",
+            "schema:encodingFormat": "text/csv",
+            "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_NanoSIMSTabular_1.csv",
+            "schema:size": {
+              "@id": "_:b2",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 2587
+            }
+          },
+          "schema:description": "sha256:d196b7577c7997ba0e3f4f1cd182c4164b8b67174a4ae17b890820aaf41720e8 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_NanoSIMSTabular_1.yaml",
+          "schema:size": {
+            "@id": "_:b3",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 2714
+          }
+        },
+        {
+          "@id": "http://example.org/base/#cc0b43216458832aec7b9bd02a2cb38f",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "Secondary electron images showing the analysis location of precursor silicate olivine and pyroxene grains analysed sha256:145bc3789183c2fb5913c81b0be04d1cf7f58ddaec9d5625b1f066bb0e5725b1 ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_analysisLocation_1.pdf",
+          "schema:size": {
+            "@id": "_:b4",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 268299
+          }
+        },
+        {
+          "@id": "http://example.org/base/#c15d2c4716524c2128d338ada63f21f6",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#cc0b43216458832aec7b9bd02a2cb38f",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "Secondary electron images showing the analysis location of precursor silicate olivine and pyroxene grains analysed sha256:145bc3789183c2fb5913c81b0be04d1cf7f58ddaec9d5625b1f066bb0e5725b1 ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_analysisLocation_1.pdf",
+            "schema:size": {
+              "@id": "_:b4",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 268299
+            }
+          },
+          "schema:description": "sha256:fd8403ef61701886a02812b13f916040f9a2fdd45b53ca060bf8974e3f7e5e72 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_analysisLocation_1.yaml",
+          "schema:size": {
+            "@id": "_:b5",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 439
+          }
+        },
+        {
+          "@id": "http://example.org/base/#dc0047491573e855628e09ee126fcba2",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:description": "description of the methods and data processing sha256:b431a0f9fef33e3c8a1f5bdc9be8b1894787bda143bdbb70f87ecfc00da5ba0d ; ",
+          "schema:encodingFormat": "application/pdf",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_methodDescription_1.pdf",
+          "schema:size": {
+            "@id": "_:b6",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 96923
+          }
+        },
+        {
+          "@id": "http://example.org/base/#7e7fdc06114509464ae86d386166b8d2",
+          "@type": [
+            "schema:Dataset"
+          ],
+          "schema:about": {
+            "@id": "http://example.org/base/#dc0047491573e855628e09ee126fcba2",
+            "@type": [
+              "schema:Dataset"
+            ],
+            "schema:description": "description of the methods and data processing sha256:b431a0f9fef33e3c8a1f5bdc9be8b1894787bda143bdbb70f87ecfc00da5ba0d ; ",
+            "schema:encodingFormat": "application/pdf",
+            "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_methodDescription_1.pdf",
+            "schema:size": {
+              "@id": "_:b6",
+              "@type": [
+                "schema:QuantitativeValue"
+              ],
+              "schema:unitText": "byte",
+              "schema:value": 96923
+            }
+          },
+          "schema:description": "sha256:914c6ab72897061528668fc4456e6bd2b8bc93e324ba1ea707af53f94ce94429 ; ",
+          "schema:encodingFormat": "application/yaml",
+          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_methodDescription_1.yaml",
+          "schema:size": {
+            "@id": "_:b7",
+            "@type": [
+              "schema:QuantitativeValue"
+            ],
+            "schema:unitText": "byte",
+            "schema:value": 368
+          }
+        }
+      ]
     }
   ],
   "schema:funding": [
     {
-      "@type": "schema:MonetaryGrant",
-      "schema:description": "STFC Grant ST/Y000188/1"
+      "@id": "_:b8",
+      "@type": [
+        "schema:MonetaryGrant"
+      ],
+      "schema:description": "STFC Grant ST/Y000188/1",
+      "schema:name": "Missing"
     }
   ],
-  "schema:measurementTechnique": {
-    "@type": "schema:DefinedTerm",
-    "schema:name": "Nanoscale secondary ion mass spectrometry",
-    "schema:termCode": "NanoSIMS"
+  "schema:identifier": {
+    "@id": "_:b9",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://registry.identifiers.org/registry/doi",
+    "schema:url": "https://doi.org/10.60707/4q94-c237",
+    "schema:value": "10.60707/4q94-c237"
   },
-  "prov:wasGeneratedBy": [
+  "schema:license": [
+    "missing"
+  ],
+  "schema:measurementTechnique": [
     {
+      "@id": "_:b10",
       "@type": [
-        "schema:Event",
-        "xas:AnalysisEvent",
-        "prov:Activity"
+        "schema:DefinedTerm"
       ],
-      "schema:startDate": "2024-01-11T12:00:00Z",
-      "schema:identifier": "20240111_nanosims_ou_orex-501059-0_1",
-      "prov:used": [
-        {
-          "@type": [
-            "schema:Thing",
-            "prov:Entity",
-            "nxs:BaseClass/NXinstrument"
-          ],
-          "schema:name": "(OU)NanoSIMS 50L",
-          "schema:identifier": "NS50L-OU"
-        }
-      ],
-      "schema:location": {
-        "@type": [
-          "schema:Place",
-          "nxs:BaseClass/NXsource"
-        ],
-        "schema:identifier": "https://ror.org/05mzfcs16",
-        "schema:name": "Open University",
-        "schema:alternateName": "OU"
-      },
-      "schema:mainEntity": [
-        {
-          "@type": [
-            "schema:Thing",
-            "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
-          ],
-          "schema:additionalType": [
-            "MaterialSample"
-          ],
-          "schema:identifier": ["OREX-501059-0"]
-        }
-      ]
+      "schema:name": "Nanoscale secondary ion mass spectrometry",
+      "schema:termCode": "NanoSIMS"
     }
   ],
-  "schema:variableMeasured": [
-    {
-      "@id": "#samplename",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Sample Name",
-      "schema:description": "user defined Sample Name",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#x",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "X",
-      "schema:description": "X coordinate",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#y",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Y",
-      "schema:description": "Y coordinate",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#z",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "Z",
-      "schema:description": "Z coordinate",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#16ocounts",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "16O Counts",
-      "schema:description": "Total counts of 16O during measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#17o16oratio",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "17O/16O Ratio",
-      "schema:description": "Measured 17O/16O ratio",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17osmow",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d17O SMOW",
-      "schema:description": "Standard corrected d17O value",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17o2sigmaerr",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d17O 2 sigma err",
-      "schema:description": "the calculated 2 sigma error associated with the 17O/16O spot analysis and calibration",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#17o16opoisson",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "17O/16O Poisson",
-      "schema:description": "instrument calculated error based on counting statistics only for the sample measurement only",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#16o18oratio",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "16O/18O Ratio",
-      "schema:description": "Measured 18O/16O ratio",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d18osmow",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d18O SMOW",
-      "schema:description": "Standard corrected d18O value",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d18o2sigmaerr",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "d18O 2 sigma err",
-      "schema:description": "the calculated 2 sigma error associated with the 18O/16O spot analysis and calibration",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#18o16opoisson",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "18O/16O Poisson",
-      "schema:description": "instrument calculated error based on counting statistics only for the sample measurement only",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17o",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "D17O",
-      "schema:description": "Cap delta 17O measurement",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#d17o2sigmaerr",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "D17O 2 sigma err",
-      "schema:description": "the calculated 2 sigma error associated with the D17O spot analysis based on the standard deviation of standards analysed alongside the sample",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    },
-    {
-      "@id": "#16ohon17o",
-      "@type": [
-        "schema:PropertyValue"
-      ],
-      "schema:name": "16OH on 17O",
-      "schema:description": "Calculated contribution of 16OH to d17O",
-      "schema:propertyID": [
-        "missing"
-      ],
-      "schema:unitText": "missing"
-    }
-  ],
-  "schema:distribution": [
-    {
-      "@type": [
-        "schema:DataDownload"
-      ],
-      "schema:encodingFormat": [
-        "application/zip"
-      ],
-      "schema:description": "this data product is distributed in zip archive; contents of the archive are listed as parts. The component files are not individually accessible",
-      "schema:contentUrl": "",
-      "schema:hasPart": [
-        {
-          "@type": "schema:Dataset",
-          "@id": "#70b46947c29eb75e9f88758e7c23d8da",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_NanoSIMSTabular_1.csv",
-          "schema:description": "processed NanoSIMS data sha256:69dab2eb772473588b46df4a54f6fde53c4a3d28f8d0fed76eb9608291bf5db5 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 2587,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "text/csv"
-          ],
-          "fileDetail": {
-            "@type": [
-              "cdi:PhysicalDataSet",
-              "ada:tabularData"
-            ],
-            "componentType": {
-              "@type": "ada:NanoSIMSTabular"
-            },
-            "cdi:isStructuredBy": {
-              "@type": "cdi:WideDataStructure",
-              "cdi:has_DataStructureComponent": [
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#samplename"
-                  },
-                  "schema:name": "Sample Name",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 2,
-                    "cdi:physicalDataType": "string"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#x"
-                  },
-                  "schema:name": "X",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 3,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#y"
-                  },
-                  "schema:name": "Y",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 4,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#z"
-                  },
-                  "schema:name": "Z",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 5,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#16ocounts"
-                  },
-                  "schema:name": "16O Counts",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 6,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#17o16oratio"
-                  },
-                  "schema:name": "17O/16O Ratio",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 7,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17osmow"
-                  },
-                  "schema:name": "d17O SMOW",
-                  "schema:unitText": "permil",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 8,
-                    "cdi:physicalDataType": "decimal"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17o2sigmaerr"
-                  },
-                  "schema:name": "d17O 2 sigma err",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 9,
-                    "cdi:physicalDataType": "decimal"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#17o16opoisson"
-                  },
-                  "schema:name": "17O/16O Poisson",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 10,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#16o18oratio"
-                  },
-                  "schema:name": "16O/18O Ratio",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 11,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d18osmow"
-                  },
-                  "schema:name": "d18O SMOW",
-                  "schema:unitText": "permil",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 12,
-                    "cdi:physicalDataType": "decimal"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d18o2sigmaerr"
-                  },
-                  "schema:name": "d18O 2 sigma err",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 13,
-                    "cdi:physicalDataType": "decimal"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#18o16opoisson"
-                  },
-                  "schema:name": "18O/16O Poisson",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 14,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17o"
-                  },
-                  "schema:name": "D17O",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 15,
-                    "cdi:physicalDataType": "decimal"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#d17o2sigmaerr"
-                  },
-                  "schema:name": "D17O 2 sigma err",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 16,
-                    "cdi:physicalDataType": "None"
-                  }
-                },
-                {
-                  "@type": "cdi:MeasureComponent",
-                  "cdi:isDefinedBy_InstanceVariable": {
-                    "@id": "#16ohon17o"
-                  },
-                  "schema:name": "16OH on 17O",
-                  "schema:unitText": "None",
-                  "cdi:has": {
-                    "@type": "cdi:ValueMapping",
-                    "cdi:hasIndex": 17,
-                    "cdi:physicalDataType": "None"
-                  }
-                }
-              ]
-            },
-            "headerRowCount": 1,
-            "countRows": 11,
-            "countColumns": 17,
-            "xCoordCol": "2",
-            "yCoordCol": "3",
-            "zCoordCol": "4",
-            "coordUnits": "micrometer"
-          }
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#941577854dc8418ba9e5cd85265ec062",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_NanoSIMSTabular_1.yaml",
-          "schema:description": "sha256:d196b7577c7997ba0e3f4f1cd182c4164b8b67174a4ae17b890820aaf41720e8 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 2714,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#70b46947c29eb75e9f88758e7c23d8da"
-            }
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#cc0b43216458832aec7b9bd02a2cb38f",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_analysisLocation_1.pdf",
-          "schema:description": "Secondary electron images showing the analysis location of precursor silicate olivine and pyroxene grains analysed sha256:145bc3789183c2fb5913c81b0be04d1cf7f58ddaec9d5625b1f066bb0e5725b1 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 268299,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#c15d2c4716524c2128d338ada63f21f6",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_analysisLocation_1.yaml",
-          "schema:description": "sha256:fd8403ef61701886a02812b13f916040f9a2fdd45b53ca060bf8974e3f7e5e72 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 439,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#cc0b43216458832aec7b9bd02a2cb38f"
-            }
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#dc0047491573e855628e09ee126fcba2",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_methodDescription_1.pdf",
-          "schema:description": "description of the methods and data processing sha256:b431a0f9fef33e3c8a1f5bdc9be8b1894787bda143bdbb70f87ecfc00da5ba0d ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 96923,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/pdf"
-          ]
-        },
-        {
-          "@type": "schema:Dataset",
-          "@id": "#7e7fdc06114509464ae86d386166b8d2",
-          "schema:name": "20240111_NanoSIMS_OU_OREX-501059-0_1_methodDescription_1.yaml",
-          "schema:description": "sha256:914c6ab72897061528668fc4456e6bd2b8bc93e324ba1ea707af53f94ce94429 ; ",
-          "schema:size": {
-            "@type": "schema:QuantitativeValue",
-            "schema:value": 368,
-            "schema:unitText": "byte"
-          },
-          "schema:encodingFormat": [
-            "application/yaml"
-          ],
-          "schema:about": [
-            {
-              "@id": "#dc0047491573e855628e09ee126fcba2"
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "schema:name": "NanoSIMS O isotopic analysis of precursor silicates in sample OREX-501059-0",
   "schema:subjectOf": {
     "@id": "ada:metadata_926",
-    "@type": "schema:Dataset",
-    "schema:dateModified": "2025-01-27",
-    "schema:maintainer": {
-      "@id": "https://ada.org/person/3479",
-      "@type": "schema:Person",
-      "schema:name": "Richard, Stephen M.",
-      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-      "schema:email": "smrTucson@email.org"
-    },
-    "schema:about": {
-      "@id": "ada:record_926"
-    },
-    "schema:description": "metadata about documentation for https://doi.org/10.60707/4q94-c237",
+    "@type": [
+      "schema:Dataset"
+    ],
     "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/manifest/1.1"
+      },
       {
         "@id": "ada:image"
       },
@@ -666,7 +281,7 @@
         "@id": "ada:tabularData"
       },
       {
-        "@id": "CDIF_basic_1.0"
+        "@id": "http://example.org/base/CDIF_basic_1.0"
       },
       {
         "@id": "ada:analysisLocation"
@@ -683,6 +298,250 @@
       {
         "@id": "ada:NanoSIMSTabular"
       }
-    ]
-  }
+    ],
+    "schema:about": {
+      "@id": "ada:record_926"
+    },
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "schema:dateModified": "2025-01-27",
+    "schema:description": "metadata about documentation for https://doi.org/10.60707/4q94-c237",
+    "schema:maintainer": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    }
+  },
+  "schema:url": "",
+  "schema:variableMeasured": [
+    {
+      "@id": "http://example.org/base/#samplename",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "user defined Sample Name",
+      "schema:name": "Sample Name",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#x",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "X coordinate",
+      "schema:name": "X",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#y",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Y coordinate",
+      "schema:name": "Y",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#z",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Z coordinate",
+      "schema:name": "Z",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#16ocounts",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Total counts of 16O during measurement",
+      "schema:name": "16O Counts",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#17o16oratio",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Measured 17O/16O ratio",
+      "schema:name": "17O/16O Ratio",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d17osmow",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Standard corrected d17O value",
+      "schema:name": "d17O SMOW",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d17o2sigmaerr",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": [
+        "the calculated 2 sigma error associated with the 17O/16O spot analysis and calibration",
+        "the calculated 2 sigma error associated with the D17O spot analysis based on the standard deviation of standards analysed alongside the sample"
+      ],
+      "schema:name": [
+        "d17O 2 sigma err",
+        "D17O 2 sigma err"
+      ],
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#17o16opoisson",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "instrument calculated error based on counting statistics only for the sample measurement only",
+      "schema:name": "17O/16O Poisson",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#16o18oratio",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Measured 18O/16O ratio",
+      "schema:name": "16O/18O Ratio",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d18osmow",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Standard corrected d18O value",
+      "schema:name": "d18O SMOW",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d18o2sigmaerr",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "the calculated 2 sigma error associated with the 18O/16O spot analysis and calibration",
+      "schema:name": "d18O 2 sigma err",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#18o16opoisson",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "instrument calculated error based on counting statistics only for the sample measurement only",
+      "schema:name": "18O/16O Poisson",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#d17o",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Cap delta 17O measurement",
+      "schema:name": "D17O",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    },
+    {
+      "@id": "http://example.org/base/#16ohon17o",
+      "@type": [
+        "schema:PropertyValue"
+      ],
+      "schema:description": "Calculated contribution of 16OH to d17O",
+      "schema:name": "16OH on 17O",
+      "schema:propertyID": [
+        "missing"
+      ],
+      "schema:unitText": "missing"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b11",
+      "@type": [
+        "schema:Event",
+        "xas:AnalysisEvent",
+        "prov:Activity"
+      ],
+      "schema:identifier": "20240111_nanosims_ou_orex-501059-0_1",
+      "schema:location": {
+        "@id": "_:b12",
+        "@type": [
+          "schema:Place",
+          "nxs:BaseClass/NXsource"
+        ],
+        "schema:alternateName": [
+          "OU"
+        ],
+        "schema:identifier": "https://ror.org/05mzfcs16",
+        "schema:name": "Open University"
+      },
+      "schema:mainEntity": {
+        "@id": "_:b13",
+        "@type": [
+          "schema:Thing",
+          "https://w3id.org/isample/vocabulary/materialsampleobjecttype/materialsample"
+        ],
+        "schema:additionalType": [
+          "MaterialSample"
+        ],
+        "schema:identifier": "OREX-501059-0"
+      },
+      "schema:startDate": "2024-01-11T12:00:00Z"
+    }
+  ],
+  "schema:dateModified": "2025-12-31"
 }

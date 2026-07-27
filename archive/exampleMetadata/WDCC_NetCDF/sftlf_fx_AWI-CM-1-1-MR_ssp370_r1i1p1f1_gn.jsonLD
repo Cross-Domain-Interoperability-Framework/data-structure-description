@@ -1,225 +1,204 @@
 {
-	"@context": {
-		"@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-		"schema": "http://schema.org/",
-		"dcterms": "http://purl.org/dc/terms/",
-		"geosparql": "http://www.opengis.net/ont/geosparql#",
-		"spdx": "http://spdx.org/rdf/terms#",
-		"cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
-		"time": "http://www.w3.org/2006/time#",
-		"skos": "http://www.w3.org/2004/02/skos/core#",
-		"nc": "https://ex.org/netcdf/",
-		"esgf": "http://purl.org/esgf/definitions/",
-		"prov": "http://www.w3.org/ns/prov#"
-	},
-	"@graph": [
-		{
-			"@id": "nc:4h6up",
-			"@type": [
-				"schema:Dataset",
-				"schema:Product"
-			],
-			"schema:additionalType": "model-output",
-			"schema:name": "AWI-CM-1-1-MR output prepared for CMIP6",
-			"schema:description": "experiment: gap-filling scenario reaching 7.0 based on SSP3; source = AWI-CM 1.1 MR (2018);  aerosol: none; atmos: ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km); atmosChem: none; land: JSBACH 3.20; landIce: none; ocean: FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m); ocnBgchem: none; seaIce: FESOM 1.4",
-			"schema:identifier": {
-				"@type": "schema:PropertyValue",
-				"schema:propertyID": "https://doi.org/10.17487/RFC3650",
-				"schema:value": "hdl:21.14100/23bb22a0-c324-4ed8-aa40-4cf57c3a3e3f",
-				"schema:url": "https://hdl.handle.net/21.14100/23bb22a0-c324-4ed8-aa40-4cf57c3a3e3f"
-			},
-			"schema:dateModified": "2020-06-02T10:11:14Z",
-			"schema:publisher": {
-				"@type": "schema:Organization",
-				"@id": "https://ror.org/032e6b942",
-				"schema:name": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research",
-				"schema:identifier": "https://ror.org/032e6b942",
-				"schema:address": "Am Handelshafen 12, 27570 Bremerhaven, Germany"
-			},
-			"schema:license": ["Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."],
-			"schema:distribution": [
-				{
-					"@type": [
-						"schema:DataDownload",
-						"cdi:PhysicalDataSet"
-					],
-					"schema:contentUrl": "http://esgf3.dkrz.de/thredds/fileServer/cmip6/ScenarioMIP/AWI/AWI-CM-1-1-MR/ssp370/r1i1p1f1/fx/sftlf/gn/v20200511/sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.nc",
-					"spdx:checksum": {
-						"@type": "spdx:Checksum",
-						"spdx:algorithm": "spdx:checksumAlgorithm_SHA256",
-						"spdx:checksumValue": "11402560ac58899ebf139a0374502710b926fff366ca5c0f52fbd492377aa975"
-					},
-					"schema:description": "Distribution = PhysicalDataSet NetCDF file",
-					"schema:contentSize": "55703 kb",
-					"schema:encodingFormat": ["application/x-netcdf;profile='cf'"],
-					"dcterms:conformsTo": ["CF-1.7 CMIP-6.2"],
-					"cdi:allowsDuplicates": false,
-					"cdi:isStructuredBy": {
-						"@type": "DimensionalDataStructure",
-						"schema:description": "not all the variables are described in this test example",
-						"has_DataStructureComponent": [
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:latitude"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "lat",
-									"length": 192
-								}
-							},
-							{
-								"@type": "DimensionComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:longitude"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "lon",
-									"length": 384
-								}
-							},
-							{
-								"@type": "MeasureComponent",
-								"isDefinedBy_InstanceVariable": {"@id": "esgf:land_area_fraction"},
-								"has": {
-									"@type": "ValueMapping",
-									"locator": "sftlf(lat, lon)",
-									"shape": [
-										192,
-										384
-									]
-								}
-							}
-						],
-						"allowsDuplicates": false
-					}
-				}
-			],
-			"schema:keywords": [
-				"land area fraction",
-				"CMIP6"
-			],
-			"prov:wasGeneratedBy": {
-				"@type": [
-					"schema:Event",
-					"schema:Product",
-					"prov:Activity"
-				],
-				"schema:startDate": "2008-04-10T21:58:50",
-				"prov:used": [
-					{
-						"@type": ["schema:SoftwareApplication"],
-						"schema:name": "CMIP6 model",
-						"schema:description": "2020-04-21T15:15:03Z ; CMOR rewrote data to be consistent with CMIP6, CF-1.7 CMIP-6.2 and CF standards.; 2020-04-21T15:14:47Z MIP Convert v1.3.4, Python v2.7.16, Iris v2.2.0, Numpy v1.15.4, cftime v1.0.0b1.",
-						"schema:version": "3.4.0",
-						"schema:identifier": ""
-					}
-				]
-			},
-			"schema:variableMeasured": [
-				{
-					"@id": "esgf:land_area_fraction",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:name": "sftlf",
-					"schema:alternateName": "Land area fraction",
-					"schema:description": "Percentage of the grid  cell occupied by land (including lakes)\"",
-					"schema:propertyID": "esfg:land_area_fractionConcept",
-					"schema:unitText": "percent",
-					"cdi:identifier": "",
-					"cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"cdi:uses": "land_area_fractionConcept",
-					"cdi:name": "sftlf",
-					"cdi:displayLabel": "Land area fraction",
-					"missing_value": 1e+20,
-					"defaultFillValue": 1e+20
-				},
-				{
-					"@id": "esgf:latitude",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:description": "",
-					"schema:propertyID": "esgf:latitudeConcept",
-					"schema:unitText": "degree",
-					"schema:name": "latitude",
-					"schema:alternateName": "Latitude",
-					"physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"identifier": "",
-					"uses": "esgf:latitudeConcept",
-					"name": "latitude",
-					"displayLabel": "Latitude",
-					"schema:minValue": -89.375,
-					"schema:maxValue": 89.375
-				},
-				{
-					"@id": "esgf:longitude",
-					"@type": [
-						"cdi:InstanceVariable",
-						"schema:PropertyValue"
-					],
-					"schema:description": "longitude description",
-					"schema:propertyID": "esgf:longitudeConcept",
-					"schema:unitText": "degree",
-					"schema:name": "longitude",
-					"schema:alternateName": "Longitude",
-					"cdi:physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
-					"cdi:identifier": "",
-					"cdi:uses": "esgf:longitudeConcept",
-					"cdi:name": "longitude",
-					"cdi:displayLabel": "Longitude",
-					"schema:minValue": 0.9375,
-					"schema:maxValue": 359.0625
-				}
-			],
-			"schema:subjectOf": {
-				"@id": "nc:ja51-pz63",
-				"@type": "schema:Dataset",
-				"schema:dateModified": "2025-11-13",
-				"schema:creator": [
-					{
-						"@id": "https://ada.org/person/3479",
-						"@type": "schema:Person",
-						"schema:name": "Richard, Stephen M.",
-						"schema:identifier": "https://orcid.org/0000-0002-7933-2154",
-						"schema:email": "smrTucson@email.org"
-					}
-				],
-				"schema:about": {"@id": "nc:4h6up"},
-				"schema:description": "metadata about documentation for NetCDF dataset",
-				"dcterms:conformsTo": [
-					{"@id": "cdif:profile_basic_1.0"},
-					{"@id": "cdif:profile_x-netcdfCDIF"}
-				]
-			}
-		},
-		{
-			"@id": "#esgfDict_3457",
-			"@type": "skos:ConceptScheme",
-			"dcterms:title": "CMIP land area fraction product dictionary",
-			"dcterms:description": "A SKOS vocabulary of variables in example CMIP file. In a production system, this would be expected to be an external resource, included here only for convienence"
-		},
-		{
-			"@id": "esgf:latitudeConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict_3457"},
-			"skos:prefLabel": "Latitude",
-			"skos:definition": "definition of latitude"
-		},
-		{
-			"@id": "esgf:longitudeConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict_3457"},
-			"skos:prefLabel": "Longitude",
-			"skos:definition": "definition of longitude, east positive"
-		},
-		{
-			"@id": "esgf:land_area_fractionConcept",
-			"@type": "skos:Concept",
-			"skos:inScheme": {"@id": "#esgfDict_3457"},
-			"skos:prefLabel": "Land area fraction",
-			"skos:definition": "\"Percentage of the grid  cell occupied by land (including lakes)"
-		}
-	]
+  "@context": {
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/",
+    "@vocab": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "nc": "https://ex.org/netcdf/",
+    "esgf": "http://purl.org/esgf/definitions/"
+  },
+  "@id": "nc:4h6up",
+  "@type": [
+    "schema:Dataset",
+    "schema:Product"
+  ],
+  "schema:additionalType": [
+    "model-output"
+  ],
+  "schema:dateModified": "2020-06-02T10:11:14Z",
+  "schema:description": "experiment: gap-filling scenario reaching 7.0 based on SSP3; source = AWI-CM 1.1 MR (2018);  aerosol: none; atmos: ECHAM6.3.04p1 (T127L95 native atmosphere T127 gaussian grid; 384 x 192 longitude/latitude; 95 levels; top level 80 km); atmosChem: none; land: JSBACH 3.20; landIce: none; ocean: FESOM 1.4 (unstructured grid in the horizontal with 830305 wet nodes; 46 levels; top grid cell 0-5 m); ocnBgchem: none; seaIce: FESOM 1.4",
+  "schema:distribution": [
+    {
+      "@id": "_:b1",
+      "@type": [
+        "schema:DataDownload",
+        "PhysicalDataSet"
+      ],
+      "allowsDuplicates": false,
+      "dcterms:conformsTo": [
+        "CF-1.7 CMIP-6.2"
+      ],
+      "schema:contentSize": "55703 kb",
+      "schema:contentUrl": "http://esgf3.dkrz.de/thredds/fileServer/cmip6/ScenarioMIP/AWI/AWI-CM-1-1-MR/ssp370/r1i1p1f1/fx/sftlf/gn/v20200511/sftlf_fx_AWI-CM-1-1-MR_ssp370_r1i1p1f1_gn.nc",
+      "schema:description": "Distribution = PhysicalDataSet NetCDF file",
+      "schema:encodingFormat": [
+        "application/x-netcdf;profile='cf'"
+      ],
+      "spdx:checksum": {
+        "@id": "_:b9",
+        "@type": [
+          "spdx:Checksum"
+        ],
+        "spdx:algorithm": "spdx:checksumAlgorithm_SHA256",
+        "spdx:checksumValue": "11402560ac58899ebf139a0374502710b926fff366ca5c0f52fbd492377aa975"
+      }
+    }
+  ],
+  "schema:identifier": {
+    "@id": "_:b10",
+    "@type": [
+      "schema:PropertyValue"
+    ],
+    "schema:propertyID": "https://doi.org/10.17487/RFC3650",
+    "schema:url": "https://hdl.handle.net/21.14100/23bb22a0-c324-4ed8-aa40-4cf57c3a3e3f",
+    "schema:value": "hdl:21.14100/23bb22a0-c324-4ed8-aa40-4cf57c3a3e3f"
+  },
+  "schema:keywords": [
+    "land area fraction",
+    "CMIP6"
+  ],
+  "schema:license": [
+    "Creative Commons Attribution-ShareAlike 4.0 International License (https://creativecommons.org/licenses). Consult https://pcmdi.llnl.gov/CMIP6/TermsOfUse for terms of use governing CMIP6 output, including citation requirements and proper acknowledgment. Further information about this data, including some limitations, can be found at https://ukesm.ac.uk/cmip6. The data producers and data providers make no warranty, either express or implied, including, but not limited to, warranties of merchantability and fitness for a particular purpose. All liabilities arising from the supply of the information (including any liability arising in negligence) are excluded to the fullest extent permitted by law."
+  ],
+  "schema:name": "AWI-CM-1-1-MR output prepared for CMIP6",
+  "schema:publisher": {
+    "@id": "https://ror.org/032e6b942",
+    "@type": [
+      "schema:Organization"
+    ],
+    "schema:address": "Am Handelshafen 12, 27570 Bremerhaven, Germany",
+    "schema:identifier": "https://ror.org/032e6b942",
+    "schema:name": "Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research"
+  },
+  "schema:subjectOf": {
+    "@id": "nc:ja51-pz63",
+    "@type": [
+      "schema:Dataset"
+    ],
+    "dcterms:conformsTo": [
+      {
+        "@id": "https://w3id.org/cdif/core/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/data_description/1.1"
+      }
+    ],
+    "schema:about": {
+      "@id": "nc:4h6up"
+    },
+    "schema:creator": {
+      "@id": "https://ada.org/person/3479",
+      "@type": [
+        "schema:Person"
+      ],
+      "schema:email": "smrTucson@email.org",
+      "schema:identifier": "https://orcid.org/0000-0002-7933-2154",
+      "schema:name": "Richard, Stephen M."
+    },
+    "schema:dateModified": "2025-11-13",
+    "schema:description": "metadata about documentation for NetCDF dataset",
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ]
+  },
+  "schema:variableMeasured": [
+    {
+      "@id": "esgf:land_area_fraction",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "defaultFillValue": 1e+20,
+      "displayLabel": "Land area fraction",
+      "identifier": "",
+      "missing_value": 1e+20,
+      "name": "sftlf",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "land_area_fractionConcept",
+      "schema:alternateName": [
+        "Land area fraction"
+      ],
+      "schema:description": "Percentage of the grid  cell occupied by land (including lakes)\"",
+      "schema:name": "sftlf",
+      "schema:propertyID": [
+        "esfg:land_area_fractionConcept"
+      ],
+      "schema:unitText": "percent"
+    },
+    {
+      "@id": "esgf:latitude",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "displayLabel": "Latitude",
+      "identifier": "",
+      "name": "latitude",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "esgf:latitudeConcept",
+      "schema:alternateName": [
+        "Latitude"
+      ],
+      "schema:description": "",
+      "schema:maxValue": 89.375,
+      "schema:minValue": -89.375,
+      "schema:name": "latitude",
+      "schema:propertyID": [
+        "esgf:latitudeConcept"
+      ],
+      "schema:unitText": "degree"
+    },
+    {
+      "@id": "esgf:longitude",
+      "@type": [
+        "InstanceVariable",
+        "schema:PropertyValue"
+      ],
+      "displayLabel": "Longitude",
+      "identifier": "",
+      "name": "longitude",
+      "physicalDataType": "https://www.w3.org/TR/xmlschema-2/#decimal",
+      "uses": "esgf:longitudeConcept",
+      "schema:alternateName": [
+        "Longitude"
+      ],
+      "schema:description": "longitude description",
+      "schema:maxValue": 359.0625,
+      "schema:minValue": 0.9375,
+      "schema:name": "longitude",
+      "schema:propertyID": [
+        "esgf:longitudeConcept"
+      ],
+      "schema:unitText": "degree"
+    }
+  ],
+  "prov:wasGeneratedBy": [
+    {
+      "@id": "_:b11",
+      "@type": [
+        "schema:Event",
+        "schema:Product",
+        "prov:Activity"
+      ],
+      "schema:startDate": "2008-04-10T21:58:50"
+    }
+  ]
 }

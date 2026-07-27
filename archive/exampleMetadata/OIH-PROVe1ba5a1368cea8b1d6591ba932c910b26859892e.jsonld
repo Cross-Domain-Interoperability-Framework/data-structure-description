@@ -1,49 +1,31 @@
 {
-		"@context": {
-		  "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-		  "prov": "http://www.w3.org/ns/prov#",
-		  "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
-		},
-		"@graph": [
-		  {
-			"@id": "https://catalogue.odis.org/view/343",
-			"@type": "prov:Organization",
-			"rdf:name": "Ocean Biodiversity Information System (OBIS)",
-			"rdfs:seeAlso": "https://obis.org"
-		  },
-		  {
-			"@id": "https://obis.org/dataset/2c6e60bd-9dbf-48a2-9e9d-f836620ab04e",
-			"@type": "prov:Entity",
-			"prov:wasAttributedTo": {
-			  "@id": "https://catalogue.odis.org/view/343"
-			},
-			"prov:value": "https://obis.org/dataset/2c6e60bd-9dbf-48a2-9e9d-f836620ab04e"
-		  },
-		  {
-			"@id": "https://gleaner.io/id/collection/0cbfaa7d4dbc59564a62148c80cb1fb55399ee63",
-			"@type": "prov:Collection",
-			"prov:hadMember": {
-			  "@id": "https://obis.org/dataset/2c6e60bd-9dbf-48a2-9e9d-f836620ab04e"
-			}
-		  },
-		  {
-			"@id": "urn::milled:obis:0cbfaa7d4dbc59564a62148c80cb1fb55399ee63",
-			"@type": "prov:Entity",
-			"prov:value": "0cbfaa7d4dbc59564a62148c80cb1fb55399ee63.jsonld"
-		  },
-		  {
-			"@id": "https://gleaner.io/id/run/0cbfaa7d4dbc59564a62148c80cb1fb55399ee63",
-			"@type": "prov:Activity",
-			"prov:endedAtTime": {
-			  "@value": "2025-11-09",
-			  "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-			},
-			"prov:generated": {
-			  "@id": "urn::milled:obis:0cbfaa7d4dbc59564a62148c80cb1fb55399ee63"
-			},
-			"prov:used": {
-			  "@id": "https://gleaner.io/id/collection/0cbfaa7d4dbc59564a62148c80cb1fb55399ee63"
-			}
-		  }
-		]
-	  }
+  "@context": {
+    "schema": "http://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "dqv": "http://www.w3.org/ns/dqv#",
+    "geosparql": "http://www.opengis.net/ont/geosparql#",
+    "spdx": "http://spdx.org/rdf/terms#",
+    "time": "http://www.w3.org/2006/time#",
+    "sf": "http://www.opengis.net/ont/sf#",
+    "cdi": "http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/",
+    "cdif": "https://cdif.org/0.1/",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ada": "https://ada.astromat.org/metadata/",
+    "xas": "https://ada.astromat.org/metadata/xas/",
+    "nxs": "https://manual.nexusformat.org/classes/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+  },
+  "schema:subjectOf": {
+    "@type": "dcat:CatalogRecord",
+    "schema:additionalType": [
+      {
+        "@id": "dcat:CatalogRecord"
+      }
+    ],
+    "dcterms:conformsTo": []
+  }
+}
