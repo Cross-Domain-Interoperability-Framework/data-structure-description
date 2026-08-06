@@ -1985,7 +1985,8 @@
       },
       "required": [
         "@id"
-      ]
+      ],
+      "additionalProperties": false
     },
     "IdentifierComponent": {
       "type": "object",
