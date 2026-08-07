@@ -9,9 +9,10 @@ This repository publishes the **CDIF Data Structure profile module** (`cdifDataS
 - `CDIFDataStructureImplementationGuide.md` — implementation guide (auto-generated draft from the StructuredSchema; hand-curated content pending)
 - `cdifDataStructureStructuredSchema.json` — JSON Schema (generated)
 - `dataStructureRules.shacl` — merged SHACL shapes (generated)
-- `CDIFDataStructure-frame.jsonld` — JSON-LD frame used by `FrameAndValidate.py`
-- `examples/` — validated JSON-LD examples (dimensional, long, wide, minimal, complete)
-- `FrameAndValidate.py` — frame + JSON Schema validation
+- `CDIFDataStructure-frame.jsonld` — JSON-LD frame for Dataset-rooted documents (structure nested under a `schema:Dataset` distribution via `cdi:isStructuredBy`)
+- `CDIFDataStructure-structure-frame.jsonld` — JSON-LD frame for **bare** DataStructure documents (root `@type` = `cdi:*DataStructure`); `FrameAndValidate.py` auto-selects by root `@type`
+- `examples/` — validated JSON-LD examples: bare-structure (dimensional, long, wide, minimal, complete) under the structure frame; `FeXAS/` Dataset-rooted examples under the Dataset frame
+- `FrameAndValidate.py` — frame + JSON Schema validation (multi-frame selection by root `@type`)
 
 ## Synced files (manual sync from metadataBuildingBlocks)
 
@@ -44,9 +45,12 @@ Do not treat any of this as part of the release artifact set; the canonical rele
 ## Validation
 
 ```bash
-python FrameAndValidate.py examples/<file>.json --validate \
-  --schema cdifDataStructureStructuredSchema.json --frame CDIFDataStructure-frame.jsonld
+# schema + frame auto-detected; the frame is chosen by the document's root @type
+# (structure frame for bare cdi:*DataStructure docs, Dataset frame for FeXAS/ records)
+python FrameAndValidate.py examples/<file>.json --validate
 ```
+
+Pass `--frame` explicitly only to override auto-selection.
 
 ## Development branch
 
