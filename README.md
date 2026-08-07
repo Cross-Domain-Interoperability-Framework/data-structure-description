@@ -9,7 +9,8 @@ This repository holds the published artifacts for the **CDIF Data Structure prof
 - **[CDIFDataStructureImplementationGuide.md](CDIFDataStructureImplementationGuide.md)** — Implementation guide (auto-generated draft; hand-curated content pending).
 - **[cdifDataStructureStructuredSchema.json](cdifDataStructureStructuredSchema.json)** — Resolved JSON Schema (Draft 2020-12) generated from the source register.
 - **[dataStructureRules.shacl](dataStructureRules.shacl)** — Self-contained SHACL shapes, merged from every composing building block plus the profile-level shapes.
-- **[CDIFDataStructure-frame.jsonld](CDIFDataStructure-frame.jsonld)** — JSON-LD frame used by `FrameAndValidate.py`.
+- **[CDIFDataStructure-frame.jsonld](CDIFDataStructure-frame.jsonld)** — JSON-LD frame for Dataset-rooted documents (a `schema:Dataset` whose distribution carries the structure via `cdi:isStructuredBy`).
+- **[CDIFDataStructure-structure-frame.jsonld](CDIFDataStructure-structure-frame.jsonld)** — JSON-LD frame for **bare** DataStructure documents (root `@type` = `cdi:DataStructure` / `cdi:DimensionalDataStructure` / `cdi:LongDataStructure` / `cdi:WideDataStructure`). `FrameAndValidate.py` auto-selects between the two frames by the document's root `@type`.
 
 ## Examples
 
@@ -19,7 +20,7 @@ This repository holds the published artifacts for the **CDIF Data Structure prof
 python FrameAndValidate.py examples/exampleCdifDataStructureComplete.json --validate
 ```
 
-`FrameAndValidate.py` frames the document against `CDIFDataStructure-frame.jsonld`, array-wraps the multi-valued properties, then validates against the JSON Schema. Validation is open-world: unknown properties pass.
+`FrameAndValidate.py` selects the matching frame by the document's root `@type` — the Dataset frame for `schema:Dataset` records, the structure frame for bare `cdi:*DataStructure` documents — array-wraps the multi-valued properties, then validates against the JSON Schema. Validation is open-world: unknown properties pass.
 
 ## Synced from metadataBuildingBlocks
 
