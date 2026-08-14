@@ -25,14 +25,7 @@
         "cdif:name": [
           "country"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:string"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:string"
       }
     },
     {
@@ -48,14 +41,7 @@
         "cdif:name": [
           "quarter"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:gYearMonth"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:gYearMonth"
       }
     },
     {
@@ -71,14 +57,7 @@
         "cdif:name": [
           "product_category"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:string"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:string"
       }
     },
     {
@@ -95,14 +74,7 @@
           "sales_amount"
         ],
         "cdi:simpleUnitOfMeasure": "USD",
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:decimal"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:decimal"
       },
       "cdi:semantic": [
         {
@@ -111,9 +83,7 @@
           ],
           "skos:prefLabel": "Monetary Total",
           "skos:definition": "Total monetary value of sales.",
-          "skos:notation": [
-            "monetary-total"
-          ],
+          "skos:notation": "monetary-total",
           "skos:inScheme": {
             "@id": "https://example.org/vocab/measure"
           }
@@ -138,14 +108,7 @@
         "cdif:name": [
           "currency"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:string"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:string"
       }
     }
   ],
@@ -156,13 +119,31 @@
     "@id": "ex:struct/salesCube/pk",
     "cdif:isComposedOf": [
       {
-        "@id": "ex:var/country"
+        "@type": [
+          "cdi:ComponentPosition"
+        ],
+        "cdi:indexes": {
+          "@id": "ex:var/country"
+        },
+        "cdi:value": 1
       },
       {
-        "@id": "ex:var/quarter"
+        "@type": [
+          "cdi:ComponentPosition"
+        ],
+        "cdi:indexes": {
+          "@id": "ex:var/quarter"
+        },
+        "cdi:value": 2
       },
       {
-        "@id": "ex:var/productCategory"
+        "@type": [
+          "cdi:ComponentPosition"
+        ],
+        "cdi:indexes": {
+          "@id": "ex:var/productCategory"
+        },
+        "cdi:value": 3
       }
     ]
   }

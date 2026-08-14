@@ -37,6 +37,37 @@ Source profile: `_sources/profiles/cdifProfile/cdifDataStructure/`.
 
 Background and exploratory material from the profile's development is kept under `archive/` for traceability — DDI-CDI samples and discussion notes, sample data files (`archive/ExampleData/`, `archive/LongData/`, `archive/TestCDIMetadata/`, `archive/XrayAbsorbtion/`, `archive/hierarchicalData/`, `archive/exampleMetadata/`), reference documents (`archive/PhysicalDataset2025.xmi`, SDMX glossary, format-description figures), and the earlier psdi/UML drafts. The `Documents/` directory holds the curated reference docs (`Documents/CDIF-DescribingDatasetStructure.md`, `Documents/hdf5Work/`). None of these are part of the release-artifact set.
 
+## Changelog — reviewRevision202606 (updates since branched from `main`)
+
+This release-review branch has diverged from `main` with the following updates,
+synced from the CDIF **metadataBuildingBlocks** source (see
+`git log main..reviewRevision202606` for the full per-commit history):
+
+- **Populated from metadataBuildingBlocks** — `*StructuredSchema.json`, merged SHACL,
+  JSON-LD frame, examples, and the normative `FrameAndValidate.py` generated from the
+  building-block source; `Examples/` renamed to `examples/`.
+- **CDIF v1.1** — profile conformance URIs migrated `/1.0` → `/1.1`.
+- **License** standardized on CC-BY-4.0.
+- **`@id`-reference tightening** — bare `{@id}` reference slots sealed
+  (`additionalProperties: false` + `required: ['@id']`); a canonical `objectReference`
+  building block introduced as the strict node reference.
+- **`prov:used` wrapper reconciliation** — the base `generatedBy.prov:used` accepts
+  role-keyed wrappers (`schema:instrument` / `bios:computationalTool` / `prov:reagent`)
+  alongside string / `{@id}` / inline `prov:Entity`; profiles pin a wrapper's shape via
+  a constraint-only `if/then` (never a narrowed `anyOf`).
+- **`skos:notation` → single string** at concept level (consistent with the codelist
+  single-notation design).
+- **`FrameAndValidate.py`** (normative, drift-checked against
+  `Cross-Domain-Interoperability-Framework/validation`) — two-frame root-`@type`
+  selection, context-aware `schema:about`, `--conformance` detection, `cdif:`-`@id`
+  re-expansion, and (2026-08) reference-collapse on all document types + blank-node
+  dedupe + agent `schema:identifier` unwrap, so `@embed:@always`-framed documents
+  validate against the tightened schemas.
+- **Examples** conformed to the tightened schemas throughout (PrimaryKey →
+  `cdi:ComponentPosition`, reference slots → `{@id}`, CVE `hasIntendedDataType` →
+  string, `skos:notation` → string, `schema:additionalType` URI → `{@id}`).
+
+
 ## Development branch
 
 Active work for the 2026-06 review revision is on the `reviewRevision202606` branch. `main` reflects the prior release state. New changes should target the review branch; it is merged to main on release.
