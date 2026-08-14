@@ -22,14 +22,7 @@
         "cdif:name": [
           "observation_id"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:string"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:string"
       }
     },
     {
@@ -45,14 +38,7 @@
         "cdif:name": [
           "observation_value"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:decimal"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:decimal"
       }
     }
   ]

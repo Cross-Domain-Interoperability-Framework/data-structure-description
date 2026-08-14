@@ -24,14 +24,7 @@
         "cdif:name": [
           "patient_id"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:string"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:string"
       }
     },
     {
@@ -85,14 +78,7 @@
         "cdif:name": [
           "measure_value"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:decimal"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:decimal"
       }
     },
     {
@@ -113,14 +99,7 @@
         "cdif:name": [
           "observed_at"
         ],
-        "cdi:hasIntendedDataType": {
-          "@type": [
-            "cdi:ControlledVocabularyEntry"
-          ],
-          "cdi:entryValue": [
-            "xsd:dateTime"
-          ]
-        }
+        "cdi:hasIntendedDataType": "xsd:dateTime"
       }
     }
   ],
@@ -130,15 +109,9 @@
     ],
     "@id": "ex:struct/vitalsLong/pk",
     "cdif:isComposedOf": [
-      {
-        "@id": "ex:var/patientId"
-      },
-      {
-        "@id": "ex:var/measureName"
-      },
-      {
-        "@id": "ex:var/observedAt"
-      }
+      {"@type": ["cdi:ComponentPosition"], "cdi:indexes": {"@id": "ex:var/patientId"}, "cdi:value": 1},
+      {"@type": ["cdi:ComponentPosition"], "cdi:indexes": {"@id": "ex:var/measureName"}, "cdi:value": 2},
+      {"@type": ["cdi:ComponentPosition"], "cdi:indexes": {"@id": "ex:var/observedAt"}, "cdi:value": 3}
     ]
   }
 }
